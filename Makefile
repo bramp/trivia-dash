@@ -27,15 +27,12 @@ test:
 		-gsuffix=.gd \
 		-gexit
 
-## Build exports (requires export presets in export_presets.cfg)
+## Build Web export (requires export templates installed in Godot)
 build:
 	@if [ ! -f export_presets.cfg ]; then \
 		echo "Error: export_presets.cfg not found. Configure export presets in Godot first."; \
 		exit 1; \
 	fi
 	mkdir -p $(BUILD_DIR)/web
-	godot --headless --export-release "macOS" $(BUILD_DIR)/trivia-dash-macos.zip 2>&1 || true
-	godot --headless --export-release "Windows Desktop" $(BUILD_DIR)/trivia-dash-windows.exe 2>&1 || true
-	godot --headless --export-release "Linux" $(BUILD_DIR)/trivia-dash-linux.x86_64 2>&1 || true
-	godot --headless --export-release "Web" $(BUILD_DIR)/web/index.html 2>&1 || true
-	@echo "Exports written to $(BUILD_DIR)/"
+	godot --headless --export-release "Web" $(BUILD_DIR)/web/index.html
+	@echo "Export written to $(BUILD_DIR)/web/"
