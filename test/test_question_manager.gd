@@ -20,7 +20,7 @@ func test_load_questions_count() -> void:
 
 func test_next_question_returns_valid_dict() -> void:
 	_manager.load_questions()
-	var q := _manager.next_question()
+	var q: Dictionary = _manager.next_question()
 	assert_has(q, "question", "Should have 'question' key")
 	assert_has(q, "answers", "Should have 'answers' key")
 	assert_has(q, "correct", "Should have 'correct' key")
@@ -28,7 +28,7 @@ func test_next_question_returns_valid_dict() -> void:
 
 func test_next_question_has_four_answers() -> void:
 	_manager.load_questions()
-	var q := _manager.next_question()
+	var q: Dictionary = _manager.next_question()
 	assert_eq(q.answers.size(), 4, "Should have exactly 4 answers")
 
 
@@ -38,7 +38,7 @@ func test_correct_index_points_to_right_answer() -> void:
 	# Run multiple times to account for shuffle randomness.
 	for i in range(20):
 		_manager.reset()
-		var q := _manager.next_question()
+		var q: Dictionary = _manager.next_question()
 		var correct_idx: int = q.correct
 		assert_gte(correct_idx, 0, "Correct index should be >= 0")
 		assert_lt(correct_idx, 4, "Correct index should be < 4")
@@ -49,16 +49,16 @@ func test_correct_index_points_to_right_answer() -> void:
 func test_no_repeat_until_pool_exhausted() -> void:
 	_manager.load_questions()
 	var seen_questions: Array[String] = []
-	var count := _manager.get_question_count()
+	var count: int = _manager.get_question_count()
 	for i in range(count):
-		var q := _manager.next_question()
+		var q: Dictionary = _manager.next_question()
 		assert_does_not_have(seen_questions, q.question, "Should not repeat question")
 		seen_questions.append(q.question)
 
 
 func test_has_next_returns_false_when_exhausted() -> void:
 	_manager.load_questions()
-	var count := _manager.get_question_count()
+	var count: int = _manager.get_question_count()
 	for i in range(count):
 		_manager.next_question()
 	assert_false(_manager.has_next(), "Should have no more questions after exhausting pool")
@@ -66,7 +66,7 @@ func test_has_next_returns_false_when_exhausted() -> void:
 
 func test_reset_refills_pool() -> void:
 	_manager.load_questions()
-	var count := _manager.get_question_count()
+	var count: int = _manager.get_question_count()
 	for i in range(count):
 		_manager.next_question()
 	_manager.reset()

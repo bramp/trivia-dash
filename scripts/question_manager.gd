@@ -26,6 +26,10 @@ func reset() -> void:
 	_remaining.shuffle()
 
 
+func get_question_count() -> int:
+	return _questions.size()
+
+
 func has_next() -> bool:
 	return _remaining.size() > 0
 

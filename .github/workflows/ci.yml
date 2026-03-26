@@ -21,11 +21,11 @@ jobs:
       - name: Install gdtoolkit
         run: pip install "gdtoolkit>=4,<5"
 
-      - name: Check formatting (gdformat)
-        run: gdformat --check $(find . -name "*.gd" -not -path "./.godot/*" -not -path "./addons/*") || true
+      - name: Check formatting
+        run: make format-check
 
-      - name: Lint (gdlint)
-        run: gdlint $(find . -name "*.gd" -not -path "./.godot/*" -not -path "./addons/*") || true
+      - name: Lint
+        run: make lint
 
   test:
     name: Run GUT Tests
@@ -45,10 +45,5 @@ jobs:
         timeout-minutes: 2
 
       - name: Run GUT tests
-        run: |
-          godot --headless --script addons/gut/gut_cmdln.gd \
-            -gdir=res://test/ \
-            -gprefix=test_ \
-            -gsuffix=.gd \
-            -gexit
+        run: make test
         timeout-minutes: 5

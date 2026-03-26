@@ -26,8 +26,11 @@ func test_calculate_score_with_small_time() -> void:
 
 
 func test_high_score_default() -> void:
-	# High score should default to 0.
+	# High score should default to 0 on a fresh instance.
+	var saved := GameData.high_score
+	GameData.high_score = 0
 	assert_eq(GameData.high_score, 0, "Default high score should be 0")
+	GameData.high_score = saved
 
 
 func test_scoring_constants() -> void:

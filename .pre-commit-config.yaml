@@ -3,15 +3,25 @@ repos:
     hooks:
       - id: gdformat
         name: gdformat
-        description: Format GDScript files
-        entry: gdformat --check
+        description: Check GDScript formatting
+        entry: make format-check
         language: system
         files: '\.gd$'
         exclude: ^addons/
+        pass_filenames: false
       - id: gdlint
         name: gdlint
         description: Lint GDScript files
-        entry: gdlint
+        entry: make lint
         language: system
         files: '\.gd$'
         exclude: ^addons/
+        pass_filenames: false
+      - id: gut-tests
+        name: gut-tests
+        description: Run GUT unit tests
+        entry: make test
+        language: system
+        files: '\.gd$'
+        exclude: ^addons/
+        pass_filenames: false
