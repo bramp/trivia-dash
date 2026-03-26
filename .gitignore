@@ -17,3 +17,6 @@ mono_crash.*.json
 
 # Android export
 /android/
+
+# Build outputs
+/build/

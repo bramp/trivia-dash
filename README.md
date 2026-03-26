@@ -52,10 +52,12 @@ pre-commit install
 
 | Command | Description |
 |---------|-------------|
+| `make run` | Launch the game |
 | `make format` | Format all GDScript files in place |
 | `make format-check` | Check formatting (fails on diff) |
 | `make lint` | Lint all GDScript files |
 | `make test` | Run GUT unit tests (requires Godot in PATH) |
+| `make build` | Export release builds (requires export presets) |
 
 ### Project Structure
 
