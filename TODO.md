@@ -87,6 +87,7 @@
 - [ ] Run `gdlint` on all scripts, resolve warnings
 - [ ] Test responsive layout at 720×1280, 1920×1080, and in-browser
 - [ ] Ensure CI is green
+- [ ] Update `README.md` with project description, screenshots, and setup instructions
 
 ## Phase 9 — Export & Deploy
 
