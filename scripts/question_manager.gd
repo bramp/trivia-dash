@@ -51,7 +51,3 @@ func _shuffle_answers(q: Dictionary) -> Dictionary:
 		"answers": answers,
 		"correct": new_correct,
 	}
-
-
-func get_question_count() -> int:
-	return _questions.size()

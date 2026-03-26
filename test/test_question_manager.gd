@@ -81,7 +81,7 @@ func test_shuffle_changes_answer_order() -> void:
 	var found_different := false
 	for i in range(20):
 		_manager.reset()
-		var q := _manager.next_question()
+		var q: Dictionary = _manager.next_question()
 		if q.question == "What is the capital of France?":
 			if q.answers != original_first_answers:
 				found_different = true
