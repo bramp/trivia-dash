@@ -74,18 +74,20 @@ func test_reset_refills_pool() -> void:
 
 
 func test_shuffle_changes_answer_order() -> void:
-	# Run next_question many times; at least once the answers should be in a different order
-	# than the original JSON order. This is probabilistic but with 20 tries it's near-certain.
+	# Load multiple times and check that at least one question has shuffled answers.
 	_manager.load_questions()
-	var original_first_answers := ["Paris", "London", "Berlin", "Madrid"]
 	var found_different := false
 	for i in range(20):
 		_manager.reset()
-		var q: Dictionary = _manager.next_question()
-		if q.question == "What is the capital of France?":
-			if q.answers != original_first_answers:
-				found_different = true
-				break
+		# Go through all questions looking for any with shuffled answers.
+		while _manager.has_next():
+			var q: Dictionary = _manager.next_question()
+			if q.question == "What is the capital of France?":
+				var original := ["Paris", "London", "Berlin", "Madrid"]
+				if q.answers != original:
+					found_different = true
+					break
+		if found_different:
+			break
 	# It's possible (but extremely unlikely at 1/24^20) that shuffle never changes order.
-	# We accept this as a valid probabilistic test.
 	assert_true(found_different, "Shuffle should change answer order at least once in 20 tries")

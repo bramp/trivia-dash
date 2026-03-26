@@ -329,10 +329,11 @@ func _handle_correct_answer(index: int, time_remaining: float) -> void:
 
 func _handle_wrong_answer(index: int) -> void:
 	SfxManager.play_wrong()
-	_animate_wrong(index)
+	var correct_index: int = _current_question.get("correct", -1)
+	_animate_wrong(index, correct_index)
 	# Brief pause then game over.
 	var tween := create_tween()
-	tween.tween_interval(0.8)
+	tween.tween_interval(1.0)
 	tween.tween_callback(_end_game)
 
 
@@ -449,15 +450,20 @@ func _animate_correct(index: int) -> void:
 	var btn := answer_buttons[index]
 	btn.pivot_offset = btn.size / 2.0
 
-	# Flash the button brighter.
+	# Flash the button bright green with white border.
 	var style := btn.get_theme_stylebox("normal").duplicate() as StyleBoxFlat
-	style.bg_color = GameData.CORRECT_HIGHLIGHT
+	style.bg_color = GameData.CORRECT_HIGHLIGHT.lightened(0.2)
+	style.border_width_left = 4
+	style.border_width_right = 4
+	style.border_width_top = 4
+	style.border_width_bottom = 4
+	style.border_color = Color.WHITE
 	btn.add_theme_stylebox_override("normal", style)
 
 	var tween := create_tween()
 	tween.set_ease(Tween.EASE_OUT)
 	tween.set_trans(Tween.TRANS_ELASTIC)
-	tween.tween_property(btn, "scale", Vector2(1.12, 1.12), 0.15)
+	tween.tween_property(btn, "scale", Vector2(1.15, 1.15), 0.18)
 	tween.tween_property(btn, "scale", Vector2.ONE, 0.15)
 
 	# Spawn celebratory emoji particles around the button.
@@ -469,8 +475,8 @@ func _animate_correct(index: int) -> void:
 func _spawn_floating_score(btn: Button, points: int) -> void:
 	var float_label := Label.new()
 	float_label.text = "+%d" % points
-	float_label.add_theme_font_size_override("font_size", 36)
-	float_label.add_theme_color_override("font_color", GameData.CORRECT_HIGHLIGHT)
+	float_label.add_theme_font_size_override("font_size", 44)
+	float_label.add_theme_color_override("font_color", Color.WHITE)
 	float_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	float_label.z_index = 10
 	add_child(float_label)
@@ -488,36 +494,49 @@ func _spawn_floating_score(btn: Button, points: int) -> void:
 
 
 func _spawn_celebration_particles(btn: Button) -> void:
-	var emojis := ["✓", "★", "✦", "●"]
+	var emojis := ["🎉", "⭐", "✨", "💥", "🔥", "✓"]
+	var colors: Array[Color] = [
+		Color("#2ECC71"),
+		Color("#F1C40F"),
+		Color("#E74C3C"),
+		Color("#3498DB"),
+		Color("#FFFFFF"),
+		Color("#E67E22"),
+	]
 	var center := Vector2(
 		btn.global_position.x + btn.size.x / 2.0,
 		btn.global_position.y + btn.size.y / 2.0,
 	)
-	for i in range(8):
+	var particle_count := 14
+	for i in range(particle_count):
 		var particle := Label.new()
 		particle.text = emojis[i % emojis.size()]
-		particle.add_theme_font_size_override("font_size", 28)
-		particle.add_theme_color_override("font_color", GameData.CORRECT_HIGHLIGHT)
+		particle.add_theme_font_size_override("font_size", 38)
+		particle.add_theme_color_override("font_color", colors[i % colors.size()])
 		particle.z_index = 10
 		add_child(particle)
 
 		particle.global_position = center
-		var angle := i * TAU / 8.0
-		var target := center + Vector2(cos(angle), sin(angle)) * 80.0
+		var angle := i * TAU / float(particle_count)
+		var radius := 120.0 + randf_range(-20.0, 20.0)
+		var target := center + Vector2(cos(angle), sin(angle)) * radius
 
 		var tween := create_tween()
 		tween.set_parallel(true)
-		tween.tween_property(particle, "global_position", target, 0.4).set_ease(Tween.EASE_OUT).set_trans(
+		tween.tween_property(particle, "global_position", target, 0.5).set_ease(Tween.EASE_OUT).set_trans(
 			Tween.TRANS_CUBIC
 		)
-		tween.tween_property(particle, "modulate:a", 0.0, 0.3).set_delay(0.15)
+		# Spin the particle for flair.
+		particle.pivot_offset = Vector2(10, 10)
+		tween.tween_property(particle, "rotation", randf_range(-PI, PI), 0.5)
+		tween.tween_property(particle, "modulate:a", 0.0, 0.35).set_delay(0.2)
 		tween.chain().tween_callback(particle.queue_free)
 
 
-func _animate_wrong(index: int) -> void:
+func _animate_wrong(index: int, correct_index: int) -> void:
 	var btn := answer_buttons[index]
 
-	# Flash the button red.
+	# Flash the wrong button red.
 	var style := btn.get_theme_stylebox("normal").duplicate() as StyleBoxFlat
 	style.bg_color = GameData.WRONG_HIGHLIGHT
 	btn.add_theme_stylebox_override("normal", style)
@@ -526,13 +545,31 @@ func _animate_wrong(index: int) -> void:
 	for b in answer_buttons:
 		b.disabled = true
 
-	# Shake animation.
+	# Shake animation on wrong button.
 	var original_x := btn.position.x
 	var tween := create_tween()
 	for cycle in range(3):
 		tween.tween_property(btn, "position:x", original_x + 8, 0.05)
 		tween.tween_property(btn, "position:x", original_x - 8, 0.05)
 	tween.tween_property(btn, "position:x", original_x, 0.05)
+
+	# Highlight the correct answer with a pulsing green glow.
+	if correct_index >= 0 and correct_index < answer_buttons.size():
+		var correct_btn := answer_buttons[correct_index]
+		var correct_style := correct_btn.get_theme_stylebox("normal").duplicate() as StyleBoxFlat
+		correct_style.bg_color = GameData.CORRECT_HIGHLIGHT
+		correct_style.border_width_left = 4
+		correct_style.border_width_right = 4
+		correct_style.border_width_top = 4
+		correct_style.border_width_bottom = 4
+		correct_style.border_color = Color.WHITE
+		correct_btn.add_theme_stylebox_override("normal", correct_style)
+		correct_btn.pivot_offset = correct_btn.size / 2.0
+		var pulse := create_tween()
+		pulse.set_ease(Tween.EASE_IN_OUT)
+		pulse.set_trans(Tween.TRANS_SINE)
+		pulse.tween_property(correct_btn, "scale", Vector2(1.08, 1.08), 0.25)
+		pulse.tween_property(correct_btn, "scale", Vector2.ONE, 0.25)
 
 
 func _animate_score_pop() -> void:
