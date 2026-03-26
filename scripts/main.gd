@@ -10,37 +10,37 @@ var _current_question: Dictionary = {}
 var _input_locked: bool = false
 var _active_tween: Tween = null
 
-@onready var title_screen: VBoxContainer = $TitleScreen
-@onready var game_screen: VBoxContainer = $GameScreen
-@onready var game_over_screen: VBoxContainer = $GameOverScreen
+@onready var title_screen: MarginContainer = $TitleScreen
+@onready var game_screen: MarginContainer = $GameScreen
+@onready var game_over_screen: MarginContainer = $GameOverScreen
 @onready var question_manager: Node = $QuestionManager
 @onready var game_timer: Timer = $GameTimer
 
 # Title screen
-@onready var title_label: Label = $TitleScreen/TitleLabel
-@onready var subtitle_label: Label = $TitleScreen/SubtitleLabel
-@onready var play_button: Button = $TitleScreen/PlayButton
-@onready var title_high_score_label: Label = $TitleScreen/HighScoreLabel
+@onready var title_label: Label = $TitleScreen/Content/TitleLabel
+@onready var subtitle_label: Label = $TitleScreen/Content/SubtitleLabel
+@onready var play_button: Button = $TitleScreen/Content/PlayButton
+@onready var title_high_score_label: Label = $TitleScreen/Content/HighScoreLabel
 
 # Game screen
-@onready var score_label: Label = $GameScreen/TopBar/ScoreLabel
-@onready var timer_label: Label = $GameScreen/TopBar/TimerLabel
-@onready var timer_bar: ProgressBar = $GameScreen/TimerBar
-@onready var question_label: Label = $GameScreen/QuestionContainer/QuestionLabel
+@onready var score_label: Label = $GameScreen/Content/TopBar/ScoreLabel
+@onready var timer_label: Label = $GameScreen/Content/TopBar/TimerLabel
+@onready var timer_bar: ProgressBar = $GameScreen/Content/TimerBar
+@onready var question_label: Label = $GameScreen/Content/QuestionContainer/QuestionLabel
 @onready var answer_buttons: Array[Button] = [
-	$GameScreen/AnswersContainer/AnswerButtons/Answer1,
-	$GameScreen/AnswersContainer/AnswerButtons/Answer2,
-	$GameScreen/AnswersContainer/AnswerButtons/Answer3,
-	$GameScreen/AnswersContainer/AnswerButtons/Answer4,
+	$GameScreen/Content/AnswersContainer/AnswerGrid/Answer1,
+	$GameScreen/Content/AnswersContainer/AnswerGrid/Answer2,
+	$GameScreen/Content/AnswersContainer/AnswerGrid/Answer3,
+	$GameScreen/Content/AnswersContainer/AnswerGrid/Answer4,
 ]
 
 # Game over screen
-@onready var game_over_label: Label = $GameOverScreen/GameOverLabel
-@onready var final_score_label: Label = $GameOverScreen/FinalScoreLabel
-@onready var game_over_high_score_label: Label = $GameOverScreen/HighScoreLabel
-@onready var new_high_score_label: Label = $GameOverScreen/NewHighScoreLabel
-@onready var play_again_button: Button = $GameOverScreen/PlayAgainButton
-@onready var main_menu_button: Button = $GameOverScreen/MainMenuButton
+@onready var game_over_label: Label = $GameOverScreen/Content/GameOverLabel
+@onready var final_score_label: Label = $GameOverScreen/Content/FinalScoreLabel
+@onready var game_over_high_score_label: Label = $GameOverScreen/Content/HighScoreLabel
+@onready var new_high_score_label: Label = $GameOverScreen/Content/NewHighScoreLabel
+@onready var play_again_button: Button = $GameOverScreen/Content/PlayAgainButton
+@onready var main_menu_button: Button = $GameOverScreen/Content/MainMenuButton
 
 
 func _ready() -> void:
@@ -73,17 +73,22 @@ func _on_game_timer_timeout() -> void:
 	if _time_remaining <= 0.0:
 		game_timer.stop()
 		_end_game()
+	elif _time_remaining <= 5.0 and fmod(_time_remaining, 1.0) < game_timer.wait_time:
+		SfxManager.play_tick()
 
 
 func _on_play_pressed() -> void:
+	SfxManager.play_button_tap()
 	_start_game()
 
 
 func _on_play_again_pressed() -> void:
+	SfxManager.play_button_tap()
 	_start_game()
 
 
 func _on_main_menu_pressed() -> void:
+	SfxManager.play_button_tap()
 	_show_title_screen()
 
 
@@ -138,7 +143,7 @@ func _style_answer_buttons() -> void:
 		btn.add_theme_color_override("font_color", GameData.TEXT_COLOR)
 		btn.add_theme_color_override("font_hover_color", GameData.TEXT_COLOR)
 		btn.add_theme_color_override("font_pressed_color", GameData.TEXT_COLOR)
-		btn.add_theme_font_size_override("font_size", 28)
+		btn.add_theme_font_size_override("font_size", 34)
 
 
 func _style_play_button(btn: Button) -> void:
@@ -165,7 +170,7 @@ func _style_play_button(btn: Button) -> void:
 	btn.add_theme_color_override("font_color", GameData.TEXT_COLOR)
 	btn.add_theme_color_override("font_hover_color", GameData.TEXT_COLOR)
 	btn.add_theme_color_override("font_pressed_color", GameData.TEXT_COLOR)
-	btn.add_theme_font_size_override("font_size", 32)
+	btn.add_theme_font_size_override("font_size", 40)
 
 
 # --- State transitions ---
@@ -181,11 +186,11 @@ func _show_title_screen() -> void:
 	_style_play_button(play_button)
 
 	# Style title
-	title_label.add_theme_font_size_override("font_size", 64)
+	title_label.add_theme_font_size_override("font_size", 80)
 	title_label.add_theme_color_override("font_color", GameData.TITLE_COLOR)
-	subtitle_label.add_theme_font_size_override("font_size", 24)
+	subtitle_label.add_theme_font_size_override("font_size", 32)
 	subtitle_label.add_theme_color_override("font_color", GameData.TITLE_COLOR.darkened(0.3))
-	title_high_score_label.add_theme_font_size_override("font_size", 22)
+	title_high_score_label.add_theme_font_size_override("font_size", 28)
 	title_high_score_label.add_theme_color_override("font_color", GameData.TITLE_COLOR.darkened(0.3))
 
 	_animate_title_entrance()
@@ -206,11 +211,11 @@ func _start_game() -> void:
 	_update_timer_display()
 
 	# Style HUD labels
-	score_label.add_theme_font_size_override("font_size", 28)
+	score_label.add_theme_font_size_override("font_size", 36)
 	score_label.add_theme_color_override("font_color", GameData.TEXT_COLOR)
-	timer_label.add_theme_font_size_override("font_size", 28)
+	timer_label.add_theme_font_size_override("font_size", 36)
 	timer_label.add_theme_color_override("font_color", GameData.TEXT_COLOR)
-	question_label.add_theme_font_size_override("font_size", 32)
+	question_label.add_theme_font_size_override("font_size", 40)
 	question_label.add_theme_color_override("font_color", GameData.TEXT_COLOR)
 
 	# Style timer bar
@@ -244,6 +249,8 @@ func _end_game() -> void:
 		GameData.high_score = _score
 		GameData.save_data()
 
+	SfxManager.play_game_over()
+
 	# Transition to game over after a brief delay.
 	var delay_tween := create_tween()
 	delay_tween.tween_interval(0.5)
@@ -256,18 +263,20 @@ func _show_game_over_screen(is_new_high: bool) -> void:
 	game_over_screen.visible = true
 
 	# Style labels
-	game_over_label.add_theme_font_size_override("font_size", 52)
+	game_over_label.add_theme_font_size_override("font_size", 64)
 	game_over_label.add_theme_color_override("font_color", GameData.TITLE_COLOR)
-	final_score_label.add_theme_font_size_override("font_size", 36)
+	final_score_label.add_theme_font_size_override("font_size", 48)
 	final_score_label.add_theme_color_override("font_color", GameData.TEXT_COLOR)
-	game_over_high_score_label.add_theme_font_size_override("font_size", 22)
+	game_over_high_score_label.add_theme_font_size_override("font_size", 28)
 	game_over_high_score_label.add_theme_color_override("font_color", GameData.TITLE_COLOR.darkened(0.3))
-	new_high_score_label.add_theme_font_size_override("font_size", 28)
+	new_high_score_label.add_theme_font_size_override("font_size", 36)
 	new_high_score_label.add_theme_color_override("font_color", GameData.BUTTON_YELLOW)
 
 	final_score_label.text = "Score: %d" % _score
 	game_over_high_score_label.text = "High Score: %d" % GameData.high_score
 	new_high_score_label.visible = is_new_high
+	if is_new_high:
+		SfxManager.play_new_high_score()
 
 	_style_play_button(play_again_button)
 	_style_play_button(main_menu_button)
@@ -306,17 +315,20 @@ func _handle_correct_answer(index: int, time_remaining: float) -> void:
 	var points := GameData.calculate_score(time_remaining)
 	_score += points
 	_update_score_display()
+	SfxManager.play_correct()
 	_animate_correct(index)
+	_spawn_floating_score(answer_buttons[index], points)
 
 	# After correct animation, show next question.
 	var tween := create_tween()
-	tween.tween_interval(0.4)
+	tween.tween_interval(0.6)
 	tween.tween_callback(_animate_question_exit)
 	tween.tween_interval(0.3)
 	tween.tween_callback(_show_next_question)
 
 
 func _handle_wrong_answer(index: int) -> void:
+	SfxManager.play_wrong()
 	_animate_wrong(index)
 	# Brief pause then game over.
 	var tween := create_tween()
@@ -445,10 +457,61 @@ func _animate_correct(index: int) -> void:
 	var tween := create_tween()
 	tween.set_ease(Tween.EASE_OUT)
 	tween.set_trans(Tween.TRANS_ELASTIC)
-	tween.tween_property(btn, "scale", Vector2(1.08, 1.08), 0.1)
-	tween.tween_property(btn, "scale", Vector2.ONE, 0.1)
+	tween.tween_property(btn, "scale", Vector2(1.12, 1.12), 0.15)
+	tween.tween_property(btn, "scale", Vector2.ONE, 0.15)
+
+	# Spawn celebratory emoji particles around the button.
+	_spawn_celebration_particles(btn)
 
 	# Restore original colour after animation completes via the next question display.
+
+
+func _spawn_floating_score(btn: Button, points: int) -> void:
+	var float_label := Label.new()
+	float_label.text = "+%d" % points
+	float_label.add_theme_font_size_override("font_size", 36)
+	float_label.add_theme_color_override("font_color", GameData.CORRECT_HIGHLIGHT)
+	float_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	float_label.z_index = 10
+	add_child(float_label)
+
+	float_label.global_position = Vector2(
+		btn.global_position.x + btn.size.x / 2.0 - 40,
+		btn.global_position.y - 20,
+	)
+
+	var tween := create_tween()
+	tween.set_parallel(true)
+	tween.tween_property(float_label, "global_position:y", float_label.global_position.y - 80, 0.6)
+	tween.tween_property(float_label, "modulate:a", 0.0, 0.6).set_delay(0.2)
+	tween.chain().tween_callback(float_label.queue_free)
+
+
+func _spawn_celebration_particles(btn: Button) -> void:
+	var emojis := ["✓", "★", "✦", "●"]
+	var center := Vector2(
+		btn.global_position.x + btn.size.x / 2.0,
+		btn.global_position.y + btn.size.y / 2.0,
+	)
+	for i in range(8):
+		var particle := Label.new()
+		particle.text = emojis[i % emojis.size()]
+		particle.add_theme_font_size_override("font_size", 28)
+		particle.add_theme_color_override("font_color", GameData.CORRECT_HIGHLIGHT)
+		particle.z_index = 10
+		add_child(particle)
+
+		particle.global_position = center
+		var angle := i * TAU / 8.0
+		var target := center + Vector2(cos(angle), sin(angle)) * 80.0
+
+		var tween := create_tween()
+		tween.set_parallel(true)
+		tween.tween_property(particle, "global_position", target, 0.4).set_ease(Tween.EASE_OUT).set_trans(
+			Tween.TRANS_CUBIC
+		)
+		tween.tween_property(particle, "modulate:a", 0.0, 0.3).set_delay(0.15)
+		tween.chain().tween_callback(particle.queue_free)
 
 
 func _animate_wrong(index: int) -> void:

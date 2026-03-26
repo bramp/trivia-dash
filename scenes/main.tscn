@@ -24,53 +24,60 @@ color = Color(0.173, 0.243, 0.314, 1)
 [node name="QuestionManager" type="Node" parent="."]
 script = ExtResource("2")
 
-[node name="TitleScreen" type="VBoxContainer" parent="."]
+[node name="TitleScreen" type="MarginContainer" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_constants/margin_left = 32
+theme_override_constants/margin_right = 32
+theme_override_constants/margin_top = 32
+theme_override_constants/margin_bottom = 32
+
+[node name="Content" type="VBoxContainer" parent="TitleScreen"]
+layout_mode = 2
 alignment = 1
 
-[node name="Spacer1" type="Control" parent="TitleScreen"]
+[node name="Spacer1" type="Control" parent="TitleScreen/Content"]
 layout_mode = 2
 custom_minimum_size = Vector2(0, 100)
 
-[node name="TitleLabel" type="Label" parent="TitleScreen"]
+[node name="TitleLabel" type="Label" parent="TitleScreen/Content"]
 layout_mode = 2
 horizontal_alignment = 1
 text = "TRIVIA DASH"
 
-[node name="Spacer2" type="Control" parent="TitleScreen"]
+[node name="Spacer2" type="Control" parent="TitleScreen/Content"]
 layout_mode = 2
 custom_minimum_size = Vector2(0, 40)
 
-[node name="SubtitleLabel" type="Label" parent="TitleScreen"]
+[node name="SubtitleLabel" type="Label" parent="TitleScreen/Content"]
 layout_mode = 2
 horizontal_alignment = 1
 text = "Answer fast. Stay alive."
 
-[node name="Spacer3" type="Control" parent="TitleScreen"]
+[node name="Spacer3" type="Control" parent="TitleScreen/Content"]
 layout_mode = 2
 custom_minimum_size = Vector2(0, 80)
 
-[node name="PlayButton" type="Button" parent="TitleScreen"]
+[node name="PlayButton" type="Button" parent="TitleScreen/Content"]
 layout_mode = 2
-custom_minimum_size = Vector2(300, 80)
+custom_minimum_size = Vector2(300, 90)
 size_flags_horizontal = 4
 text = "PLAY"
 
-[node name="Spacer4" type="Control" parent="TitleScreen"]
+[node name="Spacer4" type="Control" parent="TitleScreen/Content"]
 layout_mode = 2
 custom_minimum_size = Vector2(0, 30)
 
-[node name="HighScoreLabel" type="Label" parent="TitleScreen"]
+[node name="HighScoreLabel" type="Label" parent="TitleScreen/Content"]
 layout_mode = 2
 horizontal_alignment = 1
 text = "High Score: 0"
 
-[node name="GameScreen" type="VBoxContainer" parent="."]
+[node name="GameScreen" type="MarginContainer" parent="."]
 visible = false
 layout_mode = 1
 anchors_preset = 15
@@ -78,81 +85,97 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_bottom = 24
 
-[node name="TopBar" type="HBoxContainer" parent="GameScreen"]
+[node name="Content" type="VBoxContainer" parent="GameScreen"]
+layout_mode = 2
+
+[node name="TopBar" type="HBoxContainer" parent="GameScreen/Content"]
 layout_mode = 2
 custom_minimum_size = Vector2(0, 60)
 
-[node name="ScoreLabel" type="Label" parent="GameScreen/TopBar"]
+[node name="ScoreLabel" type="Label" parent="GameScreen/Content/TopBar"]
 layout_mode = 2
 size_flags_horizontal = 3
 text = "Score: 0"
 
-[node name="TimerLabel" type="Label" parent="GameScreen/TopBar"]
+[node name="TimerLabel" type="Label" parent="GameScreen/Content/TopBar"]
 layout_mode = 2
 horizontal_alignment = 2
 text = "30.0"
 
-[node name="TimerBar" type="ProgressBar" parent="GameScreen"]
+[node name="TimerBar" type="ProgressBar" parent="GameScreen/Content"]
 layout_mode = 2
-custom_minimum_size = Vector2(0, 12)
+custom_minimum_size = Vector2(0, 14)
 max_value = 30.0
 value = 30.0
 show_percentage = false
 
-[node name="Spacer1" type="Control" parent="GameScreen"]
+[node name="Spacer1" type="Control" parent="GameScreen/Content"]
 layout_mode = 2
-custom_minimum_size = Vector2(0, 40)
+custom_minimum_size = Vector2(0, 30)
 
-[node name="QuestionContainer" type="MarginContainer" parent="GameScreen"]
+[node name="QuestionContainer" type="MarginContainer" parent="GameScreen/Content"]
 layout_mode = 2
 size_flags_vertical = 3
-theme_override_constants/margin_left = 40
-theme_override_constants/margin_right = 40
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_right = 16
 
-[node name="QuestionLabel" type="Label" parent="GameScreen/QuestionContainer"]
+[node name="QuestionLabel" type="Label" parent="GameScreen/Content/QuestionContainer"]
 layout_mode = 2
 horizontal_alignment = 1
+vertical_alignment = 1
 autowrap_mode = 2
 text = "Question goes here?"
 
-[node name="Spacer2" type="Control" parent="GameScreen"]
+[node name="Spacer2" type="Control" parent="GameScreen/Content"]
 layout_mode = 2
-custom_minimum_size = Vector2(0, 40)
+custom_minimum_size = Vector2(0, 24)
 
-[node name="AnswersContainer" type="MarginContainer" parent="GameScreen"]
+[node name="AnswersContainer" type="MarginContainer" parent="GameScreen/Content"]
 layout_mode = 2
 size_flags_vertical = 3
-size_flags_stretch_ratio = 2.0
-theme_override_constants/margin_left = 40
-theme_override_constants/margin_right = 40
-theme_override_constants/margin_bottom = 40
+size_flags_stretch_ratio = 2.5
 
-[node name="AnswerButtons" type="VBoxContainer" parent="GameScreen/AnswersContainer"]
+[node name="AnswerGrid" type="GridContainer" parent="GameScreen/Content/AnswersContainer"]
 layout_mode = 2
-theme_override_constants/separation = 16
+size_flags_vertical = 3
+columns = 2
+theme_override_constants/h_separation = 16
+theme_override_constants/v_separation = 16
 
-[node name="Answer1" type="Button" parent="GameScreen/AnswersContainer/AnswerButtons"]
+[node name="Answer1" type="Button" parent="GameScreen/Content/AnswersContainer/AnswerGrid"]
 layout_mode = 2
-custom_minimum_size = Vector2(0, 80)
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_minimum_size = Vector2(0, 100)
 text = "Answer 1"
 
-[node name="Answer2" type="Button" parent="GameScreen/AnswersContainer/AnswerButtons"]
+[node name="Answer2" type="Button" parent="GameScreen/Content/AnswersContainer/AnswerGrid"]
 layout_mode = 2
-custom_minimum_size = Vector2(0, 80)
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_minimum_size = Vector2(0, 100)
 text = "Answer 2"
 
-[node name="Answer3" type="Button" parent="GameScreen/AnswersContainer/AnswerButtons"]
+[node name="Answer3" type="Button" parent="GameScreen/Content/AnswersContainer/AnswerGrid"]
 layout_mode = 2
-custom_minimum_size = Vector2(0, 80)
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_minimum_size = Vector2(0, 100)
 text = "Answer 3"
 
-[node name="Answer4" type="Button" parent="GameScreen/AnswersContainer/AnswerButtons"]
+[node name="Answer4" type="Button" parent="GameScreen/Content/AnswersContainer/AnswerGrid"]
 layout_mode = 2
-custom_minimum_size = Vector2(0, 80)
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_minimum_size = Vector2(0, 100)
 text = "Answer 4"
 
-[node name="GameOverScreen" type="VBoxContainer" parent="."]
+[node name="GameOverScreen" type="MarginContainer" parent="."]
 visible = false
 layout_mode = 1
 anchors_preset = 15
@@ -160,54 +183,61 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_constants/margin_left = 32
+theme_override_constants/margin_right = 32
+theme_override_constants/margin_top = 32
+theme_override_constants/margin_bottom = 32
+
+[node name="Content" type="VBoxContainer" parent="GameOverScreen"]
+layout_mode = 2
 alignment = 1
 
-[node name="Spacer1" type="Control" parent="GameOverScreen"]
+[node name="Spacer1" type="Control" parent="GameOverScreen/Content"]
 layout_mode = 2
 custom_minimum_size = Vector2(0, 100)
 
-[node name="GameOverLabel" type="Label" parent="GameOverScreen"]
+[node name="GameOverLabel" type="Label" parent="GameOverScreen/Content"]
 layout_mode = 2
 horizontal_alignment = 1
 text = "GAME OVER"
 
-[node name="Spacer2" type="Control" parent="GameOverScreen"]
+[node name="Spacer2" type="Control" parent="GameOverScreen/Content"]
 layout_mode = 2
 custom_minimum_size = Vector2(0, 30)
 
-[node name="FinalScoreLabel" type="Label" parent="GameOverScreen"]
+[node name="FinalScoreLabel" type="Label" parent="GameOverScreen/Content"]
 layout_mode = 2
 horizontal_alignment = 1
 text = "Score: 0"
 
-[node name="HighScoreLabel" type="Label" parent="GameOverScreen"]
+[node name="HighScoreLabel" type="Label" parent="GameOverScreen/Content"]
 layout_mode = 2
 horizontal_alignment = 1
 text = "High Score: 0"
 
-[node name="NewHighScoreLabel" type="Label" parent="GameOverScreen"]
+[node name="NewHighScoreLabel" type="Label" parent="GameOverScreen/Content"]
 visible = false
 layout_mode = 2
 horizontal_alignment = 1
 text = "NEW HIGH SCORE!"
 
-[node name="Spacer3" type="Control" parent="GameOverScreen"]
+[node name="Spacer3" type="Control" parent="GameOverScreen/Content"]
 layout_mode = 2
 custom_minimum_size = Vector2(0, 60)
 
-[node name="PlayAgainButton" type="Button" parent="GameOverScreen"]
+[node name="PlayAgainButton" type="Button" parent="GameOverScreen/Content"]
 layout_mode = 2
-custom_minimum_size = Vector2(300, 80)
+custom_minimum_size = Vector2(300, 90)
 size_flags_horizontal = 4
 text = "PLAY AGAIN"
 
-[node name="Spacer4" type="Control" parent="GameOverScreen"]
+[node name="Spacer4" type="Control" parent="GameOverScreen/Content"]
 layout_mode = 2
 custom_minimum_size = Vector2(0, 16)
 
-[node name="MainMenuButton" type="Button" parent="GameOverScreen"]
+[node name="MainMenuButton" type="Button" parent="GameOverScreen/Content"]
 layout_mode = 2
-custom_minimum_size = Vector2(300, 80)
+custom_minimum_size = Vector2(300, 90)
 size_flags_horizontal = 4
 text = "MAIN MENU"
 
@@ -215,11 +245,11 @@ text = "MAIN MENU"
 wait_time = 0.05
 autostart = false
 
-[connection signal="pressed" from="TitleScreen/PlayButton" to="." method="_on_play_pressed"]
-[connection signal="pressed" from="GameScreen/AnswersContainer/AnswerButtons/Answer1" to="." method="_on_answer_pressed" binds= [0]]
-[connection signal="pressed" from="GameScreen/AnswersContainer/AnswerButtons/Answer2" to="." method="_on_answer_pressed" binds= [1]]
-[connection signal="pressed" from="GameScreen/AnswersContainer/AnswerButtons/Answer3" to="." method="_on_answer_pressed" binds= [2]]
-[connection signal="pressed" from="GameScreen/AnswersContainer/AnswerButtons/Answer4" to="." method="_on_answer_pressed" binds= [3]]
-[connection signal="pressed" from="GameOverScreen/PlayAgainButton" to="." method="_on_play_again_pressed"]
-[connection signal="pressed" from="GameOverScreen/MainMenuButton" to="." method="_on_main_menu_pressed"]
+[connection signal="pressed" from="TitleScreen/Content/PlayButton" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="GameScreen/Content/AnswersContainer/AnswerGrid/Answer1" to="." method="_on_answer_pressed" binds= [0]]
+[connection signal="pressed" from="GameScreen/Content/AnswersContainer/AnswerGrid/Answer2" to="." method="_on_answer_pressed" binds= [1]]
+[connection signal="pressed" from="GameScreen/Content/AnswersContainer/AnswerGrid/Answer3" to="." method="_on_answer_pressed" binds= [2]]
+[connection signal="pressed" from="GameScreen/Content/AnswersContainer/AnswerGrid/Answer4" to="." method="_on_answer_pressed" binds= [3]]
+[connection signal="pressed" from="GameOverScreen/Content/PlayAgainButton" to="." method="_on_play_again_pressed"]
+[connection signal="pressed" from="GameOverScreen/Content/MainMenuButton" to="." method="_on_main_menu_pressed"]
 [connection signal="timeout" from="GameTimer" to="." method="_on_game_timer_timeout"]
