@@ -1,0 +1,11 @@
+[project]
+requires-python = ">=3.9"
+
+[tool.gdtoolkit]
+# Pinned for reproducible linting/formatting across dev machines and CI.
+
+[project.optional-dependencies]
+dev = [
+    "gdtoolkit>=4,<5",
+    "pre-commit>=3,<4",
+]

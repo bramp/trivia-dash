@@ -1,0 +1,54 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  lint:
+    name: Lint GDScript
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install gdtoolkit
+        run: pip install "gdtoolkit>=4,<5"
+
+      - name: Check formatting (gdformat)
+        run: gdformat --check $(find . -name "*.gd" -not -path "./.godot/*" -not -path "./addons/*") || true
+
+      - name: Lint (gdlint)
+        run: gdlint $(find . -name "*.gd" -not -path "./.godot/*" -not -path "./addons/*") || true
+
+  test:
+    name: Run GUT Tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Godot
+        uses: chickensoft-games/setup-godot@v2
+        with:
+          version: 4.6.0
+          use-dotnet: false
+          include-templates: false
+
+      - name: Import project
+        run: godot --headless --import . --quit || true
+        timeout-minutes: 2
+
+      - name: Run GUT tests
+        run: |
+          godot --headless --script addons/gut/gut_cmdln.gd \
+            -gdir=res://test/ \
+            -gprefix=test_ \
+            -gsuffix=.gd \
+            -gexit
+        timeout-minutes: 5

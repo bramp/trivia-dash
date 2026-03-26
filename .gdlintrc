@@ -1,0 +1,5 @@
+# gdlint configuration
+# https://github.com/Scony/godot-gdscript-toolkit
+max-function-length: 40
+max-file-length: 500
+max-line-length: 120
