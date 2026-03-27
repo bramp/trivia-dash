@@ -303,10 +303,20 @@ func _display_question(q: Dictionary) -> void:
 		var btn := answer_buttons[i]
 		btn.text = answers[i] if i < answers.size() else ""
 		btn.disabled = false
+		btn.modulate.a = 1.0
+		btn.scale = Vector2.ONE
+		# Remove any overlay labels (e.g. ✗ from wrong answers).
+		for child in btn.get_children():
+			if child is Label:
+				child.queue_free()
 		# Reset button style to default colour.
 		var style := btn.get_theme_stylebox("normal") as StyleBoxFlat
 		if style:
 			style.bg_color = GameData.BUTTON_COLORS[i]
+			style.border_width_left = 0
+			style.border_width_right = 0
+			style.border_width_top = 0
+			style.border_width_bottom = 0
 
 	_animate_question_entrance()
 
@@ -550,6 +560,18 @@ func _animate_wrong(index: int, correct_index: int) -> void:
 		dimmed.bg_color = grey
 		b.add_theme_stylebox_override("normal", dimmed)
 		b.modulate.a = 0.5
+
+	# Overlay a red ✗ on the wrong button.
+	var x_label := Label.new()
+	x_label.text = "✗"
+	x_label.add_theme_font_size_override("font_size", 72)
+	x_label.add_theme_color_override("font_color", Color(0.9, 0.15, 0.15))
+	x_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	x_label.vertical_alignment = VERTICAL_ALIGNMENT_CENTER
+	x_label.z_index = 10
+	x_label.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	btn.add_child(x_label)
+	x_label.set_anchors_and_offsets_preset(Control.PRESET_CENTER)
 
 	# Shake animation on the wrong button.
 	var original_x := btn.position.x
