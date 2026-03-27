@@ -23,7 +23,7 @@ Each element must match this schema exactly:
     "alternative_answers": ["Other valid phrasings or synonyms for the answer"],
     "distractors": ["Wrong 1", "Wrong 2", "Wrong 3"],
     "difficulty": "easy | medium | hard",
-    "source": "A reputable reference (e.g., Britannica, NASA, WHO)",
+    "source": "A specific, verifiable reference — preferably a URL to a reputable source. If no URL is available, cite a specific book (title + author + page/chapter) or a named report/publication. Avoid vague attributions like just an organization name.",
     "clarity_note": "Brief note explaining why the answer is unambiguously correct, or why alternatives are also accepted"
   }}
 ]
@@ -63,7 +63,7 @@ Each element must match this schema exactly:
     "alternative_answers": ["Alpha Canis Majoris", "Dog Star"],
     "distractors": ["Betelgeuse", "Polaris", "Rigel"],
     "difficulty": "medium",
-    "source": "NASA",
+    "source": "https://science.nasa.gov/star/sirius/",
     "clarity_note": "Sirius (Alpha Canis Majoris) has an apparent magnitude of −1.46, making it the brightest star visible from Earth."
   }}
 ]
