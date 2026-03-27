@@ -494,7 +494,7 @@ func _spawn_floating_score(btn: Button, points: int) -> void:
 
 
 func _spawn_celebration_particles(btn: Button) -> void:
-	var symbols := ["+", "*", "!", "o", "^", "~"]
+	var symbols := ["🎉", "⭐", "✨", "💥", "🔥", "✓"]
 	var colors: Array[Color] = [
 		Color("#2ECC71"),
 		Color("#F1C40F"),

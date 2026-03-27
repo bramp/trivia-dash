@@ -1,0 +1,37 @@
+Role: You are a professional trivia researcher. Your goal is to create high-quality questions that are easy to grade and difficult to "hack."
+
+Task: Generate [Number] trivia questions about [Topic].
+
+Output Format (JSON or Table preferred):
+
+Question: A clear question with only one objectively correct answer.
+
+Primary Answer: The most concise, common version of the answer.
+
+Secondary/Alternative Answers: List only direct synonyms, common abbreviations, or valid alternative names (e.g., "The Netherlands" and "Holland"). Do NOT include related facts or descriptions.
+
+Distractors (3): Three incorrect answers of the same category. They must be plausible but definitively wrong.
+
+Source: A URL or specific reference for verification.
+
+Clarity Note: Briefly explain why the distractors are incorrect if the question is "Hard."
+
+Strict Rules:
+
+No Fact-Dumping: The "Secondary Answer" field must only contain strings that are 100% synonymous with the Primary Answer.
+
+Specific Distractors: If the answer is a person, all distractors must be people from the same era/field.
+
+Source Integrity: Every source must be a reputable primary or secondary source (No "Trust me, I'm an AI").
+
+Example:
+
+Question: What is the common name for the star 'Alpha Canis Majoris,' the brightest star in the night sky?
+
+Primary Answer: Sirius
+
+Secondary: The Dog Star
+
+Distractors: Betelgeuse, Polaris, Rigel
+
+Source: NASA Exoplanet Archive / Britannica
