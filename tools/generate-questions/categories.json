@@ -1,0 +1,222 @@
+[
+  {
+    "title": "The 'I Should Know This' Vault",
+    "description": "Common knowledge and basic facts that often become difficult to recall under the pressure of a timer.",
+    "example": {
+      "question": "Which human finger is the only one to contain two phalanges instead of three?",
+      "answer": "The thumb",
+      "distractors": ["The pinky", "The index finger", "The ring finger"],
+      "source": "https://www.britannica.com/science/phalanx-bone",
+      "clarity_note": "Phalanges are the digital bones of the hands and feet."
+    }
+  },
+  {
+    "title": "Slogans & Jingles",
+    "description": "Identifying famous brands based on their iconic catchphrases or short musical signatures.",
+    "example": {
+      "question": "Which snack brand uses the tagline 'The snack that smiles back'?",
+      "answer": "Goldfish",
+      "distractors": ["Cheez-It", "Teddy Grahams", "Whales"],
+      "source": "https://www.pepperidgefarm.com/product-category/goldfish-crackers/",
+      "clarity_note": null
+    }
+  },
+  {
+    "title": "Movie 'Before They Were Famous'",
+    "description": "Identifying A-list actors based on their early, minor, or obscure roles before they achieved stardom.",
+    "example": {
+      "question": "Which 'Friends' star made their film debut in the 1993 horror movie 'Leprechaun'?",
+      "answer": "Jennifer Aniston",
+      "distractors": ["Courteney Cox", "Lisa Kudrow", "Matthew Perry"],
+      "source": "https://www.imdb.com/title/tt0107387/",
+      "clarity_note": "She played the character Tory Reding."
+    }
+  },
+  {
+    "title": "Badly Explained Plots",
+    "description": "Summarizing famous movies or books using the most technically correct but misleading descriptions possible.",
+    "example": {
+      "question": "A grumpy green guy and a talking donkey travel to save a princess so the guy can get his yard back.",
+      "answer": "Shrek",
+      "distractors": ["The Grinch", "Hulk", "Trolls"],
+      "source": "https://www.dreamworks.com/movies/shrek",
+      "clarity_note": null
+    }
+  },
+  {
+    "title": "Foodie Geography",
+    "description": "Challenging the true geographical origins of famous dishes, ingredients, and culinary traditions.",
+    "example": {
+      "question": "In which country were 'French Fries' actually invented?",
+      "answer": "Belgium",
+      "distractors": ["France", "USA", "Germany"],
+      "source": "https://www.bbc.com/travel/article/20180730-can-belgium-claim-ownership-of-the-french-fry",
+      "clarity_note": "The name 'French' refers to the way the potatoes are sliced (julienned)."
+    }
+  },
+  {
+    "title": "One-Hit Wonders",
+    "description": "Naming the artist or group behind a massively popular song that was their only major chart success.",
+    "example": {
+      "question": "Who performed the 1990 hit 'Ice Ice Baby'?",
+      "answer": "Vanilla Ice",
+      "distractors": ["MC Hammer", "Snow", "Coolio"],
+      "source": "https://www.billboard.com/artist/vanilla-ice/",
+      "clarity_note": null
+    }
+  },
+  {
+    "title": "Tech & Toys of the Decades",
+    "description": "A nostalgia-driven category focused on gadgets, games, and playthings from the 80s, 90s, and 2000s.",
+    "example": {
+      "question": "What was the name of the handheld digital pet that became a global craze in 1996?",
+      "answer": "Tamagotchi",
+      "distractors": ["Furby", "Giga Pet", "Webkinz"],
+      "source": "https://www.bandai.com/brands/tamagotchi/",
+      "clarity_note": "The name is a portmanteau of the Japanese words for 'egg' and 'watch'."
+    }
+  },
+  {
+    "title": "Animal Kingdom Superlatives",
+    "description": "Questions about the fastest, largest, loudest, and most extreme creatures in the natural world.",
+    "example": {
+      "question": "Which animal has the largest eyes in the world, roughly the size of a dinner plate?",
+      "answer": "Colossal Squid",
+      "distractors": ["Blue Whale", "Giant Squid", "Ostrich"],
+      "source": "https://www.nhm.ac.uk/discover/colossal-squid.html",
+      "clarity_note": "Their eyes can reach up to 27cm (11 inches) in diameter."
+    }
+  },
+  {
+    "title": "Real or Fake?",
+    "description": "Teams must distinguish between a bizarre true fact and a total fabrication from a list of options.",
+    "example": {
+      "question": "Which of the following is a TRUE historical fact?",
+      "answer": "Oxford University is older than the Aztec Empire",
+      "distractors": ["The Eiffel Tower was originally built for London", "Napoleon was shorter than 5 feet", "Vikings wore horned helmets"],
+      "source": "https://www.ox.ac.uk/about/organisation/history",
+      "clarity_note": "Teaching existed at Oxford as early as 1096; the Aztec Empire was founded in 1325."
+    }
+  },
+  {
+    "title": "Literal Lyrics",
+    "description": "Famous song lyrics translated into overly formal, academic, or clinical English prose.",
+    "example": {
+      "question": "Identify the song: 'Please cease your movements, for it is currently the period designated for the use of a percussion instrument.'",
+      "answer": "U Can't Touch This (MC Hammer)",
+      "distractors": ["Ice Ice Baby", "Bust a Move", "Can't Stop the Feeling"],
+      "source": "https://www.azlyrics.com/lyrics/mchammer/ucanttouchthis.html",
+      "clarity_note": "Referencing the line 'Stop, Hammertime!'"
+    }
+  },
+  {
+    "title": "The 1-Star Review",
+    "description": "Identifying famous movies, books, or landmarks based on humorous, overly critical 1-star internet reviews.",
+    "example": {
+      "question": "Which movie was reviewed as: 'Way too much walking. Just a bunch of guys complaining about a piece of jewelry.'?",
+      "answer": "The Lord of the Rings",
+      "distractors": ["The Hobbit", "Harry Potter", "The Wizard of Oz"],
+      "source": "https://www.amazon.com/Lord-Rings-Motion-Picture-Trilogy/product-reviews/B004HE2YHS",
+      "clarity_note": null
+    }
+  },
+  {
+    "title": "Emoji Cryptograms",
+    "description": "Deciphering movie titles, songs, or famous phrases represented entirely by a string of emojis.",
+    "example": {
+      "question": "Decipher this movie title: 🦁👑",
+      "answer": "The Lion King",
+      "distractors": ["Madagascar", "The Jungle Book", "Tiger King"],
+      "source": "https://www.disney.com/movies/the-lion-king",
+      "clarity_note": null
+    }
+  },
+  {
+    "title": "Historical 'Which Came First?'",
+    "description": "Comparing the timelines of historical events or inventions that people often don't realize overlapped.",
+    "example": {
+      "question": "Which of these was established or invented FIRST?",
+      "answer": "Nintendo",
+      "distractors": ["The Wright Brothers' First Flight", "The Sliced Bread Machine", "The Eiffel Tower"],
+      "source": "https://www.nintendo.co.jp/corporate/en/history/index.html",
+      "clarity_note": "Nintendo was founded in 1889 as a playing card company."
+    }
+  },
+  {
+    "title": "The Stage Name Shuffle",
+    "description": "Providing the legal birth name of a celebrity and requiring the player to identify their famous stage name.",
+    "example": {
+      "question": "What is the stage name of Stefani Joanne Angelina Germanotta?",
+      "answer": "Lady Gaga",
+      "distractors": ["Madonna", "Katy Perry", "Kesha"],
+      "source": "https://www.biography.com/musicians/lady-gaga",
+      "clarity_note": null
+    }
+  },
+  {
+    "title": "Logo Logic",
+    "description": "Exploring the hidden symbols, negative space, and clever meanings tucked into world-famous brand logos.",
+    "example": {
+      "question": "What 'hidden' image is found in the negative space of the FedEx logo?",
+      "answer": "An arrow",
+      "distractors": ["A spoon", "A plane", "A box"],
+      "source": "https://www.fedex.com/en-us/about/logo-history.html",
+      "clarity_note": "It is located between the 'E' and the 'x'."
+    }
+  },
+  {
+    "title": "Strange Laws: Real or Ridiculous?",
+    "description": "A multiple-choice challenge to identify which bizarre legal restriction is actually a real law.",
+    "example": {
+      "question": "In Gainesville, Georgia, it is technically illegal to eat fried chicken with what?",
+      "answer": "A fork",
+      "distractors": ["Your hands", "A spoon", "Chopsticks"],
+      "source": "https://www.gainesville.org/641/Fried-Chicken-Capital",
+      "clarity_note": "Passed in 1961 as a PR stunt to promote Gainesville as the poultry capital."
+    }
+  },
+  {
+    "title": "Pop Culture Math",
+    "description": "Solving simple arithmetic problems where the numbers are derived from famous movies, bands, or facts.",
+    "example": {
+      "question": "(Number of Dwarves in Snow White) + (Number of Strings on a standard Cello) = ?",
+      "answer": "11",
+      "distractors": ["10", "12", "13"],
+      "source": "https://www.britannica.com/art/cello",
+      "clarity_note": "7 Dwarves + 4 Cello strings."
+    }
+  },
+  {
+    "title": "Fictional Corporate Giants",
+    "description": "Matching fictional companies, products, or brands to the TV shows or movies in which they appear.",
+    "example": {
+      "question": "Which company serves as the primary employer in the US version of 'The Office'?",
+      "answer": "Dunder Mifflin",
+      "distractors": ["Initech", "Sabre", "Wernham Hogg"],
+      "source": "https://www.nbc.com/the-office",
+      "clarity_note": "Wernham Hogg is the company in the original UK version."
+    }
+  },
+  {
+    "title": "Urban Legend Debunkers",
+    "description": "Sorting through common misconceptions and 'facts' to find the one that is scientifically or historically true.",
+    "example": {
+      "question": "Which of these widely cited 'facts' is actually scientifically true?",
+      "answer": "Wombat poop is cube-shaped",
+      "distractors": ["You swallow 8 spiders a year in your sleep", "Humans only use 10% of their brains", "Bananas grow on trees"],
+      "source": "https://www.nationalgeographic.com/animals/article/wombat-poop-cubes-explained",
+      "clarity_note": "Bananas grow on herbaceous plants, not trees."
+    }
+  },
+  {
+    "title": "Misheard Lyric Madness",
+    "description": "We provide a famous misheard lyric (Mondegreen), and you must identify the correct song or actual lyric.",
+    "example": {
+      "question": "If the misheard lyric is 'Excuse me while I kiss this guy!', what is the actual lyric?",
+      "answer": "Excuse me while I kiss the sky",
+      "distractors": ["Excuse me while I miss the pie", "Excuse me while I hit the guy", "Excuse me while I kiss this fly"],
+      "source": "https://www.jimihendrix.com/music/purple-haze/",
+      "clarity_note": "From the song 'Purple Haze' by Jimi Hendrix."
+    }
+  }
+]

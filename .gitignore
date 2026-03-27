@@ -6,5 +6,8 @@
 .venv/
 *.egg-info/
 
+# Environment files (API keys, secrets)
+.env
+
 # Build outputs
 build/

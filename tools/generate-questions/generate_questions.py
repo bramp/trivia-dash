@@ -5,9 +5,14 @@ Usage:
     python3 tools/generate-questions/generate_questions.py \
         [--count N] [--categories CAT1,CAT2,...] [--model MODEL]
 
-Authentication:
-    Uses Application Default Credentials. Run once:
-        gcloud auth application-default login
+Authentication (pick one):
+    1. Create a .env file in the project root with your API key:
+           echo 'GEMINI_API_KEY=your-key-here' > .env
+       (The .env file is git-ignored and will not be committed.)
+    2. Export the environment variable directly:
+           export GEMINI_API_KEY=your-key-here
+    3. Use Application Default Credentials:
+           gcloud auth application-default login
 
 Requirements:
     pip install google-genai
@@ -15,6 +20,7 @@ Requirements:
 
 import argparse
 import json
+import os
 import random
 import re
 import sys
@@ -31,6 +37,21 @@ SCRIPT_DIR = Path(__file__).resolve().parent
 PROJECT_ROOT = SCRIPT_DIR.parent.parent
 PROMPT_FILE = SCRIPT_DIR / "prompt.txt"
 OUTPUT_FILE = PROJECT_ROOT / "data" / "questions.json"
+ENV_FILE = PROJECT_ROOT / ".env"
+
+
+def _load_env_file() -> None:
+    """Load KEY=VALUE pairs from .env into os.environ (if the file exists)."""
+    if not ENV_FILE.exists():
+        return
+    for line in ENV_FILE.read_text().splitlines():
+        line = line.strip()
+        if not line or line.startswith("#"):
+            continue
+        key, sep, value = line.partition("=")
+        if sep:
+            os.environ.setdefault(key.strip(), value.strip())
+
 
 DEFAULT_CATEGORIES = [
     "Science",
@@ -200,8 +221,20 @@ def main():
 
     template = load_prompt_template()
 
-    print("Authenticating with Google AI (using Application Default Credentials)...")
-    client = genai.Client()
+    _load_env_file()
+    api_key = os.environ.get("GEMINI_API_KEY")
+
+    if api_key:
+        print("Authenticating with Google AI (using GEMINI_API_KEY)...")
+        client = genai.Client(api_key=api_key)
+    else:
+        print(
+            "Authenticating with Google AI (using Application Default Credentials)..."
+        )
+        print(
+            "Tip: You can also set GEMINI_API_KEY in a .env file in the project root."
+        )
+        client = genai.Client()
 
     # Load existing questions if appending.
     categories_dict: dict[str, list] = {}
