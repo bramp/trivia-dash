@@ -28,7 +28,6 @@ Requirements:
 import argparse
 import json
 import os
-import random
 import re
 import sys
 import time
@@ -184,34 +183,6 @@ def extract_json(text: str) -> list:
     return data
 
 
-def convert_to_game_format(q: dict) -> dict:
-    """Convert from the LLM's rich format to the game's format."""
-    answer = q["answer"]
-    distractors = q["distractors"][:3]
-
-    # Build answers list: correct answer + 3 distractors, then shuffle.
-    answers = [answer] + distractors
-    random.shuffle(answers)
-    correct_index = answers.index(answer)
-
-    result = {
-        "question": q["question"],
-        "answers": answers,
-        "correct": correct_index,
-        "difficulty": q.get("difficulty", "medium"),
-    }
-
-    # Preserve optional metadata for review.
-    alt = q.get("alternative_answers", [])
-    if alt:
-        result["alternative_answers"] = alt
-    note = q.get("clarity_note", "")
-    if note:
-        result["clarity_note"] = note
-
-    return result
-
-
 def generate_for_category(
     client: genai.Client, model: str, template: str, category: dict, count: int
 ) -> list:
@@ -232,10 +203,9 @@ def generate_for_category(
         if len(q["distractors"]) < 3:
             print(f"  Skipping (< 3 distractors): {q['question']}")
             continue
-        converted = convert_to_game_format(q)
-        converted["model"] = model
-        converted["generated_at"] = generated_at
-        questions.append(converted)
+        q["model"] = model
+        q["generated_at"] = generated_at
+        questions.append(q)
 
     return questions
 
