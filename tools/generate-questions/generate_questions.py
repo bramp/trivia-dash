@@ -2,7 +2,7 @@
 """Generate trivia questions using Google Gemini and save to data/questions.json.
 
 Usage:
-    python3 scripts/generate_questions.py [--count N] [--categories CAT1,CAT2,...]
+    python3 tools/generate-questions/generate_questions.py [--count N] [--categories CAT1,CAT2,...]
 
 Authentication:
     Uses Application Default Credentials. Run once:
@@ -27,8 +27,8 @@ except ImportError:
     sys.exit(1)
 
 SCRIPT_DIR = Path(__file__).resolve().parent
-PROJECT_ROOT = SCRIPT_DIR.parent
-PROMPT_FILE = PROJECT_ROOT / "docs" / "question-prompt.txt"
+PROJECT_ROOT = SCRIPT_DIR.parent.parent
+PROMPT_FILE = SCRIPT_DIR / "prompt.txt"
 OUTPUT_FILE = PROJECT_ROOT / "data" / "questions.json"
 
 DEFAULT_CATEGORIES = [

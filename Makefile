@@ -39,4 +39,4 @@ build:
 
 ## Generate trivia questions using Gemini (requires gcloud auth)
 generate-questions:
-	python3 scripts/generate_questions.py
+	python3 tools/generate-questions/generate_questions.py
