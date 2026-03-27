@@ -109,3 +109,4 @@
 - [ ] Difficulty scaling (harder questions as streak grows)
 - [ ] Leaderboard (local or online)
 - [ ] Streak particle effects
+- [ ] Custom export templates compiled with `disable_3d`, `modules_enabled_by_default=no`, etc. to reduce web build size (see https://popcar.bearblog.dev/how-to-minify-godots-build-size/)

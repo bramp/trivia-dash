@@ -48,12 +48,21 @@ build:
 		echo "Error: export_presets.cfg not found. Configure export presets in Godot first."; \
 		exit 1; \
 	fi
-	@# Stamp build date/time into build_info.gd
-	@sed -i '' 's/^const BUILD_DATE := .*/const BUILD_DATE := "'"$$(date -u +%Y-%m-%dT%H:%M:%SZ)"'"/' scripts/build_info.gd
+	@# Stamp build date into build_info.gd
+	@sed -i '' 's/^const BUILD_DATE := .*/const BUILD_DATE := "'"$$(date -u +%Y-%m-%d)"'"/' scripts/build_info.gd
 	mkdir -p $(BUILD_DIR)/web
 	godot --headless --export-release "Web" $(BUILD_DIR)/web/index.html
 	@# Reset build_info.gd back to dev
 	@sed -i '' 's/^const BUILD_DATE := .*/const BUILD_DATE := "dev"/' scripts/build_info.gd
+	@# Optimize wasm with wasm-opt (from binaryen) if available
+	@if command -v wasm-opt >/dev/null 2>&1; then \
+		echo "Running wasm-opt..."; \
+		wasm-opt $(BUILD_DIR)/web/index.wasm -o $(BUILD_DIR)/web/index.wasm -all -Oz; \
+	else \
+		echo "Warning: wasm-opt not found, skipping wasm optimization. Install binaryen to enable."; \
+	fi
+	@echo "Build sizes:"
+	@ls -lh $(BUILD_DIR)/web/index.wasm $(BUILD_DIR)/web/index.pck $(BUILD_DIR)/web/index.js
 	@echo "Export written to $(BUILD_DIR)/web/"
 
 ## Create/update the Python virtual environment and install all dependencies
