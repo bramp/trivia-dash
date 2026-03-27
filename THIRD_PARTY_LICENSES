@@ -1,0 +1,47 @@
+# Third-Party Licenses
+
+This file lists all third-party dependencies, libraries, and assets used by
+Trivia Dash, along with their licenses.
+
+## Bundled Assets
+
+### Noto Sans
+- **Source:** https://github.com/notofonts/latin-greek-cyrillic
+- **License:** SIL Open Font License 1.1
+- **Copyright:** 2022 The Noto Project Authors
+- **Files:** `fonts/NotoSans.ttf`
+- **License text:** `fonts/LICENSE`
+
+### Noto Emoji
+- **Source:** https://github.com/notofonts/emoji
+- **License:** SIL Open Font License 1.1
+- **Copyright:** 2022 The Noto Project Authors
+- **Files:** `fonts/NotoEmoji.ttf`
+- **License text:** `fonts/LICENSE`
+
+## Testing
+
+### GUT (Godot Unit Testing)
+- **Version:** 9.6.0
+- **Source:** https://github.com/prolog/gut
+- **License:** MIT
+- **Copyright:** 2018 Tom "Butch" Wesley
+- **Files:** `addons/gut/`
+
+## Development Tools (not bundled in game)
+
+### gdtoolkit
+- **Source:** https://github.com/Scony/gdtoolkit
+- **License:** MIT
+
+### pre-commit
+- **Source:** https://github.com/pre-commit/pre-commit
+- **License:** MIT
+
+## Engine
+
+### Godot Engine
+- **Version:** 4.6+
+- **Source:** https://godotengine.org
+- **License:** MIT
+- **Copyright:** 2014-present Godot Engine contributors
