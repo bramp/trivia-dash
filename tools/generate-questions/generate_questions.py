@@ -64,15 +64,27 @@ def build_prompt(template: str, topic: str, count: int) -> str:
     return template.format(topic=topic, count=count)
 
 
-def extract_json(text: str) -> list:
-    """Extract a JSON array from the LLM response, stripping markdown fences."""
+def extract_json(text: str) -> tuple[str, list]:
+    """Extract category and questions from the LLM response.
+
+    Returns (category, questions_list).
+    """
     # Strip markdown code fences if present.
     cleaned = re.sub(r"^```(?:json)?\s*\n?", "", text.strip())
     cleaned = re.sub(r"\n?```\s*$", "", cleaned)
-    return json.loads(cleaned)
+    data = json.loads(cleaned)
+
+    # Handle both wrapper-object and bare-array formats.
+    if isinstance(data, dict):
+        category = data.get("category", "")
+        questions = data.get("questions", [])
+    else:
+        category = ""
+        questions = data
+    return category, questions
 
 
-def convert_to_game_format(q: dict) -> dict:
+def convert_to_game_format(q: dict, category: str) -> dict:
     """Convert from the LLM's rich format to the game's simple format."""
     answer = q["answer"]
     distractors = q["distractors"][:3]
@@ -86,9 +98,18 @@ def convert_to_game_format(q: dict) -> dict:
         "question": q["question"],
         "answers": answers,
         "correct": correct_index,
-        "category": q.get("category", ""),
+        "category": category or q.get("category", ""),
         "difficulty": q.get("difficulty", "medium"),
     }
+
+    # Preserve optional metadata for review.
+    alt = q.get("alternative_answers", [])
+    if alt:
+        result["alternative_answers"] = alt
+    note = q.get("clarity_note", "")
+    if note:
+        result["clarity_note"] = note
+
     return result
 
 
@@ -100,7 +121,7 @@ def generate_for_category(
     print(f"  Requesting {count} questions...")
     response = client.models.generate_content(model=MODEL, contents=prompt)
 
-    raw = extract_json(response.text)
+    category, raw = extract_json(response.text)
     print(f"  Received {len(raw)} questions")
 
     questions = []
@@ -111,7 +132,7 @@ def generate_for_category(
         if len(q["distractors"]) < 3:
             print(f"  Skipping (< 3 distractors): {q['question']}")
             continue
-        questions.append(convert_to_game_format(q))
+        questions.append(convert_to_game_format(q, category or topic))
 
     return questions
 
