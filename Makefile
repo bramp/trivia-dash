@@ -4,11 +4,15 @@ VENV_DIR := .venv
 
 PY_FILES := $(shell find . -name "*.py" -not -path "./.godot/*" -not -path "./$(VENV_DIR)/*")
 
-.PHONY: format format-check format-check-gd format-check-py lint test run build generate-questions venv
+.PHONY: format format-check format-check-gd format-check-py lint test run build serve generate-questions venv
 
 ## Run the game
 run:
 	godot --path .
+
+## Serve the web build (requires Python 3)
+serve: build
+	@python3 tools/serve.py $(BUILD_DIR)/web
 
 ## Format all GDScript files in place
 format:
