@@ -7,24 +7,21 @@ objectively correct answer.
 Distribute the questions across difficulties: roughly 40% Easy, 40% Medium,
 20% Hard.
 
-**Output:** Return ONLY a JSON object. No markdown fences, no commentary.
-The object must match this schema exactly:
+**Output:** Return ONLY a JSON array. No markdown fences, no commentary.
+Each element must match this schema exactly:
 
 ```json
-{{
-  "category": "{topic}",
-  "questions": [
-    {{
-      "question": "A concise question (one sentence, under 120 characters preferred)",
-      "answer": "The correct answer (short, commonly known form)",
-      "alternative_answers": ["Other valid phrasings or synonyms for the answer"],
-      "distractors": ["Wrong 1", "Wrong 2", "Wrong 3"],
-      "difficulty": "easy | medium | hard",
-      "source": "A reputable reference (e.g., Britannica, NASA, WHO)",
-      "clarity_note": "Brief note explaining why the answer is unambiguously correct, or why alternatives are also accepted"
-    }}
-  ]
-}}
+[
+  {{
+    "question": "A concise question (one sentence, under 120 characters preferred)",
+    "answer": "The correct answer (short, commonly known form)",
+    "alternative_answers": ["Other valid phrasings or synonyms for the answer"],
+    "distractors": ["Wrong 1", "Wrong 2", "Wrong 3"],
+    "difficulty": "easy | medium | hard",
+    "source": "A reputable reference (e.g., Britannica, NASA, WHO)",
+    "clarity_note": "Brief note explaining why the answer is unambiguously correct, or why alternatives are also accepted"
+  }}
+]
 ```
 
 - `alternative_answers`: Other correct or widely accepted answers (e.g.,
@@ -54,17 +51,14 @@ The object must match this schema exactly:
    `alternative_answers` appear as distractors.
 
 **Example output:**
-{{
-  "category": "Astronomy",
-  "questions": [
-    {{
-      "question": "What is the brightest star in the night sky?",
-      "answer": "Sirius",
-      "alternative_answers": ["Alpha Canis Majoris", "Dog Star"],
-      "distractors": ["Betelgeuse", "Polaris", "Rigel"],
-      "difficulty": "medium",
-      "source": "NASA",
-      "clarity_note": "Sirius (Alpha Canis Majoris) has an apparent magnitude of −1.46, making it the brightest star visible from Earth."
-    }}
-  ]
-}}
+[
+  {{
+    "question": "What is the brightest star in the night sky?",
+    "answer": "Sirius",
+    "alternative_answers": ["Alpha Canis Majoris", "Dog Star"],
+    "distractors": ["Betelgeuse", "Polaris", "Rigel"],
+    "difficulty": "medium",
+    "source": "NASA",
+    "clarity_note": "Sirius (Alpha Canis Majoris) has an apparent magnitude of −1.46, making it the brightest star visible from Earth."
+  }}
+]

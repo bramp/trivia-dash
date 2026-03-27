@@ -50,7 +50,7 @@ DEFAULT_CATEGORIES = [
 ]
 
 DEFAULT_COUNT = 20
-MODEL = "gemini-2.5-flash"
+MODEL = "gemini-3.1-pro-preview"
 
 
 def load_prompt_template() -> str:
@@ -64,28 +64,21 @@ def build_prompt(template: str, topic: str, count: int) -> str:
     return template.format(topic=topic, count=count)
 
 
-def extract_json(text: str) -> tuple[str, list]:
-    """Extract category and questions from the LLM response.
-
-    Returns (category, questions_list).
-    """
+def extract_json(text: str) -> list:
+    """Extract a JSON array of questions from the LLM response."""
     # Strip markdown code fences if present.
     cleaned = re.sub(r"^```(?:json)?\s*\n?", "", text.strip())
     cleaned = re.sub(r"\n?```\s*$", "", cleaned)
     data = json.loads(cleaned)
 
-    # Handle both wrapper-object and bare-array formats.
+    # Handle both bare-array and wrapper-object formats.
     if isinstance(data, dict):
-        category = data.get("category", "")
-        questions = data.get("questions", [])
-    else:
-        category = ""
-        questions = data
-    return category, questions
+        return data.get("questions", [])
+    return data
 
 
-def convert_to_game_format(q: dict, category: str) -> dict:
-    """Convert from the LLM's rich format to the game's simple format."""
+def convert_to_game_format(q: dict) -> dict:
+    """Convert from the LLM's rich format to the game's format."""
     answer = q["answer"]
     distractors = q["distractors"][:3]
 
@@ -98,7 +91,6 @@ def convert_to_game_format(q: dict, category: str) -> dict:
         "question": q["question"],
         "answers": answers,
         "correct": correct_index,
-        "category": category or q.get("category", ""),
         "difficulty": q.get("difficulty", "medium"),
     }
 
@@ -121,7 +113,7 @@ def generate_for_category(
     print(f"  Requesting {count} questions...")
     response = client.models.generate_content(model=MODEL, contents=prompt)
 
-    category, raw = extract_json(response.text)
+    raw = extract_json(response.text)
     print(f"  Received {len(raw)} questions")
 
     questions = []
@@ -132,7 +124,7 @@ def generate_for_category(
         if len(q["distractors"]) < 3:
             print(f"  Skipping (< 3 distractors): {q['question']}")
             continue
-        questions.append(convert_to_game_format(q, category or topic))
+        questions.append(convert_to_game_format(q))
 
     return questions
 
@@ -147,6 +139,27 @@ def deduplicate(questions: list) -> list:
             seen.add(key)
             unique.append(q)
     return unique
+
+
+def load_existing(path: Path) -> dict[str, list]:
+    """Load existing questions.json and return a {category: [questions]} dict."""
+    if not path.exists():
+        return {}
+    data = json.loads(path.read_text())
+    result = {}
+    for cat in data.get("categories", []):
+        result[cat["name"]] = cat["questions"]
+    return result
+
+
+def build_output(categories_dict: dict[str, list]) -> dict:
+    """Build the output JSON structure from {category: [questions]} dict."""
+    categories = []
+    for name in sorted(categories_dict):
+        questions = deduplicate(categories_dict[name])
+        categories.append({"name": name, "questions": questions})
+    total = sum(len(c["questions"]) for c in categories)
+    return {"categories": categories, "total_questions": total}
 
 
 def main():
@@ -181,20 +194,23 @@ def main():
     print(f"Authenticating with Google AI (using Application Default Credentials)...")
     client = genai.Client()
 
-    all_questions = []
-
     # Load existing questions if appending.
-    if args.append and OUTPUT_FILE.exists():
-        existing = json.loads(OUTPUT_FILE.read_text())
-        all_questions.extend(existing)
-        print(f"Loaded {len(existing)} existing questions")
+    categories_dict: dict[str, list] = {}
+    if args.append:
+        categories_dict = load_existing(OUTPUT_FILE)
+        total = sum(len(v) for v in categories_dict.values())
+        if total:
+            print(f"Loaded {total} existing questions across {len(categories_dict)} categories")
 
     for i, category in enumerate(categories):
         print(f"\n[{i + 1}/{len(categories)}] Generating: {category}")
         try:
             questions = generate_for_category(client, template, category, args.count)
-            all_questions.extend(questions)
-            print(f"  Added {len(questions)} questions (total: {len(all_questions)})")
+            # Merge into existing category or create new.
+            existing = categories_dict.get(category, [])
+            existing.extend(questions)
+            categories_dict[category] = existing
+            print(f"  Added {len(questions)} questions ({len(existing)} total in category)")
         except Exception as e:
             print(f"  ERROR generating {category}: {e}")
             continue
@@ -203,11 +219,11 @@ def main():
         if i < len(categories) - 1:
             time.sleep(2)
 
-    all_questions = deduplicate(all_questions)
+    output = build_output(categories_dict)
 
     OUTPUT_FILE.parent.mkdir(parents=True, exist_ok=True)
-    OUTPUT_FILE.write_text(json.dumps(all_questions, indent=2, ensure_ascii=False) + "\n")
-    print(f"\nDone! Wrote {len(all_questions)} questions to {OUTPUT_FILE}")
+    OUTPUT_FILE.write_text(json.dumps(output, indent=2, ensure_ascii=False) + "\n")
+    print(f"\nDone! Wrote {output['total_questions']} questions across {len(output['categories'])} categories to {OUTPUT_FILE}")
 
 
 if __name__ == "__main__":
