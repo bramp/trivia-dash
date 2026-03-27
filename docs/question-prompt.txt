@@ -1,37 +1,36 @@
-Role: You are a professional trivia researcher. Your goal is to create high-quality questions that are easy to grade and difficult to "hack."
+**Role:** You are a professional trivia researcher. Your goal is to create high-quality questions that are easy to grade and difficult to "hack."
 
-Task: Generate [Number] trivia questions about [Topic].
+**Task:** Generate [Number] trivia questions about [Topic].
 
-Output Format (JSON or Table preferred):
+**Output Format (JSON or Table preferred):**
+1. **Difficulty:** 
+   * **Easy:** General knowledge taught in elementary school (e.g., basic RYB mixing).
+   * **Medium:** Requires technical knowledge of a specific field (e.g., CMYK for printing or RGB for web design).
+   * **Hard:** Requires specific scientific or professional data (e.g., wavelengths in nanometers or complementary color physics).
 
-Question: A clear question with only one objectively correct answer.
+2. **Question:** A clear question with only one objectively correct answer.
+3. **Primary Answer:** The most concise, common version of the answer.
+4. **Alternative Answers:** List only direct synonyms, common abbreviations, or valid alternative names (e.g., "The Netherlands" and "Holland"). Do NOT include related facts or descriptions.
+5. **Distractors (3):** Three incorrect answers of the same category. They must be plausible but definitively wrong.
+6. **Source:** A URL or specific reference for verification.
+7. **Clarity Note:** Briefly explain why the distractors are incorrect if the question is "Hard."
 
-Primary Answer: The most concise, common version of the answer.
+**Strict Rules:**
+* **No Fact-Dumping:** The "Secondary Answer" field must only contain strings that are 100% synonymous with the Primary Answer.
+* **Specific Distractors:** If the answer is a person, all distractors must be people from the same era/field.
+* **Source Integrity:** Every source must be a reputable primary or secondary source (No "Trust me, I'm an AI").
 
-Secondary/Alternative Answers: List only direct synonyms, common abbreviations, or valid alternative names (e.g., "The Netherlands" and "Holland"). Do NOT include related facts or descriptions.
+**Example:**
+* **Difficulty:** Medium
+* **Question:** What is the common name for the star 'Alpha Canis Majoris,' the brightest star in the night sky?
+* **Primary Answer:** Sirius
+* **Alternative:** The Dog Star
+* **Distractors:** Betelgeuse, Polaris, Rigel
+* **Source:** NASA Exoplanet Archive / Britannica
 
-Distractors (3): Three incorrect answers of the same category. They must be plausible but definitively wrong.
+---
 
-Source: A URL or specific reference for verification.
 
-Clarity Note: Briefly explain why the distractors are incorrect if the question is "Hard."
+> **Rule: Difficulty Balancing**
 
-Strict Rules:
-
-No Fact-Dumping: The "Secondary Answer" field must only contain strings that are 100% synonymous with the Primary Answer.
-
-Specific Distractors: If the answer is a person, all distractors must be people from the same era/field.
-
-Source Integrity: Every source must be a reputable primary or secondary source (No "Trust me, I'm an AI").
-
-Example:
-
-Question: What is the common name for the star 'Alpha Canis Majoris,' the brightest star in the night sky?
-
-Primary Answer: Sirius
-
-Secondary: The Dog Star
-
-Distractors: Betelgeuse, Polaris, Rigel
-
-Source: NASA Exoplanet Archive / Britannica
+**Would you like me to generate a set of questions for a different topic, like "Computer Networking" or "World Geography," using this exact table format?**
