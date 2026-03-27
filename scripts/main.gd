@@ -158,6 +158,8 @@ func _style_answer_buttons() -> void:
 		btn.add_theme_color_override("font_color", GameData.TEXT_COLOR)
 		btn.add_theme_color_override("font_hover_color", GameData.TEXT_COLOR)
 		btn.add_theme_color_override("font_pressed_color", GameData.TEXT_COLOR)
+		btn.add_theme_color_override("font_outline_color", Color.BLACK)
+		btn.add_theme_constant_override("outline_size", 6)
 		btn.add_theme_font_size_override("font_size", 38)
 		if _bold_font:
 			btn.add_theme_font_override("font", _bold_font)

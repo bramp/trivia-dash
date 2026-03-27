@@ -4,6 +4,7 @@
 
 # Python virtual environment
 .venv/
+*.egg-info/
 
 # Build outputs
 build/

@@ -3,6 +3,9 @@ name = "trivia-dash"
 version = "0.0.0"
 requires-python = ">=3.9"
 
+[tool.setuptools]
+py-modules = []
+
 [tool.gdtoolkit]
 # Pinned for reproducible linting/formatting across dev machines and CI.
 
