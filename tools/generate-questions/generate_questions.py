@@ -1,5 +1,9 @@
 #!/usr/bin/env python3
-"""Generate trivia questions using Google Gemini and save to data/questions.json.
+"""Generate trivia questions using Google Gemini.
+
+Questions are saved as one JSON file per category in
+tools/generate-questions/generated/<slug>.json.  Each file is written
+immediately after generation so progress is not lost if interrupted.
 
 Usage:
     python3 tools/generate-questions/generate_questions.py --list
@@ -28,6 +32,7 @@ import random
 import re
 import sys
 import time
+from datetime import datetime, timezone
 from pathlib import Path
 
 try:
@@ -45,7 +50,7 @@ SCRIPT_DIR = Path(__file__).resolve().parent
 PROJECT_ROOT = SCRIPT_DIR.parent.parent
 PROMPT_FILE = SCRIPT_DIR / "prompt.txt"
 CATEGORIES_FILE = SCRIPT_DIR / "categories.json"
-OUTPUT_FILE = PROJECT_ROOT / "data" / "questions.json"
+OUTPUT_DIR = SCRIPT_DIR / "generated"
 ENV_FILE = PROJECT_ROOT / ".env"
 
 
@@ -218,6 +223,7 @@ def generate_for_category(
     raw = extract_json(response.text)
     print(f"  Received {len(raw)} questions")
 
+    generated_at = datetime.now(timezone.utc).isoformat()
     questions = []
     for q in raw:
         if "question" not in q or "answer" not in q or "distractors" not in q:
@@ -226,7 +232,10 @@ def generate_for_category(
         if len(q["distractors"]) < 3:
             print(f"  Skipping (< 3 distractors): {q['question']}")
             continue
-        questions.append(convert_to_game_format(q))
+        converted = convert_to_game_format(q)
+        converted["model"] = model
+        converted["generated_at"] = generated_at
+        questions.append(converted)
 
     return questions
 
@@ -243,25 +252,20 @@ def deduplicate(questions: list) -> list:
     return unique
 
 
-def load_existing(path: Path) -> dict[str, list]:
-    """Load existing questions.json and return a {category: [questions]} dict."""
+def load_existing_category(output_dir: Path, slug: str) -> list:
+    """Load existing questions for a category from its generated JSON file."""
+    path = output_dir / f"{slug}.json"
     if not path.exists():
-        return {}
-    data = json5.loads(path.read_text())
-    result = {}
-    for cat in data.get("categories", []):
-        result[cat["name"]] = cat["questions"]
-    return result
+        return []
+    return json5.loads(path.read_text())
 
 
-def build_output(categories_dict: dict[str, list]) -> dict:
-    """Build the output JSON structure from {category: [questions]} dict."""
-    categories = []
-    for name in sorted(categories_dict):
-        questions = deduplicate(categories_dict[name])
-        categories.append({"name": name, "questions": questions})
-    total = sum(len(c["questions"]) for c in categories)
-    return {"categories": categories, "total_questions": total}
+def save_category(output_dir: Path, slug: str, questions: list) -> Path:
+    """Write questions for a category to its generated JSON file."""
+    output_dir.mkdir(parents=True, exist_ok=True)
+    path = output_dir / f"{slug}.json"
+    path.write_text(json.dumps(questions, indent=2, ensure_ascii=False) + "\n")
+    return path
 
 
 def main():
@@ -303,6 +307,12 @@ def main():
         action="store_true",
         help="Append to existing questions instead of overwriting",
     )
+    parser.add_argument(
+        "--output-dir",
+        type=Path,
+        default=None,
+        help=f"Directory for generated JSON files (default: {OUTPUT_DIR})",
+    )
     args = parser.parse_args()
 
     all_categories = load_categories()
@@ -335,37 +345,34 @@ def main():
         )
         client = genai.Client()
 
-    # Load existing questions if appending.
-    categories_dict: dict[str, list] = {}
-    if args.append:
-        categories_dict = load_existing(OUTPUT_FILE)
-        total = sum(len(v) for v in categories_dict.values())
-        if total:
-            print(
-                f"Loaded {total} existing questions"
-                f" across {len(categories_dict)} categories"
-            )
+    output_dir = (
+        args.output_dir.resolve() if args.output_dir is not None else OUTPUT_DIR
+    )
 
     print(
         f"\nGenerating for {len(categories)} categories: "
         f"{', '.join(c['title'] for c in categories)}"
     )
+    print(f"Output directory: {output_dir}\n")
 
+    total_generated = 0
     for i, category in enumerate(categories):
         name = category["title"]
-        print(f"\n[{i + 1}/{len(categories)}] Generating: {name}")
+        slug = category["slug"]
+        print(f"[{i + 1}/{len(categories)}] Generating: {name}")
         try:
             questions = generate_for_category(
                 client, args.model, template, category, args.count
             )
-            # Merge into existing category or create new.
-            existing = categories_dict.get(name, [])
-            existing.extend(questions)
-            categories_dict[name] = existing
-            print(
-                f"  Added {len(questions)} questions"
-                f" ({len(existing)} total in category)"
-            )
+
+            if args.append:
+                existing = load_existing_category(output_dir, slug)
+                questions = existing + questions
+
+            questions = deduplicate(questions)
+            path = save_category(output_dir, slug, questions)
+            total_generated += len(questions)
+            print(f"  Wrote {len(questions)} questions to {path.name}")
         except Exception as e:
             print(f"  ERROR generating {name}: {e}")
             continue
@@ -374,15 +381,9 @@ def main():
         if i < len(categories) - 1:
             time.sleep(2)
 
-    output = build_output(categories_dict)
-
-    OUTPUT_FILE.parent.mkdir(parents=True, exist_ok=True)
-    OUTPUT_FILE.write_text(json.dumps(output, indent=2, ensure_ascii=False) + "\n")
-    n_questions = output["total_questions"]
-    n_categories = len(output["categories"])
     print(
-        f"\nDone! Wrote {n_questions} questions"
-        f" across {n_categories} categories to {OUTPUT_FILE}"
+        f"\nDone! Generated {total_generated} total questions"
+        f" across {len(categories)} categories in {output_dir}"
     )
 
 
