@@ -48,12 +48,12 @@ build:
 		echo "Error: export_presets.cfg not found. Configure export presets in Godot first."; \
 		exit 1; \
 	fi
-	@# Stamp build date into build_info.gd
-	@sed -i '' 's/^const BUILD_DATE := .*/const BUILD_DATE := "'"$$(date -u +%Y-%m-%d)"'"/' scripts/build_info.gd
+	@# Stamp build date/time into build_info.gd
+	@sed -i.bak 's/^const BUILD_DATE := .*/const BUILD_DATE := "'"$$(date -u +%Y-%m-%dT%H:%M:%SZ)"'"/' scripts/build_info.gd && rm -f scripts/build_info.gd.bak
 	mkdir -p $(BUILD_DIR)/web
 	godot --headless --export-release "Web" $(BUILD_DIR)/web/index.html
 	@# Reset build_info.gd back to dev
-	@sed -i '' 's/^const BUILD_DATE := .*/const BUILD_DATE := "dev"/' scripts/build_info.gd
+	@sed -i.bak 's/^const BUILD_DATE := .*/const BUILD_DATE := "dev"/' scripts/build_info.gd && rm -f scripts/build_info.gd.bak
 	@# Optimize wasm with wasm-opt (from binaryen) if available
 	@if command -v wasm-opt >/dev/null 2>&1; then \
 		echo "Running wasm-opt..."; \
