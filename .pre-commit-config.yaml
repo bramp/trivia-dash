@@ -4,11 +4,12 @@ repos:
       - id: gdformat
         name: gdformat
         description: Check GDScript formatting
-        entry: make format-check
+        entry: make format-check-gd
         language: system
         files: '\.gd$'
         exclude: ^addons/
         pass_filenames: false
+
       - id: gdlint
         name: gdlint
         description: Lint GDScript files
@@ -17,6 +18,7 @@ repos:
         files: '\.gd$'
         exclude: ^addons/
         pass_filenames: false
+
       - id: gut-tests
         name: gut-tests
         description: Run GUT unit tests
@@ -25,17 +27,11 @@ repos:
         files: '\.gd$'
         exclude: ^addons/
         pass_filenames: false
-      - id: ruff-format
-        name: ruff-format
-        description: Check Python formatting
-        entry: ruff format --check
+
+      - id: ruff
+        name: ruff
+        description: Check Python formatting and lint
+        entry: make format-check-py
         language: system
         files: '\.py$'
-        pass_filenames: true
-      - id: ruff-lint
-        name: ruff-lint
-        description: Lint Python files
-        entry: ruff check
-        language: system
-        files: '\.py$'
-        pass_filenames: true
+        pass_filenames: false
