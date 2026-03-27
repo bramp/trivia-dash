@@ -11,7 +11,6 @@ var _question_start_time: float = 0.0
 var _current_question: Dictionary = {}
 var _input_locked: bool = false
 var _active_tween: Tween = null
-var _bold_font: FontVariation = null
 
 @onready var title_screen: MarginContainer = $TitleScreen
 @onready var game_screen: MarginContainer = $GameScreen
@@ -48,23 +47,8 @@ var _bold_font: FontVariation = null
 
 
 func _ready() -> void:
-	_create_bold_font()
 	question_manager.load_questions()
-	_style_answer_buttons()
 	_show_title_screen()
-
-
-func _create_bold_font() -> void:
-	var base_font := ThemeDB.fallback_font
-	if base_font is FontVariation:
-		_bold_font = FontVariation.new()
-		_bold_font.base_font = base_font.base_font
-		_bold_font.fallbacks = base_font.fallbacks
-		_bold_font.variation_opentype = {&"wght": 700}
-	elif base_font is FontFile:
-		_bold_font = FontVariation.new()
-		_bold_font.base_font = base_font
-		_bold_font.variation_opentype = {&"wght": 700}
 
 
 func _unhandled_input(event: InputEvent) -> void:
@@ -127,76 +111,6 @@ func _on_answer_pressed(index: int) -> void:
 		_handle_wrong_answer(index)
 
 
-func _style_answer_buttons() -> void:
-	for i in range(answer_buttons.size()):
-		var btn := answer_buttons[i]
-		var style := StyleBoxFlat.new()
-		style.bg_color = GameData.BUTTON_COLORS[i]
-		style.corner_radius_top_left = 12
-		style.corner_radius_top_right = 12
-		style.corner_radius_bottom_left = 12
-		style.corner_radius_bottom_right = 12
-		style.content_margin_left = 20.0
-		style.content_margin_right = 20.0
-		style.content_margin_top = 10.0
-		style.content_margin_bottom = 10.0
-		btn.add_theme_stylebox_override("normal", style)
-
-		var hover_style := style.duplicate()
-		hover_style.bg_color = GameData.BUTTON_COLORS[i].lightened(0.15)
-		btn.add_theme_stylebox_override("hover", hover_style)
-
-		var pressed_style := style.duplicate()
-		pressed_style.bg_color = GameData.BUTTON_COLORS[i].darkened(0.15)
-		btn.add_theme_stylebox_override("pressed", pressed_style)
-
-		var focus_style := style.duplicate()
-		focus_style.border_width_left = 3
-		focus_style.border_width_right = 3
-		focus_style.border_width_top = 3
-		focus_style.border_width_bottom = 3
-		focus_style.border_color = Color.WHITE
-		btn.add_theme_stylebox_override("focus", focus_style)
-
-		btn.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
-		btn.clip_text = true
-		btn.add_theme_color_override("font_color", GameData.TEXT_COLOR)
-		btn.add_theme_color_override("font_hover_color", GameData.TEXT_COLOR)
-		btn.add_theme_color_override("font_pressed_color", GameData.TEXT_COLOR)
-		btn.add_theme_color_override("font_outline_color", Color.BLACK)
-		btn.add_theme_constant_override("outline_size", 6)
-		btn.add_theme_font_size_override("font_size", 38)
-		if _bold_font:
-			btn.add_theme_font_override("font", _bold_font)
-
-
-func _style_play_button(btn: Button) -> void:
-	var style := StyleBoxFlat.new()
-	style.bg_color = GameData.BUTTON_GREEN
-	style.corner_radius_top_left = 12
-	style.corner_radius_top_right = 12
-	style.corner_radius_bottom_left = 12
-	style.corner_radius_bottom_right = 12
-	style.content_margin_left = 20.0
-	style.content_margin_right = 20.0
-	style.content_margin_top = 10.0
-	style.content_margin_bottom = 10.0
-	btn.add_theme_stylebox_override("normal", style)
-
-	var hover_style := style.duplicate()
-	hover_style.bg_color = GameData.BUTTON_GREEN.lightened(0.15)
-	btn.add_theme_stylebox_override("hover", hover_style)
-
-	var pressed_style := style.duplicate()
-	pressed_style.bg_color = GameData.BUTTON_GREEN.darkened(0.15)
-	btn.add_theme_stylebox_override("pressed", pressed_style)
-
-	btn.add_theme_color_override("font_color", GameData.TEXT_COLOR)
-	btn.add_theme_color_override("font_hover_color", GameData.TEXT_COLOR)
-	btn.add_theme_color_override("font_pressed_color", GameData.TEXT_COLOR)
-	btn.add_theme_font_size_override("font_size", 40)
-
-
 # --- State transitions ---
 
 
@@ -207,19 +121,8 @@ func _show_title_screen() -> void:
 	title_screen.visible = true
 
 	title_high_score_label.text = "High Score: %d" % GameData.high_score
-	_style_play_button(play_button)
-
-	# Style title
-	title_label.add_theme_font_size_override("font_size", 80)
-	title_label.add_theme_color_override("font_color", GameData.TITLE_COLOR)
-	subtitle_label.add_theme_font_size_override("font_size", 32)
-	subtitle_label.add_theme_color_override("font_color", GameData.TITLE_COLOR.darkened(0.3))
-	title_high_score_label.add_theme_font_size_override("font_size", 28)
-	title_high_score_label.add_theme_color_override("font_color", GameData.TITLE_COLOR.darkened(0.3))
 
 	build_info_label.text = "Build: %s" % BuildInfo.BUILD_DATE
-	build_info_label.add_theme_font_size_override("font_size", 14)
-	build_info_label.add_theme_color_override("font_color", GameData.TITLE_COLOR.darkened(0.5))
 
 	_animate_title_entrance()
 
@@ -237,33 +140,6 @@ func _start_game() -> void:
 
 	_update_score_display()
 	_update_timer_display()
-
-	# Style HUD labels
-	score_label.add_theme_font_size_override("font_size", 40)
-	score_label.add_theme_color_override("font_color", GameData.TEXT_COLOR)
-	timer_label.add_theme_font_size_override("font_size", 40)
-	timer_label.add_theme_color_override("font_color", GameData.TEXT_COLOR)
-	question_label.add_theme_font_size_override("font_size", 48)
-	question_label.add_theme_color_override("font_color", GameData.TEXT_COLOR)
-	if _bold_font:
-		question_label.add_theme_font_override("font", _bold_font)
-
-	# Style timer bar
-	var bar_bg := StyleBoxFlat.new()
-	bar_bg.bg_color = Color(0.1, 0.1, 0.1, 0.5)
-	bar_bg.corner_radius_top_left = 6
-	bar_bg.corner_radius_top_right = 6
-	bar_bg.corner_radius_bottom_left = 6
-	bar_bg.corner_radius_bottom_right = 6
-	timer_bar.add_theme_stylebox_override("background", bar_bg)
-
-	var bar_fill := StyleBoxFlat.new()
-	bar_fill.bg_color = GameData.TIMER_GREEN
-	bar_fill.corner_radius_top_left = 6
-	bar_fill.corner_radius_top_right = 6
-	bar_fill.corner_radius_bottom_left = 6
-	bar_fill.corner_radius_bottom_right = 6
-	timer_bar.add_theme_stylebox_override("fill", bar_fill)
 
 	game_timer.start()
 	_show_next_question()
@@ -292,24 +168,11 @@ func _show_game_over_screen(is_new_high: bool) -> void:
 	title_screen.visible = false
 	game_over_screen.visible = true
 
-	# Style labels
-	game_over_label.add_theme_font_size_override("font_size", 64)
-	game_over_label.add_theme_color_override("font_color", GameData.TITLE_COLOR)
-	final_score_label.add_theme_font_size_override("font_size", 48)
-	final_score_label.add_theme_color_override("font_color", GameData.TEXT_COLOR)
-	game_over_high_score_label.add_theme_font_size_override("font_size", 28)
-	game_over_high_score_label.add_theme_color_override("font_color", GameData.TITLE_COLOR.darkened(0.3))
-	new_high_score_label.add_theme_font_size_override("font_size", 36)
-	new_high_score_label.add_theme_color_override("font_color", GameData.BUTTON_YELLOW)
-
 	final_score_label.text = "Score: %d" % _score
 	game_over_high_score_label.text = "High Score: %d" % GameData.high_score
 	new_high_score_label.visible = is_new_high
 	if is_new_high:
 		SfxManager.play_new_high_score()
-
-	_style_play_button(play_again_button)
-	_style_play_button(main_menu_button)
 
 	_animate_game_over_entrance()
 

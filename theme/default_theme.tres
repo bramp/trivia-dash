@@ -10,6 +10,39 @@ variation_opentype = {
 "wght": 700
 }
 
+[sub_resource type="StyleBoxFlat" id="PlayButton_hover"]
+content_margin_left = 20.0
+content_margin_top = 10.0
+content_margin_right = 20.0
+content_margin_bottom = 10.0
+bg_color = Color(0.303, 0.83, 0.527, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxFlat" id="PlayButton_normal"]
+content_margin_left = 20.0
+content_margin_top = 10.0
+content_margin_right = 20.0
+content_margin_bottom = 10.0
+bg_color = Color(0.18, 0.8, 0.443, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxFlat" id="PlayButton_pressed"]
+content_margin_left = 20.0
+content_margin_top = 10.0
+content_margin_right = 20.0
+content_margin_bottom = 10.0
+bg_color = Color(0.153, 0.68, 0.377, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
 [sub_resource type="FontVariation" id="FontVariation_1"]
 fallbacks = Array[Font]([ExtResource("2")])
 base_font = ExtResource("1")
@@ -17,4 +50,48 @@ base_font = ExtResource("1")
 [resource]
 default_font = SubResource("FontVariation_1")
 default_font_size = 24
+AnswerButton/base_type = &"Button"
+AnswerButton/colors/font_color = Color(1, 1, 1, 1)
+AnswerButton/colors/font_hover_color = Color(1, 1, 1, 1)
+AnswerButton/colors/font_outline_color = Color(0, 0, 0, 1)
+AnswerButton/colors/font_pressed_color = Color(1, 1, 1, 1)
+AnswerButton/constants/outline_size = 6
+AnswerButton/font_sizes/font_size = 38
+AnswerButton/fonts/font = SubResource("FontVariation_bold")
+BuildInfoLabel/base_type = &"Label"
+BuildInfoLabel/colors/font_color = Color(0.463, 0.471, 0.473, 1)
+BuildInfoLabel/font_sizes/font_size = 14
+FinalScoreLabel/base_type = &"Label"
+FinalScoreLabel/colors/font_color = Color(1, 1, 1, 1)
+FinalScoreLabel/font_sizes/font_size = 48
+GameOverTitle/base_type = &"Label"
+GameOverTitle/colors/font_color = Color(0.925, 0.941, 0.945, 1)
+GameOverTitle/font_sizes/font_size = 64
+HighScoreLabel/base_type = &"Label"
+HighScoreLabel/colors/font_color = Color(0.648, 0.659, 0.662, 1)
+HighScoreLabel/font_sizes/font_size = 28
+HudLabel/base_type = &"Label"
+HudLabel/colors/font_color = Color(1, 1, 1, 1)
+HudLabel/font_sizes/font_size = 40
 Label/fonts/bold_font = SubResource("FontVariation_bold")
+NewHighScoreLabel/base_type = &"Label"
+NewHighScoreLabel/colors/font_color = Color(0.945, 0.769, 0.059, 1)
+NewHighScoreLabel/font_sizes/font_size = 36
+PlayButton/base_type = &"Button"
+PlayButton/colors/font_color = Color(1, 1, 1, 1)
+PlayButton/colors/font_hover_color = Color(1, 1, 1, 1)
+PlayButton/colors/font_pressed_color = Color(1, 1, 1, 1)
+PlayButton/font_sizes/font_size = 40
+PlayButton/styles/hover = SubResource("PlayButton_hover")
+PlayButton/styles/normal = SubResource("PlayButton_normal")
+PlayButton/styles/pressed = SubResource("PlayButton_pressed")
+QuestionLabel/base_type = &"Label"
+QuestionLabel/colors/font_color = Color(1, 1, 1, 1)
+QuestionLabel/font_sizes/font_size = 48
+QuestionLabel/fonts/font = SubResource("FontVariation_bold")
+SubtitleLabel/base_type = &"Label"
+SubtitleLabel/colors/font_color = Color(0.648, 0.659, 0.662, 1)
+SubtitleLabel/font_sizes/font_size = 32
+TitleLabel/base_type = &"Label"
+TitleLabel/colors/font_color = Color(0.925, 0.941, 0.945, 1)
+TitleLabel/font_sizes/font_size = 80

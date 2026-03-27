@@ -20,3 +20,10 @@
 - **Tests**: GUT framework in `test/` directory, headless via `make test`.
 - **Python tooling**: Located in `tools/`, uses ruff for linting/formatting.
 - **Fonts**: Noto Sans + Noto Emoji bundled in `fonts/`, used via theme with FontVariation.
+
+## Styling & Theming
+
+- **Static visual properties go in the theme or scene, not in GDScript.** Font sizes, font colors, stylebox colors, margins, corner radii, and other properties that don't change at runtime must be defined in `theme/default_theme.tres` (via theme type variations) or as `theme_override_*` properties in `scenes/main.tscn`. Never use `add_theme_*_override()` in scripts for values that are constant.
+- **Use theme type variations** (e.g. `TitleLabel`, `HudLabel`, `PlayButton`, `AnswerButton`) to group shared static styles. Assign them to nodes via `theme_type_variation` in the `.tscn` file.
+- **Per-node style overrides** (e.g. per-button colors) belong as inline `SubResource` styleboxes in the `.tscn` file, not created in code.
+- **Reserve GDScript styling for dynamic/runtime changes only**: animations, state-dependent color transitions (e.g. timer bar color lerp), correct/wrong answer highlights, and temporary effects.

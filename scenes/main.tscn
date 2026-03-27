@@ -3,6 +3,216 @@
 [ext_resource type="Script" uid="uid://chhytbqojddgq" path="res://scripts/main.gd" id="1"]
 [ext_resource type="Script" uid="uid://c7v41swwgkf2n" path="res://scripts/question_manager.gd" id="2"]
 
+[sub_resource type="StyleBoxFlat" id="TimerBar_bg"]
+bg_color = Color(0.1, 0.1, 0.1, 0.5)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[sub_resource type="StyleBoxFlat" id="TimerBar_fill"]
+bg_color = Color(0.18, 0.8, 0.443, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[sub_resource type="StyleBoxFlat" id="Answer1_normal"]
+content_margin_left = 20.0
+content_margin_top = 10.0
+content_margin_right = 20.0
+content_margin_bottom = 10.0
+bg_color = Color(0.906, 0.298, 0.235, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxFlat" id="Answer1_pressed"]
+content_margin_left = 20.0
+content_margin_top = 10.0
+content_margin_right = 20.0
+content_margin_bottom = 10.0
+bg_color = Color(0.77, 0.253, 0.2, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxFlat" id="Answer1_hover"]
+content_margin_left = 20.0
+content_margin_top = 10.0
+content_margin_right = 20.0
+content_margin_bottom = 10.0
+bg_color = Color(0.92, 0.403, 0.35, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxFlat" id="Answer1_focus"]
+content_margin_left = 20.0
+content_margin_top = 10.0
+content_margin_right = 20.0
+content_margin_bottom = 10.0
+bg_color = Color(0.906, 0.298, 0.235, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxFlat" id="Answer2_normal"]
+content_margin_left = 20.0
+content_margin_top = 10.0
+content_margin_right = 20.0
+content_margin_bottom = 10.0
+bg_color = Color(0.18, 0.8, 0.443, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxFlat" id="Answer2_pressed"]
+content_margin_left = 20.0
+content_margin_top = 10.0
+content_margin_right = 20.0
+content_margin_bottom = 10.0
+bg_color = Color(0.153, 0.68, 0.377, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxFlat" id="Answer2_hover"]
+content_margin_left = 20.0
+content_margin_top = 10.0
+content_margin_right = 20.0
+content_margin_bottom = 10.0
+bg_color = Color(0.303, 0.83, 0.527, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxFlat" id="Answer2_focus"]
+content_margin_left = 20.0
+content_margin_top = 10.0
+content_margin_right = 20.0
+content_margin_bottom = 10.0
+bg_color = Color(0.18, 0.8, 0.443, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxFlat" id="Answer3_normal"]
+content_margin_left = 20.0
+content_margin_top = 10.0
+content_margin_right = 20.0
+content_margin_bottom = 10.0
+bg_color = Color(0.204, 0.596, 0.859, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxFlat" id="Answer3_pressed"]
+content_margin_left = 20.0
+content_margin_top = 10.0
+content_margin_right = 20.0
+content_margin_bottom = 10.0
+bg_color = Color(0.173, 0.507, 0.73, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxFlat" id="Answer3_hover"]
+content_margin_left = 20.0
+content_margin_top = 10.0
+content_margin_right = 20.0
+content_margin_bottom = 10.0
+bg_color = Color(0.323, 0.657, 0.88, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxFlat" id="Answer3_focus"]
+content_margin_left = 20.0
+content_margin_top = 10.0
+content_margin_right = 20.0
+content_margin_bottom = 10.0
+bg_color = Color(0.204, 0.596, 0.859, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxFlat" id="Answer4_normal"]
+content_margin_left = 20.0
+content_margin_top = 10.0
+content_margin_right = 20.0
+content_margin_bottom = 10.0
+bg_color = Color(0.945, 0.769, 0.059, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxFlat" id="Answer4_pressed"]
+content_margin_left = 20.0
+content_margin_top = 10.0
+content_margin_right = 20.0
+content_margin_bottom = 10.0
+bg_color = Color(0.803, 0.653, 0.05, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxFlat" id="Answer4_hover"]
+content_margin_left = 20.0
+content_margin_top = 10.0
+content_margin_right = 20.0
+content_margin_bottom = 10.0
+bg_color = Color(0.953, 0.803, 0.2, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxFlat" id="Answer4_focus"]
+content_margin_left = 20.0
+content_margin_top = 10.0
+content_margin_right = 20.0
+content_margin_bottom = 10.0
+bg_color = Color(0.945, 0.769, 0.059, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
 [node name="Main" type="Control" unique_id=1639450787]
 layout_mode = 3
 anchors_preset = 15
@@ -25,6 +235,7 @@ color = Color(0.173, 0.243, 0.314, 1)
 script = ExtResource("2")
 
 [node name="TitleScreen" type="MarginContainer" parent="." unique_id=2075619366]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -46,6 +257,7 @@ layout_mode = 2
 
 [node name="TitleLabel" type="Label" parent="TitleScreen/Content" unique_id=139873589]
 layout_mode = 2
+theme_type_variation = &"TitleLabel"
 text = "TRIVIA DASH"
 horizontal_alignment = 1
 
@@ -55,6 +267,7 @@ layout_mode = 2
 
 [node name="SubtitleLabel" type="Label" parent="TitleScreen/Content" unique_id=436192223]
 layout_mode = 2
+theme_type_variation = &"SubtitleLabel"
 text = "Answer fast. Stay alive."
 horizontal_alignment = 1
 
@@ -66,6 +279,7 @@ layout_mode = 2
 custom_minimum_size = Vector2(300, 90)
 layout_mode = 2
 size_flags_horizontal = 4
+theme_type_variation = &"PlayButton"
 text = "PLAY"
 
 [node name="Spacer4" type="Control" parent="TitleScreen/Content" unique_id=1407817240]
@@ -74,6 +288,7 @@ layout_mode = 2
 
 [node name="HighScoreLabel" type="Label" parent="TitleScreen/Content" unique_id=172839051]
 layout_mode = 2
+theme_type_variation = &"HighScoreLabel"
 text = "High Score: 0"
 horizontal_alignment = 1
 
@@ -83,12 +298,11 @@ size_flags_vertical = 3
 
 [node name="BuildInfoLabel" type="Label" parent="TitleScreen/Content" unique_id=11942782]
 layout_mode = 2
-theme_override_font_sizes/font_size = 30
+theme_type_variation = &"BuildInfoLabel"
 text = "Build: Dev"
 horizontal_alignment = 1
 
 [node name="GameScreen" type="MarginContainer" parent="." unique_id=301848079]
-visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -110,16 +324,20 @@ layout_mode = 2
 [node name="ScoreLabel" type="Label" parent="GameScreen/Content/TopBar" unique_id=2028698202]
 layout_mode = 2
 size_flags_horizontal = 3
+theme_type_variation = &"HudLabel"
 text = "Score: 0"
 
 [node name="TimerLabel" type="Label" parent="GameScreen/Content/TopBar" unique_id=49558968]
 layout_mode = 2
+theme_type_variation = &"HudLabel"
 text = "30.0"
 horizontal_alignment = 2
 
 [node name="TimerBar" type="ProgressBar" parent="GameScreen/Content" unique_id=32542858]
 custom_minimum_size = Vector2(0, 14)
 layout_mode = 2
+theme_override_styles/background = SubResource("TimerBar_bg")
+theme_override_styles/fill = SubResource("TimerBar_fill")
 max_value = 30.0
 value = 30.0
 show_percentage = false
@@ -136,6 +354,7 @@ theme_override_constants/margin_right = 16
 
 [node name="QuestionLabel" type="Label" parent="GameScreen/Content/QuestionContainer" unique_id=1523935575]
 layout_mode = 2
+theme_type_variation = &"QuestionLabel"
 text = "Question goes here?"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -162,28 +381,56 @@ custom_minimum_size = Vector2(0, 100)
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+theme_type_variation = &"AnswerButton"
+theme_override_styles/normal = SubResource("Answer1_normal")
+theme_override_styles/pressed = SubResource("Answer1_pressed")
+theme_override_styles/hover = SubResource("Answer1_hover")
+theme_override_styles/focus = SubResource("Answer1_focus")
 text = "Answer 1"
+autowrap_mode = 3
+clip_text = true
 
 [node name="Answer2" type="Button" parent="GameScreen/Content/AnswersContainer/AnswerGrid" unique_id=1238245127]
 custom_minimum_size = Vector2(0, 100)
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+theme_type_variation = &"AnswerButton"
+theme_override_styles/normal = SubResource("Answer2_normal")
+theme_override_styles/pressed = SubResource("Answer2_pressed")
+theme_override_styles/hover = SubResource("Answer2_hover")
+theme_override_styles/focus = SubResource("Answer2_focus")
 text = "Answer 2"
+autowrap_mode = 3
+clip_text = true
 
 [node name="Answer3" type="Button" parent="GameScreen/Content/AnswersContainer/AnswerGrid" unique_id=624123642]
 custom_minimum_size = Vector2(0, 100)
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+theme_type_variation = &"AnswerButton"
+theme_override_styles/normal = SubResource("Answer3_normal")
+theme_override_styles/pressed = SubResource("Answer3_pressed")
+theme_override_styles/hover = SubResource("Answer3_hover")
+theme_override_styles/focus = SubResource("Answer3_focus")
 text = "Answer 3"
+autowrap_mode = 3
+clip_text = true
 
 [node name="Answer4" type="Button" parent="GameScreen/Content/AnswersContainer/AnswerGrid" unique_id=400269202]
 custom_minimum_size = Vector2(0, 100)
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+theme_type_variation = &"AnswerButton"
+theme_override_styles/normal = SubResource("Answer4_normal")
+theme_override_styles/pressed = SubResource("Answer4_pressed")
+theme_override_styles/hover = SubResource("Answer4_hover")
+theme_override_styles/focus = SubResource("Answer4_focus")
 text = "Answer 4"
+autowrap_mode = 3
+clip_text = true
 
 [node name="GameOverScreen" type="MarginContainer" parent="." unique_id=1241660869]
 visible = false
@@ -208,6 +455,7 @@ layout_mode = 2
 
 [node name="GameOverLabel" type="Label" parent="GameOverScreen/Content" unique_id=1561473757]
 layout_mode = 2
+theme_type_variation = &"GameOverTitle"
 text = "GAME OVER"
 horizontal_alignment = 1
 
@@ -217,17 +465,20 @@ layout_mode = 2
 
 [node name="FinalScoreLabel" type="Label" parent="GameOverScreen/Content" unique_id=1834046621]
 layout_mode = 2
+theme_type_variation = &"FinalScoreLabel"
 text = "Score: 0"
 horizontal_alignment = 1
 
 [node name="HighScoreLabel" type="Label" parent="GameOverScreen/Content" unique_id=172559502]
 layout_mode = 2
+theme_type_variation = &"HighScoreLabel"
 text = "High Score: 0"
 horizontal_alignment = 1
 
 [node name="NewHighScoreLabel" type="Label" parent="GameOverScreen/Content" unique_id=855803811]
 visible = false
 layout_mode = 2
+theme_type_variation = &"NewHighScoreLabel"
 text = "NEW HIGH SCORE!"
 horizontal_alignment = 1
 
@@ -239,6 +490,7 @@ layout_mode = 2
 custom_minimum_size = Vector2(300, 90)
 layout_mode = 2
 size_flags_horizontal = 4
+theme_type_variation = &"PlayButton"
 text = "PLAY AGAIN"
 
 [node name="Spacer4" type="Control" parent="GameOverScreen/Content" unique_id=1406863596]
@@ -249,6 +501,7 @@ layout_mode = 2
 custom_minimum_size = Vector2(300, 90)
 layout_mode = 2
 size_flags_horizontal = 4
+theme_type_variation = &"PlayButton"
 text = "MAIN MENU"
 
 [node name="GameTimer" type="Timer" parent="." unique_id=93162372]
