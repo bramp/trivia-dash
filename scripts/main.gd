@@ -155,6 +155,8 @@ func _style_answer_buttons() -> void:
 		focus_style.border_color = Color.WHITE
 		btn.add_theme_stylebox_override("focus", focus_style)
 
+		btn.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+		btn.clip_text = true
 		btn.add_theme_color_override("font_color", GameData.TEXT_COLOR)
 		btn.add_theme_color_override("font_hover_color", GameData.TEXT_COLOR)
 		btn.add_theme_color_override("font_pressed_color", GameData.TEXT_COLOR)

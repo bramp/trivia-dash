@@ -50,6 +50,8 @@ build:
 
 ## Create/update the Python virtual environment and install all dependencies
 venv: $(VENV_DIR)/.installed
+	@echo "Virtual environment is set up and dependencies are installed."
+	@echo "To activate the virtual environment, run: source $(VENV_DIR)/bin/activate"
 
 $(VENV_DIR)/.installed: pyproject.toml
 	python3 -m venv $(VENV_DIR)

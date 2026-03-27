@@ -46,7 +46,7 @@ This creates a `.venv/` directory and installs all Python dependencies from `pyp
 Install pre-commit hooks:
 
 ```bash
-pre-commit install
+.venv/bin/pre-commit install
 ```
 
 ### Make Targets
