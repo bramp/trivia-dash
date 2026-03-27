@@ -310,6 +310,8 @@ func _display_question(q: Dictionary) -> void:
 			if child is Label:
 				child.queue_free()
 		# Reset button style to default colour.
+		btn.remove_theme_stylebox_override("disabled")
+		btn.remove_theme_color_override("font_disabled_color")
 		var style := btn.get_theme_stylebox("normal") as StyleBoxFlat
 		if style:
 			style.bg_color = GameData.BUTTON_COLORS[i]
@@ -553,18 +555,23 @@ func _animate_wrong(index: int, correct_index: int) -> void:
 	# Grey out all buttons except the correct one.
 	var grey := Color(0.3, 0.3, 0.3, 0.6)
 	for i in range(answer_buttons.size()):
-		if i == correct_index:
-			continue
 		var b := answer_buttons[i]
+		if i == correct_index:
+			# Keep the correct button in its original color even when disabled.
+			var original := b.get_theme_stylebox("normal").duplicate() as StyleBoxFlat
+			b.add_theme_stylebox_override("disabled", original)
+			b.add_theme_color_override("font_disabled_color", GameData.TEXT_COLOR)
+			continue
 		var dimmed := b.get_theme_stylebox("normal").duplicate() as StyleBoxFlat
 		dimmed.bg_color = grey
 		b.add_theme_stylebox_override("normal", dimmed)
+		b.add_theme_stylebox_override("disabled", dimmed)
 		b.modulate.a = 0.5
 
 	# Overlay a red ✗ on the wrong button.
 	var x_label := Label.new()
 	x_label.text = "✗"
-	x_label.add_theme_font_size_override("font_size", 72)
+	x_label.add_theme_font_size_override("font_size", 216)
 	x_label.add_theme_color_override("font_color", Color(0.9, 0.15, 0.15))
 	x_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	x_label.vertical_alignment = VERTICAL_ALIGNMENT_CENTER

@@ -35,29 +35,32 @@ godot --path .
 
 ## Development
 
-Install the formatting and linting tools:
+Set up the Python virtual environment (installs formatters, linters, and question generator dependencies):
 
 ```bash
-pip install "gdtoolkit>=4,<5"
+make venv
 ```
+
+This creates a `.venv/` directory and installs all Python dependencies from `pyproject.toml`. Re-run it any time `pyproject.toml` changes.
 
 Install pre-commit hooks:
 
 ```bash
-pip install pre-commit
-pre-commit install
+.venv/bin/pre-commit install
 ```
 
 ### Make Targets
 
 | Command | Description |
 |---------|-------------|
+| `make venv` | Create/update the Python virtual environment |
 | `make run` | Launch the game |
 | `make format` | Format all GDScript files in place |
 | `make format-check` | Check formatting (fails on diff) |
 | `make lint` | Lint all GDScript files |
 | `make test` | Run GUT unit tests (requires Godot in PATH) |
 | `make build` | Export release builds (requires export presets) |
+| `make generate-questions` | Generate trivia questions via Gemini (requires `gcloud auth application-default login`) |
 
 ### Project Structure
 

@@ -1,9 +1,10 @@
 GD_FILES := $(shell find . -name "*.gd" -not -path "./.godot/*" -not -path "./addons/*")
 BUILD_DIR := build
+VENV_DIR := .venv
 
-PY_FILES := $(shell find . -name "*.py" -not -path "./.godot/*")
+PY_FILES := $(shell find . -name "*.py" -not -path "./.godot/*" -not -path "./$(VENV_DIR)/*")
 
-.PHONY: format format-check format-check-gd format-check-py lint test run build generate-questions
+.PHONY: format format-check format-check-gd format-check-py lint test run build generate-questions venv
 
 ## Run the game
 run:
@@ -47,6 +48,15 @@ build:
 	godot --headless --export-release "Web" $(BUILD_DIR)/web/index.html
 	@echo "Export written to $(BUILD_DIR)/web/"
 
-## Generate trivia questions using Gemini (requires gcloud auth)
-generate-questions:
-	python3 tools/generate-questions/generate_questions.py
+## Create/update the Python virtual environment and install all dependencies
+venv: $(VENV_DIR)/.installed
+
+$(VENV_DIR)/.installed: pyproject.toml
+	python3 -m venv $(VENV_DIR)
+	$(VENV_DIR)/bin/pip install --upgrade pip
+	$(VENV_DIR)/bin/pip install ".[dev,generate]"
+	@touch $@
+
+## Generate trivia questions using Gemini (requires gcloud auth + make venv)
+generate-questions: venv
+	$(VENV_DIR)/bin/python tools/generate-questions/generate_questions.py

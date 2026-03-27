@@ -2,5 +2,8 @@
 .godot/
 /android/
 
+# Python virtual environment
+.venv/
+
 # Build outputs
 build/
