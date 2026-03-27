@@ -16,7 +16,7 @@
 	},
 	{
 		"question": "What is the chemical symbol for water?",
-		"answers": ["H2O", "CO2", "NaCl", "O2"],
+		"answers": ["H₂O", "CO₂", "NaCl", "O₂"],
 		"correct": 0
 	},
 	{

@@ -9,6 +9,7 @@ var _question_start_time: float = 0.0
 var _current_question: Dictionary = {}
 var _input_locked: bool = false
 var _active_tween: Tween = null
+var _bold_font: FontVariation = null
 
 @onready var title_screen: MarginContainer = $TitleScreen
 @onready var game_screen: MarginContainer = $GameScreen
@@ -44,9 +45,23 @@ var _active_tween: Tween = null
 
 
 func _ready() -> void:
+	_create_bold_font()
 	question_manager.load_questions()
 	_style_answer_buttons()
 	_show_title_screen()
+
+
+func _create_bold_font() -> void:
+	var base_font := ThemeDB.fallback_font
+	if base_font is FontVariation:
+		_bold_font = FontVariation.new()
+		_bold_font.base_font = base_font.base_font
+		_bold_font.fallbacks = base_font.fallbacks
+		_bold_font.variation_opentype = {&"wght": 700}
+	elif base_font is FontFile:
+		_bold_font = FontVariation.new()
+		_bold_font.base_font = base_font
+		_bold_font.variation_opentype = {&"wght": 700}
 
 
 func _unhandled_input(event: InputEvent) -> void:
@@ -143,7 +158,9 @@ func _style_answer_buttons() -> void:
 		btn.add_theme_color_override("font_color", GameData.TEXT_COLOR)
 		btn.add_theme_color_override("font_hover_color", GameData.TEXT_COLOR)
 		btn.add_theme_color_override("font_pressed_color", GameData.TEXT_COLOR)
-		btn.add_theme_font_size_override("font_size", 34)
+		btn.add_theme_font_size_override("font_size", 38)
+		if _bold_font:
+			btn.add_theme_font_override("font", _bold_font)
 
 
 func _style_play_button(btn: Button) -> void:
@@ -211,12 +228,14 @@ func _start_game() -> void:
 	_update_timer_display()
 
 	# Style HUD labels
-	score_label.add_theme_font_size_override("font_size", 36)
+	score_label.add_theme_font_size_override("font_size", 40)
 	score_label.add_theme_color_override("font_color", GameData.TEXT_COLOR)
-	timer_label.add_theme_font_size_override("font_size", 36)
+	timer_label.add_theme_font_size_override("font_size", 40)
 	timer_label.add_theme_color_override("font_color", GameData.TEXT_COLOR)
-	question_label.add_theme_font_size_override("font_size", 40)
+	question_label.add_theme_font_size_override("font_size", 48)
 	question_label.add_theme_color_override("font_color", GameData.TEXT_COLOR)
+	if _bold_font:
+		question_label.add_theme_font_override("font", _bold_font)
 
 	# Style timer bar
 	var bar_bg := StyleBoxFlat.new()
