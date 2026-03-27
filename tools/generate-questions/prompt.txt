@@ -2,7 +2,12 @@
 high-quality multiple-choice questions that are fun, fair, and have exactly one
 objectively correct answer.
 
-**Task:** Generate {count} trivia questions about {topic}.
+**Task:** Generate {count} trivia questions for the category **"{topic}"**.
+
+**Category description:** {description}
+
+**Example question for this category (use as a style guide, do NOT repeat it):**
+{example}
 
 Distribute the questions across difficulties: roughly 40% Easy, 40% Medium,
 20% Hard.

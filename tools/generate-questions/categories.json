@@ -5,10 +5,15 @@
     "example": {
       "question": "Which human finger is the only one to contain two phalanges instead of three?",
       "answer": "The thumb",
-      "distractors": ["The pinky", "The index finger", "The ring finger"],
+      "distractors": [
+        "The pinky",
+        "The index finger",
+        "The ring finger"
+      ],
       "source": "https://www.britannica.com/science/phalanx-bone",
       "clarity_note": "Phalanges are the digital bones of the hands and feet."
-    }
+    },
+    "slug": "the-i-should-know-this-vault"
   },
   {
     "title": "Slogans & Jingles",
@@ -16,10 +21,15 @@
     "example": {
       "question": "Which snack brand uses the tagline 'The snack that smiles back'?",
       "answer": "Goldfish",
-      "distractors": ["Cheez-It", "Teddy Grahams", "Whales"],
+      "distractors": [
+        "Cheez-It",
+        "Teddy Grahams",
+        "Whales"
+      ],
       "source": "https://www.pepperidgefarm.com/product-category/goldfish-crackers/",
       "clarity_note": null
-    }
+    },
+    "slug": "slogans-jingles"
   },
   {
     "title": "Movie 'Before They Were Famous'",
@@ -27,10 +37,15 @@
     "example": {
       "question": "Which 'Friends' star made their film debut in the 1993 horror movie 'Leprechaun'?",
       "answer": "Jennifer Aniston",
-      "distractors": ["Courteney Cox", "Lisa Kudrow", "Matthew Perry"],
+      "distractors": [
+        "Courteney Cox",
+        "Lisa Kudrow",
+        "Matthew Perry"
+      ],
       "source": "https://www.imdb.com/title/tt0107387/",
       "clarity_note": "She played the character Tory Reding."
-    }
+    },
+    "slug": "movie-before-they-were-famous"
   },
   {
     "title": "Badly Explained Plots",
@@ -38,10 +53,15 @@
     "example": {
       "question": "A grumpy green guy and a talking donkey travel to save a princess so the guy can get his yard back.",
       "answer": "Shrek",
-      "distractors": ["The Grinch", "Hulk", "Trolls"],
+      "distractors": [
+        "The Grinch",
+        "Hulk",
+        "Trolls"
+      ],
       "source": "https://www.dreamworks.com/movies/shrek",
       "clarity_note": null
-    }
+    },
+    "slug": "badly-explained-plots"
   },
   {
     "title": "Foodie Geography",
@@ -49,10 +69,15 @@
     "example": {
       "question": "In which country were 'French Fries' actually invented?",
       "answer": "Belgium",
-      "distractors": ["France", "USA", "Germany"],
+      "distractors": [
+        "France",
+        "USA",
+        "Germany"
+      ],
       "source": "https://www.bbc.com/travel/article/20180730-can-belgium-claim-ownership-of-the-french-fry",
       "clarity_note": "The name 'French' refers to the way the potatoes are sliced (julienned)."
-    }
+    },
+    "slug": "foodie-geography"
   },
   {
     "title": "One-Hit Wonders",
@@ -60,10 +85,15 @@
     "example": {
       "question": "Who performed the 1990 hit 'Ice Ice Baby'?",
       "answer": "Vanilla Ice",
-      "distractors": ["MC Hammer", "Snow", "Coolio"],
+      "distractors": [
+        "MC Hammer",
+        "Snow",
+        "Coolio"
+      ],
       "source": "https://www.billboard.com/artist/vanilla-ice/",
       "clarity_note": null
-    }
+    },
+    "slug": "one-hit-wonders"
   },
   {
     "title": "Tech & Toys of the Decades",
@@ -71,10 +101,15 @@
     "example": {
       "question": "What was the name of the handheld digital pet that became a global craze in 1996?",
       "answer": "Tamagotchi",
-      "distractors": ["Furby", "Giga Pet", "Webkinz"],
+      "distractors": [
+        "Furby",
+        "Giga Pet",
+        "Webkinz"
+      ],
       "source": "https://www.bandai.com/brands/tamagotchi/",
       "clarity_note": "The name is a portmanteau of the Japanese words for 'egg' and 'watch'."
-    }
+    },
+    "slug": "tech-toys-of-the-decades"
   },
   {
     "title": "Animal Kingdom Superlatives",
@@ -82,10 +117,15 @@
     "example": {
       "question": "Which animal has the largest eyes in the world, roughly the size of a dinner plate?",
       "answer": "Colossal Squid",
-      "distractors": ["Blue Whale", "Giant Squid", "Ostrich"],
+      "distractors": [
+        "Blue Whale",
+        "Giant Squid",
+        "Ostrich"
+      ],
       "source": "https://www.nhm.ac.uk/discover/colossal-squid.html",
       "clarity_note": "Their eyes can reach up to 27cm (11 inches) in diameter."
-    }
+    },
+    "slug": "animal-kingdom-superlatives"
   },
   {
     "title": "Real or Fake?",
@@ -93,10 +133,15 @@
     "example": {
       "question": "Which of the following is a TRUE historical fact?",
       "answer": "Oxford University is older than the Aztec Empire",
-      "distractors": ["The Eiffel Tower was originally built for London", "Napoleon was shorter than 5 feet", "Vikings wore horned helmets"],
+      "distractors": [
+        "The Eiffel Tower was originally built for London",
+        "Napoleon was shorter than 5 feet",
+        "Vikings wore horned helmets"
+      ],
       "source": "https://www.ox.ac.uk/about/organisation/history",
       "clarity_note": "Teaching existed at Oxford as early as 1096; the Aztec Empire was founded in 1325."
-    }
+    },
+    "slug": "real-or-fake"
   },
   {
     "title": "Literal Lyrics",
@@ -104,10 +149,15 @@
     "example": {
       "question": "Identify the song: 'Please cease your movements, for it is currently the period designated for the use of a percussion instrument.'",
       "answer": "U Can't Touch This (MC Hammer)",
-      "distractors": ["Ice Ice Baby", "Bust a Move", "Can't Stop the Feeling"],
+      "distractors": [
+        "Ice Ice Baby",
+        "Bust a Move",
+        "Can't Stop the Feeling"
+      ],
       "source": "https://www.azlyrics.com/lyrics/mchammer/ucanttouchthis.html",
       "clarity_note": "Referencing the line 'Stop, Hammertime!'"
-    }
+    },
+    "slug": "literal-lyrics"
   },
   {
     "title": "The 1-Star Review",
@@ -115,10 +165,15 @@
     "example": {
       "question": "Which movie was reviewed as: 'Way too much walking. Just a bunch of guys complaining about a piece of jewelry.'?",
       "answer": "The Lord of the Rings",
-      "distractors": ["The Hobbit", "Harry Potter", "The Wizard of Oz"],
+      "distractors": [
+        "The Hobbit",
+        "Harry Potter",
+        "The Wizard of Oz"
+      ],
       "source": "https://www.amazon.com/Lord-Rings-Motion-Picture-Trilogy/product-reviews/B004HE2YHS",
       "clarity_note": null
-    }
+    },
+    "slug": "the-1-star-review"
   },
   {
     "title": "Emoji Cryptograms",
@@ -126,10 +181,15 @@
     "example": {
       "question": "Decipher this movie title: 🦁👑",
       "answer": "The Lion King",
-      "distractors": ["Madagascar", "The Jungle Book", "Tiger King"],
+      "distractors": [
+        "Madagascar",
+        "The Jungle Book",
+        "Tiger King"
+      ],
       "source": "https://www.disney.com/movies/the-lion-king",
       "clarity_note": null
-    }
+    },
+    "slug": "emoji-cryptograms"
   },
   {
     "title": "Historical 'Which Came First?'",
@@ -137,10 +197,15 @@
     "example": {
       "question": "Which of these was established or invented FIRST?",
       "answer": "Nintendo",
-      "distractors": ["The Wright Brothers' First Flight", "The Sliced Bread Machine", "The Eiffel Tower"],
+      "distractors": [
+        "The Wright Brothers' First Flight",
+        "The Sliced Bread Machine",
+        "The Eiffel Tower"
+      ],
       "source": "https://www.nintendo.co.jp/corporate/en/history/index.html",
       "clarity_note": "Nintendo was founded in 1889 as a playing card company."
-    }
+    },
+    "slug": "historical-which-came-first"
   },
   {
     "title": "The Stage Name Shuffle",
@@ -148,10 +213,15 @@
     "example": {
       "question": "What is the stage name of Stefani Joanne Angelina Germanotta?",
       "answer": "Lady Gaga",
-      "distractors": ["Madonna", "Katy Perry", "Kesha"],
+      "distractors": [
+        "Madonna",
+        "Katy Perry",
+        "Kesha"
+      ],
       "source": "https://www.biography.com/musicians/lady-gaga",
       "clarity_note": null
-    }
+    },
+    "slug": "the-stage-name-shuffle"
   },
   {
     "title": "Logo Logic",
@@ -159,10 +229,15 @@
     "example": {
       "question": "What 'hidden' image is found in the negative space of the FedEx logo?",
       "answer": "An arrow",
-      "distractors": ["A spoon", "A plane", "A box"],
+      "distractors": [
+        "A spoon",
+        "A plane",
+        "A box"
+      ],
       "source": "https://www.fedex.com/en-us/about/logo-history.html",
       "clarity_note": "It is located between the 'E' and the 'x'."
-    }
+    },
+    "slug": "logo-logic"
   },
   {
     "title": "Strange Laws: Real or Ridiculous?",
@@ -170,10 +245,15 @@
     "example": {
       "question": "In Gainesville, Georgia, it is technically illegal to eat fried chicken with what?",
       "answer": "A fork",
-      "distractors": ["Your hands", "A spoon", "Chopsticks"],
+      "distractors": [
+        "Your hands",
+        "A spoon",
+        "Chopsticks"
+      ],
       "source": "https://www.gainesville.org/641/Fried-Chicken-Capital",
       "clarity_note": "Passed in 1961 as a PR stunt to promote Gainesville as the poultry capital."
-    }
+    },
+    "slug": "strange-laws-real-or-ridiculous"
   },
   {
     "title": "Pop Culture Math",
@@ -181,10 +261,15 @@
     "example": {
       "question": "(Number of Dwarves in Snow White) + (Number of Strings on a standard Cello) = ?",
       "answer": "11",
-      "distractors": ["10", "12", "13"],
+      "distractors": [
+        "10",
+        "12",
+        "13"
+      ],
       "source": "https://www.britannica.com/art/cello",
       "clarity_note": "7 Dwarves + 4 Cello strings."
-    }
+    },
+    "slug": "pop-culture-math"
   },
   {
     "title": "Fictional Corporate Giants",
@@ -192,10 +277,15 @@
     "example": {
       "question": "Which company serves as the primary employer in the US version of 'The Office'?",
       "answer": "Dunder Mifflin",
-      "distractors": ["Initech", "Sabre", "Wernham Hogg"],
+      "distractors": [
+        "Initech",
+        "Sabre",
+        "Wernham Hogg"
+      ],
       "source": "https://www.nbc.com/the-office",
       "clarity_note": "Wernham Hogg is the company in the original UK version."
-    }
+    },
+    "slug": "fictional-corporate-giants"
   },
   {
     "title": "Urban Legend Debunkers",
@@ -203,10 +293,15 @@
     "example": {
       "question": "Which of these widely cited 'facts' is actually scientifically true?",
       "answer": "Wombat poop is cube-shaped",
-      "distractors": ["You swallow 8 spiders a year in your sleep", "Humans only use 10% of their brains", "Bananas grow on trees"],
+      "distractors": [
+        "You swallow 8 spiders a year in your sleep",
+        "Humans only use 10% of their brains",
+        "Bananas grow on trees"
+      ],
       "source": "https://www.nationalgeographic.com/animals/article/wombat-poop-cubes-explained",
       "clarity_note": "Bananas grow on herbaceous plants, not trees."
-    }
+    },
+    "slug": "urban-legend-debunkers"
   },
   {
     "title": "Misheard Lyric Madness",
@@ -214,9 +309,14 @@
     "example": {
       "question": "If the misheard lyric is 'Excuse me while I kiss this guy!', what is the actual lyric?",
       "answer": "Excuse me while I kiss the sky",
-      "distractors": ["Excuse me while I miss the pie", "Excuse me while I hit the guy", "Excuse me while I kiss this fly"],
+      "distractors": [
+        "Excuse me while I miss the pie",
+        "Excuse me while I hit the guy",
+        "Excuse me while I kiss this fly"
+      ],
       "source": "https://www.jimihendrix.com/music/purple-haze/",
       "clarity_note": "From the song 'Purple Haze' by Jimi Hendrix."
-    }
+    },
+    "slug": "misheard-lyric-madness"
   }
 ]
