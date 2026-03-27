@@ -25,3 +25,17 @@ repos:
         files: '\.gd$'
         exclude: ^addons/
         pass_filenames: false
+      - id: ruff-format
+        name: ruff-format
+        description: Check Python formatting
+        entry: ruff format --check
+        language: system
+        files: '\.py$'
+        pass_filenames: true
+      - id: ruff-lint
+        name: ruff-lint
+        description: Lint Python files
+        entry: ruff check
+        language: system
+        files: '\.py$'
+        pass_filenames: true

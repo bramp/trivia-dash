@@ -2,7 +2,8 @@
 """Generate trivia questions using Google Gemini and save to data/questions.json.
 
 Usage:
-    python3 tools/generate-questions/generate_questions.py [--count N] [--categories CAT1,CAT2,...]
+    python3 tools/generate-questions/generate_questions.py \
+        [--count N] [--categories CAT1,CAT2,...] [--model MODEL]
 
 Authentication:
     Uses Application Default Credentials. Run once:
@@ -50,7 +51,7 @@ DEFAULT_CATEGORIES = [
 ]
 
 DEFAULT_COUNT = 20
-MODEL = "gemini-3.1-pro-preview"
+DEFAULT_MODEL = "gemini-3.1-pro-preview"
 
 
 def load_prompt_template() -> str:
@@ -106,12 +107,12 @@ def convert_to_game_format(q: dict) -> dict:
 
 
 def generate_for_category(
-    client: genai.Client, template: str, topic: str, count: int
+    client: genai.Client, model: str, template: str, topic: str, count: int
 ) -> list:
     prompt = build_prompt(template, topic, count)
 
     print(f"  Requesting {count} questions...")
-    response = client.models.generate_content(model=MODEL, contents=prompt)
+    response = client.models.generate_content(model=model, contents=prompt)
 
     raw = extract_json(response.text)
     print(f"  Received {len(raw)} questions")
@@ -163,12 +164,20 @@ def build_output(categories_dict: dict[str, list]) -> dict:
 
 
 def main():
-    parser = argparse.ArgumentParser(description="Generate trivia questions with Gemini")
+    parser = argparse.ArgumentParser(
+        description="Generate trivia questions with Gemini",
+    )
     parser.add_argument(
         "--count",
         type=int,
         default=DEFAULT_COUNT,
         help=f"Questions per category (default: {DEFAULT_COUNT})",
+    )
+    parser.add_argument(
+        "--model",
+        type=str,
+        default=DEFAULT_MODEL,
+        help=f"Gemini model name (default: {DEFAULT_MODEL})",
     )
     parser.add_argument(
         "--categories",
@@ -191,7 +200,7 @@ def main():
 
     template = load_prompt_template()
 
-    print(f"Authenticating with Google AI (using Application Default Credentials)...")
+    print("Authenticating with Google AI (using Application Default Credentials)...")
     client = genai.Client()
 
     # Load existing questions if appending.
@@ -200,17 +209,25 @@ def main():
         categories_dict = load_existing(OUTPUT_FILE)
         total = sum(len(v) for v in categories_dict.values())
         if total:
-            print(f"Loaded {total} existing questions across {len(categories_dict)} categories")
+            print(
+                f"Loaded {total} existing questions"
+                f" across {len(categories_dict)} categories"
+            )
 
     for i, category in enumerate(categories):
         print(f"\n[{i + 1}/{len(categories)}] Generating: {category}")
         try:
-            questions = generate_for_category(client, template, category, args.count)
+            questions = generate_for_category(
+                client, args.model, template, category, args.count
+            )
             # Merge into existing category or create new.
             existing = categories_dict.get(category, [])
             existing.extend(questions)
             categories_dict[category] = existing
-            print(f"  Added {len(questions)} questions ({len(existing)} total in category)")
+            print(
+                f"  Added {len(questions)} questions"
+                f" ({len(existing)} total in category)"
+            )
         except Exception as e:
             print(f"  ERROR generating {category}: {e}")
             continue
@@ -223,7 +240,12 @@ def main():
 
     OUTPUT_FILE.parent.mkdir(parents=True, exist_ok=True)
     OUTPUT_FILE.write_text(json.dumps(output, indent=2, ensure_ascii=False) + "\n")
-    print(f"\nDone! Wrote {output['total_questions']} questions across {len(output['categories'])} categories to {OUTPUT_FILE}")
+    n_questions = output["total_questions"]
+    n_categories = len(output["categories"])
+    print(
+        f"\nDone! Wrote {n_questions} questions"
+        f" across {n_categories} categories to {OUTPUT_FILE}"
+    )
 
 
 if __name__ == "__main__":

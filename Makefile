@@ -1,7 +1,9 @@
 GD_FILES := $(shell find . -name "*.gd" -not -path "./.godot/*" -not -path "./addons/*")
 BUILD_DIR := build
 
-.PHONY: format format-check lint test run build generate-questions
+PY_FILES := $(shell find . -name "*.py" -not -path "./.godot/*")
+
+.PHONY: format format-check lint lint-python test run build generate-questions
 
 ## Run the game
 run:
@@ -10,14 +12,21 @@ run:
 ## Format all GDScript files in place
 format:
 	gdformat $(GD_FILES)
+	ruff format $(PY_FILES)
+	ruff check --fix $(PY_FILES)
 
 ## Check GDScript formatting (fails on diff)
 format-check:
 	gdformat --check $(GD_FILES)
+	ruff format --check $(PY_FILES)
 
 ## Lint all GDScript files
 lint:
 	gdlint $(GD_FILES)
+
+## Lint all Python files
+lint-python:
+	ruff check $(PY_FILES)
 
 ## Run GUT unit tests (requires Godot in PATH)
 test:
