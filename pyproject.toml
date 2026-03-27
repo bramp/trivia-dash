@@ -17,6 +17,7 @@ dev = [
 ]
 generate = [
     "google-genai>=1",
+    "json5>=0.9",
 ]
 
 [tool.ruff]

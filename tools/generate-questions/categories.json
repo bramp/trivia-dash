@@ -31,6 +31,7 @@
     },
     "slug": "slogans-jingles"
   },
+  /*
   {
     "title": "Movie 'Before They Were Famous'",
     "description": "Identifying A-list actors based on their early, minor, or obscure roles before they achieved stardom.",
@@ -47,6 +48,7 @@
     },
     "slug": "movie-before-they-were-famous"
   },
+  */
   {
     "title": "Badly Explained Plots",
     "description": "Summarizing famous movies or books using the most technically correct but misleading descriptions possible.",
@@ -59,7 +61,6 @@
         "Trolls"
       ],
       "source": "https://www.dreamworks.com/movies/shrek",
-      "clarity_note": null
     },
     "slug": "badly-explained-plots"
   },
@@ -79,6 +80,7 @@
     },
     "slug": "foodie-geography"
   },
+  /*
   {
     "title": "One-Hit Wonders",
     "description": "Naming the artist or group behind a massively popular song that was their only major chart success.",
@@ -111,6 +113,7 @@
     },
     "slug": "tech-toys-of-the-decades"
   },
+  */
   {
     "title": "Animal Kingdom Superlatives",
     "description": "Questions about the fastest, largest, loudest, and most extreme creatures in the natural world.",
@@ -143,6 +146,7 @@
     },
     "slug": "real-or-fake"
   },
+  /*
   {
     "title": "Literal Lyrics",
     "description": "Famous song lyrics translated into overly formal, academic, or clinical English prose.",
@@ -159,6 +163,7 @@
     },
     "slug": "literal-lyrics"
   },
+  */
   {
     "title": "The 1-Star Review",
     "description": "Identifying famous movies, books, or landmarks based on humorous, overly critical 1-star internet reviews.",
@@ -303,6 +308,7 @@
     },
     "slug": "urban-legend-debunkers"
   },
+  /*
   {
     "title": "Misheard Lyric Madness",
     "description": "We provide a famous misheard lyric (Mondegreen), and you must identify the correct song or actual lyric.",
@@ -319,4 +325,5 @@
     },
     "slug": "misheard-lyric-madness"
   }
+  */
 ]

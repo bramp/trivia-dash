@@ -18,7 +18,7 @@ Authentication (pick one):
            gcloud auth application-default login
 
 Requirements:
-    pip install google-genai
+    pip install google-genai json5
 """
 
 import argparse
@@ -29,6 +29,12 @@ import re
 import sys
 import time
 from pathlib import Path
+
+try:
+    import json5
+except ImportError:
+    print("Error: json5 is required. Run 'pip install json5'")
+    sys.exit(1)
 
 try:
     from google import genai
@@ -65,7 +71,7 @@ def load_categories() -> list[dict]:
     if not CATEGORIES_FILE.exists():
         print(f"Error: Categories file not found at {CATEGORIES_FILE}")
         sys.exit(1)
-    return json.loads(CATEGORIES_FILE.read_text())
+    return json5.loads(CATEGORIES_FILE.read_text())
 
 
 def list_categories(categories: list[dict]) -> None:
@@ -165,7 +171,7 @@ def extract_json(text: str) -> list:
     # Strip markdown code fences if present.
     cleaned = re.sub(r"^```(?:json)?\s*\n?", "", text.strip())
     cleaned = re.sub(r"\n?```\s*$", "", cleaned)
-    data = json.loads(cleaned)
+    data = json5.loads(cleaned)
 
     # Handle both bare-array and wrapper-object formats.
     if isinstance(data, dict):
@@ -241,7 +247,7 @@ def load_existing(path: Path) -> dict[str, list]:
     """Load existing questions.json and return a {category: [questions]} dict."""
     if not path.exists():
         return {}
-    data = json.loads(path.read_text())
+    data = json5.loads(path.read_text())
     result = {}
     for cat in data.get("categories", []):
         result[cat["name"]] = cat["questions"]
