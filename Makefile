@@ -48,8 +48,12 @@ build:
 		echo "Error: export_presets.cfg not found. Configure export presets in Godot first."; \
 		exit 1; \
 	fi
+	@# Stamp build date/time into build_info.gd
+	@sed -i '' 's/^const BUILD_DATE := .*/const BUILD_DATE := "'"$$(date -u +%Y-%m-%dT%H:%M:%SZ)"'"/' scripts/build_info.gd
 	mkdir -p $(BUILD_DIR)/web
 	godot --headless --export-release "Web" $(BUILD_DIR)/web/index.html
+	@# Reset build_info.gd back to dev
+	@sed -i '' 's/^const BUILD_DATE := .*/const BUILD_DATE := "dev"/' scripts/build_info.gd
 	@echo "Export written to $(BUILD_DIR)/web/"
 
 ## Create/update the Python virtual environment and install all dependencies

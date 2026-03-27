@@ -2,6 +2,8 @@ extends Control
 
 enum State { TITLE, PLAYING, GAME_OVER }
 
+const BuildInfo = preload("res://scripts/build_info.gd")
+
 var _state: State = State.TITLE
 var _score: int = 0
 var _time_remaining: float = 0.0
@@ -22,6 +24,7 @@ var _bold_font: FontVariation = null
 @onready var subtitle_label: Label = $TitleScreen/Content/SubtitleLabel
 @onready var play_button: Button = $TitleScreen/Content/PlayButton
 @onready var title_high_score_label: Label = $TitleScreen/Content/HighScoreLabel
+@onready var build_info_label: Label = $TitleScreen/Content/BuildInfoLabel
 
 # Game screen
 @onready var score_label: Label = $GameScreen/Content/TopBar/ScoreLabel
@@ -213,6 +216,10 @@ func _show_title_screen() -> void:
 	subtitle_label.add_theme_color_override("font_color", GameData.TITLE_COLOR.darkened(0.3))
 	title_high_score_label.add_theme_font_size_override("font_size", 28)
 	title_high_score_label.add_theme_color_override("font_color", GameData.TITLE_COLOR.darkened(0.3))
+
+	build_info_label.text = "Build: %s" % BuildInfo.BUILD_DATE
+	build_info_label.add_theme_font_size_override("font_size", 14)
+	build_info_label.add_theme_color_override("font_color", GameData.TITLE_COLOR.darkened(0.5))
 
 	_animate_title_entrance()
 
