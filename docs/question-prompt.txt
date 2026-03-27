@@ -1,36 +1,53 @@
-**Role:** You are a professional trivia researcher. Your goal is to create high-quality questions that are easy to grade and difficult to "hack."
+**Role:** You are a professional trivia researcher. Your goal is to create
+high-quality multiple-choice questions that are fun, fair, and have exactly one
+objectively correct answer.
 
-**Task:** Generate [Number] trivia questions about [Topic].
+**Task:** Generate {count} trivia questions about {topic}.
 
-**Output Format (JSON or Table preferred):**
-1. **Difficulty:** 
-   * **Easy:** General knowledge taught in elementary school (e.g., basic RYB mixing).
-   * **Medium:** Requires technical knowledge of a specific field (e.g., CMYK for printing or RGB for web design).
-   * **Hard:** Requires specific scientific or professional data (e.g., wavelengths in nanometers or complementary color physics).
+Distribute the questions across difficulties: roughly 40% Easy, 40% Medium,
+20% Hard.
 
-2. **Question:** A clear question with only one objectively correct answer.
-3. **Primary Answer:** The most concise, common version of the answer.
-4. **Alternative Answers:** List only direct synonyms, common abbreviations, or valid alternative names (e.g., "The Netherlands" and "Holland"). Do NOT include related facts or descriptions.
-5. **Distractors (3):** Three incorrect answers of the same category. They must be plausible but definitively wrong.
-6. **Source:** A URL or specific reference for verification.
-7. **Clarity Note:** Briefly explain why the distractors are incorrect if the question is "Hard."
+**Output:** Return ONLY a JSON array. No markdown fences, no commentary.
+Each element must match this schema exactly:
 
-**Strict Rules:**
-* **No Fact-Dumping:** The "Secondary Answer" field must only contain strings that are 100% synonymous with the Primary Answer.
-* **Specific Distractors:** If the answer is a person, all distractors must be people from the same era/field.
-* **Source Integrity:** Every source must be a reputable primary or secondary source (No "Trust me, I'm an AI").
+```json
+[
+  {{
+    "question": "A concise question (one sentence, under 120 characters preferred)",
+    "answer": "The correct answer (short, commonly known form)",
+    "distractors": ["Wrong 1", "Wrong 2", "Wrong 3"],
+    "difficulty": "easy | medium | hard",
+    "category": "{topic}",
+    "source": "A reputable reference (e.g., Britannica, NASA, WHO)"
+  }}
+]
+```
 
-**Example:**
-* **Difficulty:** Medium
-* **Question:** What is the common name for the star 'Alpha Canis Majoris,' the brightest star in the night sky?
-* **Primary Answer:** Sirius
-* **Alternative:** The Dog Star
-* **Distractors:** Betelgeuse, Polaris, Rigel
-* **Source:** NASA Exoplanet Archive / Britannica
+**Difficulty Definitions:**
+- **Easy:** Common knowledge most adults would know.
+- **Medium:** Requires some familiarity with the topic.
+- **Hard:** Requires specific or expert-level knowledge.
 
----
+**Rules:**
+1. Each question must have exactly ONE correct answer and THREE plausible
+   distractors of the same type (e.g., if the answer is a person, all
+   distractors must be people from a similar era or field).
+2. Keep questions concise — this is a fast-paced game with a 30-second timer.
+3. Avoid ambiguous phrasing. Do not use "Which of these..." since button
+   order is randomised.
+4. No duplicate or near-duplicate questions within the batch.
+5. Distractors must be definitively wrong, not "arguably correct."
+6. Do not include questions whose answers change over time (e.g., "Who is
+   the current president?").
 
-
-> **Rule: Difficulty Balancing**
-
-**Would you like me to generate a set of questions for a different topic, like "Computer Networking" or "World Geography," using this exact table format?**
+**Example output:**
+[
+  {{
+    "question": "What is the brightest star in the night sky?",
+    "answer": "Sirius",
+    "distractors": ["Betelgeuse", "Polaris", "Rigel"],
+    "difficulty": "medium",
+    "category": "Astronomy",
+    "source": "NASA"
+  }}
+]

@@ -9,3 +9,6 @@ dev = [
     "gdtoolkit>=4,<5",
     "pre-commit>=3,<4",
 ]
+generate = [
+    "google-genai>=1",
+]

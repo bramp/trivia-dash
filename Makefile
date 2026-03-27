@@ -1,7 +1,7 @@
 GD_FILES := $(shell find . -name "*.gd" -not -path "./.godot/*" -not -path "./addons/*")
 BUILD_DIR := build
 
-.PHONY: format format-check lint test run build
+.PHONY: format format-check lint test run build generate-questions
 
 ## Run the game
 run:
@@ -36,3 +36,7 @@ build:
 	mkdir -p $(BUILD_DIR)/web
 	godot --headless --export-release "Web" $(BUILD_DIR)/web/index.html
 	@echo "Export written to $(BUILD_DIR)/web/"
+
+## Generate trivia questions using Gemini (requires gcloud auth)
+generate-questions:
+	python3 scripts/generate_questions.py
