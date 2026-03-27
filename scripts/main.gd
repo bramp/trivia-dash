@@ -494,7 +494,7 @@ func _spawn_floating_score(btn: Button, points: int) -> void:
 
 
 func _spawn_celebration_particles(btn: Button) -> void:
-	var emojis := ["🎉", "⭐", "✨", "💥", "🔥", "✓"]
+	var symbols := ["+", "*", "!", "o", "^", "~"]
 	var colors: Array[Color] = [
 		Color("#2ECC71"),
 		Color("#F1C40F"),
@@ -510,7 +510,7 @@ func _spawn_celebration_particles(btn: Button) -> void:
 	var particle_count := 14
 	for i in range(particle_count):
 		var particle := Label.new()
-		particle.text = emojis[i % emojis.size()]
+		particle.text = symbols[i % symbols.size()]
 		particle.add_theme_font_size_override("font_size", 38)
 		particle.add_theme_color_override("font_color", colors[i % colors.size()])
 		particle.z_index = 10
@@ -536,16 +536,22 @@ func _spawn_celebration_particles(btn: Button) -> void:
 func _animate_wrong(index: int, correct_index: int) -> void:
 	var btn := answer_buttons[index]
 
-	# Flash the wrong button red.
-	var style := btn.get_theme_stylebox("normal").duplicate() as StyleBoxFlat
-	style.bg_color = GameData.WRONG_HIGHLIGHT
-	btn.add_theme_stylebox_override("normal", style)
-
 	# Disable all buttons.
 	for b in answer_buttons:
 		b.disabled = true
 
-	# Shake animation on wrong button.
+	# Grey out all buttons except the correct one.
+	var grey := Color(0.3, 0.3, 0.3, 0.6)
+	for i in range(answer_buttons.size()):
+		if i == correct_index:
+			continue
+		var b := answer_buttons[i]
+		var dimmed := b.get_theme_stylebox("normal").duplicate() as StyleBoxFlat
+		dimmed.bg_color = grey
+		b.add_theme_stylebox_override("normal", dimmed)
+		b.modulate.a = 0.5
+
+	# Shake animation on the wrong button.
 	var original_x := btn.position.x
 	var tween := create_tween()
 	for cycle in range(3):
@@ -553,17 +559,9 @@ func _animate_wrong(index: int, correct_index: int) -> void:
 		tween.tween_property(btn, "position:x", original_x - 8, 0.05)
 	tween.tween_property(btn, "position:x", original_x, 0.05)
 
-	# Highlight the correct answer with a pulsing green glow.
+	# Pulse the correct answer so it stands out.
 	if correct_index >= 0 and correct_index < answer_buttons.size():
 		var correct_btn := answer_buttons[correct_index]
-		var correct_style := correct_btn.get_theme_stylebox("normal").duplicate() as StyleBoxFlat
-		correct_style.bg_color = GameData.CORRECT_HIGHLIGHT
-		correct_style.border_width_left = 4
-		correct_style.border_width_right = 4
-		correct_style.border_width_top = 4
-		correct_style.border_width_bottom = 4
-		correct_style.border_color = Color.WHITE
-		correct_btn.add_theme_stylebox_override("normal", correct_style)
 		correct_btn.pivot_offset = correct_btn.size / 2.0
 		var pulse := create_tween()
 		pulse.set_ease(Tween.EASE_IN_OUT)
