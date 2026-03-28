@@ -1,0 +1,333 @@
+[
+  {
+    "question": "Which movie was reviewed as: \"Spoiler alert: the boat sinks and the door was definitely big enough for two.\"?",
+    "answer": "Titanic",
+    "alternative_answers": [
+      "The Titanic"
+    ],
+    "distractors": [
+      "The Poseidon Adventure",
+      "Pearl Harbor",
+      "The Perfect Storm"
+    ],
+    "difficulty": "easy",
+    "source": "https://letterboxd.com/film/titanic/reviews/by/rating/",
+    "clarity_note": "Titanic is famously mocked for the ending where Jack freezes in the water while Rose floats on a seemingly large wooden door.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:20:13.855311+00:00"
+  },
+  {
+    "question": "Which landmark received this 1-star review: \"A very large hole in the dirt. Overrated.\"?",
+    "answer": "Grand Canyon",
+    "alternative_answers": [
+      "The Grand Canyon",
+      "Grand Canyon National Park"
+    ],
+    "distractors": [
+      "Death Valley",
+      "Crater Lake",
+      "Yellowstone"
+    ],
+    "difficulty": "easy",
+    "source": "https://subparparks.com/",
+    "clarity_note": "This exact 1-star review of the Grand Canyon was made famous by Amber Share's 'Subpar Parks' illustration series.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:20:13.855311+00:00"
+  },
+  {
+    "question": "Which landmark was reviewed as: \"Just a bunch of rocks in a field. You can't even touch them.\"?",
+    "answer": "Stonehenge",
+    "alternative_answers": [],
+    "distractors": [
+      "Machu Picchu",
+      "Easter Island",
+      "The Acropolis"
+    ],
+    "difficulty": "easy",
+    "source": "https://www.tripadvisor.com/Attraction_Review-g315993-d195251-Reviews-Stonehenge-Amesbury_Wiltshire_England.html",
+    "clarity_note": "Stonehenge is literally a circular arrangement of large rocks in a field, and visitors are roped off from touching them.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:20:13.855311+00:00"
+  },
+  {
+    "question": "Which play was reviewed as: \"Two teenagers meet, fall in love, and die in three days. Ridiculous.\"?",
+    "answer": "Romeo and Juliet",
+    "alternative_answers": [
+      "The Tragedy of Romeo and Juliet",
+      "Romeo & Juliet"
+    ],
+    "distractors": [
+      "Hamlet",
+      "Macbeth",
+      "Othello"
+    ],
+    "difficulty": "easy",
+    "source": "https://www.goodreads.com/book/show/18135.Romeo_and_Juliet",
+    "clarity_note": "The entire tragic plot of Shakespeare's Romeo and Juliet famously unfolds over a severely compressed timeline of just a few days.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:20:13.855311+00:00"
+  },
+  {
+    "question": "Which movie was reviewed as: \"A guy gets writer's block in a hotel, goes crazy, and hates his family.\"?",
+    "answer": "The Shining",
+    "alternative_answers": [],
+    "distractors": [
+      "Psycho",
+      "Misery",
+      "Shutter Island"
+    ],
+    "difficulty": "easy",
+    "source": "https://letterboxd.com/film/the-shining/reviews/by/rating/",
+    "clarity_note": "The Shining centers on Jack Torrance, an aspiring writer who descends into madness at the isolated Overlook Hotel.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:20:13.855311+00:00"
+  },
+  {
+    "question": "Which landmark was reviewed as: \"Just a giant metal pylon in the middle of the city. An eyesore.\"?",
+    "answer": "Eiffel Tower",
+    "alternative_answers": [
+      "La Tour Eiffel"
+    ],
+    "distractors": [
+      "Space Needle",
+      "Washington Monument",
+      "The Shard"
+    ],
+    "difficulty": "easy",
+    "source": "https://www.tripadvisor.com/Attraction_Review-g187147-d188151-Reviews-Eiffel_Tower-Paris_Ile_de_France.html",
+    "clarity_note": "The Eiffel Tower is a wrought-iron lattice tower in Paris that was originally heavily criticized by artists as a metal eyesore.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:20:13.855311+00:00"
+  },
+  {
+    "question": "Which movie was reviewed as: \"A girl hallucinates about shoes and murders a lady with a bucket of water.\"?",
+    "answer": "The Wizard of Oz",
+    "alternative_answers": [
+      "Wizard of Oz"
+    ],
+    "distractors": [
+      "Alice in Wonderland",
+      "Mary Poppins",
+      "Peter Pan"
+    ],
+    "difficulty": "easy",
+    "source": "https://letterboxd.com/film/the-wizard-of-oz/reviews/by/rating/",
+    "clarity_note": "In The Wizard of Oz, Dorothy's journey is revealed to be a dream, her ruby slippers are central to the plot, and she kills the Wicked Witch with water.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:20:13.855311+00:00"
+  },
+  {
+    "question": "Which movie was reviewed as: \"An old man fails to run a zoo properly and blames his IT guy.\"?",
+    "answer": "Jurassic Park",
+    "alternative_answers": [],
+    "distractors": [
+      "Jumanji",
+      "Night at the Museum",
+      "King Kong"
+    ],
+    "difficulty": "easy",
+    "source": "https://letterboxd.com/film/jurassic-park/reviews/by/rating/",
+    "clarity_note": "Jurassic Park involves John Hammond's dinosaur theme park breaking down, heavily catalyzed by the sabotage of IT worker Dennis Nedry.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:20:13.855311+00:00"
+  },
+  {
+    "question": "Which book was reviewed as: \"A crazy guy spends 600 pages chasing a fish. Also, it's a mammal.\"?",
+    "answer": "Moby-Dick",
+    "alternative_answers": [
+      "Moby Dick",
+      "The Whale"
+    ],
+    "distractors": [
+      "The Old Man and the Sea",
+      "Treasure Island",
+      "Twenty Thousand Leagues Under the Sea"
+    ],
+    "difficulty": "medium",
+    "source": "https://www.goodreads.com/book/show/153747.Moby_Dick_or_the_Whale",
+    "clarity_note": "Moby-Dick is a lengthy novel about Captain Ahab's obsessive quest for a white sperm whale.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:20:13.855311+00:00"
+  },
+  {
+    "question": "Which landmark was reviewed as: \"Just some old guys' faces carved in a rock. Smaller than I thought.\"?",
+    "answer": "Mount Rushmore",
+    "alternative_answers": [
+      "Mount Rushmore National Memorial"
+    ],
+    "distractors": [
+      "Crazy Horse Memorial",
+      "Stone Mountain",
+      "The Sphinx"
+    ],
+    "difficulty": "medium",
+    "source": "https://www.tripadvisor.com/Attraction_Review-g54670-d145028-Reviews-Mount_Rushmore_National_Memorial-Keystone_South_Dakota.html",
+    "clarity_note": "Mount Rushmore features the faces of four US presidents carved into granite, commonly critiqued by tourists as looking small from the viewing deck.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:20:13.855311+00:00"
+  },
+  {
+    "question": "Which book was reviewed as: \"Rich people complaining about being rich until someone gets hit by a car.\"?",
+    "answer": "The Great Gatsby",
+    "alternative_answers": [],
+    "distractors": [
+      "The Catcher in the Rye",
+      "Pride and Prejudice",
+      "Anna Karenina"
+    ],
+    "difficulty": "medium",
+    "source": "https://www.goodreads.com/book/show/4671.The_Great_Gatsby",
+    "clarity_note": "The Great Gatsby focuses on wealthy socialites in the 1920s and features the pivotal climax where Myrtle Wilson is struck and killed by Gatsby's yellow car.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:20:13.855311+00:00"
+  },
+  {
+    "question": "Which movie was reviewed as: \"People taking naps within naps. Completely nonsensical.\"?",
+    "answer": "Inception",
+    "alternative_answers": [],
+    "distractors": [
+      "The Matrix",
+      "Interstellar",
+      "Memento"
+    ],
+    "difficulty": "medium",
+    "source": "https://letterboxd.com/film/inception/reviews/by/rating/",
+    "clarity_note": "Inception's core plot revolves around characters going to sleep to enter multi-layered dreams (dreams within dreams).",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:20:13.855311+00:00"
+  },
+  {
+    "question": "Which landmark was reviewed as: \"It's literally just a really long wall. Lots of walking.\"?",
+    "answer": "Great Wall of China",
+    "alternative_answers": [
+      "The Great Wall",
+      "Great Wall"
+    ],
+    "distractors": [
+      "Machu Picchu",
+      "The Colosseum",
+      "Chichén Itzá"
+    ],
+    "difficulty": "medium",
+    "source": "https://www.tripadvisor.com/Attraction_Review-g297403-d324021-Reviews-Mutianyu_Great_Wall-Huairou_District.html",
+    "clarity_note": "The Great Wall is famously a massive, lengthy fortification that requires extensive hiking to visit.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:20:13.855311+00:00"
+  },
+  {
+    "question": "Which movie was reviewed as: \"An ugly brown alien eats candy and ruins a family's house.\"?",
+    "answer": "E.T. the Extra-Terrestrial",
+    "alternative_answers": [
+      "E.T.",
+      "ET"
+    ],
+    "distractors": [
+      "Alien",
+      "Men in Black",
+      "Gremlins"
+    ],
+    "difficulty": "medium",
+    "source": "https://letterboxd.com/film/et-the-extra-terrestrial/reviews/by/rating/",
+    "clarity_note": "In E.T., the titular alien is lured with Reese's Pieces and causes chaos in Elliot's suburban home.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:20:13.855311+00:00"
+  },
+  {
+    "question": "Which book was reviewed as: \"A whiny teenager wanders around New York complaining about phonies.\"?",
+    "answer": "The Catcher in the Rye",
+    "alternative_answers": [],
+    "distractors": [
+      "The Outsiders",
+      "Lord of the Flies",
+      "The Perks of Being a Wallflower"
+    ],
+    "difficulty": "medium",
+    "source": "https://www.goodreads.com/book/show/5107.The_Catcher_in_the_Rye",
+    "clarity_note": "The Catcher in the Rye follows angsty teen Holden Caulfield wandering NYC, famous for constantly using the word 'phony'.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:20:13.855311+00:00"
+  },
+  {
+    "question": "Which landmark was reviewed as: \"It's not even gold, it's rust red. Very misleading name.\"?",
+    "answer": "Golden Gate Bridge",
+    "alternative_answers": [
+      "The Golden Gate Bridge"
+    ],
+    "distractors": [
+      "Brooklyn Bridge",
+      "Tower Bridge",
+      "Sydney Harbour Bridge"
+    ],
+    "difficulty": "medium",
+    "source": "https://www.tripadvisor.com/Attraction_Review-g60713-d102457-Reviews-Golden_Gate_Bridge-San_Francisco_California.html",
+    "clarity_note": "Despite the name 'Golden Gate', the famous San Francisco bridge is painted 'International Orange' (a reddish color).",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:20:13.855311+00:00"
+  },
+  {
+    "question": "Which book was reviewed as: \"An old guy catches a big fish, then other fish eat it.\"?",
+    "answer": "The Old Man and the Sea",
+    "alternative_answers": [],
+    "distractors": [
+      "Life of Pi",
+      "Moby-Dick",
+      "The Pearl"
+    ],
+    "difficulty": "hard",
+    "source": "https://www.goodreads.com/book/show/2165.The_Old_Man_and_the_Sea",
+    "clarity_note": "Ernest Hemingway's novella is about Santiago catching a giant marlin, only for sharks to eat the carcass before he returns to shore.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:20:13.855311+00:00"
+  },
+  {
+    "question": "Which movie was reviewed as: \"Monkeys, slow spaceships, and a red dot that refuses to open doors.\"?",
+    "answer": "2001: A Space Odyssey",
+    "alternative_answers": [
+      "2001 A Space Odyssey",
+      "2001"
+    ],
+    "distractors": [
+      "Blade Runner",
+      "Interstellar",
+      "The Martian"
+    ],
+    "difficulty": "hard",
+    "source": "https://letterboxd.com/film/2001-a-space-odyssey/reviews/by/rating/",
+    "clarity_note": "The film starts with apes (Dawn of Man), features slow pacing, and has the villainous AI HAL 9000, represented by a glowing red camera lens.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:20:13.855311+00:00"
+  },
+  {
+    "question": "Which landmark was reviewed as: \"Paid $25 to stand in a glass box. Couldn't see through the clouds.\"?",
+    "answer": "Willis Tower",
+    "alternative_answers": [
+      "Sears Tower",
+      "Willis Tower Skydeck"
+    ],
+    "distractors": [
+      "Empire State Building",
+      "Space Needle",
+      "CN Tower"
+    ],
+    "difficulty": "hard",
+    "source": "https://www.tripadvisor.com/Attraction_Review-g35805-d103328-Reviews-Skydeck_Chicago_Willis_Tower-Chicago_Illinois.html",
+    "clarity_note": "The Willis Tower in Chicago is famous for its 'Skydeck', featuring protruding glass boxes where visibility is often obscured by low-hanging clouds.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:20:13.855311+00:00"
+  },
+  {
+    "question": "Which play was reviewed as: \"Two guys sit by a barren tree complaining, and nothing happens.\"?",
+    "answer": "Waiting for Godot",
+    "alternative_answers": [],
+    "distractors": [
+      "Death of a Salesman",
+      "The Crucible",
+      "A Streetcar Named Desire"
+    ],
+    "difficulty": "hard",
+    "source": "https://www.goodreads.com/book/show/17716.Waiting_for_Godot",
+    "clarity_note": "Samuel Beckett's absurdist play consists of Vladimir and Estragon conversing next to a solitary tree while waiting for a man who never arrives.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:20:13.855311+00:00"
+  }
+]

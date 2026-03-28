@@ -1,0 +1,346 @@
+[
+  {
+    "question": "(Core members in The Beatles) + (Number of Rings to rule them all in Lord of the Rings) = ?",
+    "answer": "5",
+    "alternative_answers": [
+      "Five"
+    ],
+    "distractors": [
+      "4",
+      "6",
+      "7"
+    ],
+    "difficulty": "easy",
+    "source": "https://www.britannica.com/topic/the-Beatles",
+    "clarity_note": "4 core members of The Beatles (John, Paul, George, Ringo) + 1 Ring to rule them all = 5.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:27:38.969716+00:00"
+  },
+  {
+    "question": "(Number of Infinity Stones in the MCU) + (Number of members in Destiny's Child final lineup) = ?",
+    "answer": "9",
+    "alternative_answers": [
+      "Nine"
+    ],
+    "distractors": [
+      "8",
+      "10",
+      "11"
+    ],
+    "difficulty": "easy",
+    "source": "https://www.marvel.com/items/infinity-stones",
+    "clarity_note": "6 Infinity Stones + 3 members of Destiny's Child (Beyoncé, Kelly, Michelle) = 9.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:27:38.969716+00:00"
+  },
+  {
+    "question": "(Number of main characters in the TV show 'Friends') * (Number of members in the Spice Girls) = ?",
+    "answer": "30",
+    "alternative_answers": [
+      "Thirty"
+    ],
+    "distractors": [
+      "24",
+      "25",
+      "36"
+    ],
+    "difficulty": "easy",
+    "source": "https://www.britannica.com/topic/Friends",
+    "clarity_note": "6 main Friends (Rachel, Monica, Phoebe, Joey, Chandler, Ross) * 5 Spice Girls = 30.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:27:38.969716+00:00"
+  },
+  {
+    "question": "(Number of Harry Potter books in the main series) + (Number of books in the original Hunger Games trilogy) = ?",
+    "answer": "10",
+    "alternative_answers": [
+      "Ten"
+    ],
+    "distractors": [
+      "9",
+      "11",
+      "12"
+    ],
+    "difficulty": "easy",
+    "source": "https://www.jkrowling.com/about/",
+    "clarity_note": "7 Harry Potter books + 3 Hunger Games books = 10.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:27:38.969716+00:00"
+  },
+  {
+    "question": "(Miles The Proclaimers would walk before walking 500 more) / (Number of cents in rapper 50 Cent's name) = ?",
+    "answer": "10",
+    "alternative_answers": [
+      "Ten"
+    ],
+    "distractors": [
+      "5",
+      "20",
+      "100"
+    ],
+    "difficulty": "easy",
+    "source": "https://genius.com/The-proclaimers-im-gonna-be-500-miles-lyrics",
+    "clarity_note": "500 miles / 50 Cent = 10.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:27:38.969716+00:00"
+  },
+  {
+    "question": "(Days it takes the tape to kill you in 'The Ring') + (Number of deadly sins in the 1995 Brad Pitt thriller title) = ?",
+    "answer": "14",
+    "alternative_answers": [
+      "Fourteen"
+    ],
+    "distractors": [
+      "12",
+      "13",
+      "15"
+    ],
+    "difficulty": "easy",
+    "source": "https://www.imdb.com/title/tt0298130/",
+    "clarity_note": "7 days in The Ring + 7 deadly sins in Se7en = 14.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:27:38.969716+00:00"
+  },
+  {
+    "question": "(Number of problems Jay-Z famously has) - (Number of red balloons in Nena's hit song) = ?",
+    "answer": "0",
+    "alternative_answers": [
+      "Zero"
+    ],
+    "distractors": [
+      "1",
+      "10",
+      "99"
+    ],
+    "difficulty": "easy",
+    "source": "https://genius.com/Jay-z-99-problems-lyrics",
+    "clarity_note": "99 Problems - 99 Red Balloons = 0.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:27:38.969716+00:00"
+  },
+  {
+    "question": "(Number of players on the court for one basketball team) * (Number of directions in Harry Styles' former boy band) = ?",
+    "answer": "5",
+    "alternative_answers": [
+      "Five"
+    ],
+    "distractors": [
+      "4",
+      "6",
+      "10"
+    ],
+    "difficulty": "easy",
+    "source": "https://www.fiba.basketball/basic-rules",
+    "clarity_note": "5 basketball players on the court per team * 1 Direction = 5.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:27:38.969716+00:00"
+  },
+  {
+    "question": "(Number of students in detention in 'The Breakfast Club') * (Number of brothers in the Jackson 5) = ?",
+    "answer": "25",
+    "alternative_answers": [
+      "Twenty-five"
+    ],
+    "distractors": [
+      "15",
+      "20",
+      "30"
+    ],
+    "difficulty": "medium",
+    "source": "https://www.imdb.com/title/tt0088847/",
+    "clarity_note": "5 students in The Breakfast Club * 5 brothers in the Jackson 5 = 25.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:27:38.969716+00:00"
+  },
+  {
+    "question": "(Number of monkeys in the 1995 Bruce Willis movie title) * (Number of seasons of HBO's 'The Wire') = ?",
+    "answer": "60",
+    "alternative_answers": [
+      "Sixty"
+    ],
+    "distractors": [
+      "48",
+      "72",
+      "84"
+    ],
+    "difficulty": "medium",
+    "source": "https://www.hbo.com/the-wire",
+    "clarity_note": "12 Monkeys * 5 seasons of The Wire = 60.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:27:38.969716+00:00"
+  },
+  {
+    "question": "(The number in pop-punk band Sum 41's name) + (The number in pop-punk band Blink-182's name) = ?",
+    "answer": "223",
+    "alternative_answers": [
+      "Two hundred twenty-three",
+      "Two hundred and twenty-three"
+    ],
+    "distractors": [
+      "221",
+      "225",
+      "227"
+    ],
+    "difficulty": "medium",
+    "source": "https://www.billboard.com/artist/blink-182/",
+    "clarity_note": "41 (Sum 41) + 182 (Blink-182) = 223.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:27:38.969716+00:00"
+  },
+  {
+    "question": "(Number of crew members in the 2001 heist movie 'Ocean's...') + (Number of Angry Men in the 1957 jury film) = ?",
+    "answer": "23",
+    "alternative_answers": [
+      "Twenty-three"
+    ],
+    "distractors": [
+      "21",
+      "22",
+      "24"
+    ],
+    "difficulty": "medium",
+    "source": "https://www.imdb.com/title/tt0240772/",
+    "clarity_note": "Ocean's Eleven (11) + 12 Angry Men = 23.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:27:38.969716+00:00"
+  },
+  {
+    "question": "(The numerical incarnation of Doctor Who played by Matt Smith) + (Number of James Bond films starring Daniel Craig) = ?",
+    "answer": "16",
+    "alternative_answers": [
+      "Sixteen"
+    ],
+    "distractors": [
+      "14",
+      "15",
+      "17"
+    ],
+    "difficulty": "medium",
+    "source": "https://www.doctorwho.tv/characters/the-eleventh-doctor",
+    "clarity_note": "Matt Smith was the 11th Doctor + Daniel Craig starred in 5 Bond films = 16.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:27:38.969716+00:00"
+  },
+  {
+    "question": "(Number of ways to leave your lover in the Paul Simon song) - (Number of days in February during a non-leap year) = ?",
+    "answer": "22",
+    "alternative_answers": [
+      "Twenty-two"
+    ],
+    "distractors": [
+      "20",
+      "21",
+      "24"
+    ],
+    "difficulty": "medium",
+    "source": "https://genius.com/Paul-simon-50-ways-to-leave-your-lover-lyrics",
+    "clarity_note": "50 Ways to Leave Your Lover - 28 days in February = 22.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:27:38.969716+00:00"
+  },
+  {
+    "question": "(Temperature at which book paper burns in the Ray Bradbury novel title) - (Number of days in a leap year) = ?",
+    "answer": "85",
+    "alternative_answers": [
+      "Eighty-five"
+    ],
+    "distractors": [
+      "84",
+      "86",
+      "95"
+    ],
+    "difficulty": "medium",
+    "source": "https://www.britannica.com/topic/Fahrenheit-451",
+    "clarity_note": "Fahrenheit 451 - 366 days in a leap year = 85.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:27:38.969716+00:00"
+  },
+  {
+    "question": "(Number of trombones that led the big parade in 'The Music Man') - (Number of stars on the American flag) = ?",
+    "answer": "26",
+    "alternative_answers": [
+      "Twenty-six"
+    ],
+    "distractors": [
+      "24",
+      "25",
+      "28"
+    ],
+    "difficulty": "medium",
+    "source": "https://masterworksbroadway.com/music/seventy-six-trombones/",
+    "clarity_note": "76 Trombones - 50 states/stars = 26.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:27:38.969716+00:00"
+  },
+  {
+    "question": "(The Route number where you can 'get your kicks') + (The Beverly Hills Zip Code from the classic 90s teen drama) = ?",
+    "answer": "90276",
+    "alternative_answers": [
+      "Ninety thousand two hundred seventy-six"
+    ],
+    "distractors": [
+      "90266",
+      "90286",
+      "90376"
+    ],
+    "difficulty": "hard",
+    "source": "https://www.imdb.com/title/tt0098749/",
+    "clarity_note": "Route 66 + 90210 = 90276.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:27:38.969716+00:00"
+  },
+  {
+    "question": "(Number of keys on a standard piano) * (Number of times the postman rings in the classic film noir title) = ?",
+    "answer": "176",
+    "alternative_answers": [
+      "One hundred seventy-six",
+      "One hundred and seventy-six"
+    ],
+    "distractors": [
+      "166",
+      "172",
+      "186"
+    ],
+    "difficulty": "hard",
+    "source": "https://www.steinway.com/news/features/how-many-keys-on-a-piano",
+    "clarity_note": "88 piano keys * The Postman Always Rings Twice (2) = 176.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:27:38.969716+00:00"
+  },
+  {
+    "question": "(Number of Luftballons in Nena's hit song) * (Number of stooges in the classic comedy group 'The Three Stooges') = ?",
+    "answer": "297",
+    "alternative_answers": [
+      "Two hundred ninety-seven",
+      "Two hundred and ninety-seven"
+    ],
+    "distractors": [
+      "198",
+      "287",
+      "396"
+    ],
+    "difficulty": "hard",
+    "source": "https://genius.com/Nena-99-luftballons-lyrics",
+    "clarity_note": "99 Luftballons * 3 Stooges = 297.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:27:38.969716+00:00"
+  },
+  {
+    "question": "(Dalmatians in the classic Disney movie) * (Academy Awards won by 'The Lord of the Rings: Return of the King') = ?",
+    "answer": "1111",
+    "alternative_answers": [
+      "One thousand one hundred eleven",
+      "One thousand one hundred and eleven"
+    ],
+    "distractors": [
+      "1011",
+      "1101",
+      "1211"
+    ],
+    "difficulty": "hard",
+    "source": "https://www.oscars.org/oscars/ceremonies/2004",
+    "clarity_note": "101 Dalmatians * 11 Oscars won by Return of the King = 1111.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:27:38.969716+00:00"
+  }
+]

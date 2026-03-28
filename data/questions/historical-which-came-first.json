@@ -1,0 +1,341 @@
+[
+  {
+    "question": "What major technology company was founded earliest?",
+    "answer": "IBM",
+    "alternative_answers": [
+      "International Business Machines"
+    ],
+    "distractors": [
+      "Motorola",
+      "Hewlett-Packard",
+      "Microsoft"
+    ],
+    "difficulty": "easy",
+    "source": "https://www.ibm.com/history",
+    "clarity_note": "IBM was founded in 1911 as the Computing-Tabulating-Recording Company, predating Motorola (1928), Hewlett-Packard (1939), and Microsoft (1975).",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:22:56.638420+00:00"
+  },
+  {
+    "question": "What famous landmark was constructed chronologically first?",
+    "answer": "The Colosseum",
+    "alternative_answers": [
+      "Flavian Amphitheatre",
+      "Colosseum"
+    ],
+    "distractors": [
+      "Machu Picchu",
+      "The Taj Mahal",
+      "The Eiffel Tower"
+    ],
+    "difficulty": "easy",
+    "source": "https://www.history.com/topics/ancient-rome/colosseum",
+    "clarity_note": "The Colosseum was completed in 80 AD, long before Machu Picchu (1450), the Taj Mahal (1632), and the Eiffel Tower (1889).",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:22:56.638420+00:00"
+  },
+  {
+    "question": "What social media platform was launched earliest?",
+    "answer": "Facebook",
+    "alternative_answers": [
+      "TheFacebook"
+    ],
+    "distractors": [
+      "YouTube",
+      "Twitter",
+      "Instagram"
+    ],
+    "difficulty": "easy",
+    "source": "https://www.britannica.com/topic/Facebook",
+    "clarity_note": "Facebook launched in February 2004, predating YouTube (2005), Twitter (2006), and Instagram (2010).",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:22:56.638420+00:00"
+  },
+  {
+    "question": "What classic pop culture character made their debut first?",
+    "answer": "Mickey Mouse",
+    "alternative_answers": [
+      "Mickey"
+    ],
+    "distractors": [
+      "Superman",
+      "Bugs Bunny",
+      "Scooby-Doo"
+    ],
+    "difficulty": "easy",
+    "source": "https://thewaltdisneycompany.com/about/",
+    "clarity_note": "Mickey Mouse debuted in 'Steamboat Willie' in 1928, predating Superman (1938), Bugs Bunny (1940), and Scooby-Doo (1969).",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:22:56.638420+00:00"
+  },
+  {
+    "question": "What communication or media technology was invented earliest?",
+    "answer": "The Telephone",
+    "alternative_answers": [
+      "Telephone"
+    ],
+    "distractors": [
+      "The Radio",
+      "The Television",
+      "The Internet"
+    ],
+    "difficulty": "easy",
+    "source": "https://www.loc.gov/everyday-mysteries/technology/item/who-is-credited-with-inventing-the-telephone/",
+    "clarity_note": "The telephone was patented by Alexander Graham Bell in 1876, predating the radio (1895), television (1927), and the ARPANET internet (1969).",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:22:56.638420+00:00"
+  },
+  {
+    "question": "What popular book series released its first novel earliest?",
+    "answer": "Harry Potter",
+    "alternative_answers": [
+      "Harry Potter and the Sorcerer's Stone",
+      "Harry Potter and the Philosopher's Stone"
+    ],
+    "distractors": [
+      "The Da Vinci Code",
+      "Twilight",
+      "The Hunger Games"
+    ],
+    "difficulty": "easy",
+    "source": "https://www.jkrowling.com/about/",
+    "clarity_note": "The first Harry Potter book was published in 1997, predating The Da Vinci Code (2003), Twilight (2005), and The Hunger Games (2008).",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:22:56.638420+00:00"
+  },
+  {
+    "question": "What space exploration milestone happened earliest?",
+    "answer": "Sputnik 1",
+    "alternative_answers": [
+      "Sputnik"
+    ],
+    "distractors": [
+      "Apollo 11",
+      "Voyager 1",
+      "Hubble Space Telescope"
+    ],
+    "difficulty": "easy",
+    "source": "https://history.nasa.gov/sputnik/",
+    "clarity_note": "Sputnik 1 launched in 1957, making it the first artificial satellite and predating Apollo 11 (1969), Voyager 1 (1977), and the Hubble Space Telescope (1990).",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:22:56.638420+00:00"
+  },
+  {
+    "question": "What major American brand was founded earliest?",
+    "answer": "Coca-Cola",
+    "alternative_answers": [
+      "Coke"
+    ],
+    "distractors": [
+      "Ford Motor Company",
+      "Boeing",
+      "Nike"
+    ],
+    "difficulty": "easy",
+    "source": "https://www.coca-colacompany.com/about-us/history",
+    "clarity_note": "Coca-Cola was formulated in 1886, predating the Ford Motor Company (1903), Boeing (1916), and Nike (1964).",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:22:56.638420+00:00"
+  },
+  {
+    "question": "What institution or empire was established first?",
+    "answer": "Oxford University",
+    "alternative_answers": [
+      "University of Oxford"
+    ],
+    "distractors": [
+      "The Aztec Empire",
+      "The Printing Press",
+      "Machu Picchu"
+    ],
+    "difficulty": "medium",
+    "source": "https://www.ox.ac.uk/about/oxford-people/oxford-history",
+    "clarity_note": "Teaching at Oxford existed by 1096, centuries before the Aztec Empire (1325), Gutenberg's printing press (1440), and Machu Picchu (1450).",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:22:56.638420+00:00"
+  },
+  {
+    "question": "What fire-starting or illuminating invention was created earliest?",
+    "answer": "The Lighter",
+    "alternative_answers": [
+      "Lighter"
+    ],
+    "distractors": [
+      "The Friction Match",
+      "Dynamite",
+      "The Incandescent Lightbulb"
+    ],
+    "difficulty": "medium",
+    "source": "https://www.guinnessworldrecords.com/world-records/first-lighter",
+    "clarity_note": "The first lighter (Döbereiner's lamp) was invented in 1823, prior to the friction match (1826), dynamite (1867), and the practical incandescent lightbulb (1879).",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:22:56.638420+00:00"
+  },
+  {
+    "question": "What famous 20th-century figure was born earliest?",
+    "answer": "Betty White",
+    "alternative_answers": [],
+    "distractors": [
+      "Marilyn Monroe",
+      "Martin Luther King Jr.",
+      "Anne Frank"
+    ],
+    "difficulty": "medium",
+    "source": "https://www.biography.com/actor/betty-white",
+    "clarity_note": "Betty White was born in 1922, predating Marilyn Monroe (1926), Martin Luther King Jr. (1929), and Anne Frank (1929).",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:22:56.638420+00:00"
+  },
+  {
+    "question": "What popular soft drink was invented first?",
+    "answer": "Dr Pepper",
+    "alternative_answers": [],
+    "distractors": [
+      "Coca-Cola",
+      "Pepsi",
+      "7 Up"
+    ],
+    "difficulty": "medium",
+    "source": "https://drpeppermuseum.com/history/",
+    "clarity_note": "Dr Pepper was created in 1885, making it an older brand than Coca-Cola (1886), Pepsi (1893), and 7 Up (1929).",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:22:56.638420+00:00"
+  },
+  {
+    "question": "What method of transportation or vehicle debuted first?",
+    "answer": "London Underground",
+    "alternative_answers": [
+      "The Tube"
+    ],
+    "distractors": [
+      "The Wright Flyer",
+      "The Ford Model T",
+      "The Titanic"
+    ],
+    "difficulty": "medium",
+    "source": "https://tfl.gov.uk/corporate/about-tfl/culture-and-heritage/londons-transport-history/london-underground",
+    "clarity_note": "The London Underground opened in 1863, predating the Wright Brothers' first flight (1903), the Ford Model T (1908), and the Titanic (1912).",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:22:56.638420+00:00"
+  },
+  {
+    "question": "What beloved snack food hit the market earliest?",
+    "answer": "Oreos",
+    "alternative_answers": [
+      "Oreo"
+    ],
+    "distractors": [
+      "Chocolate Chip Cookies",
+      "M&Ms",
+      "Doritos"
+    ],
+    "difficulty": "medium",
+    "source": "https://www.mondelezinternational.com/Our-Brands/Oreo",
+    "clarity_note": "The Oreo cookie was introduced in 1912, predating the invention of the chocolate chip cookie (1938), M&Ms (1941), and Doritos (1964).",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:22:56.638420+00:00"
+  },
+  {
+    "question": "What ancient historical event or structure occurred first?",
+    "answer": "The Great Pyramid of Giza",
+    "alternative_answers": [
+      "Pyramid of Khufu",
+      "Great Pyramid"
+    ],
+    "distractors": [
+      "The Founding of Rome",
+      "The Life of Julius Caesar",
+      "The Construction of the Colosseum"
+    ],
+    "difficulty": "medium",
+    "source": "https://www.nationalgeographic.com/history/article/giza-pyramids",
+    "clarity_note": "The Great Pyramid was completed around 2560 BC, long before the founding of Rome (753 BC), the life of Caesar (100 BC), and the Colosseum (80 AD).",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:22:56.638420+00:00"
+  },
+  {
+    "question": "What early American milestone happened chronologically first?",
+    "answer": "Harvard University established",
+    "alternative_answers": [
+      "Founding of Harvard"
+    ],
+    "distractors": [
+      "The Salem Witch Trials",
+      "The Boston Tea Party",
+      "The Declaration of Independence"
+    ],
+    "difficulty": "medium",
+    "source": "https://www.harvard.edu/about/history/",
+    "clarity_note": "Harvard University was established in 1636, predating the Salem Witch Trials (1692), the Boston Tea Party (1773), and the Declaration of Independence (1776).",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:22:56.638420+00:00"
+  },
+  {
+    "question": "What piece of office or commercial technology was patented first?",
+    "answer": "The Fax Machine",
+    "alternative_answers": [
+      "Fax Machine",
+      "Chemical Telegraph"
+    ],
+    "distractors": [
+      "The Typewriter",
+      "The Phonograph",
+      "The Cash Register"
+    ],
+    "difficulty": "hard",
+    "source": "https://www.britannica.com/technology/fax",
+    "clarity_note": "The first experimental fax machine was patented by Alexander Bain in 1843, preceding the commercial typewriter (1874), the phonograph (1877), and the cash register (1879).",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:22:56.638420+00:00"
+  },
+  {
+    "question": "What classic board game was published earliest?",
+    "answer": "Monopoly",
+    "alternative_answers": [],
+    "distractors": [
+      "Scrabble",
+      "Candy Land",
+      "Risk"
+    ],
+    "difficulty": "hard",
+    "source": "https://corporate.hasbro.com/en-us/about/history",
+    "clarity_note": "Monopoly was published by Parker Brothers in 1935, predating Scrabble (1938), Candy Land (1949), and Risk (1957).",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:22:56.638420+00:00"
+  },
+  {
+    "question": "What major geographical or astronomical discovery occurred first?",
+    "answer": "The Planet Uranus",
+    "alternative_answers": [
+      "Uranus"
+    ],
+    "distractors": [
+      "The Continent of Antarctica",
+      "The Planet Neptune",
+      "The North Pole"
+    ],
+    "difficulty": "hard",
+    "source": "https://science.nasa.gov/uranus/",
+    "clarity_note": "William Herschel discovered Uranus in 1781, predating the first sighting of Antarctica (1820), the discovery of Neptune (1846), and reaching the North Pole (1909).",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:22:56.638420+00:00"
+  },
+  {
+    "question": "What groundbreaking invention predates the others?",
+    "answer": "The Battery",
+    "alternative_answers": [
+      "Voltaic Pile",
+      "Battery"
+    ],
+    "distractors": [
+      "The Bicycle",
+      "The Photograph",
+      "The Telegraph"
+    ],
+    "difficulty": "hard",
+    "source": "https://www.britannica.com/technology/battery-electronics",
+    "clarity_note": "Alessandro Volta invented the first true battery in 1800, predating the bicycle (1817), the first photograph (1826), and the commercial telegraph (1837).",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:22:56.638420+00:00"
+  }
+]

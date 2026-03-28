@@ -1,0 +1,334 @@
+[
+  {
+    "question": "A rich girl lets her poor boyfriend freeze in the ocean because she refuses to share a floating door.",
+    "answer": "Titanic",
+    "alternative_answers": [
+      "The Titanic"
+    ],
+    "distractors": [
+      "The Notebook",
+      "Romeo and Juliet",
+      "Pearl Harbor"
+    ],
+    "difficulty": "easy",
+    "source": "https://www.imdb.com/title/tt0120338/",
+    "clarity_note": "Summarizes Rose surviving on the floating debris while Jack freezes to death in the Atlantic.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:14:51.535392+00:00"
+  },
+  {
+    "question": "A girl murders the first person she meets, then teams up with three strangers to kill again.",
+    "answer": "The Wizard of Oz",
+    "alternative_answers": [
+      "Wizard of Oz"
+    ],
+    "distractors": [
+      "Alice in Wonderland",
+      "Peter Pan",
+      "The Chronicles of Narnia"
+    ],
+    "difficulty": "easy",
+    "source": "https://www.imdb.com/title/tt0032138/",
+    "clarity_note": "Dorothy's house crushes the Wicked Witch of the East, then she later melts the Wicked Witch of the West.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:14:51.535392+00:00"
+  },
+  {
+    "question": "A widowed father teams up with a memory-impaired woman to track down his kidnapped son.",
+    "answer": "Finding Nemo",
+    "alternative_answers": [],
+    "distractors": [
+      "The Little Mermaid",
+      "Shark Tale",
+      "Free Willy"
+    ],
+    "difficulty": "easy",
+    "source": "https://www.imdb.com/title/tt0266543/",
+    "clarity_note": "Marlin (a widowed clownfish) and Dory (who has short-term memory loss) search for Nemo.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:14:51.535392+00:00"
+  },
+  {
+    "question": "A farm boy joins a religious cult, kisses his sister, and blows up a massive government facility.",
+    "answer": "Star Wars",
+    "alternative_answers": [
+      "A New Hope",
+      "Star Wars: Episode IV - A New Hope"
+    ],
+    "distractors": [
+      "Dune",
+      "Star Trek",
+      "Guardians of the Galaxy"
+    ],
+    "difficulty": "easy",
+    "source": "https://www.imdb.com/title/tt0076759/",
+    "clarity_note": "Luke Skywalker learns the ways of the Jedi, kisses Princess Leia, and destroys the Death Star.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:14:51.535392+00:00"
+  },
+  {
+    "question": "A group of friends spend three movies walking to a volcano to destroy a piece of jewelry.",
+    "answer": "The Lord of the Rings",
+    "alternative_answers": [
+      "LotR",
+      "The Return of the King",
+      "Lord of the Rings"
+    ],
+    "distractors": [
+      "Harry Potter",
+      "The Chronicles of Narnia",
+      "Game of Thrones"
+    ],
+    "difficulty": "easy",
+    "source": "https://www.imdb.com/title/tt0120737/",
+    "clarity_note": "Frodo and the Fellowship journey to Mount Doom to destroy the One Ring.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:14:51.535392+00:00"
+  },
+  {
+    "question": "A billionaire deals with his parents' death by dressing as an animal and beating up the mentally ill.",
+    "answer": "Batman",
+    "alternative_answers": [
+      "The Dark Knight",
+      "Batman Begins",
+      "The Batman"
+    ],
+    "distractors": [
+      "Iron Man",
+      "Spider-Man",
+      "Superman"
+    ],
+    "difficulty": "easy",
+    "source": "https://www.dc.com/characters/batman",
+    "clarity_note": "Bruce Wayne copes with trauma by dressing as a bat and fighting Arkham Asylum inmates.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:14:51.535392+00:00"
+  },
+  {
+    "question": "An orphan living under stairs discovers he's famous and gets attacked by a bald, noseless man.",
+    "answer": "Harry Potter",
+    "alternative_answers": [
+      "Harry Potter and the Sorcerer's Stone",
+      "Harry Potter and the Philosopher's Stone"
+    ],
+    "distractors": [
+      "Percy Jackson",
+      "The Chronicles of Narnia",
+      "The Golden Compass"
+    ],
+    "difficulty": "easy",
+    "source": "https://www.wizardingworld.com/",
+    "clarity_note": "Harry Potter lives under the Dursleys' stairs and is constantly targeted by Voldemort.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:14:51.535392+00:00"
+  },
+  {
+    "question": "A teenage girl moves to a rainy town and causes a feud between a sparkly vampire and a werewolf.",
+    "answer": "Twilight",
+    "alternative_answers": [
+      "The Twilight Saga"
+    ],
+    "distractors": [
+      "The Vampire Diaries",
+      "True Blood",
+      "Teen Wolf"
+    ],
+    "difficulty": "easy",
+    "source": "https://www.imdb.com/title/tt1099212/",
+    "clarity_note": "Bella Swan moves to Forks, Washington, and gets involved in a love triangle with Edward and Jacob.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:14:51.535392+00:00"
+  },
+  {
+    "question": "A recovering alcoholic takes his family to an empty hotel and tries to cure his writer's block with an axe.",
+    "answer": "The Shining",
+    "alternative_answers": [],
+    "distractors": [
+      "Psycho",
+      "Misery",
+      "The Amityville Horror"
+    ],
+    "difficulty": "medium",
+    "source": "https://www.imdb.com/title/tt0081505/",
+    "clarity_note": "Jack Torrance attempts to murder his family with an axe while wintering at the Overlook Hotel.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:14:51.535392+00:00"
+  },
+  {
+    "question": "An eccentric billionaire completely fails to pass a basic safety inspection for his exotic petting zoo.",
+    "answer": "Jurassic Park",
+    "alternative_answers": [
+      "Jurassic World"
+    ],
+    "distractors": [
+      "King Kong",
+      "Godzilla",
+      "Planet of the Apes"
+    ],
+    "difficulty": "medium",
+    "source": "https://www.imdb.com/title/tt0107290/",
+    "clarity_note": "John Hammond invites experts to endorse his dinosaur park, which ends in catastrophic failure.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:14:51.535392+00:00"
+  },
+  {
+    "question": "A barefoot cop ruins a European man's elaborate holiday heist just to talk to his estranged wife.",
+    "answer": "Die Hard",
+    "alternative_answers": [],
+    "distractors": [
+      "Lethal Weapon",
+      "Home Alone",
+      "The Terminator"
+    ],
+    "difficulty": "medium",
+    "source": "https://www.imdb.com/title/tt0095016/",
+    "clarity_note": "John McClane fights Hans Gruber's terrorists at Nakatomi Plaza during a Christmas party.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:14:51.535392+00:00"
+  },
+  {
+    "question": "A hacker takes an unprescribed pill from a stranger, wakes up in a gooey pod, and learns martial arts.",
+    "answer": "The Matrix",
+    "alternative_answers": [],
+    "distractors": [
+      "Tron",
+      "Blade Runner",
+      "Inception"
+    ],
+    "difficulty": "medium",
+    "source": "https://www.imdb.com/title/tt0133093/",
+    "clarity_note": "Neo takes the red pill from Morpheus, wakes up in the real world, and downloads kung fu.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:14:51.535392+00:00"
+  },
+  {
+    "question": "A group of suited professionals take a heavily sedated nap together to convince a CEO to dissolve his company.",
+    "answer": "Inception",
+    "alternative_answers": [],
+    "distractors": [
+      "The Matrix",
+      "Shutter Island",
+      "Memento"
+    ],
+    "difficulty": "medium",
+    "source": "https://www.imdb.com/title/tt1375666/",
+    "clarity_note": "Cobb and his team use shared dreaming to plant an idea (inception) in Robert Fischer's mind.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:14:51.535392+00:00"
+  },
+  {
+    "question": "A young woman is held hostage in a castle but falls in love with her captor because he gives her a library.",
+    "answer": "Beauty and the Beast",
+    "alternative_answers": [],
+    "distractors": [
+      "Cinderella",
+      "Snow White",
+      "Sleeping Beauty"
+    ],
+    "difficulty": "medium",
+    "source": "https://www.imdb.com/title/tt0101414/",
+    "clarity_note": "Belle is imprisoned by the Beast but bonds with him after he gifts her his massive book collection.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:14:51.535392+00:00"
+  },
+  {
+    "question": "A boy hides an unregistered alien in his bedroom and feeds him peanut butter candy to evade government agents.",
+    "answer": "E.T. the Extra-Terrestrial",
+    "alternative_answers": [
+      "E.T.",
+      "ET"
+    ],
+    "distractors": [
+      "Super 8",
+      "Close Encounters of the Third Kind",
+      "Men in Black"
+    ],
+    "difficulty": "medium",
+    "source": "https://www.imdb.com/title/tt0083866/",
+    "clarity_note": "Elliott hides E.T. and lures him with Reese's Pieces while dodging government scientists.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:14:51.535392+00:00"
+  },
+  {
+    "question": "An eccentric businessman uses a magical factory tour to systematically maim misbehaving children.",
+    "answer": "Charlie and the Chocolate Factory",
+    "alternative_answers": [
+      "Willy Wonka & the Chocolate Factory",
+      "Willy Wonka and the Chocolate Factory"
+    ],
+    "distractors": [
+      "The Wizard of Oz",
+      "Mary Poppins",
+      "Alice in Wonderland"
+    ],
+    "difficulty": "medium",
+    "source": "https://www.imdb.com/title/tt0367594/",
+    "clarity_note": "Willy Wonka's factory tour results in the horrific punishments of Augustus, Veruca, Violet, and Mike.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:14:51.535392+00:00"
+  },
+  {
+    "question": "An insomniac office worker creates a very aggressive imaginary friend and accidentally starts a terrorist cult.",
+    "answer": "Fight Club",
+    "alternative_answers": [],
+    "distractors": [
+      "American Psycho",
+      "The Machinist",
+      "Memento"
+    ],
+    "difficulty": "hard",
+    "source": "https://www.imdb.com/title/tt0137523/",
+    "clarity_note": "The Narrator hallucinates Tyler Durden, leading to the creation of Project Mayhem.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:14:51.535392+00:00"
+  },
+  {
+    "question": "A stranded botanist goes to extreme lengths to grow potatoes in his own feces until his coworkers pick him up.",
+    "answer": "The Martian",
+    "alternative_answers": [],
+    "distractors": [
+      "Interstellar",
+      "Gravity",
+      "Apollo 13"
+    ],
+    "difficulty": "hard",
+    "source": "https://www.imdb.com/title/tt3659388/",
+    "clarity_note": "Mark Watney survives on Mars by fertilizing a potato crop with human waste.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:14:51.535392+00:00"
+  },
+  {
+    "question": "A disabled ship captain dooms his entire crew because he refuses to let go of a personal grudge against a whale.",
+    "answer": "Moby-Dick",
+    "alternative_answers": [
+      "Moby Dick"
+    ],
+    "distractors": [
+      "Treasure Island",
+      "20,000 Leagues Under the Sea",
+      "The Old Man and the Sea"
+    ],
+    "difficulty": "hard",
+    "source": "https://www.gutenberg.org/files/2701/2701-h/2701-h.htm",
+    "clarity_note": "Captain Ahab's obsessive quest for revenge against the white whale destroys the Pequod.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:14:51.535392+00:00"
+  },
+  {
+    "question": "A linguist talks to giant alien squids and learns a new language that spoils the tragic ending of her own life.",
+    "answer": "Arrival",
+    "alternative_answers": [
+      "Story of Your Life"
+    ],
+    "distractors": [
+      "Contact",
+      "Interstellar",
+      "Signs"
+    ],
+    "difficulty": "hard",
+    "source": "https://www.imdb.com/title/tt2543164/",
+    "clarity_note": "Louise Banks deciphers the Heptapod language, which unlocks non-linear time and reveals her future.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:14:51.535392+00:00"
+  }
+]

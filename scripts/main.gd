@@ -47,8 +47,11 @@ var _active_tween: Tween = null
 
 
 func _ready() -> void:
-	question_manager.load_questions()
+	var loaded := question_manager.load_questions()
 	_show_title_screen()
+	if not loaded:
+		subtitle_label.text = "Error: No questions found!"
+		play_button.disabled = true
 
 
 func _unhandled_input(event: InputEvent) -> void:

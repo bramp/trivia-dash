@@ -1,0 +1,674 @@
+[
+  {
+    "question": "How many days are in a standard leap year?",
+    "answer": "366",
+    "alternative_answers": [
+      "366 days"
+    ],
+    "distractors": [
+      "365",
+      "364",
+      "367"
+    ],
+    "difficulty": "easy",
+    "source": "NASA",
+    "clarity_note": "A leap year contains one extra day, February 29th, making it 366 days long.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-27T23:02:48.658278+00:00"
+  },
+  {
+    "question": "What is the freezing point of water on the Fahrenheit scale?",
+    "answer": "32 degrees",
+    "alternative_answers": [
+      "32",
+      "32 °F"
+    ],
+    "distractors": [
+      "0 degrees",
+      "100 degrees",
+      "212 degrees"
+    ],
+    "difficulty": "easy",
+    "source": "Britannica",
+    "clarity_note": "Under standard atmospheric pressure, water freezes at 32 °F, which corresponds to 0 °C.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-27T23:02:48.658278+00:00"
+  },
+  {
+    "question": "How many sides does a hexagon have?",
+    "answer": "Six",
+    "alternative_answers": [
+      "6"
+    ],
+    "distractors": [
+      "Five",
+      "Seven",
+      "Eight"
+    ],
+    "difficulty": "easy",
+    "source": "Britannica",
+    "clarity_note": "The prefix 'hexa-' means six, defining a hexagon as a six-sided polygon.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-27T23:02:48.658278+00:00"
+  },
+  {
+    "question": "What is the largest ocean on Earth?",
+    "answer": "Pacific Ocean",
+    "alternative_answers": [
+      "The Pacific"
+    ],
+    "distractors": [
+      "Atlantic Ocean",
+      "Indian Ocean",
+      "Arctic Ocean"
+    ],
+    "difficulty": "easy",
+    "source": "NOAA",
+    "clarity_note": "The Pacific Ocean covers more than 30% of the Earth's surface, making it the largest and deepest ocean basin.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-27T23:02:48.658278+00:00"
+  },
+  {
+    "question": "What is the chemical symbol for gold?",
+    "answer": "Au",
+    "alternative_answers": [],
+    "distractors": [
+      "Ag",
+      "Gd",
+      "Go"
+    ],
+    "difficulty": "easy",
+    "source": "IUPAC",
+    "clarity_note": "The symbol Au comes from the Latin word for gold, 'aurum'.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-27T23:02:48.658278+00:00"
+  },
+  {
+    "question": "How many players are on the field for a single standard soccer team?",
+    "answer": "11",
+    "alternative_answers": [
+      "Eleven"
+    ],
+    "distractors": [
+      "9",
+      "10",
+      "12"
+    ],
+    "difficulty": "easy",
+    "source": "FIFA",
+    "clarity_note": "According to the Laws of the Game, a match is played by two teams, each with a maximum of eleven players on the field.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-27T23:02:48.658278+00:00"
+  },
+  {
+    "question": "Which planet in our solar system is closest to the Sun?",
+    "answer": "Mercury",
+    "alternative_answers": [],
+    "distractors": [
+      "Venus",
+      "Mars",
+      "Earth"
+    ],
+    "difficulty": "easy",
+    "source": "NASA",
+    "clarity_note": "Mercury is the innermost planet of the solar system, orbiting the Sun at an average distance of about 36 million miles.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-27T23:02:48.658278+00:00"
+  },
+  {
+    "question": "How many colors are traditionally recognized in a standard rainbow?",
+    "answer": "Seven",
+    "alternative_answers": [
+      "7"
+    ],
+    "distractors": [
+      "Six",
+      "Eight",
+      "Nine"
+    ],
+    "difficulty": "easy",
+    "source": "National Geographic",
+    "clarity_note": "Isaac Newton originally defined the seven colors as red, orange, yellow, green, blue, indigo, and violet (ROYGBIV).",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-27T23:02:48.658278+00:00"
+  },
+  {
+    "question": "What is the most abundant gas in Earth's atmosphere?",
+    "answer": "Nitrogen",
+    "alternative_answers": [
+      "N2"
+    ],
+    "distractors": [
+      "Oxygen",
+      "Carbon dioxide",
+      "Hydrogen"
+    ],
+    "difficulty": "medium",
+    "source": "NASA",
+    "clarity_note": "Nitrogen makes up about 78% of the Earth's atmosphere, followed by oxygen at 21%.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-27T23:02:48.658278+00:00"
+  },
+  {
+    "question": "Which blood type is generally known as the universal donor?",
+    "answer": "O negative",
+    "alternative_answers": [
+      "O-",
+      "Type O negative"
+    ],
+    "distractors": [
+      "O positive",
+      "AB positive",
+      "AB negative"
+    ],
+    "difficulty": "medium",
+    "source": "American Red Cross",
+    "clarity_note": "O negative blood lacks A, B, and Rh antigens, meaning it can be transfused to patients of any blood type in emergencies.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-27T23:02:48.658278+00:00"
+  },
+  {
+    "question": "What is the largest internal organ in the human body?",
+    "answer": "The liver",
+    "alternative_answers": [
+      "Liver"
+    ],
+    "distractors": [
+      "The heart",
+      "The lungs",
+      "The stomach"
+    ],
+    "difficulty": "medium",
+    "source": "Cleveland Clinic",
+    "clarity_note": "While the skin is the largest organ overall, the liver is the heaviest and largest internal organ.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-27T23:02:48.658278+00:00"
+  },
+  {
+    "question": "How many individual squares make up a standard chessboard?",
+    "answer": "64",
+    "alternative_answers": [
+      "Sixty-four"
+    ],
+    "distractors": [
+      "36",
+      "81",
+      "100"
+    ],
+    "difficulty": "medium",
+    "source": "FIDE",
+    "clarity_note": "A chessboard consists of an 8x8 grid of alternating light and dark squares, resulting in 64 total squares.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-27T23:02:48.658278+00:00"
+  },
+  {
+    "question": "Which standard chess piece is restricted to moving exclusively diagonally?",
+    "answer": "The bishop",
+    "alternative_answers": [
+      "Bishop"
+    ],
+    "distractors": [
+      "The rook",
+      "The knight",
+      "The pawn"
+    ],
+    "difficulty": "medium",
+    "source": "FIDE",
+    "clarity_note": "The bishop can move any number of vacant squares in any diagonal direction.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-27T23:02:48.658278+00:00"
+  },
+  {
+    "question": "How many fluid ounces are in a standard US cup?",
+    "answer": "8",
+    "alternative_answers": [
+      "Eight",
+      "8 oz"
+    ],
+    "distractors": [
+      "10",
+      "12",
+      "16"
+    ],
+    "difficulty": "medium",
+    "source": "NIST",
+    "clarity_note": "In the United States customary system of volume, one standard cup is equal to exactly 8 fluid ounces.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-27T23:02:48.658278+00:00"
+  },
+  {
+    "question": "What is the capital city of Australia?",
+    "answer": "Canberra",
+    "alternative_answers": [],
+    "distractors": [
+      "Sydney",
+      "Melbourne",
+      "Brisbane"
+    ],
+    "difficulty": "medium",
+    "source": "Britannica",
+    "clarity_note": "Canberra was intentionally established as the capital in 1908 as a geographical compromise between rivals Sydney and Melbourne.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-27T23:02:48.658278+00:00"
+  },
+  {
+    "question": "How many permanent teeth does a typical adult human have?",
+    "answer": "32",
+    "alternative_answers": [
+      "Thirty-two"
+    ],
+    "distractors": [
+      "28",
+      "30",
+      "34"
+    ],
+    "difficulty": "medium",
+    "source": "American Dental Association",
+    "clarity_note": "A full, natural set of adult teeth includes 32 teeth, which counts the four third molars (wisdom teeth).",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-27T23:02:48.658278+00:00"
+  },
+  {
+    "question": "What is the only letter of the alphabet that does not appear in any US state name?",
+    "answer": "Q",
+    "alternative_answers": [
+      "The letter Q"
+    ],
+    "distractors": [
+      "X",
+      "Z",
+      "J"
+    ],
+    "difficulty": "hard",
+    "source": "US Census Bureau",
+    "clarity_note": "While X, Z, and J appear in states like Texas, Arizona, and New Jersey respectively, the letter Q does not appear in any of the 50 state names.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-27T23:02:48.658278+00:00"
+  },
+  {
+    "question": "What is the exact boiling point of water on the Kelvin scale at standard pressure?",
+    "answer": "373.15 K",
+    "alternative_answers": [
+      "373 K",
+      "373.15"
+    ],
+    "distractors": [
+      "273.15 K",
+      "100 K",
+      "0 K"
+    ],
+    "difficulty": "hard",
+    "source": "NIST",
+    "clarity_note": "Water boils at 100 degrees Celsius, and to convert Celsius to Kelvin, you add 273.15, resulting in 373.15 K.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-27T23:02:48.658278+00:00"
+  },
+  {
+    "question": "What is the mathematical term for a polygon with exactly twelve sides?",
+    "answer": "Dodecagon",
+    "alternative_answers": [
+      "12-gon"
+    ],
+    "distractors": [
+      "Decagon",
+      "Hendecagon",
+      "Icosagon"
+    ],
+    "difficulty": "hard",
+    "source": "Wolfram MathWorld",
+    "clarity_note": "The Greek prefix 'dodeca-' translates to twelve, making a dodecagon a twelve-sided polygon.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-27T23:02:48.658278+00:00"
+  },
+  {
+    "question": "Which continent is the only one to span all four hemispheres?",
+    "answer": "Africa",
+    "alternative_answers": [],
+    "distractors": [
+      "Asia",
+      "South America",
+      "Antarctica"
+    ],
+    "difficulty": "hard",
+    "source": "National Geographic",
+    "clarity_note": "Africa is crossed by both the Equator and the Prime Meridian, placing portions of its landmass in the Northern, Southern, Eastern, and Western hemispheres.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-27T23:02:48.658278+00:00"
+  },
+  {
+    "question": "How many full weeks are in a standard 365-day calendar year?",
+    "answer": "52",
+    "alternative_answers": [
+      "Fifty-two"
+    ],
+    "distractors": [
+      "50",
+      "54",
+      "48"
+    ],
+    "difficulty": "easy",
+    "source": "https://www.timeanddate.com/calendar/days/",
+    "clarity_note": "A standard year has 365 days, and 365 divided by 7 equals 52 with one day remaining.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:07:19.383823+00:00"
+  },
+  {
+    "question": "Which US president is depicted on the front of the US five-dollar bill?",
+    "answer": "Abraham Lincoln",
+    "alternative_answers": [
+      "Lincoln",
+      "Abe Lincoln"
+    ],
+    "distractors": [
+      "George Washington",
+      "Thomas Jefferson",
+      "Alexander Hamilton"
+    ],
+    "difficulty": "easy",
+    "source": "https://www.bep.gov/currency/five-dollar-bill",
+    "clarity_note": "Abraham Lincoln has been featured on the front of the US five-dollar bill since 1914.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:07:19.383823+00:00"
+  },
+  {
+    "question": "What is the sum of the interior angles of a flat triangle, in degrees?",
+    "answer": "180",
+    "alternative_answers": [
+      "180 degrees",
+      "One hundred eighty"
+    ],
+    "distractors": [
+      "360",
+      "90",
+      "270"
+    ],
+    "difficulty": "easy",
+    "source": "https://www.mathsisfun.com/geometry/triangles-interiors.html",
+    "clarity_note": "In Euclidean geometry, the three interior angles of any triangle always add up to exactly 180 degrees.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:07:19.383823+00:00"
+  },
+  {
+    "question": "What is the capital city of Canada?",
+    "answer": "Ottawa",
+    "alternative_answers": [],
+    "distractors": [
+      "Toronto",
+      "Vancouver",
+      "Montreal"
+    ],
+    "difficulty": "easy",
+    "source": "https://www.britannica.com/place/Ottawa",
+    "clarity_note": "Queen Victoria chose Ottawa as the capital of the Province of Canada in 1857.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:07:19.383823+00:00"
+  },
+  {
+    "question": "How many individual Great Lakes are located in North America?",
+    "answer": "5",
+    "alternative_answers": [
+      "Five"
+    ],
+    "distractors": [
+      "4",
+      "6",
+      "7"
+    ],
+    "difficulty": "easy",
+    "source": "https://www.epa.gov/greatlakes/facts-and-figures-about-great-lakes",
+    "clarity_note": "The five Great Lakes are Huron, Ontario, Michigan, Erie, and Superior (remembered by the acronym HOMES).",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:07:19.383823+00:00"
+  },
+  {
+    "question": "What is the hardest naturally occurring mineral on the Mohs hardness scale?",
+    "answer": "Diamond",
+    "alternative_answers": [],
+    "distractors": [
+      "Quartz",
+      "Corundum",
+      "Topaz"
+    ],
+    "difficulty": "easy",
+    "source": "https://www.nps.gov/articles/mohs-hardness-scale.htm",
+    "clarity_note": "Diamond is at the very top of the Mohs scale with a rating of 10.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:07:19.383823+00:00"
+  },
+  {
+    "question": "On a standard compass rose, which cardinal direction is located exactly at 90 degrees?",
+    "answer": "East",
+    "alternative_answers": [
+      "E"
+    ],
+    "distractors": [
+      "North",
+      "South",
+      "West"
+    ],
+    "difficulty": "easy",
+    "source": "https://education.nationalgeographic.org/resource/compass/",
+    "clarity_note": "North is 0/360 degrees, East is 90 degrees, South is 180 degrees, and West is 270 degrees.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:07:19.383823+00:00"
+  },
+  {
+    "question": "How many standard liquid pints are contained in one US liquid gallon?",
+    "answer": "8",
+    "alternative_answers": [
+      "Eight"
+    ],
+    "distractors": [
+      "4",
+      "16",
+      "12"
+    ],
+    "difficulty": "easy",
+    "source": "https://www.nist.gov/pml/owm/approximate-conversions-us-customary-measures-metric",
+    "clarity_note": "There are 2 pints in a quart, and 4 quarts in a gallon, making 8 pints in a gallon.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:07:19.383823+00:00"
+  },
+  {
+    "question": "How many standard time zones cover the contiguous United States?",
+    "answer": "4",
+    "alternative_answers": [
+      "Four"
+    ],
+    "distractors": [
+      "3",
+      "5",
+      "6"
+    ],
+    "difficulty": "medium",
+    "source": "https://www.nist.gov/pml/time-and-frequency-division/popular-links/local-time-faqs",
+    "clarity_note": "The lower 48 states span four standard time zones: Eastern, Central, Mountain, and Pacific.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:07:19.383823+00:00"
+  },
+  {
+    "question": "What Roman numeral is used to represent the number 50?",
+    "answer": "L",
+    "alternative_answers": [],
+    "distractors": [
+      "C",
+      "D",
+      "M"
+    ],
+    "difficulty": "medium",
+    "source": "https://www.britannica.com/topic/Roman-numeral",
+    "clarity_note": "In the Roman numeral system, L represents 50, C represents 100, D represents 500, and M represents 1000.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:07:19.383823+00:00"
+  },
+  {
+    "question": "In American football, how many points is a touchdown worth before the extra point attempt?",
+    "answer": "6",
+    "alternative_answers": [
+      "Six"
+    ],
+    "distractors": [
+      "7",
+      "3",
+      "5"
+    ],
+    "difficulty": "medium",
+    "source": "https://operations.nfl.com/the-rules/nfl-rules-digest/",
+    "clarity_note": "A touchdown awards 6 points, allowing the scoring team to then attempt a 1-point kick or 2-point conversion.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:07:19.383823+00:00"
+  },
+  {
+    "question": "What is the standard number of keys on a modern full-size piano?",
+    "answer": "88",
+    "alternative_answers": [
+      "Eighty-eight"
+    ],
+    "distractors": [
+      "76",
+      "64",
+      "96"
+    ],
+    "difficulty": "medium",
+    "source": "https://www.steinway.com/articles/how-many-keys-on-a-piano",
+    "clarity_note": "A standard modern piano has 88 keys: 52 white keys and 36 black keys.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:07:19.383823+00:00"
+  },
+  {
+    "question": "Which layer of the Earth lies directly beneath the outermost crust?",
+    "answer": "The mantle",
+    "alternative_answers": [
+      "Mantle"
+    ],
+    "distractors": [
+      "The outer core",
+      "The inner core",
+      "The troposphere"
+    ],
+    "difficulty": "medium",
+    "source": "https://education.nationalgeographic.org/resource/mantle/",
+    "clarity_note": "The mantle is the mostly solid bulk of Earth's interior that lies between Earth's dense core and its thin outer crust.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:07:19.383823+00:00"
+  },
+  {
+    "question": "How many strings does a standard modern acoustic violin have?",
+    "answer": "4",
+    "alternative_answers": [
+      "Four"
+    ],
+    "distractors": [
+      "5",
+      "6",
+      "8"
+    ],
+    "difficulty": "medium",
+    "source": "https://www.britannica.com/art/violin",
+    "clarity_note": "A standard violin has four strings, usually tuned in perfect fifths: G, D, A, and E.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:07:19.383823+00:00"
+  },
+  {
+    "question": "What is the proper noun for the typographic symbol '&'?",
+    "answer": "Ampersand",
+    "alternative_answers": [],
+    "distractors": [
+      "Asterisk",
+      "Octothorpe",
+      "Tilde"
+    ],
+    "difficulty": "medium",
+    "source": "https://www.merriam-webster.com/dictionary/ampersand",
+    "clarity_note": "The symbol '&' is historically a ligature of the letters 'et', which is Latin for 'and'.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:07:19.383823+00:00"
+  },
+  {
+    "question": "How many five-pointed stars are featured on the flag of the European Union?",
+    "answer": "12",
+    "alternative_answers": [
+      "Twelve"
+    ],
+    "distractors": [
+      "10",
+      "15",
+      "27"
+    ],
+    "difficulty": "medium",
+    "source": "https://european-union.europa.eu/principles-countries-history/symbols/european-flag_en",
+    "clarity_note": "The flag features 12 stars as a symbol of perfection and entirety, independent of the number of member states.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:07:19.383823+00:00"
+  },
+  {
+    "question": "What is the atomic number of the element carbon on the periodic table?",
+    "answer": "6",
+    "alternative_answers": [
+      "Six"
+    ],
+    "distractors": [
+      "8",
+      "12",
+      "14"
+    ],
+    "difficulty": "hard",
+    "source": "https://pubchem.ncbi.nlm.nih.gov/element/Carbon",
+    "clarity_note": "Carbon has 6 protons in its nucleus, giving it the atomic number 6.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:07:19.383823+00:00"
+  },
+  {
+    "question": "What is the sum of all the numbers on a standard roulette wheel, from 1 to 36?",
+    "answer": "666",
+    "alternative_answers": [
+      "Six hundred sixty-six"
+    ],
+    "distractors": [
+      "360",
+      "777",
+      "505"
+    ],
+    "difficulty": "hard",
+    "source": "https://www.britannica.com/topic/roulette",
+    "clarity_note": "Adding every number on the wheel (1+2+3...+36) mathematically equates to 666.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:07:19.383823+00:00"
+  },
+  {
+    "question": "How many individual bones are contained in a standard adult human foot?",
+    "answer": "26",
+    "alternative_answers": [
+      "Twenty-six"
+    ],
+    "distractors": [
+      "24",
+      "28",
+      "32"
+    ],
+    "difficulty": "hard",
+    "source": "https://my.clevelandclinic.org/health/body/21752-foot-and-ankle-bones",
+    "clarity_note": "A typical human foot is composed of 26 bones: 7 tarsals, 5 metatarsals, and 14 phalanges.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:07:19.383823+00:00"
+  },
+  {
+    "question": "Which US constitutional amendment guarantees a citizen's right to a speedy and public trial?",
+    "answer": "Sixth Amendment",
+    "alternative_answers": [
+      "6th Amendment",
+      "Amendment VI",
+      "The Sixth Amendment"
+    ],
+    "distractors": [
+      "Fourth Amendment",
+      "Fifth Amendment",
+      "Eighth Amendment"
+    ],
+    "difficulty": "hard",
+    "source": "https://constitution.congress.gov/constitution/amendment-6/",
+    "clarity_note": "The Sixth Amendment provides protections and rights to a person accused of a crime, including a speedy, public, and impartial trial.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:07:19.383823+00:00"
+  }
+]

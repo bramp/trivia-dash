@@ -1,0 +1,353 @@
+[
+  {
+    "question": "In which country was the Hawaiian pizza invented?",
+    "answer": "Canada",
+    "alternative_answers": [],
+    "distractors": [
+      "USA",
+      "Italy",
+      "Australia"
+    ],
+    "difficulty": "easy",
+    "source": "https://www.bbc.co.uk/bitesize/articles/z2vftrd",
+    "clarity_note": "Invented by Sam Panopoulos, a Greek immigrant, in Ontario, Canada in 1962.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:15:59.040263+00:00"
+  },
+  {
+    "question": "Which country is the true birthplace of the pastry that evolved into the croissant?",
+    "answer": "Austria",
+    "alternative_answers": [
+      "Austrian Empire"
+    ],
+    "distractors": [
+      "France",
+      "Italy",
+      "Switzerland"
+    ],
+    "difficulty": "easy",
+    "source": "https://www.smithsonianmag.com/travel/croissant-really-french-180955130/",
+    "clarity_note": "The French croissant is a direct descendant of the Austrian kipferl, introduced to France in the 1830s.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:15:59.040263+00:00"
+  },
+  {
+    "question": "Which country is widely considered the birthplace of the curry dish Chicken Tikka Masala?",
+    "answer": "United Kingdom",
+    "alternative_answers": [
+      "UK",
+      "Great Britain",
+      "Scotland",
+      "Britain"
+    ],
+    "distractors": [
+      "India",
+      "Pakistan",
+      "Bangladesh"
+    ],
+    "difficulty": "easy",
+    "source": "https://www.britannica.com/topic/chicken-tikka-masala",
+    "clarity_note": "It was created by South Asian chefs adjusting to local palates, most famously attributed to a restaurant in Glasgow, Scotland.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:15:59.040263+00:00"
+  },
+  {
+    "question": "In which country was the Caesar salad invented?",
+    "answer": "Mexico",
+    "alternative_answers": [
+      "United Mexican States"
+    ],
+    "distractors": [
+      "USA",
+      "Italy",
+      "Greece"
+    ],
+    "difficulty": "easy",
+    "source": "https://www.huffpost.com/entry/caesar-salad-origin-mexico_n_5b3e24fee4b09e4a20b852f8",
+    "clarity_note": "It was invented by Italian-American restaurateur Caesar Cardini in Tijuana, Mexico.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:15:59.040263+00:00"
+  },
+  {
+    "question": "Which US state is the original birthplace of chili con carne?",
+    "answer": "Texas",
+    "alternative_answers": [
+      "State of Texas"
+    ],
+    "distractors": [
+      "New Mexico",
+      "Arizona",
+      "California"
+    ],
+    "difficulty": "easy",
+    "source": "https://nationalchilicenter.org/history-of-chili/",
+    "clarity_note": "Chili con carne originated as a working-class staple in San Antonio, Texas, not in Mexico.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:15:59.040263+00:00"
+  },
+  {
+    "question": "In which country was German Chocolate Cake actually invented?",
+    "answer": "USA",
+    "alternative_answers": [
+      "United States",
+      "United States of America",
+      "America"
+    ],
+    "distractors": [
+      "Germany",
+      "Austria",
+      "Switzerland"
+    ],
+    "difficulty": "easy",
+    "source": "https://www.npr.org/templates/story/story.php?storyId=11300757",
+    "clarity_note": "It is named after Samuel German, an American baker who created a dark baking chocolate for Baker's Chocolate Company.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:15:59.040263+00:00"
+  },
+  {
+    "question": "Which country is the true home of the seemingly Scandinavian ice cream brand Häagen-Dazs?",
+    "answer": "USA",
+    "alternative_answers": [
+      "United States",
+      "United States of America",
+      "America"
+    ],
+    "distractors": [
+      "Denmark",
+      "Sweden",
+      "Norway"
+    ],
+    "difficulty": "easy",
+    "source": "https://www.nytimes.com/1999/07/18/nyregion/neighborhood-report-bronx-up-close-the-rough-boyhood-that-led-to-haagen-dazs.html",
+    "clarity_note": "The brand was founded in the Bronx, New York. The name is a nonsense word invented to sound Danish.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:15:59.040263+00:00"
+  },
+  {
+    "question": "Which country is the original native home of the kiwifruit?",
+    "answer": "China",
+    "alternative_answers": [
+      "People's Republic of China",
+      "PRC"
+    ],
+    "distractors": [
+      "New Zealand",
+      "Australia",
+      "Brazil"
+    ],
+    "difficulty": "easy",
+    "source": "https://www.britannica.com/plant/kiwi-fruit",
+    "clarity_note": "Originally known as the Chinese gooseberry, it is native to mainland China and was later renamed in New Zealand.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:15:59.040263+00:00"
+  },
+  {
+    "question": "Which European country introduced the batter-frying technique that became Japanese tempura?",
+    "answer": "Portugal",
+    "alternative_answers": [
+      "Portuguese Republic"
+    ],
+    "distractors": [
+      "Spain",
+      "Netherlands",
+      "Great Britain"
+    ],
+    "difficulty": "medium",
+    "source": "https://www.bbc.com/travel/article/20170808-the-truth-about-japanese-tempura",
+    "clarity_note": "Portuguese missionaries and traders introduced batter-frying to Nagasaki in the 16th century.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:15:59.040263+00:00"
+  },
+  {
+    "question": "Which European country first introduced raw salmon as a sushi ingredient to Japan in the 1980s?",
+    "answer": "Norway",
+    "alternative_answers": [
+      "Kingdom of Norway"
+    ],
+    "distractors": [
+      "Sweden",
+      "Scotland",
+      "Iceland"
+    ],
+    "difficulty": "medium",
+    "source": "https://www.npr.org/2015/09/18/441530790/how-the-desperate-norwegian-salmon-industry-created-a-sushi-staple",
+    "clarity_note": "'Project Japan' was a Norwegian marketing campaign that successfully introduced Atlantic salmon to Japanese sushi chefs.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:15:59.040263+00:00"
+  },
+  {
+    "question": "The spicy Indian dish Vindaloo derives its name and fundamental marinade from which country?",
+    "answer": "Portugal",
+    "alternative_answers": [
+      "Portuguese Republic"
+    ],
+    "distractors": [
+      "Great Britain",
+      "France",
+      "Spain"
+    ],
+    "difficulty": "medium",
+    "source": "https://www.bbc.com/travel/article/20151126-the-surprising-origins-of-indian-food",
+    "clarity_note": "It originates from the Portuguese dish 'carne de vinha d'alhos', which means meat in a garlic and wine marinade.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:15:59.040263+00:00"
+  },
+  {
+    "question": "Which modern-day African country is the geographical origin of the Arabica coffee plant?",
+    "answer": "Ethiopia",
+    "alternative_answers": [
+      "Federal Democratic Republic of Ethiopia"
+    ],
+    "distractors": [
+      "Kenya",
+      "Yemen",
+      "Colombia"
+    ],
+    "difficulty": "medium",
+    "source": "https://www.kew.org/plants/arabica-coffee",
+    "clarity_note": "Coffea arabica is indigenous to the southwestern highlands of Ethiopia.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:15:59.040263+00:00"
+  },
+  {
+    "question": "Sriracha sauce is named after the coastal city of Si Racha, which is located in which country?",
+    "answer": "Thailand",
+    "alternative_answers": [
+      "Kingdom of Thailand"
+    ],
+    "distractors": [
+      "Vietnam",
+      "Malaysia",
+      "Indonesia"
+    ],
+    "difficulty": "medium",
+    "source": "https://www.npr.org/sections/thesalt/2019/01/16/681944292/in-the-thai-town-where-sriracha-was-born-the-local-sauce-remains-the-champion",
+    "clarity_note": "It was first produced in the Thai coastal city of Si Racha by Thanom Chakkapak.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:15:59.040263+00:00"
+  },
+  {
+    "question": "The chimichanga, a deep-fried burrito, is widely believed to have been invented in which US state?",
+    "answer": "Arizona",
+    "alternative_answers": [
+      "State of Arizona"
+    ],
+    "distractors": [
+      "Texas",
+      "California",
+      "New Mexico"
+    ],
+    "difficulty": "medium",
+    "source": "https://www.latimes.com/food/dailydish/la-dd-chimichanga-20150924-story.html",
+    "clarity_note": "Multiple restaurants in Tucson, Arizona, claim to have invented it by accidentally dropping a burrito into a deep fryer.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:15:59.040263+00:00"
+  },
+  {
+    "question": "In which country were English muffins actually invented?",
+    "answer": "USA",
+    "alternative_answers": [
+      "United States",
+      "United States of America",
+      "America"
+    ],
+    "distractors": [
+      "United Kingdom",
+      "Canada",
+      "Australia"
+    ],
+    "difficulty": "medium",
+    "source": "https://www.seriouseats.com/the-history-of-the-english-muffin",
+    "clarity_note": "Invented by Samuel Bath Thomas, a British immigrant, in his New York bakery in 1880.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:15:59.040263+00:00"
+  },
+  {
+    "question": "Which country is the original native birthplace of the vanilla orchid?",
+    "answer": "Mexico",
+    "alternative_answers": [
+      "United Mexican States"
+    ],
+    "distractors": [
+      "Madagascar",
+      "Indonesia",
+      "Tahiti"
+    ],
+    "difficulty": "medium",
+    "source": "https://www.nationalgeographic.com/history/article/vanilla-history-mexico-madagascar",
+    "clarity_note": "Vanilla is native to Mesoamerica and was first cultivated by the Totonac people of modern-day Mexico.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:15:59.040263+00:00"
+  },
+  {
+    "question": "The word and original recipe for ketchup trace back to a fermented fish sauce from which country?",
+    "answer": "China",
+    "alternative_answers": [
+      "People's Republic of China",
+      "PRC"
+    ],
+    "distractors": [
+      "USA",
+      "United Kingdom",
+      "Italy"
+    ],
+    "difficulty": "hard",
+    "source": "https://www.nationalgeographic.com/culture/article/how-was-ketchup-invented",
+    "clarity_note": "Derived from the Hokkien Chinese word 'kê-tsiap', which referred to a fermented fish sauce.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:15:59.040263+00:00"
+  },
+  {
+    "question": "Despite being famously grown in Hawaii, the macadamia nut is originally native to which country?",
+    "answer": "Australia",
+    "alternative_answers": [
+      "Commonwealth of Australia"
+    ],
+    "distractors": [
+      "Brazil",
+      "Philippines",
+      "Indonesia"
+    ],
+    "difficulty": "hard",
+    "source": "https://www.macadamias.org/history/",
+    "clarity_note": "Macadamia trees are indigenous to the eastern coast of Australia.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:15:59.040263+00:00"
+  },
+  {
+    "question": "The cold potato-leek soup known as Vichyssoise was invented in 1917 in which country?",
+    "answer": "USA",
+    "alternative_answers": [
+      "United States",
+      "United States of America",
+      "America"
+    ],
+    "distractors": [
+      "France",
+      "Belgium",
+      "Switzerland"
+    ],
+    "difficulty": "hard",
+    "source": "https://www.nytimes.com/1997/06/15/magazine/the-master-of-the-ritz.html",
+    "clarity_note": "It was created by French chef Louis Diat while working at the Ritz-Carlton Hotel in New York City.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:15:59.040263+00:00"
+  },
+  {
+    "question": "In which US state was the modern Cuban sandwich primarily developed and popularized?",
+    "answer": "Florida",
+    "alternative_answers": [
+      "State of Florida"
+    ],
+    "distractors": [
+      "New York",
+      "California",
+      "Louisiana"
+    ],
+    "difficulty": "hard",
+    "source": "https://www.npr.org/sections/thesalt/2012/04/21/151050107/the-cuban-sandwich-a-history-in-layers",
+    "clarity_note": "Created in the late 1800s and early 1900s by Cuban immigrants living in Key West and Tampa, Florida.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:15:59.040263+00:00"
+  }
+]

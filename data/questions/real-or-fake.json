@@ -1,0 +1,340 @@
+[
+  {
+    "question": "Identify the definitively TRUE fact about animal digestion.",
+    "answer": "Wombats produce distinctively cube-shaped feces",
+    "alternative_answers": [],
+    "distractors": [
+      "Sloths routinely defecate straight out of their mouths",
+      "Owls digest their prey fully and never regurgitate waste",
+      "Cows possess three completely independent and separate stomachs"
+    ],
+    "difficulty": "easy",
+    "source": "https://www.nationalgeographic.com/animals/article/wombat-poop-cube-why-is-it-square-shaped",
+    "clarity_note": "Wombat intestines uniquely sculpt their waste into cubes, whereas the distractors are false (owls regurgitate pellets, cows have one stomach with four compartments, sloths defecate normally).",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:18:56.044771+00:00"
+  },
+  {
+    "question": "Which statement regarding historical timelines is actually TRUE?",
+    "answer": "Cleopatra lived closer in time to the Moon landing than to the Great Pyramid's construction",
+    "alternative_answers": [
+      "Cleopatra was born closer to the Moon landing than the building of the Pyramids"
+    ],
+    "distractors": [
+      "The Tyrannosaurus Rex lived closer in time to the Stegosaurus than to modern humans",
+      "Woolly mammoths went entirely extinct centuries before the Pyramids were built",
+      "The Roman Empire officially collapsed before the invention of written paper"
+    ],
+    "difficulty": "easy",
+    "source": "https://www.smithsonianmag.com/smart-news/cleopatra-lived-closer-to-the-moon-landing-than-to-the-great-pyramid-180975612/",
+    "clarity_note": "The Great Pyramid was completed around 2560 BC, Cleopatra lived around 30 BC (approx 2500 years later), and the Moon landing was in 1969 AD (under 2000 years later).",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:18:56.044771+00:00"
+  },
+  {
+    "question": "Identify the TRUE botanical fact about fruits.",
+    "answer": "Botanically speaking, bananas are classified as berries, but strawberries are not",
+    "alternative_answers": [
+      "Bananas are officially berries, while strawberries are false fruits"
+    ],
+    "distractors": [
+      "Apples are scientifically categorized as belonging to the sour citrus family",
+      "Peanuts naturally grow on the high branches of large deciduous trees",
+      "Carrots are biologically classified as the sweet fruit of a root plant"
+    ],
+    "difficulty": "easy",
+    "source": "https://news.stanford.edu/2016/06/29/bananas-are-berries-but-strawberries-arent/",
+    "clarity_note": "A true berry develops from a single flower with one ovary, making bananas berries, but strawberries (which develop from a flower with multiple ovaries) an aggregate fruit.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:18:56.044771+00:00"
+  },
+  {
+    "question": "Which of the following statements about national symbols is TRUE?",
+    "answer": "The national animal of Scotland is the mythical unicorn",
+    "alternative_answers": [
+      "Scotland's official national animal is the unicorn"
+    ],
+    "distractors": [
+      "Canada's official national bird is the predatory bald eagle",
+      "Australia's official coat of arms prominently features a sleeping koala",
+      "Japan's strictly designated national flower is the sacred water lotus"
+    ],
+    "difficulty": "easy",
+    "source": "https://www.visitscotland.com/about/uniquely-scottish/national-animal-unicorn",
+    "clarity_note": "The unicorn was first used on the Scottish royal coat of arms in the 12th century. The bald eagle is the US bird, Australia's coat features a kangaroo and emu, and Japan has no single strictly designated legal flower, though the cherry blossom is a cultural symbol.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:18:56.044771+00:00"
+  },
+  {
+    "question": "Select the TRUE fact about early video game history.",
+    "answer": "The iconic video game character Mario was originally depicted as a carpenter",
+    "alternative_answers": [
+      "Mario's original occupation in Donkey Kong was a carpenter"
+    ],
+    "distractors": [
+      "Pac-Man was initially designed to look exactly like a missing slice of apple",
+      "The famous Konami Code was specifically created to let players cheat in Tetris",
+      "Sonic the Hedgehog's original conceptualized name was Fast Blue Mouse"
+    ],
+    "difficulty": "easy",
+    "source": "https://www.nintendo.co.uk/Iwata-Asks/Iwata-Asks-New-Super-Mario-Bros-Wii/Vol-1-Mario-History/1-Mario-Was-Originally-A-Carpenter/1-Mario-Was-Originally-A-Carpenter-230919.html",
+    "clarity_note": "In his debut in Donkey Kong (1981), Mario (then 'Jumpman') was a carpenter navigating a construction site.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:18:56.044771+00:00"
+  },
+  {
+    "question": "Which statement about the planets in our solar system is actually TRUE?",
+    "answer": "A single day on the planet Venus lasts longer than a full year on Venus",
+    "alternative_answers": [
+      "Venus takes longer to rotate on its axis than it does to orbit the Sun"
+    ],
+    "distractors": [
+      "Jupiter contains a completely solid planetary core made entirely of pure diamond",
+      "Mercury is definitively the hottest planet located in our entire solar system",
+      "The majestic orbital rings of Saturn are formed from completely solid bands of rock"
+    ],
+    "difficulty": "easy",
+    "source": "https://science.nasa.gov/venus/facts/",
+    "clarity_note": "Venus takes 243 Earth days to rotate once on its axis (a Venusian day) but only 225 Earth days to orbit the Sun (a Venusian year).",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:18:56.044771+00:00"
+  },
+  {
+    "question": "Identify the TRUE historical fact about clothing and fashion.",
+    "answer": "High-heeled shoes were originally designed and intended to be worn by men",
+    "alternative_answers": [
+      "Heels were initially invented for male soldiers and aristocrats"
+    ],
+    "distractors": [
+      "The modern tuxedo was initially invented in the 1920s as a women's rebellious garment",
+      "Tall top hats were once legally banned in London for causing widespread public panic",
+      "The two-piece bikini swimsuit was directly named after a highly popular French dessert"
+    ],
+    "difficulty": "easy",
+    "source": "https://www.bbc.com/news/magazine-21151350",
+    "clarity_note": "High heels were worn by Persian cavalry in the 10th century to keep their feet in stirrups, and later adopted by male European aristocrats.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:18:56.044771+00:00"
+  },
+  {
+    "question": "Which bizarre fact about insect biology is genuinely TRUE?",
+    "answer": "Butterflies possess specialized taste receptors that are located directly on their feet",
+    "alternative_answers": [
+      "Butterflies literally taste their food using their feet"
+    ],
+    "distractors": [
+      "Mosquitoes utilize complex echolocation to actively hunt human targets in total darkness",
+      "Ants entirely lack a brain and survive strictly by relying on automatic spinal reflexes",
+      "Cockroaches are considered the only insect species known to possess actual vocal cords"
+    ],
+    "difficulty": "easy",
+    "source": "https://kids.nationalgeographic.com/animals/invertebrates/facts/butterfly",
+    "clarity_note": "Butterflies have chemoreceptors on their tarsi (feet), which allow them to 'taste' leaves to find a suitable place to lay eggs.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:18:56.044771+00:00"
+  },
+  {
+    "question": "Select the definitively TRUE statement regarding physics and matter.",
+    "answer": "Water can simultaneously freeze and boil when reaching its exact triple point",
+    "alternative_answers": [
+      "At its triple point, water exists as a solid, liquid, and gas simultaneously"
+    ],
+    "distractors": [
+      "Lightning is physically incapable of ever striking the exact same location twice",
+      "Sound waves travel significantly faster through the vacuum of space than through air",
+      "Gravity is noticeably stronger at the Earth's equator than at the geographic poles"
+    ],
+    "difficulty": "medium",
+    "source": "https://www.scientificamerican.com/article/what-is-the-triple-point/",
+    "clarity_note": "At a specific temperature and pressure (the triple point), the three phases of water (ice, liquid water, and water vapor) coexist in thermodynamic equilibrium.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:18:56.044771+00:00"
+  },
+  {
+    "question": "Which bizarre piece of Hollywood casting history is actually TRUE?",
+    "answer": "Frank Sinatra was contractually offered the lead acting role in the film Die Hard",
+    "alternative_answers": [
+      "Die Hard's lead role of John McClane was originally offered to Frank Sinatra"
+    ],
+    "distractors": [
+      "Sean Connery legally changed his middle name to James Bond for over a decade",
+      "The mechanical shark in Jaws was constructed from a real stuffed great white shark",
+      "Judy Garland was exactly twenty-five years old when she played Dorothy in Oz"
+    ],
+    "difficulty": "medium",
+    "source": "https://www.cbr.com/die-hard-frank-sinatra-contractually-offered-starring-role/",
+    "clarity_note": "Die Hard was based on a novel sequel to 'The Detective'. Because Sinatra starred in the 1968 film adaptation of 'The Detective', the studio was contractually bound to offer him the Die Hard role first, despite him being 73.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:18:56.044771+00:00"
+  },
+  {
+    "question": "Identify the TRUE fact regarding corporate history.",
+    "answer": "Nintendo was founded in the late 19th century to manufacture playing cards",
+    "alternative_answers": [
+      "Nintendo originally started as a playing card company in 1889"
+    ],
+    "distractors": [
+      "Coca-Cola originally contained trace amounts of weapons-grade enriched uranium",
+      "The Ford Motor Company definitively invented the first modern passenger automobile",
+      "McDonald's started as a highly successful national chain of delivery pizza parlors"
+    ],
+    "difficulty": "medium",
+    "source": "https://www.nintendo.co.jp/corporate/en/history/index.html",
+    "clarity_note": "Nintendo was founded by Fusajiro Yamauchi in 1889 to produce handmade Hanafuda playing cards.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:18:56.044771+00:00"
+  },
+  {
+    "question": "Which geographical statement about the United States is genuinely TRUE?",
+    "answer": "Maine is geographically the closest United States state to the continent of Africa",
+    "alternative_answers": [
+      "The US state closest to Africa is Maine"
+    ],
+    "distractors": [
+      "Florida is officially recognized as the southernmost state in the United States",
+      "California possesses the longest continuous coastline of any United States state",
+      "Texas is definitively the largest United States state by total square landmass"
+    ],
+    "difficulty": "medium",
+    "source": "https://www.mentalfloss.com/article/503460/maine-us-state-closest-africa",
+    "clarity_note": "Due to the Earth's curvature, Quoddy Head, Maine, is roughly 3,154 miles from El Beddouza, Morocco—making Maine closer to Africa than any other US state. (Hawaii is southernmost, Alaska is largest and has the longest coast).",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:18:56.044771+00:00"
+  },
+  {
+    "question": "Identify the TRUE fact regarding global trade and exports.",
+    "answer": "Saudi Arabia actively imports large quantities of sand and camels from Australia",
+    "alternative_answers": [
+      "Australia exports sand and live camels to Saudi Arabia"
+    ],
+    "distractors": [
+      "Switzerland is geographically the world's largest exporter of raw cocoa beans",
+      "Iceland imports exactly one hundred percent of its geothermal energy from Norway",
+      "China purchases more wooden dining chopsticks from the United States than it produces"
+    ],
+    "difficulty": "medium",
+    "source": "https://www.bbc.com/news/business-39483389",
+    "clarity_note": "Saudi Arabian sand is poor for construction, so they import specialized construction sand and feral camels from Australia for meat.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:18:56.044771+00:00"
+  },
+  {
+    "question": "Which statement regarding the evolutionary timeline is actually TRUE?",
+    "answer": "Sharks existed on planet Earth millions of years before the first trees ever evolved",
+    "alternative_answers": [
+      "Sharks are evolutionarily older than trees"
+    ],
+    "distractors": [
+      "Crocodiles definitively predate the existence of all known single-celled organisms",
+      "Tyrannosaurus Rex lived concurrently with the absolute earliest known human ancestors",
+      "Wild grasses successfully evolved centuries before the first amphibians crawled onto land"
+    ],
+    "difficulty": "medium",
+    "source": "https://www.smithsonianmag.com/smart-news/sharks-are-older-than-trees-180978925/",
+    "clarity_note": "Fossil evidence shows early sharks existed over 400 million years ago, while the earliest trees (like Archaeopteris) appeared about 350 million years ago.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:18:56.044771+00:00"
+  },
+  {
+    "question": "Select the definitively TRUE fact about the origin of common inventions.",
+    "answer": "The original mechanical chainsaw was invented by doctors to assist with difficult childbirths",
+    "alternative_answers": [
+      "Chainsaws were invented to cut pelvic bone during childbirth"
+    ],
+    "distractors": [
+      "The first electric microwave was originally marketed as an automated shoe-drying device",
+      "Bubble wrap was explicitly designed by NASA to act as a space-suit flotation device",
+      "Kellogg's Corn Flakes were historically created by doctors to cure legal blindness"
+    ],
+    "difficulty": "medium",
+    "source": "https://www.theatlantic.com/health/archive/2021/04/the-invention-of-the-chainsaw/618712/",
+    "clarity_note": "In the late 18th century, two Scottish doctors invented the osteotome (a hand-cranked chainsaw) to cut through the pelvic bone during a procedure called symphysiotomy.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:18:56.044771+00:00"
+  },
+  {
+    "question": "Identify the TRUE fact comparing Earth to the broader universe.",
+    "answer": "There are roughly more trees on Earth than there are stars in the Milky Way galaxy",
+    "alternative_answers": [
+      "Earth has more trees than the Milky Way has stars"
+    ],
+    "distractors": [
+      "Our solar system definitively contains more planets than the entire Andromeda galaxy",
+      "Mount Everest is physically taller than the highest known geological peak on Mars",
+      "The Great Wall of China is the only human-made structure visible from the Moon"
+    ],
+    "difficulty": "medium",
+    "source": "https://www.nature.com/articles/nature14967",
+    "clarity_note": "A 2015 study estimated there are roughly 3 trillion trees on Earth, while NASA estimates the Milky Way holds 100 to 400 billion stars.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:18:56.044771+00:00"
+  },
+  {
+    "question": "Which statement about military conflicts is historically TRUE?",
+    "answer": "The shortest recorded military war in human history lasted a total of just 38 minutes",
+    "alternative_answers": [
+      "The Anglo-Zanzibar War is the shortest in history at roughly 38 minutes"
+    ],
+    "distractors": [
+      "The historical Hundred Years' War actually concluded in exactly one hundred days",
+      "The mighty Roman Empire never officially declared any formal war on Carthage",
+      "The global Cold War resulted in precisely zero recorded shots fired by any military force"
+    ],
+    "difficulty": "hard",
+    "source": "https://www.guinnessworldrecords.com/world-records/shortest-war",
+    "clarity_note": "The Anglo-Zanzibar War of 1896 ended approximately 38 to 45 minutes after British forces bombarded the Sultan's palace.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:18:56.044771+00:00"
+  },
+  {
+    "question": "Identify the TRUE scientific fact regarding measurements and units.",
+    "answer": "A \"jiffy\" is a legitimate and officially recognized unit of time used in physics",
+    "alternative_answers": [
+      "A jiffy is an actual scientific measurement of time"
+    ],
+    "distractors": [
+      "A \"moment\" was legally defined in medieval England as exactly sixty consecutive seconds",
+      "The standard metric system includes an official sub-unit of mass called a \"heffalump\"",
+      "A \"scruple\" is exclusively an astronomical term denoting a dying star's core mass"
+    ],
+    "difficulty": "hard",
+    "source": "https://www.merriam-webster.com/dictionary/jiffy",
+    "clarity_note": "In physics, a jiffy usually represents the time it takes for light to travel one centimeter in a vacuum (roughly 33.356 picoseconds), and is also used in computing.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:18:56.044771+00:00"
+  },
+  {
+    "question": "Which mind-bending fact about the world of music is actually TRUE?",
+    "answer": "A musical piece currently being continuously performed in Germany is scheduled to end in 2640",
+    "alternative_answers": [
+      "John Cage's ASLSP organ piece in Halberstadt will end in the year 2640"
+    ],
+    "distractors": [
+      "Mozart composed a symphony exclusively meant for a choir of one hundred church bells",
+      "The world's oldest surviving playable piano is constructed entirely out of blown glass",
+      "Beethoven's renowned 9th Symphony was strictly mandated to be premiered in absolute darkness"
+    ],
+    "difficulty": "hard",
+    "source": "https://www.aslsp.org/",
+    "clarity_note": "A performance of John Cage's piece 'As Slow as Possible' began on a specially built organ in Halberstadt, Germany in 2001 and is designed to last 639 years.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:18:56.044771+00:00"
+  },
+  {
+    "question": "Identify the TRUE statement regarding vexillology and national flags.",
+    "answer": "The official national flag of Belize features twelve distinct and uniquely recognized colors",
+    "alternative_answers": [
+      "Belize has the most colorful national flag with 12 colors"
+    ],
+    "distractors": [
+      "No current nationally recognized country flag contains the color purple in its design",
+      "The official United Nations flag is entirely composed of stark black and white graphics",
+      "The national flag of Japan was originally formulated as a blue circle on a black background"
+    ],
+    "difficulty": "hard",
+    "source": "https://www.guinnessworldrecords.com/world-records/636081-most-colours-on-a-national-flag",
+    "clarity_note": "The Belize flag is widely recognized as having the most colors of any national flag (12). The distractor regarding purple is definitively false, as Dominica and Nicaragua both feature purple on their flags.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:18:56.044771+00:00"
+  }
+]

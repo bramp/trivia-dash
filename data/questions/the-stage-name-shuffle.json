@@ -1,0 +1,313 @@
+[
+  {
+    "question": "What is the stage name of Reginald Kenneth Dwight?",
+    "answer": "Elton John",
+    "alternative_answers": [],
+    "distractors": [
+      "Billy Joel",
+      "Rod Stewart",
+      "David Bowie"
+    ],
+    "difficulty": "easy",
+    "source": "https://www.biography.com/musicians/elton-john",
+    "clarity_note": "Reginald Kenneth Dwight officially changed his name to Elton Hercules John in 1972 after adopting it as a stage name.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:23:57.330304+00:00"
+  },
+  {
+    "question": "What is the stage name of Peter Gene Hernandez?",
+    "answer": "Bruno Mars",
+    "alternative_answers": [],
+    "distractors": [
+      "The Weeknd",
+      "Jason Derulo",
+      "Enrique Iglesias"
+    ],
+    "difficulty": "easy",
+    "source": "https://www.biography.com/musicians/bruno-mars",
+    "clarity_note": "He adopted 'Bruno' from a childhood nickname and 'Mars' because girls told him he was 'out of this world'.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:23:57.330304+00:00"
+  },
+  {
+    "question": "What is the stage name of Katheryn Elizabeth Hudson?",
+    "answer": "Katy Perry",
+    "alternative_answers": [],
+    "distractors": [
+      "Taylor Swift",
+      "Miley Cyrus",
+      "Kesha"
+    ],
+    "difficulty": "easy",
+    "source": "https://www.biography.com/musicians/katy-perry",
+    "clarity_note": "She adopted the stage name Katy Perry to avoid confusion with the actress Kate Hudson, using her mother's maiden name.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:23:57.330304+00:00"
+  },
+  {
+    "question": "What is the stage name of Destiny Hope Cyrus?",
+    "answer": "Miley Cyrus",
+    "alternative_answers": [],
+    "distractors": [
+      "Selena Gomez",
+      "Demi Lovato",
+      "Hilary Duff"
+    ],
+    "difficulty": "easy",
+    "source": "https://www.biography.com/musicians/miley-cyrus",
+    "clarity_note": "She was nicknamed 'Smiley' as a baby because she smiled so much, which was later shortened to Miley.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:23:57.330304+00:00"
+  },
+  {
+    "question": "What is the stage name of Gordon Matthew Thomas Sumner?",
+    "answer": "Sting",
+    "alternative_answers": [],
+    "distractors": [
+      "Bono",
+      "Prince",
+      "Seal"
+    ],
+    "difficulty": "easy",
+    "source": "https://www.biography.com/musicians/sting",
+    "clarity_note": "He received the nickname 'Sting' after wearing a black-and-yellow striped sweater with the Phoenix Jazzmen.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:23:57.330304+00:00"
+  },
+  {
+    "question": "What is the stage name of Marshall Bruce Mathers III?",
+    "answer": "Eminem",
+    "alternative_answers": [
+      "Slim Shady"
+    ],
+    "distractors": [
+      "Macklemore",
+      "Machine Gun Kelly",
+      "Vanilla Ice"
+    ],
+    "difficulty": "easy",
+    "source": "https://www.biography.com/musicians/eminem",
+    "clarity_note": "The name Eminem evolved from his initials, M&M (Marshall Mathers).",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:23:57.330304+00:00"
+  },
+  {
+    "question": "What is the stage name of Belcalis Marlenis Almánzar?",
+    "answer": "Cardi B",
+    "alternative_answers": [],
+    "distractors": [
+      "Nicki Minaj",
+      "Megan Thee Stallion",
+      "Doja Cat"
+    ],
+    "difficulty": "easy",
+    "source": "https://www.biography.com/musicians/cardi-b",
+    "clarity_note": "Cardi B is a derivation of Bacardi, a rum brand that was her nickname growing up, matching her sister's nickname Hennessy.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:23:57.330304+00:00"
+  },
+  {
+    "question": "What is the stage name of Dwayne Douglas Johnson?",
+    "answer": "The Rock",
+    "alternative_answers": [
+      "Rocky Maivia"
+    ],
+    "distractors": [
+      "John Cena",
+      "Hulk Hogan",
+      "Stone Cold Steve Austin"
+    ],
+    "difficulty": "easy",
+    "source": "https://www.biography.com/actors/dwayne-johnson",
+    "clarity_note": "Dwayne Johnson wrestled under the name Rocky Maivia before shortening it to 'The Rock' during his WWE career.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:23:57.330304+00:00"
+  },
+  {
+    "question": "What is the stage name of Mark Sinclair?",
+    "answer": "Vin Diesel",
+    "alternative_answers": [],
+    "distractors": [
+      "Dwayne Johnson",
+      "Jason Statham",
+      "Bruce Willis"
+    ],
+    "difficulty": "medium",
+    "source": "https://www.biography.com/actors/vin-diesel",
+    "clarity_note": "He created 'Vin' from his adoptive father's surname Vincent, and 'Diesel' from friends saying he ran on diesel fuel.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:23:57.330304+00:00"
+  },
+  {
+    "question": "What is the stage name of Robyn Rihanna Fenty?",
+    "answer": "Rihanna",
+    "alternative_answers": [],
+    "distractors": [
+      "Beyoncé",
+      "Ciara",
+      "Alicia Keys"
+    ],
+    "difficulty": "medium",
+    "source": "https://www.biography.com/musicians/rihanna",
+    "clarity_note": "Rihanna simply uses her middle name as her professional moniker.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:23:57.330304+00:00"
+  },
+  {
+    "question": "What is the stage name of Alecia Beth Moore?",
+    "answer": "Pink",
+    "alternative_answers": [
+      "P!nk"
+    ],
+    "distractors": [
+      "Gwen Stefani",
+      "Avril Lavigne",
+      "Kelly Clarkson"
+    ],
+    "difficulty": "medium",
+    "source": "https://www.biography.com/musicians/pink",
+    "clarity_note": "She took her stage name from the character Mr. Pink in Quentin Tarantino's film Reservoir Dogs.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:23:57.330304+00:00"
+  },
+  {
+    "question": "What is the stage name of Onika Tanya Maraj?",
+    "answer": "Nicki Minaj",
+    "alternative_answers": [],
+    "distractors": [
+      "Cardi B",
+      "Iggy Azalea",
+      "Missy Elliott"
+    ],
+    "difficulty": "medium",
+    "source": "https://www.biography.com/musicians/nicki-minaj",
+    "clarity_note": "She grew up as Onika Maraj but adopted Nicki Minaj as a stage name early in her rap career.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:23:57.330304+00:00"
+  },
+  {
+    "question": "What is the stage name of Calvin Cordozar Broadus Jr.?",
+    "answer": "Snoop Dogg",
+    "alternative_answers": [
+      "Snoop Doggy Dogg",
+      "Snoop Lion"
+    ],
+    "distractors": [
+      "Dr. Dre",
+      "Ice Cube",
+      "50 Cent"
+    ],
+    "difficulty": "medium",
+    "source": "https://www.biography.com/musicians/snoop-dogg",
+    "clarity_note": "His mother gave him the nickname 'Snoopy' because he liked the Peanuts cartoon character.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:23:57.330304+00:00"
+  },
+  {
+    "question": "What is the stage name of Ella Marija Lani Yelich-O'Connor?",
+    "answer": "Lorde",
+    "alternative_answers": [],
+    "distractors": [
+      "Billie Eilish",
+      "Halsey",
+      "Lana Del Rey"
+    ],
+    "difficulty": "medium",
+    "source": "https://www.biography.com/musicians/lorde",
+    "clarity_note": "Fascinated with royalty and aristocracy, she chose the name Lorde, adding an 'e' to make it more feminine.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:23:57.330304+00:00"
+  },
+  {
+    "question": "What is the stage name of Abel Makkonen Tesfaye?",
+    "answer": "The Weeknd",
+    "alternative_answers": [],
+    "distractors": [
+      "Frank Ocean",
+      "Khalid",
+      "Miguel"
+    ],
+    "difficulty": "medium",
+    "source": "https://www.biography.com/musicians/the-weeknd",
+    "clarity_note": "He adopted 'The Weeknd' after dropping out of high school and leaving home one weekend, removing the 'e' to avoid trademark issues.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:23:57.330304+00:00"
+  },
+  {
+    "question": "What is the stage name of Ilyena Vasilievna Mironov?",
+    "answer": "Helen Mirren",
+    "alternative_answers": [
+      "Dame Helen Mirren"
+    ],
+    "distractors": [
+      "Meryl Streep",
+      "Judi Dench",
+      "Maggie Smith"
+    ],
+    "difficulty": "medium",
+    "source": "https://www.biography.com/actors/helen-mirren",
+    "clarity_note": "Her father anglicized the family name from Mironov to Mirren in the 1950s.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:23:57.330304+00:00"
+  },
+  {
+    "question": "What is the stage name of Eric Marlon Bishop?",
+    "answer": "Jamie Foxx",
+    "alternative_answers": [],
+    "distractors": [
+      "Will Smith",
+      "Martin Lawrence",
+      "Kevin Hart"
+    ],
+    "difficulty": "hard",
+    "source": "https://www.biography.com/actors/jamie-foxx",
+    "clarity_note": "He chose an ambiguous first name (Jamie) because female comedians were often called to stage first, and 'Foxx' in tribute to Redd Foxx.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:23:57.330304+00:00"
+  },
+  {
+    "question": "What is the stage name of Demetria Gene Guynes?",
+    "answer": "Demi Moore",
+    "alternative_answers": [],
+    "distractors": [
+      "Meg Ryan",
+      "Julia Roberts",
+      "Michelle Pfeiffer"
+    ],
+    "difficulty": "hard",
+    "source": "https://www.biography.com/actors/demi-moore",
+    "clarity_note": "Demi is short for her birth name Demetria, and Moore is the surname of her first husband, Freddy Moore.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:23:57.330304+00:00"
+  },
+  {
+    "question": "What is the stage name of Amethyst Amelia Kelly?",
+    "answer": "Iggy Azalea",
+    "alternative_answers": [],
+    "distractors": [
+      "Rita Ora",
+      "Bebe Rexha",
+      "Charli XCX"
+    ],
+    "difficulty": "hard",
+    "source": "https://www.biography.com/musicians/iggy-azalea",
+    "clarity_note": "She took her stage name from the name of her childhood dog, Iggy, and the street she grew up on, Azalea Street.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:23:57.330304+00:00"
+  },
+  {
+    "question": "What is the stage name of Olivia Jane Cockburn?",
+    "answer": "Olivia Wilde",
+    "alternative_answers": [],
+    "distractors": [
+      "Emma Stone",
+      "Margot Robbie",
+      "Brie Larson"
+    ],
+    "difficulty": "hard",
+    "source": "https://www.biography.com/actors/olivia-wilde",
+    "clarity_note": "She changed her surname to Wilde in high school to honor the writers in her family, specifically inspired by Oscar Wilde.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:23:57.330304+00:00"
+  }
+]

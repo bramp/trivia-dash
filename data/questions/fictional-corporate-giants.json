@@ -1,0 +1,341 @@
+[
+  {
+    "question": "Which tech giant is the primary antagonist and former employer of Richard Hendricks in \"Silicon Valley\"?",
+    "answer": "Hooli",
+    "alternative_answers": [],
+    "distractors": [
+      "Pied Piper",
+      "Endframe",
+      "Aviato"
+    ],
+    "difficulty": "easy",
+    "source": "https://en.wikipedia.org/wiki/Silicon_Valley_(TV_series)",
+    "clarity_note": "Hooli is the massive, Google-like tech giant founded by Gavin Belson that serves as the main rival throughout the series.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:29:05.500934+00:00"
+  },
+  {
+    "question": "Which fictional biotechnology company created the cloned dinosaurs in \"Jurassic Park\"?",
+    "answer": "InGen",
+    "alternative_answers": [
+      "International Genetic Technologies"
+    ],
+    "distractors": [
+      "Biosyn",
+      "Cyberdyne Systems",
+      "Oscorp"
+    ],
+    "difficulty": "easy",
+    "source": "https://en.wikipedia.org/wiki/Jurassic_Park_(film)",
+    "clarity_note": "InGen (International Genetic Technologies) is the company founded by John Hammond that extracted dinosaur DNA from amber.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:29:05.500934+00:00"
+  },
+  {
+    "question": "In the \"Terminator\" franchise, what tech corporation created the Skynet artificial intelligence?",
+    "answer": "Cyberdyne Systems",
+    "alternative_answers": [
+      "Cyberdyne"
+    ],
+    "distractors": [
+      "Omni Consumer Products",
+      "Tyrell Corporation",
+      "Weyland-Yutani"
+    ],
+    "difficulty": "easy",
+    "source": "https://en.wikipedia.org/wiki/Terminator_2:_Judgment_Day",
+    "clarity_note": "Cyberdyne Systems developed the microprocessor from recovered future tech that eventually became the rogue Skynet AI.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:29:05.500934+00:00"
+  },
+  {
+    "question": "What is the name of the multinational conglomerate owned and run by Bruce Wayne in DC Comics?",
+    "answer": "Wayne Enterprises",
+    "alternative_answers": [
+      "WayneCorp",
+      "Wayne Industries"
+    ],
+    "distractors": [
+      "LexCorp",
+      "Queen Industries",
+      "Kord Industries"
+    ],
+    "difficulty": "easy",
+    "source": "https://en.wikipedia.org/wiki/Wayne_Enterprises",
+    "clarity_note": "Wayne Enterprises is the vast business empire that funds Bruce Wayne's operations as Batman.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:29:05.500934+00:00"
+  },
+  {
+    "question": "What defense and technology company was famously led by Tony Stark in the Marvel Cinematic Universe?",
+    "answer": "Stark Industries",
+    "alternative_answers": [
+      "Stark Resilient",
+      "Stark Enterprises"
+    ],
+    "distractors": [
+      "Hammer Industries",
+      "Oscorp Industries",
+      "Pym Technologies"
+    ],
+    "difficulty": "easy",
+    "source": "https://en.wikipedia.org/wiki/Iron_Man_(2008_film)",
+    "clarity_note": "Stark Industries is Tony Stark's inherited company, which he transitions away from weapons manufacturing in the MCU.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:29:05.500934+00:00"
+  },
+  {
+    "question": "What evil corporation is responsible for creating the zombie-producing T-virus in \"Resident Evil\"?",
+    "answer": "Umbrella Corporation",
+    "alternative_answers": [
+      "Umbrella",
+      "Umbrella Corp"
+    ],
+    "distractors": [
+      "Tricell",
+      "Armacham Technology",
+      "Abstergo Industries"
+    ],
+    "difficulty": "easy",
+    "source": "https://en.wikipedia.org/wiki/Resident_Evil",
+    "clarity_note": "The Umbrella Corporation secretly developed the T-virus, triggering the global zombie apocalypse.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:29:05.500934+00:00"
+  },
+  {
+    "question": "In Pixar's \"WALL-E\", what mega-corporation controls Earth's economy and built the Axiom starliner?",
+    "answer": "Buy n Large",
+    "alternative_answers": [
+      "BnL"
+    ],
+    "distractors": [
+      "Dinoco",
+      "Virtucon",
+      "Monsters, Inc."
+    ],
+    "difficulty": "easy",
+    "source": "https://en.wikipedia.org/wiki/WALL-E",
+    "clarity_note": "Buy n Large (BnL) is the monopolistic megacorporation that evacuated humanity from a highly polluted Earth.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:29:05.500934+00:00"
+  },
+  {
+    "question": "What fictional company supplies Wile E. Coyote with endlessly defective gadgets and explosives?",
+    "answer": "Acme Corporation",
+    "alternative_answers": [
+      "Acme",
+      "Acme Corp"
+    ],
+    "distractors": [
+      "Spacely Space Sprockets",
+      "Cogswell Cogs",
+      "Ajax"
+    ],
+    "difficulty": "easy",
+    "source": "https://en.wikipedia.org/wiki/Acme_Corporation",
+    "clarity_note": "Acme is the iconic, ubiquitous mail-order company in the Looney Tunes universe.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:29:05.500934+00:00"
+  },
+  {
+    "question": "What ruthless mega-corporation employs Ellen Ripley in the \"Alien\" film franchise?",
+    "answer": "Weyland-Yutani",
+    "alternative_answers": [
+      "Weyland-Yutani Corporation",
+      "The Company"
+    ],
+    "distractors": [
+      "Tyrell Corporation",
+      "Omni Consumer Products",
+      "Resources Development Administration"
+    ],
+    "difficulty": "medium",
+    "source": "https://en.wikipedia.org/wiki/Weyland-Yutani",
+    "clarity_note": "Often referred to simply as 'The Company', Weyland-Yutani constantly attempts to weaponize the Xenomorph species.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:29:05.500934+00:00"
+  },
+  {
+    "question": "In the 1999 cult classic \"Office Space\", Peter Gibbons hates his job at which software company?",
+    "answer": "Initech",
+    "alternative_answers": [],
+    "distractors": [
+      "Initrode",
+      "Penetrode",
+      "Dunder Mifflin"
+    ],
+    "difficulty": "medium",
+    "source": "https://en.wikipedia.org/wiki/Office_Space",
+    "clarity_note": "Initech is the soul-crushing IT firm where Peter and his coworkers are employed.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:29:05.500934+00:00"
+  },
+  {
+    "question": "What corrupt corporation manages and monetizes the Seven superheroes in \"The Boys\"?",
+    "answer": "Vought International",
+    "alternative_answers": [
+      "Vought",
+      "Vought American"
+    ],
+    "distractors": [
+      "LexCorp",
+      "Roxxon Energy",
+      "Oscorp"
+    ],
+    "difficulty": "medium",
+    "source": "https://en.wikipedia.org/wiki/The_Boys_(TV_series)",
+    "clarity_note": "Vought International is the primary antagonistic conglomerate that created Compound V and runs superhero PR.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:29:05.500934+00:00"
+  },
+  {
+    "question": "In the 1982 film \"Blade Runner\", what company manufactures the bio-engineered replicants?",
+    "answer": "Tyrell Corporation",
+    "alternative_answers": [
+      "Tyrell Corp",
+      "Tyrell"
+    ],
+    "distractors": [
+      "Wallace Corporation",
+      "Weyland-Yutani",
+      "Cyberdyne Systems"
+    ],
+    "difficulty": "medium",
+    "source": "https://en.wikipedia.org/wiki/Blade_Runner",
+    "clarity_note": "The Tyrell Corporation, led by Dr. Eldon Tyrell, is the creator of the Nexus-6 replicants in the original 1982 film.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:29:05.500934+00:00"
+  },
+  {
+    "question": "In the \"RoboCop\" franchise, what megacorporation takes over and privatizes the Detroit police force?",
+    "answer": "Omni Consumer Products",
+    "alternative_answers": [
+      "OCP"
+    ],
+    "distractors": [
+      "Cyberdyne Systems",
+      "Rekall",
+      "Weyland-Yutani"
+    ],
+    "difficulty": "medium",
+    "source": "https://en.wikipedia.org/wiki/RoboCop",
+    "clarity_note": "Omni Consumer Products (OCP) runs the Detroit police and builds the RoboCop cyborg.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:29:05.500934+00:00"
+  },
+  {
+    "question": "In the film \"Avatar\", what corporation mines the valuable mineral unobtanium on Pandora?",
+    "answer": "Resources Development Administration",
+    "alternative_answers": [
+      "RDA"
+    ],
+    "distractors": [
+      "Weyland-Yutani",
+      "Multinational United",
+      "Union Aerospace Corporation"
+    ],
+    "difficulty": "medium",
+    "source": "https://en.wikipedia.org/wiki/Fictional_universe_of_Avatar",
+    "clarity_note": "The RDA (Resources Development Administration) is the human organization exploiting Pandora's natural resources.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:29:05.500934+00:00"
+  },
+  {
+    "question": "What massive, soulless corporation does Mark Scout work for in the Apple TV+ series \"Severance\"?",
+    "answer": "Lumon Industries",
+    "alternative_answers": [
+      "Lumon"
+    ],
+    "distractors": [
+      "E Corp",
+      "Hooli",
+      "Delos Inc."
+    ],
+    "difficulty": "medium",
+    "source": "https://en.wikipedia.org/wiki/Severance_(TV_series)",
+    "clarity_note": "Lumon Industries is the mysterious biotech and data company that created the severance memory-wipe procedure.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:29:05.500934+00:00"
+  },
+  {
+    "question": "What fictional airline's Flight 815 crashes on a mysterious island in the pilot episode of \"Lost\"?",
+    "answer": "Oceanic Airlines",
+    "alternative_answers": [],
+    "distractors": [
+      "Ajira Airways",
+      "Volée Airlines",
+      "Trans Am Airlines"
+    ],
+    "difficulty": "medium",
+    "source": "https://en.wikipedia.org/wiki/Oceanic_Airlines",
+    "clarity_note": "Oceanic Airlines is famously the fictional carrier of the doomed Flight 815 in the series 'Lost'.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:29:05.500934+00:00"
+  },
+  {
+    "question": "In the TV series \"Mr. Robot\", what is the true name of the conglomerate Elliot calls \"Evil Corp\"?",
+    "answer": "E Corp",
+    "alternative_answers": [],
+    "distractors": [
+      "F Society",
+      "Steel Mountain",
+      "Allsafe Cybersecurity"
+    ],
+    "difficulty": "hard",
+    "source": "https://en.wikipedia.org/wiki/Mr._Robot",
+    "clarity_note": "E Corp is the massive global consumer and banking conglomerate that Elliot and fsociety aim to take down.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:29:05.500934+00:00"
+  },
+  {
+    "question": "What company operates the incredibly lifelike adult amusement parks in the HBO series \"Westworld\"?",
+    "answer": "Delos Inc.",
+    "alternative_answers": [
+      "Delos",
+      "Delos Destinations"
+    ],
+    "distractors": [
+      "InGen",
+      "The Hanso Foundation",
+      "Massive Dynamic"
+    ],
+    "difficulty": "hard",
+    "source": "https://en.wikipedia.org/wiki/Westworld_(TV_series)",
+    "clarity_note": "Delos Inc. (specifically its subsidiary Delos Destinations) is the corporate owner and operator of Westworld.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:29:05.500934+00:00"
+  },
+  {
+    "question": "In \"Fringe\", what multibillion-dollar multinational technology corporation was founded by William Bell?",
+    "answer": "Massive Dynamic",
+    "alternative_answers": [],
+    "distractors": [
+      "Global Dynamics",
+      "Veridian Dynamics",
+      "The Hanso Foundation"
+    ],
+    "difficulty": "hard",
+    "source": "https://en.wikipedia.org/wiki/Massive_Dynamic",
+    "clarity_note": "Massive Dynamic is the powerful, secretive corporation deeply involved in Fringe science experiments.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:29:05.500934+00:00"
+  },
+  {
+    "question": "What German multinational conglomerate secretly backs Gus Fring's meth empire in \"Breaking Bad\"?",
+    "answer": "Madrigal Electromotive",
+    "alternative_answers": [
+      "Madrigal Electromotive GmbH",
+      "Madrigal"
+    ],
+    "distractors": [
+      "Los Pollos Hermanos",
+      "Vamonos Pest",
+      "Beneke Fabricators"
+    ],
+    "difficulty": "hard",
+    "source": "https://en.wikipedia.org/wiki/Breaking_Bad",
+    "clarity_note": "Madrigal Electromotive GmbH is the massive corporate parent company of Los Pollos Hermanos that supplies Gus Fring's operations.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:29:05.500934+00:00"
+  }
+]

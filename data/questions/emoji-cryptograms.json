@@ -1,0 +1,321 @@
+[
+  {
+    "question": "Decipher this movie title: 👽📞🏠",
+    "answer": "E.T. the Extra-Terrestrial",
+    "alternative_answers": [
+      "E.T."
+    ],
+    "distractors": [
+      "Alien",
+      "Close Encounters of the Third Kind",
+      "Contact"
+    ],
+    "difficulty": "easy",
+    "source": "https://www.imdb.com/title/tt0083866/",
+    "clarity_note": "The emojis represent an alien using a phone to call home, referencing the famous quote 'E.T. phone home'.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:21:15.258812+00:00"
+  },
+  {
+    "question": "Decipher this movie title: 🧊🚢💥",
+    "answer": "Titanic",
+    "alternative_answers": [
+      "The Titanic"
+    ],
+    "distractors": [
+      "Poseidon",
+      "The Perfect Storm",
+      "Pearl Harbor"
+    ],
+    "difficulty": "easy",
+    "source": "https://www.imdb.com/title/tt0120338/",
+    "clarity_note": "The emojis depict an iceberg, a ship, and a collision, representing the sinking of the Titanic.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:21:15.258812+00:00"
+  },
+  {
+    "question": "Decipher this movie title: 🔍🐠",
+    "answer": "Finding Nemo",
+    "alternative_answers": [],
+    "distractors": [
+      "Shark Tale",
+      "The Little Mermaid",
+      "Free Willy"
+    ],
+    "difficulty": "easy",
+    "source": "https://www.imdb.com/title/tt0266543/",
+    "clarity_note": "A magnifying glass indicates searching (finding) and the fish represents Nemo.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:21:15.258812+00:00"
+  },
+  {
+    "question": "Decipher this movie title: 🐍🐍✈️",
+    "answer": "Snakes on a Plane",
+    "alternative_answers": [],
+    "distractors": [
+      "Flightplan",
+      "Con Air",
+      "Air Force One"
+    ],
+    "difficulty": "easy",
+    "source": "https://www.imdb.com/title/tt0417148/",
+    "clarity_note": "The emojis literally depict snakes and an airplane.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:21:15.258812+00:00"
+  },
+  {
+    "question": "Decipher this song title: 👁️🐯",
+    "answer": "Eye of the Tiger",
+    "alternative_answers": [],
+    "distractors": [
+      "Roar",
+      "The Lion Sleeps Tonight",
+      "Born to Be Wild"
+    ],
+    "difficulty": "easy",
+    "source": "https://en.wikipedia.org/wiki/Eye_of_the_Tiger",
+    "clarity_note": "The emojis directly translate to an eye and a tiger.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:21:15.258812+00:00"
+  },
+  {
+    "question": "Decipher this song title: 💃👑",
+    "answer": "Dancing Queen",
+    "alternative_answers": [],
+    "distractors": [
+      "Material Girl",
+      "Girls Just Want to Have Fun",
+      "Royals"
+    ],
+    "difficulty": "easy",
+    "source": "https://en.wikipedia.org/wiki/Dancing_Queen",
+    "clarity_note": "The emojis show a woman dancing and a crown, representing the ABBA hit.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:21:15.258812+00:00"
+  },
+  {
+    "question": "Decipher this famous phrase: 🍎📅🩺🚫",
+    "answer": "An apple a day keeps the doctor away",
+    "alternative_answers": [
+      "An apple a day"
+    ],
+    "distractors": [
+      "Health is wealth",
+      "Laughter is the best medicine",
+      "You are what you eat"
+    ],
+    "difficulty": "easy",
+    "source": "https://en.wikipedia.org/wiki/An_apple_a_day_keeps_the_doctor_away",
+    "clarity_note": "The emojis represent an apple, a day (calendar), and prohibiting a doctor.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:21:15.258812+00:00"
+  },
+  {
+    "question": "Decipher this movie title: 🦖🦕🏞️",
+    "answer": "Jurassic Park",
+    "alternative_answers": [],
+    "distractors": [
+      "The Land Before Time",
+      "Godzilla",
+      "King Kong"
+    ],
+    "difficulty": "easy",
+    "source": "https://www.imdb.com/title/tt0107290/",
+    "clarity_note": "The emojis represent dinosaurs and a nature park.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:21:15.258812+00:00"
+  },
+  {
+    "question": "Decipher this movie title: 👻🚫🔫",
+    "answer": "Ghostbusters",
+    "alternative_answers": [],
+    "distractors": [
+      "Men in Black",
+      "Poltergeist",
+      "Beetlejuice"
+    ],
+    "difficulty": "medium",
+    "source": "https://www.imdb.com/title/tt0087332/",
+    "clarity_note": "The emojis show a ghost, a prohibition symbol, and a specialized weapon.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:21:15.258812+00:00"
+  },
+  {
+    "question": "Decipher this movie title: 🤫🐑🐑",
+    "answer": "The Silence of the Lambs",
+    "alternative_answers": [
+      "Silence of the Lambs"
+    ],
+    "distractors": [
+      "Babe",
+      "Hannibal",
+      "Zodiac"
+    ],
+    "difficulty": "medium",
+    "source": "https://www.imdb.com/title/tt0102926/",
+    "clarity_note": "The shushing face represents silence, followed by two sheep (lambs).",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:21:15.258812+00:00"
+  },
+  {
+    "question": "Decipher this movie title: 🏃‍♂️🍫📦",
+    "answer": "Forrest Gump",
+    "alternative_answers": [],
+    "distractors": [
+      "Willy Wonka & the Chocolate Factory",
+      "Chariots of Fire",
+      "The Truman Show"
+    ],
+    "difficulty": "medium",
+    "source": "https://www.imdb.com/title/tt0109830/",
+    "clarity_note": "The emojis reference Forrest running and his famous quote about life being like a box of chocolates.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:21:15.258812+00:00"
+  },
+  {
+    "question": "Decipher this song title: 🌉🌊😟",
+    "answer": "Bridge Over Troubled Water",
+    "alternative_answers": [],
+    "distractors": [
+      "River Deep Mountain High",
+      "Cry Me a River",
+      "Under the Boardwalk"
+    ],
+    "difficulty": "medium",
+    "source": "https://en.wikipedia.org/wiki/Bridge_over_Troubled_Water_(song)",
+    "clarity_note": "The emojis show a bridge over water and a worried (troubled) face.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:21:15.258812+00:00"
+  },
+  {
+    "question": "Decipher this famous phrase: 🐦🤲🟰2️⃣🌳",
+    "answer": "A bird in the hand is worth two in the bush",
+    "alternative_answers": [
+      "A bird in hand is worth two in the bush"
+    ],
+    "distractors": [
+      "Early bird catches the worm",
+      "Birds of a feather flock together",
+      "Kill two birds with one stone"
+    ],
+    "difficulty": "medium",
+    "source": "https://en.wiktionary.org/wiki/a_bird_in_the_hand_is_worth_two_in_the_bush",
+    "clarity_note": "The sequence literally spells out bird in hands equals two in a tree/bush.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:21:15.258812+00:00"
+  },
+  {
+    "question": "Decipher this movie title: 🕶️💊🐇",
+    "answer": "The Matrix",
+    "alternative_answers": [],
+    "distractors": [
+      "Alice in Wonderland",
+      "Donnie Darko",
+      "Limitless"
+    ],
+    "difficulty": "medium",
+    "source": "https://www.imdb.com/title/tt0133093/",
+    "clarity_note": "Features iconic elements from the movie: sunglasses, the red/blue pill choice, and the white rabbit.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:21:15.258812+00:00"
+  },
+  {
+    "question": "Decipher this song title: 🎸🪜😇",
+    "answer": "Stairway to Heaven",
+    "alternative_answers": [],
+    "distractors": [
+      "Highway to Hell",
+      "Knockin' on Heaven's Door",
+      "Hotel California"
+    ],
+    "difficulty": "medium",
+    "source": "https://en.wikipedia.org/wiki/Stairway_to_Heaven",
+    "clarity_note": "Guitar represents classic rock, alongside a ladder/stairway and a halo for heaven.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:21:15.258812+00:00"
+  },
+  {
+    "question": "Decipher this movie title: 🎈🏠👴👦",
+    "answer": "Up",
+    "alternative_answers": [
+      "Disney's Up",
+      "Pixar's Up"
+    ],
+    "distractors": [
+      "The Aviator",
+      "Gran Torino",
+      "Dennis the Menace"
+    ],
+    "difficulty": "medium",
+    "source": "https://www.imdb.com/title/tt1049413/",
+    "clarity_note": "Depicts a balloon-lifted house, an old man (Carl), and a young boy (Russell).",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:21:15.258812+00:00"
+  },
+  {
+    "question": "Decipher this movie title: ⏰🍊",
+    "answer": "A Clockwork Orange",
+    "alternative_answers": [
+      "Clockwork Orange"
+    ],
+    "distractors": [
+      "Pulp Fiction",
+      "James and the Giant Peach",
+      "Pineapple Express"
+    ],
+    "difficulty": "hard",
+    "source": "https://www.imdb.com/title/tt0066921/",
+    "clarity_note": "The emojis literally depict an alarm clock and an orange fruit.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:21:15.258812+00:00"
+  },
+  {
+    "question": "Decipher this movie title: 1️⃣2️⃣😠👨",
+    "answer": "12 Angry Men",
+    "alternative_answers": [
+      "Twelve Angry Men"
+    ],
+    "distractors": [
+      "The Dirty Dozen",
+      "Ocean's Twelve",
+      "Seven Samurai"
+    ],
+    "difficulty": "hard",
+    "source": "https://www.imdb.com/title/tt0050083/",
+    "clarity_note": "The numbers 1 and 2 make 12, followed by an angry face and a man.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:21:15.258812+00:00"
+  },
+  {
+    "question": "Decipher this famous phrase: 🐱👅❓",
+    "answer": "Cat got your tongue",
+    "alternative_answers": [
+      "Has the cat got your tongue"
+    ],
+    "distractors": [
+      "Curiosity killed the cat",
+      "Let the cat out of the bag",
+      "Raining cats and dogs"
+    ],
+    "difficulty": "hard",
+    "source": "https://en.wiktionary.org/wiki/cat_got_one%27s_tongue",
+    "clarity_note": "The emojis depict a cat, a tongue, and a question mark, referencing the idiom.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:21:15.258812+00:00"
+  },
+  {
+    "question": "Decipher this song title: 🏨🌴🎸",
+    "answer": "Hotel California",
+    "alternative_answers": [],
+    "distractors": [
+      "Kokomo",
+      "Margaritaville",
+      "Copacabana"
+    ],
+    "difficulty": "hard",
+    "source": "https://en.wikipedia.org/wiki/Hotel_California",
+    "clarity_note": "Depicts a hotel, palm trees for California, and a guitar for the iconic rock song.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:21:15.258812+00:00"
+  }
+]

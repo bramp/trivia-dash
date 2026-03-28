@@ -1,0 +1,351 @@
+[
+  {
+    "question": "What does the yellow arrow under the Amazon logo point from and to?",
+    "answer": "A to Z",
+    "alternative_answers": [
+      "From A to Z"
+    ],
+    "distractors": [
+      "Left to Right",
+      "Books to Tech",
+      "Start to Finish"
+    ],
+    "difficulty": "easy",
+    "source": "https://www.aboutamazon.com/about-us",
+    "clarity_note": "The arrow starts at the letter 'a' and points to 'z', implying Amazon sells everything from A to Z, while also forming a smile.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:25:00.307267+00:00"
+  },
+  {
+    "question": "What number is highlighted in pink within the 'BR' of the Baskin-Robbins logo?",
+    "answer": "31",
+    "alternative_answers": [
+      "Thirty-one"
+    ],
+    "distractors": [
+      "15",
+      "52",
+      "24"
+    ],
+    "difficulty": "easy",
+    "source": "https://news.baskinrobbins.com/about-us",
+    "clarity_note": "The pink parts of the 'B' and 'R' form the number 31, representing a different ice cream flavor for every day of the month.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:25:00.307267+00:00"
+  },
+  {
+    "question": "What animal is hidden in the mountain graphic of the Toblerone logo?",
+    "answer": "A bear",
+    "alternative_answers": [
+      "Bear"
+    ],
+    "distractors": [
+      "A lion",
+      "An eagle",
+      "A wolf"
+    ],
+    "difficulty": "easy",
+    "source": "https://www.mondelezinternational.com/Our-Brands/Toblerone",
+    "clarity_note": "The negative space in the Matterhorn mountain features a bear, a tribute to Bern, Switzerland, the 'City of Bears' where the chocolate was created.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:25:00.307267+00:00"
+  },
+  {
+    "question": "The red lowercase 'b' in the Beats electronics logo is designed to resemble what object?",
+    "answer": "A headphone on a person's head",
+    "alternative_answers": [
+      "Headphones",
+      "A headphone",
+      "Headset"
+    ],
+    "distractors": [
+      "A musical note",
+      "A skipping stone",
+      "A record player"
+    ],
+    "difficulty": "easy",
+    "source": "https://www.beatsbydre.com/company/about",
+    "clarity_note": "The red circle represents a head in profile, and the 'b' acts as the ear cup over the ear.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:25:00.307267+00:00"
+  },
+  {
+    "question": "The white 'P' in the Pinterest logo is stylized to resemble what everyday item?",
+    "answer": "A pushpin",
+    "alternative_answers": [
+      "Thumbtack",
+      "A pin"
+    ],
+    "distractors": [
+      "A sewing needle",
+      "A magnifying glass",
+      "A paperclip"
+    ],
+    "difficulty": "easy",
+    "source": "https://newsroom.pinterest.com/en/company",
+    "clarity_note": "The stem of the 'P' tapers to a sharp point, resembling a pin used to 'pin' interests to a board.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:25:00.307267+00:00"
+  },
+  {
+    "question": "The lowercase 'g' in the Goodwill logo doubles as what image?",
+    "answer": "A smiling face",
+    "alternative_answers": [
+      "Half a smiling face",
+      "A smiley face",
+      "A face"
+    ],
+    "distractors": [
+      "A shopping bag",
+      "A helping hand",
+      "A globe"
+    ],
+    "difficulty": "easy",
+    "source": "https://www.goodwill.org/about-us/",
+    "clarity_note": "The 'g' in the word Goodwill is an exact, scaled-down replica of the smiling face shown in the primary logo mark above it.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:25:00.307267+00:00"
+  },
+  {
+    "question": "What animal is formed by the colorful negative space and shapes in the NBC logo?",
+    "answer": "A peacock",
+    "alternative_answers": [
+      "Peacock"
+    ],
+    "distractors": [
+      "A turkey",
+      "A rooster",
+      "A swan"
+    ],
+    "difficulty": "easy",
+    "source": "https://www.nbcuniversal.com/history",
+    "clarity_note": "The logo shows a peacock looking to the right with six colorful tail feathers representing the network's six original divisions.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:25:00.307267+00:00"
+  },
+  {
+    "question": "What do the four interconnected rings in the Audi logo represent?",
+    "answer": "Four merged companies",
+    "alternative_answers": [
+      "Four founding companies",
+      "Auto Union"
+    ],
+    "distractors": [
+      "Four founding brothers",
+      "Four original car models",
+      "Four cardinal directions"
+    ],
+    "difficulty": "easy",
+    "source": "https://www.audi.com/en/company/history/four-rings.html",
+    "clarity_note": "The rings symbolize the 1932 merger of four previously independent motor vehicle manufacturers: Audi, DKW, Horch, and Wanderer.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:25:00.307267+00:00"
+  },
+  {
+    "question": "The two lowercase 't's in the middle of the Tostitos logo depict people sharing what?",
+    "answer": "A tortilla chip",
+    "alternative_answers": [
+      "A chip",
+      "Chips and salsa"
+    ],
+    "distractors": [
+      "A taco",
+      "A beverage",
+      "A dancing stage"
+    ],
+    "difficulty": "medium",
+    "source": "https://www.tostitos.com/",
+    "clarity_note": "The two 't's are stick figures holding a yellow tortilla chip over a bowl of salsa, which acts as the dot over the 'i'.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:25:00.307267+00:00"
+  },
+  {
+    "question": "The stylized 'H' in the Hyundai logo represents two people doing what?",
+    "answer": "Shaking hands",
+    "alternative_answers": [
+      "A handshake"
+    ],
+    "distractors": [
+      "Bowing to each other",
+      "Exchanging keys",
+      "Passing a baton"
+    ],
+    "difficulty": "medium",
+    "source": "https://www.hyundaiusa.com/us/en/our-company/about-hyundai",
+    "clarity_note": "The slanted 'H' represents a satisfied customer and a company representative shaking hands, building trust.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:25:00.307267+00:00"
+  },
+  {
+    "question": "The word 'Tour' in the Le Tour de France logo forms the shape of what?",
+    "answer": "A cyclist",
+    "alternative_answers": [
+      "A bicycle rider",
+      "A bike rider"
+    ],
+    "distractors": [
+      "A mountain peak",
+      "A stopwatch",
+      "A winding road"
+    ],
+    "difficulty": "medium",
+    "source": "https://www.letour.fr/en/the-race/logo",
+    "clarity_note": "The 'O', 'U', 'R', and the yellow circle are arranged to look like a cyclist riding a bike, with the yellow circle serving as the front wheel.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:25:00.307267+00:00"
+  },
+  {
+    "question": "What hidden letter is created by the negative space in the Carrefour logo?",
+    "answer": "C",
+    "alternative_answers": [
+      "The letter C"
+    ],
+    "distractors": [
+      "F",
+      "R",
+      "A"
+    ],
+    "difficulty": "medium",
+    "source": "https://www.carrefour.com/en/group/history",
+    "clarity_note": "Between the red and blue arrows pointing in opposite directions, the white negative space forms the letter 'C' for Carrefour.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:25:00.307267+00:00"
+  },
+  {
+    "question": "What word is secretly spelled out in the ruffled collar of the girl in the Wendy's logo?",
+    "answer": "Mom",
+    "alternative_answers": [],
+    "distractors": [
+      "Fresh",
+      "Yum",
+      "Hot"
+    ],
+    "difficulty": "medium",
+    "source": "https://www.businessinsider.com/wendys-logo-secret-mom-2013-7",
+    "clarity_note": "The ruffles on Wendy's collar subtly spell the word 'Mom', reflecting the chain's goal to evoke home-cooked, comforting meals.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:25:00.307267+00:00"
+  },
+  {
+    "question": "The vertical lines above the word 'Cisco' in the networking company's logo represent what famous landmark?",
+    "answer": "The Golden Gate Bridge",
+    "alternative_answers": [
+      "Golden Gate Bridge"
+    ],
+    "distractors": [
+      "Eiffel Tower",
+      "Empire State Building",
+      "Sydney Harbour Bridge"
+    ],
+    "difficulty": "medium",
+    "source": "https://newsroom.cisco.com/c/r/newsroom/en/us/about-cisco.html",
+    "clarity_note": "The lines represent an electromagnetic signal, but they are also shaped to resemble the two towers and suspension cables of San Francisco's Golden Gate Bridge.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:25:00.307267+00:00"
+  },
+  {
+    "question": "The Bluetooth logo combines two Scandinavian runes representing the initials of what historical figure?",
+    "answer": "King Harald Bluetooth",
+    "alternative_answers": [
+      "Harald Bluetooth",
+      "Harald Gormsson"
+    ],
+    "distractors": [
+      "Leif Erikson",
+      "Erik the Red",
+      "Ragnar Lodbrok"
+    ],
+    "difficulty": "medium",
+    "source": "https://www.bluetooth.com/about-us/bluetooth-origin/",
+    "clarity_note": "The logo merges the Younger Futhark runes Hagall (ᚼ) and Bjarkan (ᛒ), the initials of the Viking king who united Denmark and Norway.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:25:00.307267+00:00"
+  },
+  {
+    "question": "According to Toyota, the three overlapping ellipses in their logo contain every letter of what word?",
+    "answer": "Toyota",
+    "alternative_answers": [
+      "The company name"
+    ],
+    "distractors": [
+      "The Japanese kanji for 'car'",
+      "Japan",
+      "Quality"
+    ],
+    "difficulty": "medium",
+    "source": "https://global.toyota/en/company/vision-and-philosophy/toyota-global-vision/",
+    "clarity_note": "By highlighting different parts of the overlapping ovals, you can trace out every letter in the word 'TOYOTA'.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:25:00.307267+00:00"
+  },
+  {
+    "question": "The 'IO' in the Sony VAIO logo represents what technological concept?",
+    "answer": "Digital binary code",
+    "alternative_answers": [
+      "Binary code",
+      "1 and 0",
+      "1s and 0s"
+    ],
+    "distractors": [
+      "A power button",
+      "An optical drive",
+      "A magnetic tape"
+    ],
+    "difficulty": "hard",
+    "source": "https://www.sony.com/en/SonyInfo/CorporateInfo/History/",
+    "clarity_note": "The 'VA' in the logo is shaped like an analog wave, while the 'IO' is styled to look like the 1 and 0 of digital binary code, representing the transition from analog to digital.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:25:00.307267+00:00"
+  },
+  {
+    "question": "The heart-shaped logo for the women's surf brand Roxy is made of two mirrored logos from what other brand?",
+    "answer": "Quiksilver",
+    "alternative_answers": [],
+    "distractors": [
+      "Billabong",
+      "Rip Curl",
+      "O'Neill"
+    ],
+    "difficulty": "hard",
+    "source": "https://www.roxy.com/corporate-info.html",
+    "clarity_note": "Roxy is the female brand for Quiksilver. The Roxy heart logo is created by rotating two Quiksilver mountain-and-wave crests to face each other.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:25:00.307267+00:00"
+  },
+  {
+    "question": "The 'C' and 'o' at the beginning of the Continental logo form a 3D image of what?",
+    "answer": "A tire",
+    "alternative_answers": [
+      "A car tire",
+      "A wheel"
+    ],
+    "distractors": [
+      "A steering wheel",
+      "A speedometer",
+      "A piston"
+    ],
+    "difficulty": "hard",
+    "source": "https://www.continental.com/en/company/history/",
+    "clarity_note": "The 'C' wraps around the 'o' in a specific perspective to outline the shape of an automobile tire, referencing Continental's primary manufacturing business.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:25:00.307267+00:00"
+  },
+  {
+    "question": "What do the three dots on the domino in the Domino's Pizza logo originally signify?",
+    "answer": "The first three store locations",
+    "alternative_answers": [
+      "The original three stores",
+      "The first 3 stores"
+    ],
+    "distractors": [
+      "The three founding brothers",
+      "The three original pizza toppings",
+      "A 30-minute delivery guarantee"
+    ],
+    "difficulty": "hard",
+    "source": "https://biz.dominos.com/about-us/history/",
+    "clarity_note": "Founder Tom Monaghan originally planned to add a dot for every new store that opened, but the franchise grew too fast, so it remained at three representing the original locations.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:25:00.307267+00:00"
+  }
+]

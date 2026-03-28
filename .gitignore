@@ -11,8 +11,3 @@
 
 # Build outputs
 build/
-
-# Generated question files (LLM output, re-generated on demand)
-tools/generate-questions/generated/*.json
-data/questions/*.json
-!data/questions/categories.json

@@ -1,0 +1,333 @@
+[
+  {
+    "question": "Which sports apparel brand is famous for the slogan \"Just Do It\"?",
+    "answer": "Nike",
+    "alternative_answers": [],
+    "distractors": [
+      "Adidas",
+      "Under Armour",
+      "Puma"
+    ],
+    "difficulty": "easy",
+    "source": "https://about.nike.com/en/newsroom/releases/nike-just-do-it-campaign-30th-anniversary",
+    "clarity_note": "Nike introduced the 'Just Do It' slogan in 1988, and it remains one of the most recognizable taglines in advertising.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:13:54.836355+00:00"
+  },
+  {
+    "question": "Which fast-food chain uses the jingle and slogan \"I'm Lovin' It\"?",
+    "answer": "McDonald's",
+    "alternative_answers": [
+      "McDonalds"
+    ],
+    "distractors": [
+      "Burger King",
+      "Wendy's",
+      "Taco Bell"
+    ],
+    "difficulty": "easy",
+    "source": "https://corporate.mcdonalds.com/corpmcd/our-company/who-we-are/our-history.html",
+    "clarity_note": "McDonald's launched its first global ad campaign, 'I'm Lovin' It', in 2003 with a jingle originally sung by Justin Timberlake.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:13:54.836355+00:00"
+  },
+  {
+    "question": "Which candy brand claims it \"melts in your mouth, not in your hands\"?",
+    "answer": "M&M's",
+    "alternative_answers": [
+      "M&Ms",
+      "M and Ms",
+      "M & M's"
+    ],
+    "distractors": [
+      "Skittles",
+      "Reese's",
+      "Hershey's Kisses"
+    ],
+    "difficulty": "easy",
+    "source": "https://www.mms.com/en-us/history",
+    "clarity_note": "The slogan was introduced in 1954 to highlight the candy's patented hard sugar coating that prevents the chocolate from melting.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:13:54.836355+00:00"
+  },
+  {
+    "question": "Which cosmetics company uses the signature phrase \"Because you're worth it\"?",
+    "answer": "L'Oréal",
+    "alternative_answers": [
+      "L'Oreal",
+      "LOreal",
+      "L'Oréal Paris"
+    ],
+    "distractors": [
+      "Olay",
+      "Maybelline",
+      "Revlon"
+    ],
+    "difficulty": "easy",
+    "source": "https://www.lorealparisusa.com/about-loreal-paris/because-youre-worth-it",
+    "clarity_note": "L'Oréal coined the tagline 'Because I'm worth it' in 1971, which later evolved into 'Because you're worth it'.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:13:54.836355+00:00"
+  },
+  {
+    "question": "Which candy brand encourages consumers to \"Taste the Rainbow\"?",
+    "answer": "Skittles",
+    "alternative_answers": [],
+    "distractors": [
+      "Starburst",
+      "Sour Patch Kids",
+      "Jelly Belly"
+    ],
+    "difficulty": "easy",
+    "source": "https://www.mars.com/made-by-mars/mars-wrigley",
+    "clarity_note": "Skittles has used the 'Taste the Rainbow' slogan since 1994, created by the advertising agency D'Arcy Masius Benton & Bowles.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:13:54.836355+00:00"
+  },
+  {
+    "question": "Which fast-food chain uses the trademarked slogan \"It's Finger Lickin' Good\"?",
+    "answer": "KFC",
+    "alternative_answers": [
+      "Kentucky Fried Chicken"
+    ],
+    "distractors": [
+      "Popeyes",
+      "Chick-fil-A",
+      "Church's Texas Chicken"
+    ],
+    "difficulty": "easy",
+    "source": "https://global.kfc.com/our-heritage/",
+    "clarity_note": "KFC has used 'It's Finger Lickin' Good' since the 1950s, though they temporarily paused it in 2020 due to the pandemic.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:13:54.836355+00:00"
+  },
+  {
+    "question": "Which sandwich chain heavily marketed itself with the slogan \"Eat Fresh\"?",
+    "answer": "Subway",
+    "alternative_answers": [],
+    "distractors": [
+      "Quiznos",
+      "Jimmy John's",
+      "Panera Bread"
+    ],
+    "difficulty": "easy",
+    "source": "https://www.subway.com/en-us/aboutus/history",
+    "clarity_note": "Subway used the 'Eat Fresh' slogan to emphasize that its sandwiches were made to order with freshly baked bread and fresh ingredients.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:13:54.836355+00:00"
+  },
+  {
+    "question": "Which energy drink's advertising famously claims that it \"gives you wings\"?",
+    "answer": "Red Bull",
+    "alternative_answers": [
+      "RedBull"
+    ],
+    "distractors": [
+      "Monster Energy",
+      "Rockstar",
+      "Gatorade"
+    ],
+    "difficulty": "easy",
+    "source": "https://www.redbull.com/us-en/energydrink/company-profile",
+    "clarity_note": "Red Bull's 'Gives You Wings' slogan has been central to its marketing, highlighting the drink's energy-boosting properties.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:13:54.836355+00:00"
+  },
+  {
+    "question": "Which cereal brand has long been known as \"The Breakfast of Champions\"?",
+    "answer": "Wheaties",
+    "alternative_answers": [],
+    "distractors": [
+      "Cheerios",
+      "Frosted Flakes",
+      "Corn Flakes"
+    ],
+    "difficulty": "medium",
+    "source": "https://www.generalmills.com/food-we-make/brands/wheaties",
+    "clarity_note": "Wheaties has used 'The Breakfast of Champions' slogan since 1927, famously featuring prominent athletes on its boxes.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:13:54.836355+00:00"
+  },
+  {
+    "question": "Which financial corporation asks the question, \"What's in your wallet?\"",
+    "answer": "Capital One",
+    "alternative_answers": [
+      "CapitalOne"
+    ],
+    "distractors": [
+      "Chase",
+      "American Express",
+      "Discover"
+    ],
+    "difficulty": "medium",
+    "source": "https://www.capitalone.com/about/",
+    "clarity_note": "Capital One has used the 'What's in your wallet?' slogan in numerous television and print ad campaigns since 2000.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:13:54.836355+00:00"
+  },
+  {
+    "question": "Which makeup brand uses the iconic jingle \"Maybe she's born with it\"?",
+    "answer": "Maybelline",
+    "alternative_answers": [
+      "Maybelline New York"
+    ],
+    "distractors": [
+      "CoverGirl",
+      "Clinique",
+      "MAC Cosmetics"
+    ],
+    "difficulty": "medium",
+    "source": "https://www.maybelline.com/about-maybelline",
+    "clarity_note": "Maybelline introduced the tagline 'Maybe she's born with it. Maybe it's Maybelline.' in 1991.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:13:54.836355+00:00"
+  },
+  {
+    "question": "Which brand of paper towels is marketed as \"The Quicker Picker-Upper\"?",
+    "answer": "Bounty",
+    "alternative_answers": [],
+    "distractors": [
+      "Brawny",
+      "Sparkle",
+      "Scott"
+    ],
+    "difficulty": "medium",
+    "source": "https://bountytowels.com/en-us",
+    "clarity_note": "Bounty has used the slogan 'The Quicker Picker-Upper' for decades to advertise its absorbency.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:13:54.836355+00:00"
+  },
+  {
+    "question": "Which lemon-lime soda brand historically urged consumers to \"Obey your thirst\"?",
+    "answer": "Sprite",
+    "alternative_answers": [],
+    "distractors": [
+      "7 Up",
+      "Mountain Dew",
+      "Sierra Mist"
+    ],
+    "difficulty": "medium",
+    "source": "https://www.coca-colacompany.com/about-us/history",
+    "clarity_note": "Sprite launched the 'Obey Your Thirst' campaign in 1994, strongly associating the brand with hip-hop culture.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:13:54.836355+00:00"
+  },
+  {
+    "question": "Which cereal brand is famous for the onomatopoeic slogan \"Snap, Crackle, Pop\"?",
+    "answer": "Rice Krispies",
+    "alternative_answers": [
+      "Kellogg's Rice Krispies"
+    ],
+    "distractors": [
+      "Cocoa Pebbles",
+      "Cinnamon Toast Crunch",
+      "Golden Grahams"
+    ],
+    "difficulty": "medium",
+    "source": "https://www.ricekrispies.com/en_US/about.html",
+    "clarity_note": "The slogan represents the sound the puffed rice cereal makes when milk is poured over it.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:13:54.836355+00:00"
+  },
+  {
+    "question": "Which coffee brand's long-running slogan is \"Good to the last drop\"?",
+    "answer": "Maxwell House",
+    "alternative_answers": [],
+    "distractors": [
+      "Folgers",
+      "Nescafé",
+      "Peet's Coffee"
+    ],
+    "difficulty": "medium",
+    "source": "https://www.kraftheinzcompany.com/brands.html",
+    "clarity_note": "Maxwell House claims the slogan originated from a quote by Theodore Roosevelt in 1907.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:13:54.836355+00:00"
+  },
+  {
+    "question": "Which insurance company uses the jingle \"Like a good neighbor, [Brand] is there\"?",
+    "answer": "State Farm",
+    "alternative_answers": [
+      "State Farm Insurance"
+    ],
+    "distractors": [
+      "Allstate",
+      "Geico",
+      "Progressive"
+    ],
+    "difficulty": "medium",
+    "source": "https://www.statefarm.com/about-us/company-overview/company-profile",
+    "clarity_note": "The jingle was written by Barry Manilow in 1971 and remains one of the most recognizable in the insurance industry.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:13:54.836355+00:00"
+  },
+  {
+    "question": "Which car rental company famously used the slogan \"We try harder\"?",
+    "answer": "Avis",
+    "alternative_answers": [
+      "Avis Rent a Car"
+    ],
+    "distractors": [
+      "Hertz",
+      "Enterprise",
+      "Budget"
+    ],
+    "difficulty": "hard",
+    "source": "https://www.avis.com/en/about-avis/company-info/historical-chronology",
+    "clarity_note": "Avis adopted the 'We try harder' slogan in 1962, leaning into its position as the number two car rental company behind Hertz.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:13:54.836355+00:00"
+  },
+  {
+    "question": "Which diamond company coined the iconic phrase \"A diamond is forever\" in 1947?",
+    "answer": "De Beers",
+    "alternative_answers": [
+      "DeBeers",
+      "The De Beers Group"
+    ],
+    "distractors": [
+      "Tiffany & Co.",
+      "Cartier",
+      "Harry Winston"
+    ],
+    "difficulty": "hard",
+    "source": "https://www.debeers.com/en-us/a-diamond-is-forever.html",
+    "clarity_note": "Copywriter Frances Gerety coined 'A diamond is forever' for De Beers in 1947, revolutionizing the modern engagement ring market.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:13:54.836355+00:00"
+  },
+  {
+    "question": "Which directory service famously told consumers to \"Let your fingers do the walking\"?",
+    "answer": "Yellow Pages",
+    "alternative_answers": [
+      "The Yellow Pages"
+    ],
+    "distractors": [
+      "AT&T",
+      "Rolodex",
+      "Encyclopedia Britannica"
+    ],
+    "difficulty": "hard",
+    "source": "https://www.yellowpages.com/about",
+    "clarity_note": "The slogan was created in 1962 to encourage consumers to look up businesses in the Yellow Pages phone book instead of traveling on foot.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:13:54.836355+00:00"
+  },
+  {
+    "question": "Which delivery company used the slogan \"When it absolutely, positively has to be there overnight\"?",
+    "answer": "FedEx",
+    "alternative_answers": [
+      "Federal Express"
+    ],
+    "distractors": [
+      "UPS",
+      "DHL",
+      "USPS"
+    ],
+    "difficulty": "hard",
+    "source": "https://www.fedex.com/en-us/about/history.html",
+    "clarity_note": "FedEx (then Federal Express) introduced this memorable slogan in 1978 to emphasize its reliability in overnight shipping.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:13:54.836355+00:00"
+  }
+]

@@ -6,7 +6,7 @@ var _remaining: Array = []
 var _categories: Array = []
 
 
-func load_questions() -> void:
+func load_questions() -> bool:
 	_categories = _load_categories()
 	_questions = []
 	for cat: Dictionary in _categories:
@@ -18,8 +18,9 @@ func load_questions() -> void:
 
 	if _questions.is_empty():
 		push_error("No questions loaded from %s" % questions_dir)
-		return
+		return false
 	reset()
+	return true
 
 
 func _load_categories() -> Array:

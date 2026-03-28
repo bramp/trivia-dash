@@ -1,0 +1,362 @@
+[
+  {
+    "question": "What actually happens to a piece of chewing gum when you swallow it?",
+    "answer": "It passes through in a few days",
+    "alternative_answers": [
+      "It passes through normally",
+      "It digests in a few days"
+    ],
+    "distractors": [
+      "It stays in your stomach for seven years",
+      "It permanently sticks to your intestines",
+      "It dissolves instantly"
+    ],
+    "difficulty": "easy",
+    "source": "https://www.mayoclinic.org/digestive-system/expert-answers/faq-20058446",
+    "clarity_note": "The body cannot digest the gum's resin, but it moves smoothly through the digestive tract and is excreted within days, not years.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:41:27.394045+00:00"
+  },
+  {
+    "question": "What is the actual color of deoxygenated human blood inside your veins?",
+    "answer": "Dark red",
+    "alternative_answers": [
+      "Red",
+      "Crimson"
+    ],
+    "distractors": [
+      "Blue",
+      "Purple",
+      "Green"
+    ],
+    "difficulty": "easy",
+    "source": "https://www.livescience.com/32212-is-blood-blue.html",
+    "clarity_note": "Human blood is never blue; it appears blue through the skin due to the way light scatters through tissue.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:41:27.394045+00:00"
+  },
+  {
+    "question": "Despite popular imagery, what did historical Viking helmets definitively lack?",
+    "answer": "Horns",
+    "alternative_answers": [
+      "Animal horns",
+      "Wings"
+    ],
+    "distractors": [
+      "Nose guards",
+      "Leather straps",
+      "Metal rivets"
+    ],
+    "difficulty": "easy",
+    "source": "https://www.history.com/news/did-vikings-really-wear-horned-helmets",
+    "clarity_note": "Horned helmets were a 19th-century creation popularized by costume designers for Richard Wagner's operas.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:41:27.394045+00:00"
+  },
+  {
+    "question": "What is the actual biological cause of warts on human skin?",
+    "answer": "Viruses",
+    "alternative_answers": [
+      "Human Papillomavirus",
+      "HPV"
+    ],
+    "distractors": [
+      "Touching toads",
+      "Fungal infections",
+      "Genetic mutations"
+    ],
+    "difficulty": "easy",
+    "source": "https://www.mayoclinic.org/diseases-conditions/common-warts/symptoms-causes/syc-20371125",
+    "clarity_note": "Warts are caused by strains of the human papillomavirus (HPV), not by touching frogs or toads.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:41:27.394045+00:00"
+  },
+  {
+    "question": "What effect does shaving hair actually have on its regrowth?",
+    "answer": "No effect on thickness or speed",
+    "alternative_answers": [
+      "None",
+      "It has no effect"
+    ],
+    "distractors": [
+      "It grows back thicker",
+      "It grows back darker",
+      "It grows back twice as fast"
+    ],
+    "difficulty": "easy",
+    "source": "https://www.mayoclinic.org/healthy-lifestyle/adult-health/expert-answers/hair-removal/faq-20058427",
+    "clarity_note": "Shaving gives hair a blunt tip, making it feel coarse as it breaches the skin, but it does not alter the follicle's thickness or growth rate.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:41:27.394045+00:00"
+  },
+  {
+    "question": "What medical condition was definitively proven NOT to be caused by cracking your knuckles?",
+    "answer": "Arthritis",
+    "alternative_answers": [
+      "Osteoarthritis"
+    ],
+    "distractors": [
+      "Tendonitis",
+      "Carpal tunnel syndrome",
+      "Osteoporosis"
+    ],
+    "difficulty": "easy",
+    "source": "https://www.health.harvard.edu/pain/does-knuckle-cracking-cause-arthritis",
+    "clarity_note": "Decades of study, including Dr. Donald Unger's 60-year personal experiment, show no link between knuckle cracking and joint arthritis.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:41:27.394045+00:00"
+  },
+  {
+    "question": "How much of their brain does the average healthy human actually use?",
+    "answer": "100 percent",
+    "alternative_answers": [
+      "All of it",
+      "Almost all of it",
+      "100%"
+    ],
+    "distractors": [
+      "10 percent",
+      "50 percent",
+      "25 percent"
+    ],
+    "difficulty": "easy",
+    "source": "https://www.scientificamerican.com/article/do-people-only-use-10-percent-of-their-brains/",
+    "clarity_note": "Neurological imaging shows that virtually every part of the brain is active and has a known function, completely debunking the 10 percent myth.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:41:27.394045+00:00"
+  },
+  {
+    "question": "Which historical figure was actually of average height for his time, despite rumors of him being extremely short?",
+    "answer": "Napoleon Bonaparte",
+    "alternative_answers": [
+      "Napoleon",
+      "Bonaparte"
+    ],
+    "distractors": [
+      "Julius Caesar",
+      "Alexander the Great",
+      "George Washington"
+    ],
+    "difficulty": "easy",
+    "source": "https://www.history.com/news/napoleon-complex-short",
+    "clarity_note": "Napoleon was around 5'6\" or 5'7\", average for a Frenchman at the time. The myth arose from differing French and British inch measurements.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:41:27.394045+00:00"
+  },
+  {
+    "question": "Why do chameleons primarily change their skin color?",
+    "answer": "To regulate temperature and communicate",
+    "alternative_answers": [
+      "Mood and temperature",
+      "Social signaling"
+    ],
+    "distractors": [
+      "To match their immediate surroundings",
+      "To confuse their prey",
+      "To mimic venomous reptiles"
+    ],
+    "difficulty": "medium",
+    "source": "https://www.nationalgeographic.com/animals/reptiles/facts/chameleons",
+    "clarity_note": "Chameleons alter their color to reflect their mood, communicate with others, and absorb or reflect heat, rather than to camouflage with backgrounds.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:41:27.394045+00:00"
+  },
+  {
+    "question": "What actually dictates the direction water spins when draining in a standard household sink?",
+    "answer": "The shape of the basin",
+    "alternative_answers": [
+      "Basin shape",
+      "The geometry of the sink",
+      "How the water was introduced"
+    ],
+    "distractors": [
+      "The Earth's hemisphere",
+      "The moon's gravitational pull",
+      "The water's temperature"
+    ],
+    "difficulty": "medium",
+    "source": "https://www.scientificamerican.com/article/can-somebody-finally-sett/",
+    "clarity_note": "The Coriolis effect is far too weak to affect small bodies of water. Sink drainage direction is determined by basin shape and water currents.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:41:27.394045+00:00"
+  },
+  {
+    "question": "According to scientific consensus, what is the actual memory span of a goldfish?",
+    "answer": "Months or years",
+    "alternative_answers": [
+      "Several months",
+      "Up to a year"
+    ],
+    "distractors": [
+      "Three seconds",
+      "One minute",
+      "Twenty-four hours"
+    ],
+    "difficulty": "medium",
+    "source": "https://www.livescience.com/animals/fish/how-long-is-a-goldfishs-memory",
+    "clarity_note": "Researchers have successfully trained goldfish to remember specific cues and routines for months, disproving the classic three-second memory myth.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:41:27.394045+00:00"
+  },
+  {
+    "question": "What visually striking event did lemmings famously participate in due to a staged 1958 Disney documentary?",
+    "answer": "Mass suicide by jumping off cliffs",
+    "alternative_answers": [
+      "Jumping off cliffs",
+      "Mass suicide"
+    ],
+    "distractors": [
+      "Building complex dams",
+      "Hibernating underwater",
+      "Eating their own young"
+    ],
+    "difficulty": "medium",
+    "source": "https://www.adfg.alaska.gov/index.cfm?adfg=wildlifenews.view_article&articles_id=56",
+    "clarity_note": "Lemmings naturally migrate, but the famous 'mass suicide' footage of them jumping off cliffs was deliberately staged by filmmakers.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:41:27.394045+00:00"
+  },
+  {
+    "question": "What is the actual shelf life of a standard Hostess Twinkie?",
+    "answer": "About 45 days",
+    "alternative_answers": [
+      "45 days",
+      "A few weeks",
+      "Around a month"
+    ],
+    "distractors": [
+      "Six months",
+      "Seven years",
+      "They never expire"
+    ],
+    "difficulty": "medium",
+    "source": "https://www.npr.org/sections/thesalt/2012/11/20/165502390/the-science-of-twinkies-how-do-they-last-so-long",
+    "clarity_note": "Twinkies do not survive indefinitely or withstand nuclear apocalypses; their official shelf life is just over a month.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:41:27.394045+00:00"
+  },
+  {
+    "question": "What physical reaction do bulls actually have to the color red?",
+    "answer": "They are colorblind to it",
+    "alternative_answers": [
+      "None, they are colorblind",
+      "They cannot see it"
+    ],
+    "distractors": [
+      "It increases their heart rate",
+      "It makes them instantly aggressive",
+      "It temporarily blinds them"
+    ],
+    "difficulty": "medium",
+    "source": "https://www.livescience.com/33700-bulls-charge-red.html",
+    "clarity_note": "Bulls are dichromats and cannot see red. They charge at the matador's cape simply because of its erratic movement.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:41:27.394045+00:00"
+  },
+  {
+    "question": "What actually happens if you drop a penny from the top of the Empire State Building and it hits someone?",
+    "answer": "It causes a mild sting",
+    "alternative_answers": [
+      "It just bounces off",
+      "Nothing serious"
+    ],
+    "distractors": [
+      "It shatters their skull",
+      "It embeds deep into their skin",
+      "It kills them instantly"
+    ],
+    "difficulty": "medium",
+    "source": "https://www.scientificamerican.com/article/could-a-penny-dropped-dow/",
+    "clarity_note": "A penny's low mass and flat shape mean it reaches a terminal velocity of only 25-50 mph, making it completely non-lethal.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:41:27.394045+00:00"
+  },
+  {
+    "question": "What happens to a child's behavior when they consume large amounts of sugar, according to clinical studies?",
+    "answer": "Nothing changes",
+    "alternative_answers": [
+      "No behavioral change",
+      "No effect"
+    ],
+    "distractors": [
+      "They become hyperactive",
+      "They lose their ability to focus",
+      "They experience a major energy crash"
+    ],
+    "difficulty": "medium",
+    "source": "https://www.eatright.org/health/wellness/healthful-habits/sugar-does-it-really-cause-hyperactivity",
+    "clarity_note": "Multiple double-blind studies show sugar does not cause hyperactivity; the perceived effect is entirely due to parents' expectations and the exciting environment.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:41:27.394045+00:00"
+  },
+  {
+    "question": "During WWII, British propaganda created a persistent myth that eating carrots gave their pilots what ability?",
+    "answer": "Exceptional night vision",
+    "alternative_answers": [
+      "Night vision",
+      "Seeing in the dark"
+    ],
+    "distractors": [
+      "Curing color blindness",
+      "Telescopic vision",
+      "Immunity to motion sickness"
+    ],
+    "difficulty": "hard",
+    "source": "https://www.smithsonianmag.com/arts-culture/a-wwii-propaganda-campaign-popularized-the-myth-that-carrots-help-you-see-in-the-dark-28812484/",
+    "clarity_note": "The British claimed their pilots ate carrots to see at night as a cover story to hide their newly invented airborne radar from the Germans.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:41:27.394045+00:00"
+  },
+  {
+    "question": "Often falsely claimed to be a slow-moving liquid to explain thick-bottomed ancient windows, what state of matter is glass?",
+    "answer": "Amorphous solid",
+    "alternative_answers": [
+      "Solid"
+    ],
+    "distractors": [
+      "Non-Newtonian fluid",
+      "Supercooled liquid",
+      "Viscoelastic fluid"
+    ],
+    "difficulty": "hard",
+    "source": "https://www.scientificamerican.com/article/fact-fiction-glass-liquid/",
+    "clarity_note": "Glass does not flow over time. Ancient windows are thicker at the bottom due to early crown glass manufacturing techniques, not because the glass melted downward.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:41:27.394045+00:00"
+  },
+  {
+    "question": "Despite popular medieval folklore, what gruesome torture device was actually invented as a hoax in the 18th century?",
+    "answer": "The Iron Maiden",
+    "alternative_answers": [
+      "Iron Maiden of Nuremberg"
+    ],
+    "distractors": [
+      "The Rack",
+      "The Brazen Bull",
+      "The Thumbscrew"
+    ],
+    "difficulty": "hard",
+    "source": "https://www.livescience.com/55985-are-iron-maidens-torture-devices.html",
+    "clarity_note": "There are no records of the Iron Maiden existing before the late 1700s; they were cobbled together from museum artifacts to thrill commercial audiences.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:41:27.394045+00:00"
+  },
+  {
+    "question": "What commonly blamed animal actually had nothing to do with starting the Great Chicago Fire of 1871?",
+    "answer": "A cow",
+    "alternative_answers": [
+      "Mrs. O'Leary's cow",
+      "Cow"
+    ],
+    "distractors": [
+      "A horse",
+      "A pig",
+      "A stray dog"
+    ],
+    "difficulty": "hard",
+    "source": "https://www.history.com/news/did-mrs-olearys-cow-start-the-great-chicago-fire",
+    "clarity_note": "The reporter who originally wrote the famous story about Mrs. O'Leary's cow knocking over a lantern later admitted he completely made it up.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:41:27.394045+00:00"
+  }
+]

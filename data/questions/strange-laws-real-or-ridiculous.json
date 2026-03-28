@@ -1,0 +1,345 @@
+[
+  {
+    "question": "In the UK, it is officially illegal to handle what type of fish in \"suspicious circumstances\"?",
+    "answer": "Salmon",
+    "alternative_answers": [],
+    "distractors": [
+      "Trout",
+      "Cod",
+      "Haddock"
+    ],
+    "difficulty": "easy",
+    "source": "Salmon Act 1986, Section 32 (UK)",
+    "clarity_note": "The Salmon Act 1986 makes it a specific criminal offence to handle salmon in suspicious circumstances, intended to curb illegal poaching.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:26:03.930991+00:00"
+  },
+  {
+    "question": "To keep public spaces clean, what everyday item is strictly banned from being imported or sold in Singapore?",
+    "answer": "Chewing gum",
+    "alternative_answers": [
+      "Gum"
+    ],
+    "distractors": [
+      "Glitter",
+      "Sunflower seeds",
+      "Silly string"
+    ],
+    "difficulty": "easy",
+    "source": "https://sso.agc.gov.sg/SL/RIECA1995-RG4",
+    "clarity_note": "Singapore famously banned the sale and import of chewing gum in 1992 to prevent vandalism and litter.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:26:03.930991+00:00"
+  },
+  {
+    "question": "In Venice, Italy, you can be heavily fined for feeding what animals in St. Mark's Square?",
+    "answer": "Pigeons",
+    "alternative_answers": [
+      "Doves"
+    ],
+    "distractors": [
+      "Stray cats",
+      "Seagulls",
+      "Swans"
+    ],
+    "difficulty": "easy",
+    "source": "https://www.reuters.com/article/us-italy-venice-pigeons-idUSL2972412820080429/",
+    "clarity_note": "Venice banned feeding pigeons in 2008 to protect the city's historic monuments from their acidic droppings.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:26:03.930991+00:00"
+  },
+  {
+    "question": "According to a 2005 animal rights bylaw in Rome, it is illegal to keep what popular pet in a spherical glass bowl?",
+    "answer": "Goldfish",
+    "alternative_answers": [
+      "Fish"
+    ],
+    "distractors": [
+      "Turtles",
+      "Tarantulas",
+      "Hamsters"
+    ],
+    "difficulty": "easy",
+    "source": "https://www.reuters.com/article/us-rome-pets-idUSL2473458920051025/",
+    "clarity_note": "Rome banned spherical fishbowls because they do not provide enough oxygen and can cause fish to go blind.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:26:03.930991+00:00"
+  },
+  {
+    "question": "In the coastal town of Eraclea, Italy, a local law specifically forbids building what on the beach?",
+    "answer": "Sandcastles",
+    "alternative_answers": [],
+    "distractors": [
+      "Fire pits",
+      "Tents",
+      "Volleyball nets"
+    ],
+    "difficulty": "medium",
+    "source": "https://www.telegraph.co.uk/news/worldnews/europe/italy/2544201/Sandcastles-banned-on-Italian-beaches.html",
+    "clarity_note": "Building sandcastles was banned under the premise that they obstruct passage for people walking along the beach.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:26:03.930991+00:00"
+  },
+  {
+    "question": "Under Victoria, Australia's Summary Offences Act, it is illegal to fly what item in a way that annoys others?",
+    "answer": "A kite",
+    "alternative_answers": [
+      "Kites"
+    ],
+    "distractors": [
+      "A drone",
+      "A paper airplane",
+      "A boomerang"
+    ],
+    "difficulty": "medium",
+    "source": "Summary Offences Act 1966 (Victoria), Section 4",
+    "clarity_note": "Section 4 makes it an offence to fly a kite or play a game in a public place to the annoyance of any person.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:26:03.930991+00:00"
+  },
+  {
+    "question": "Under the US Flag Code, it is technically a violation to print the American flag on what type of product?",
+    "answer": "Paper napkins",
+    "alternative_answers": [
+      "Napkins",
+      "Paper towels"
+    ],
+    "distractors": [
+      "Car bumpers",
+      "Baseball caps",
+      "Coffee mugs"
+    ],
+    "difficulty": "medium",
+    "source": "4 U.S. Code § 8(i)",
+    "clarity_note": "The Code states the flag should not be printed or impressed on paper napkins, boxes, or anything designed for temporary use and discard.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:26:03.930991+00:00"
+  },
+  {
+    "question": "In French law, what terrestrial creature is explicitly required to have its own ticket to travel on a high-speed train?",
+    "answer": "A snail",
+    "alternative_answers": [
+      "Snails",
+      "Escargot"
+    ],
+    "distractors": [
+      "A frog",
+      "A pet mouse",
+      "A lizard"
+    ],
+    "difficulty": "hard",
+    "source": "https://www.telegraph.co.uk/news/worldnews/europe/france/3400263/French-train-conductor-fines-snail.html",
+    "clarity_note": "French rail operator SNCF requires any live animal weighing under 6kg—including snails—to have a paid ticket.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:26:03.930991+00:00"
+  },
+  {
+    "question": "Since 1920, the city of Carmel-by-the-Sea, California, has required a special permit to wear what on its streets?",
+    "answer": "High heels",
+    "alternative_answers": [
+      "Heels",
+      "Stilettos"
+    ],
+    "distractors": [
+      "Swimsuits",
+      "Roller skates",
+      "Top hats"
+    ],
+    "difficulty": "medium",
+    "source": "https://ci.carmel.ca.us/carmel-history",
+    "clarity_note": "The law prohibiting heels over 2 inches tall was passed to prevent lawsuits from people tripping on the city's uneven pavements.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:26:03.930991+00:00"
+  },
+  {
+    "question": "According to a 1910 law in France, what romantic act is notoriously forbidden on train platforms to prevent delays?",
+    "answer": "Kissing",
+    "alternative_answers": [
+      "Making out"
+    ],
+    "distractors": [
+      "Proposing marriage",
+      "Holding hands",
+      "Giving flowers"
+    ],
+    "difficulty": "easy",
+    "source": "https://www.thelocal.fr/20180214/five-french-laws-you-didnt-know-about/",
+    "clarity_note": "The law was introduced to stop overly affectionate couples from causing the trains to depart late.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:26:03.930991+00:00"
+  },
+  {
+    "question": "Until 2021, a law in Western Australia made it an offense to possess more than 50 kilograms of what staple vegetable?",
+    "answer": "Potatoes",
+    "alternative_answers": [
+      "Spuds"
+    ],
+    "distractors": [
+      "Carrots",
+      "Onions",
+      "Cabbages"
+    ],
+    "difficulty": "hard",
+    "source": "Marketing of Potatoes Act 1946 (WA), Section 22",
+    "clarity_note": "The Potato Marketing Corporation heavily regulated the industry, restricting anyone from possessing bulk potatoes unless authorized.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:26:03.930991+00:00"
+  },
+  {
+    "question": "Because it features the King's image, stepping on what everyday item is strictly illegal in Thailand?",
+    "answer": "Money",
+    "alternative_answers": [
+      "Coins",
+      "Banknotes",
+      "Currency",
+      "Baht"
+    ],
+    "distractors": [
+      "A postage stamp",
+      "A daily newspaper",
+      "A national flag"
+    ],
+    "difficulty": "easy",
+    "source": "https://www.bbc.com/news/world-asia-35099322",
+    "clarity_note": "Stepping on Thai currency is considered highly offensive and violates strict lese-majeste laws protecting the monarchy.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:26:03.930991+00:00"
+  },
+  {
+    "question": "In Arizona, illegally cutting down what native plant is a felony punishable by up to 25 years in prison?",
+    "answer": "Saguaro cactus",
+    "alternative_answers": [
+      "Saguaro"
+    ],
+    "distractors": [
+      "Joshua tree",
+      "Tumbleweed",
+      "Ponderosa pine"
+    ],
+    "difficulty": "easy",
+    "source": "Arizona Revised Statutes § 3-932",
+    "clarity_note": "The Saguaro cactus is a heavily protected native plant, and destroying one carries severe criminal penalties.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:26:03.930991+00:00"
+  },
+  {
+    "question": "In Skamania County, Washington, a 1984 ordinance makes it officially illegal to harass or kill what mythical creature?",
+    "answer": "Bigfoot",
+    "alternative_answers": [
+      "Sasquatch"
+    ],
+    "distractors": [
+      "The Loch Ness Monster",
+      "The Chupacabra",
+      "The Mothman"
+    ],
+    "difficulty": "medium",
+    "source": "https://www.skamaniacounty.org/home/showpublisheddocument/1744",
+    "clarity_note": "The county declared itself a Bigfoot refuge, making the killing of a Sasquatch a gross misdemeanor.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:26:03.930991+00:00"
+  },
+  {
+    "question": "In 1998, it became legal in South Africa to attach what extreme defensive weapon to a car to deter hijackers?",
+    "answer": "Flamethrowers",
+    "alternative_answers": [
+      "A flamethrower",
+      "Fire blasters"
+    ],
+    "distractors": [
+      "Harpoons",
+      "Acid sprayers",
+      "Chainsaws"
+    ],
+    "difficulty": "medium",
+    "source": "https://www.cnn.com/WORLD/africa/9812/11/flame.thrower.car/",
+    "clarity_note": "The \"Blaster\" system was a legally approved anti-carjacking device that shot flames from the side of the vehicle.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:26:03.930991+00:00"
+  },
+  {
+    "question": "In Turin, Italy, dog owners can be heavily fined if they fail to do what at least three times a day?",
+    "answer": "Walk their dog",
+    "alternative_answers": [
+      "Take the dog outside"
+    ],
+    "distractors": [
+      "Feed their dog meat",
+      "Brush their dog's fur",
+      "Sing to their dog"
+    ],
+    "difficulty": "hard",
+    "source": "https://www.theguardian.com/world/2005/apr/25/italy",
+    "clarity_note": "A strict 2005 animal rights bylaw mandates that pet dogs must be walked three times daily or the owner faces a €500 fine.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:26:03.930991+00:00"
+  },
+  {
+    "question": "Due to strict plant health laws, it was long illegal to import what vegetable into England specifically from Poland?",
+    "answer": "Potatoes",
+    "alternative_answers": [
+      "Spuds"
+    ],
+    "distractors": [
+      "Beets",
+      "Turnips",
+      "Cabbages"
+    ],
+    "difficulty": "medium",
+    "source": "The Plant Health (England) Order 2015 (and Polish Potatoes Orders)",
+    "clarity_note": "Special restrictions were placed specifically on Polish potatoes to prevent the spread of a crop disease known as ring rot.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:26:03.930991+00:00"
+  },
+  {
+    "question": "In 1989, Florida passed a specific statute making it illegal to participate in what barroom activity involving little people?",
+    "answer": "Dwarf tossing",
+    "alternative_answers": [
+      "Midget tossing"
+    ],
+    "distractors": [
+      "Dwarf bowling",
+      "Dwarf racing",
+      "Dwarf wrestling"
+    ],
+    "difficulty": "easy",
+    "source": "Florida Statutes § 561.665",
+    "clarity_note": "The law banned establishments that serve alcohol from hosting recreational dwarf tossing events.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:26:03.930991+00:00"
+  },
+  {
+    "question": "According to an ancient but unrepealed bylaw in Milan, Italy, citizens are required to do what at all times except at funerals?",
+    "answer": "Smile",
+    "alternative_answers": [
+      "Be smiling"
+    ],
+    "distractors": [
+      "Wear a hat",
+      "Walk briskly",
+      "Carry an umbrella"
+    ],
+    "difficulty": "hard",
+    "source": "https://www.milanocittastato.it/en/featured/the-7-most-absurd-laws-still-in-force-in-milan/",
+    "clarity_note": "Dating back to Austro-Hungarian times, a law technically requires Milanese to smile in public, though it is never enforced.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:26:03.930991+00:00"
+  },
+  {
+    "question": "In 2008, the mayor of Sarpourenx, France, issued an ordinance making it temporarily illegal to do what in the village?",
+    "answer": "Die",
+    "alternative_answers": [
+      "Pass away"
+    ],
+    "distractors": [
+      "Give birth",
+      "Get sick",
+      "Age past 80"
+    ],
+    "difficulty": "medium",
+    "source": "https://www.reuters.com/article/us-france-death-idUSL0574768320080305/",
+    "clarity_note": "The mayor threatened severe punishment for anyone who died without a purchased burial plot due to an overcrowded cemetery.",
+    "model": "gemini-3.1-pro-preview",
+    "generated_at": "2026-03-28T19:26:03.930991+00:00"
+  }
+]
