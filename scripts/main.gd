@@ -47,7 +47,7 @@ var _active_tween: Tween = null
 
 
 func _ready() -> void:
-	var loaded := question_manager.load_questions()
+	var loaded: bool = question_manager.load_questions()
 	_show_title_screen()
 	if not loaded:
 		subtitle_label.text = "Error: No questions found!"

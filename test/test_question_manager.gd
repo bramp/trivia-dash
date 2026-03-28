@@ -14,6 +14,19 @@ func test_load_questions_populates_array() -> void:
 	assert_gt(_manager.get_question_count(), 0, "Should load at least one question")
 
 
+func test_load_questions_returns_true_on_success() -> void:
+	var result: bool = _manager.load_questions()
+	assert_true(result, "load_questions should return true when questions are found")
+
+
+func test_load_questions_returns_false_on_missing_dir() -> void:
+	_manager.questions_dir = "res://test/data/nonexistent/"
+	var result: bool = _manager.load_questions()
+	assert_false(result, "load_questions should return false when no questions are found")
+	assert_push_error("Failed to load")
+	assert_push_error("No questions loaded")
+
+
 func test_load_questions_count() -> void:
 	_manager.load_questions()
 	assert_eq(_manager.get_question_count(), 10, "Should load exactly 10 test questions")
