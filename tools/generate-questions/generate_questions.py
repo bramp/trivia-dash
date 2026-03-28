@@ -41,6 +41,12 @@ except ImportError:
     sys.exit(1)
 
 try:
+    from jinja2 import Template
+except ImportError:
+    print("Error: jinja2 is required. Run 'pip install jinja2'")
+    sys.exit(1)
+
+try:
     from google import genai
 except ImportError:
     genai = None
@@ -153,20 +159,23 @@ def select_categories(all_categories: list[dict], selection: str | None) -> list
     return unique
 
 
-def load_prompt_template() -> str:
+def load_prompt_template() -> Template:
     if not PROMPT_FILE.exists():
         print(f"Error: Prompt template not found at {PROMPT_FILE}")
         sys.exit(1)
-    return PROMPT_FILE.read_text()
+    return Template(PROMPT_FILE.read_text())
 
 
-def build_prompt(template: str, category: dict, count: int) -> str:
+def build_prompt(
+    template: Template, category: dict, count: int, existing_questions: list[str]
+) -> str:
     example_json = json.dumps(category["example"], indent=2, ensure_ascii=False)
-    return template.format(
+    return template.render(
         topic=category["title"],
         description=category["description"],
         example=example_json,
         count=count,
+        existing_questions=existing_questions,
     )
 
 
@@ -184,9 +193,14 @@ def extract_json(text: str) -> list:
 
 
 def generate_for_category(
-    client: genai.Client, model: str, template: str, category: dict, count: int
+    client: genai.Client,
+    model: str,
+    template: str,
+    category: dict,
+    count: int,
+    existing_questions: list[str],
 ) -> list:
-    prompt = build_prompt(template, category, count)
+    prompt = build_prompt(template, category, count, existing_questions)
 
     print(f"  Requesting {count} questions...")
     response = client.models.generate_content(model=model, contents=prompt)
@@ -273,9 +287,9 @@ def main():
         help="List available categories and exit",
     )
     parser.add_argument(
-        "--append",
+        "--no-append",
         action="store_true",
-        help="Append to existing questions instead of overwriting",
+        help="Overwrite existing questions instead of appending",
     )
     parser.add_argument(
         "--output-dir",
@@ -331,12 +345,22 @@ def main():
         slug = category["slug"]
         print(f"[{i + 1}/{len(categories)}] Generating: {name}")
         try:
+            # Load existing questions to avoid duplicates in the prompt.
+            existing = []
+            if not args.no_append:
+                existing = load_existing_category(output_dir, slug)
+            existing_texts = [q["question"] for q in existing]
+
             questions = generate_for_category(
-                client, args.model, template, category, args.count
+                client,
+                args.model,
+                template,
+                category,
+                args.count,
+                existing_texts,
             )
 
-            if args.append:
-                existing = load_existing_category(output_dir, slug)
+            if not args.no_append:
                 questions = existing + questions
 
             questions = deduplicate(questions)

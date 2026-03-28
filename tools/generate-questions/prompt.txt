@@ -2,12 +2,12 @@
 high-quality multiple-choice questions that are fun, fair, and have exactly one
 objectively correct answer.
 
-**Task:** Generate {count} trivia questions for the category **"{topic}"**.
+**Task:** Generate {{ count }} trivia questions for the category **"{{ topic }}"**.
 
-**Category description:** {description}
+**Category description:** {{ description }}
 
 **Example question for this category (use as a style guide, do NOT repeat it):**
-{example}
+{{ example }}
 
 Distribute the questions across difficulties: roughly 40% Easy, 40% Medium,
 20% Hard.
@@ -17,7 +17,7 @@ Each element must match this schema exactly:
 
 ```json
 [
-  {{
+  {
     "question": "A concise question (one sentence, under 120 characters preferred)",
     "answer": "The correct answer (short, commonly known form)",
     "alternative_answers": ["Other valid phrasings or synonyms for the answer"],
@@ -25,7 +25,7 @@ Each element must match this schema exactly:
     "difficulty": "easy | medium | hard",
     "source": "A specific, verifiable reference — preferably a URL to a reputable source. If no URL is available, cite a specific book (title + author + page/chapter) or a named report/publication. Avoid vague attributions like just an organization name.",
     "clarity_note": "Brief note explaining why the answer is unambiguously correct, or why alternatives are also accepted"
-  }}
+  }
 ]
 ```
 
@@ -57,7 +57,7 @@ Each element must match this schema exactly:
 
 **Example output:**
 [
-  {{
+  {
     "question": "What is the brightest star in the night sky?",
     "answer": "Sirius",
     "alternative_answers": ["Alpha Canis Majoris", "Dog Star"],
@@ -65,5 +65,13 @@ Each element must match this schema exactly:
     "difficulty": "medium",
     "source": "https://science.nasa.gov/star/sirius/",
     "clarity_note": "Sirius (Alpha Canis Majoris) has an apparent magnitude of −1.46, making it the brightest star visible from Earth."
-  }}
+  }
 ]
+{% if existing_questions %}
+
+**IMPORTANT: Do NOT generate any of the following existing questions
+(or close paraphrases of them):**
+{% for q in existing_questions %}
+- {{ q }}
+{% endfor %}
+{% endif %}

@@ -17,6 +17,7 @@ dev = [
 ]
 generate = [
     "google-genai>=1",
+    "jinja2>=3",
     "json5>=0.9",
 ]
 
