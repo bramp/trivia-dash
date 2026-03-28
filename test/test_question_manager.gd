@@ -5,6 +5,7 @@ var _manager: Node = null
 
 func before_each() -> void:
 	_manager = load("res://scripts/question_manager.gd").new()
+	_manager.questions_dir = "res://test/data/questions/"
 	add_child_autofree(_manager)
 
 
@@ -35,6 +36,20 @@ func test_next_question_has_four_answers() -> void:
 func test_correct_index_points_to_right_answer() -> void:
 	# Load questions and verify the correct index always points to a valid answer.
 	_manager.load_questions()
+	# Original correct answers keyed by question text.
+	var expected_answers := {}
+	for cat: Dictionary in _manager._categories:
+		var slug: String = cat.get("slug", "")
+		var path := "res://test/data/questions/" + slug + ".json"
+		var file := FileAccess.open(path, FileAccess.READ)
+		if not file:
+			continue
+		var json := JSON.new()
+		if json.parse(file.get_as_text()) != OK:
+			continue
+		for q: Dictionary in json.data:
+			expected_answers[q.get("question", "")] = q.get("answer", "")
+
 	# Run multiple times to account for shuffle randomness.
 	for i in range(20):
 		_manager.reset()
@@ -42,8 +57,10 @@ func test_correct_index_points_to_right_answer() -> void:
 		var correct_idx: int = q.correct
 		assert_gte(correct_idx, 0, "Correct index should be >= 0")
 		assert_lt(correct_idx, 4, "Correct index should be < 4")
-		# The answer at the correct index should be a non-empty string.
-		assert_ne(q.answers[correct_idx], "", "Correct answer should not be empty")
+		# The answer at the correct index should match the original answer.
+		var actual: String = q.answers[correct_idx]
+		var expected: String = expected_answers.get(q.question, "")
+		assert_eq(actual, expected, "Correct answer should match source data")
 
 
 func test_no_repeat_until_pool_exhausted() -> void:
@@ -77,13 +94,13 @@ func test_shuffle_changes_answer_order() -> void:
 	# Load multiple times and check that at least one question has shuffled answers.
 	_manager.load_questions()
 	var found_different := false
+	# Original order is answer first, then distractors.
+	var original := ["Paris", "London", "Berlin", "Madrid"]
 	for i in range(20):
 		_manager.reset()
-		# Go through all questions looking for any with shuffled answers.
 		while _manager.has_next():
 			var q: Dictionary = _manager.next_question()
 			if q.question == "What is the capital of France?":
-				var original := ["Paris", "London", "Berlin", "Madrid"]
 				if q.answers != original:
 					found_different = true
 					break

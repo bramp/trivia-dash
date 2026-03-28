@@ -55,7 +55,7 @@ SCRIPT_DIR = Path(__file__).resolve().parent
 PROJECT_ROOT = SCRIPT_DIR.parent.parent
 PROMPT_FILE = SCRIPT_DIR / "prompt.txt"
 CATEGORIES_FILE = SCRIPT_DIR / "categories.json"
-OUTPUT_DIR = SCRIPT_DIR / "generated"
+OUTPUT_DIR = PROJECT_ROOT / "data" / "questions"
 ENV_FILE = PROJECT_ROOT / ".env"
 
 
@@ -252,6 +252,20 @@ def save_category(output_dir: Path, slug: str, questions: list) -> Path:
     return path
 
 
+def write_categories_manifest(output_dir: Path, all_categories: list[dict]) -> None:
+    """Write a categories.json manifest listing every category that has a file."""
+    manifest = []
+    for cat in all_categories:
+        path = output_dir / f"{cat['slug']}.json"
+        if path.exists():
+            manifest.append({"title": cat["title"], "slug": cat["slug"]})
+    manifest_path = output_dir / "categories.json"
+    manifest_path.write_text(json.dumps(manifest, indent=2, ensure_ascii=False) + "\n")
+    print(
+        f"\nWrote categories manifest ({len(manifest)} categories) to {manifest_path}"
+    )
+
+
 def main():
     parser = argparse.ArgumentParser(
         description="Generate trivia questions with Gemini",
@@ -340,6 +354,7 @@ def main():
     print(f"Output directory: {output_dir}\n")
 
     total_generated = 0
+    generated_slugs: list[str] = []
     for i, category in enumerate(categories):
         name = category["title"]
         slug = category["slug"]
@@ -366,6 +381,7 @@ def main():
             questions = deduplicate(questions)
             path = save_category(output_dir, slug, questions)
             total_generated += len(questions)
+            generated_slugs.append(slug)
             print(f"  Wrote {len(questions)} questions to {path.name}")
         except Exception as e:
             print(f"  ERROR generating {name}: {e}")
@@ -374,6 +390,10 @@ def main():
         # Rate limit between requests.
         if i < len(categories) - 1:
             time.sleep(2)
+
+    # Write a categories manifest into the output directory so the game
+    # knows which files are available and can show category names to users.
+    write_categories_manifest(output_dir, all_categories)
 
     print(
         f"\nDone! Generated {total_generated} total questions"
