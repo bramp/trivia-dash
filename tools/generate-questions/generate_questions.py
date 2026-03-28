@@ -11,6 +11,7 @@ Usage:
     python3 tools/generate-questions/generate_questions.py --categories 1-5
     python3 tools/generate-questions/generate_questions.py --categories emoji,lyrics
     python3 tools/generate-questions/generate_questions.py --categories all
+    python3 tools/generate-questions/generate_questions.py --manifest-only
 
 Authentication (pick one):
     1. Create a .env file in the project root with your API key:
@@ -311,12 +312,25 @@ def main():
         default=None,
         help=f"Directory for generated JSON files (default: {OUTPUT_DIR})",
     )
+    parser.add_argument(
+        "--manifest-only",
+        action="store_true",
+        help="Regenerate the categories.json manifest without generating questions",
+    )
     args = parser.parse_args()
 
     all_categories = load_categories()
 
     if args.list_categories:
         list_categories(all_categories)
+        sys.exit(0)
+
+    output_dir = (
+        args.output_dir.resolve() if args.output_dir is not None else OUTPUT_DIR
+    )
+
+    if args.manifest_only:
+        write_categories_manifest(output_dir, all_categories)
         sys.exit(0)
 
     categories = select_categories(all_categories, args.categories)
@@ -342,10 +356,6 @@ def main():
             "Tip: You can also set GEMINI_API_KEY in a .env file in the project root."
         )
         client = genai.Client()
-
-    output_dir = (
-        args.output_dir.resolve() if args.output_dir is not None else OUTPUT_DIR
-    )
 
     print(
         f"\nGenerating for {len(categories)} categories: "
