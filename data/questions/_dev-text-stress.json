@@ -1,0 +1,44 @@
+[
+  {
+    "question": "Short Q?",
+    "answer": "A",
+    "distractors": ["B", "C", "D"],
+    "difficulty": "easy"
+  },
+  {
+    "question": "According to an ancient but unrepealed bylaw in Milan, Italy, citizens are required to do what at all times except at funerals?",
+    "answer": "The original mechanical chainsaw was invented by doctors to assist with difficult childbirths",
+    "distractors": [
+      "A musical piece currently being continuously performed in Germany is scheduled to end in 2640",
+      "Cleopatra lived closer in time to the Moon landing than to the Great Pyramid's construction",
+      "No"
+    ],
+    "difficulty": "hard"
+  },
+  {
+    "question": "A?",
+    "answer": "Butterflies possess specialized taste receptors that are located directly on their feet",
+    "distractors": [
+      "Mosquitoes utilize complex echolocation to actively hunt human targets in total darkness",
+      "Wild grasses successfully evolved centuries before the first amphibians crawled onto land",
+      "Yes"
+    ],
+    "difficulty": "hard"
+  },
+  {
+    "question": "Which of these statements about the natural world contains a verifiable scientific fact that has been independently confirmed by multiple research institutions?",
+    "answer": "True",
+    "distractors": ["False", "Maybe", "Unknown"],
+    "difficulty": "medium"
+  },
+  {
+    "question": "X?",
+    "answer": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+    "distractors": [
+      "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB",
+      "CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC",
+      "DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD"
+    ],
+    "difficulty": "hard"
+  }
+]

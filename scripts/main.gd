@@ -4,6 +4,15 @@ enum State { TITLE, PLAYING, GAME_OVER }
 
 const BuildInfo = preload("res://scripts/build_info.gd")
 
+# Debug: preset resolutions to cycle with F3
+const _DEBUG_RESOLUTIONS: Array[Vector2i] = [
+	Vector2i(1280, 720),
+	Vector2i(1920, 1080),
+	Vector2i(3840, 2160),
+	Vector2i(390, 844),
+	Vector2i(1024, 768),
+]
+
 var _state: State = State.TITLE
 var _score: int = 0
 var _time_remaining: float = 0.0
@@ -11,6 +20,7 @@ var _question_start_time: float = 0.0
 var _current_question: Dictionary = {}
 var _input_locked: bool = false
 var _active_tween: Tween = null
+var _debug_res_index: int = 0
 
 @onready var title_screen: MarginContainer = $TitleScreen
 @onready var game_screen: MarginContainer = $GameScreen
@@ -55,6 +65,16 @@ func _ready() -> void:
 
 
 func _unhandled_input(event: InputEvent) -> void:
+	# Debug: F3 cycles through preset resolutions (desktop only).
+	if OS.has_feature("debug") and event is InputEventKey and event.pressed and event.keycode == KEY_F3:
+		var res := _DEBUG_RESOLUTIONS[_debug_res_index]
+		get_window().size = res
+		get_window().content_scale_size = get_window().content_scale_size  # force re-layout
+		_debug_res_index = (_debug_res_index + 1) % _DEBUG_RESOLUTIONS.size()
+		print("Debug: window resized to %dx%d" % [res.x, res.y])
+		get_viewport().set_input_as_handled()
+		return
+
 	if _state != State.PLAYING or _input_locked:
 		return
 	if event.is_action_pressed("answer_1"):
@@ -194,6 +214,9 @@ func _show_next_question() -> void:
 
 func _display_question(q: Dictionary) -> void:
 	question_label.text = q.get("question", "")
+	# Reset question font size override so theme size is used, then auto-fit after layout.
+	question_label.remove_theme_font_size_override("font_size")
+
 	var answers: Array = q.get("answers", [])
 	for i in range(answer_buttons.size()):
 		var btn := answer_buttons[i]
@@ -201,6 +224,8 @@ func _display_question(q: Dictionary) -> void:
 		btn.disabled = false
 		btn.modulate.a = 1.0
 		btn.scale = Vector2.ONE
+		# Reset font size override so theme size is used, then auto-fit after layout.
+		btn.remove_theme_font_size_override("font_size")
 		# Remove any overlay labels (e.g. ✗ from wrong answers).
 		for child in btn.get_children():
 			if child is Label:
@@ -216,6 +241,8 @@ func _display_question(q: Dictionary) -> void:
 			style.border_width_top = 0
 			style.border_width_bottom = 0
 
+	# Auto-fit text after one layout pass so sizes are known.
+	_auto_fit_text.call_deferred()
 	_animate_question_entrance()
 
 
@@ -265,6 +292,51 @@ func _update_timer_display() -> void:
 			fill_style.bg_color = GameData.TIMER_GREEN.lerp(GameData.TIMER_YELLOW, 1.0 - ratio * 2.0)
 		else:
 			fill_style.bg_color = GameData.TIMER_YELLOW.lerp(GameData.TIMER_RED, 1.0 - ratio * 2.0)
+
+
+## Compute the largest font size (down to [param min_size]) at which [param text]
+## fits inside [param ctrl]. Returns the base theme size if no shrinking is needed.
+func _calc_fitting_font_size(ctrl: Control, text: String, min_size: int = 16) -> int:
+	var font := ctrl.get_theme_font("font")
+	var base_size := ctrl.get_theme_font_size("font_size")
+	var style := ctrl.get_theme_stylebox("normal") as StyleBoxFlat
+	var margin_h := 0.0
+	var margin_v := 0.0
+	if style:
+		margin_h = style.content_margin_left + style.content_margin_right
+		margin_v = style.content_margin_top + style.content_margin_bottom
+	var avail := Vector2(ctrl.size.x - margin_h, ctrl.size.y - margin_v)
+	if avail.x <= 0 or avail.y <= 0:
+		return base_size
+	var font_size := base_size
+	while font_size > min_size:
+		var text_size := font.get_multiline_string_size(text, HORIZONTAL_ALIGNMENT_CENTER, avail.x, font_size)
+		if text_size.y <= avail.y:
+			break
+		font_size -= 2
+	return font_size
+
+
+## Called via call_deferred after layout so control sizes are known.
+## Shrinks font sizes to fit, using the same size for all answer buttons.
+func _auto_fit_text() -> void:
+	# Fit question label independently.
+	var q_size := _calc_fitting_font_size(question_label, question_label.text, 24)
+	var q_base := question_label.get_theme_font_size("font_size")
+	if q_size < q_base:
+		question_label.add_theme_font_size_override("font_size", q_size)
+
+	# Find the smallest font size needed across all four answer buttons,
+	# then apply it uniformly so all buttons match.
+	var min_btn_size := answer_buttons[0].get_theme_font_size("font_size")
+	for btn in answer_buttons:
+		var fitted := _calc_fitting_font_size(btn, btn.text, 18)
+		if fitted < min_btn_size:
+			min_btn_size = fitted
+	var btn_base := answer_buttons[0].get_theme_font_size("font_size")
+	if min_btn_size < btn_base:
+		for btn in answer_buttons:
+			btn.add_theme_font_size_override("font_size", min_btn_size)
 
 
 # --- Animations ---

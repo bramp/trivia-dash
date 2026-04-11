@@ -4,11 +4,31 @@ VENV_DIR := .venv
 
 PY_FILES := $(shell find . -name "*.py" -not -path "./.godot/*" -not -path "./$(VENV_DIR)/*")
 
-.PHONY: format format-check format-check-gd format-check-py lint test run build serve generate-questions venv
+.PHONY: format format-check format-check-gd format-check-py lint test validate-questions run build serve generate-questions venv
 
-## Run the game
+## Run the game (optionally at a specific resolution: make run RES=1920x1080)
 run:
+ifdef RES
+	godot --path . --resolution $(RES)
+else
 	godot --path .
+endif
+
+## Run at common screen sizes for testing
+run-720p:
+	$(MAKE) run RES=1280x720
+
+run-1080p:
+	$(MAKE) run RES=1920x1080
+
+run-4k:
+	$(MAKE) run RES=3840x2160
+
+run-phone:
+	$(MAKE) run RES=390x844
+
+run-tablet:
+	$(MAKE) run RES=1024x768
 
 ## Serve the web build (requires Python 3)
 serve: build
@@ -35,12 +55,16 @@ lint:
 	gdlint $(GD_FILES)
 
 ## Run GUT unit tests (requires Godot in PATH)
-test:
+test: validate-questions
 	godot --headless --script addons/gut/gut_cmdln.gd \
 		-gdir=res://test/ \
 		-gprefix=test_ \
 		-gsuffix=.gd \
 		-gexit
+
+## Validate question data (structure, text lengths, duplicates)
+validate-questions:
+	python3 tools/validate_questions.py
 
 ## Build Web export (requires export templates installed in Godot)
 build:

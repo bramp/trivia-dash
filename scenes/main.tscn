@@ -388,7 +388,6 @@ theme_override_styles/hover = SubResource("Answer1_hover")
 theme_override_styles/focus = SubResource("Answer1_focus")
 text = "Answer 1"
 autowrap_mode = 3
-clip_text = true
 
 [node name="Answer2" type="Button" parent="GameScreen/Content/AnswersContainer/AnswerGrid" unique_id=1238245127]
 custom_minimum_size = Vector2(0, 100)
@@ -402,7 +401,6 @@ theme_override_styles/hover = SubResource("Answer2_hover")
 theme_override_styles/focus = SubResource("Answer2_focus")
 text = "Answer 2"
 autowrap_mode = 3
-clip_text = true
 
 [node name="Answer3" type="Button" parent="GameScreen/Content/AnswersContainer/AnswerGrid" unique_id=624123642]
 custom_minimum_size = Vector2(0, 100)
@@ -416,7 +414,6 @@ theme_override_styles/hover = SubResource("Answer3_hover")
 theme_override_styles/focus = SubResource("Answer3_focus")
 text = "Answer 3"
 autowrap_mode = 3
-clip_text = true
 
 [node name="Answer4" type="Button" parent="GameScreen/Content/AnswersContainer/AnswerGrid" unique_id=400269202]
 custom_minimum_size = Vector2(0, 100)
@@ -430,7 +427,6 @@ theme_override_styles/hover = SubResource("Answer4_hover")
 theme_override_styles/focus = SubResource("Answer4_focus")
 text = "Answer 4"
 autowrap_mode = 3
-clip_text = true
 
 [node name="GameOverScreen" type="MarginContainer" parent="." unique_id=1241660869]
 visible = false
