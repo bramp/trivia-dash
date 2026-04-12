@@ -40,10 +40,10 @@ func before_all() -> void:
 
 func after_all() -> void:
 	if _main_scene:
-		_main_scene.queue_free()
+		_main_scene.free()
 		_main_scene = null
 	if _manager:
-		_manager.queue_free()
+		_manager.free()
 		_manager = null
 
 
