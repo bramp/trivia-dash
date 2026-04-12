@@ -17,6 +17,7 @@ jobs:
         uses: actions/setup-python@v6
         with:
           python-version: "3.12"
+          cache: "pip"
 
       - name: Install gdtoolkit and ruff
         run: pip install "gdtoolkit>=4,<5" "ruff>=0.9"
@@ -34,6 +35,9 @@ jobs:
       image: barichello/godot-ci:4.6.2
     steps:
       - uses: actions/checkout@v5
+
+      - name: Install make
+        run: apt-get update && apt-get install -y make
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -57,6 +61,9 @@ jobs:
     steps:
       - uses: actions/checkout@v5
 
+      - name: Install make
+        run: apt-get update && apt-get install -y make
+
       - name: Setup export templates
         run: |
           mkdir -v -p ~/.local/share/godot/export_templates/
@@ -64,20 +71,13 @@ jobs:
           cp -a /root/.config/godot ~/.config/godot || true
           cp -a /root/.local/share/godot/export_templates/* ~/.local/share/godot/export_templates/ || true
 
-      - name: Cache binaryen
-        uses: actions/cache@v4
-        id: cache-binaryen
-        with:
-          path: binaryen-version_121
-          key: ${{ runner.os }}-binaryen-121
-
       - name: Install binaryen (wasm-opt)
-        if: steps.cache-binaryen.outputs.cache-hit != 'true'
-        run: |
-          wget -qO- https://github.com/WebAssembly/binaryen/releases/download/version_121/binaryen-version_121-x86_64-linux.tar.gz | tar xz
-          
+        run: npm install
+        env:
+          npm_config_ignore_scripts: "true"
+
       - name: Add binaryen to PATH
-        run: echo "$PWD/binaryen-version_121/bin" >> "$GITHUB_PATH"
+        run: echo "$PWD/node_modules/.bin" >> "$GITHUB_PATH"
 
       - name: Import project
         run: godot --headless --import . --quit || true
