@@ -27,3 +27,20 @@
 - **Use theme type variations** (e.g. `TitleLabel`, `HudLabel`, `PlayButton`, `AnswerButton`) to group shared static styles. Assign them to nodes via `theme_type_variation` in the `.tscn` file.
 - **Per-node style overrides** (e.g. per-button colors) belong as inline `SubResource` styleboxes in the `.tscn` file, not created in code.
 - **Reserve GDScript styling for dynamic/runtime changes only**: animations, state-dependent color transitions (e.g. timer bar color lerp), correct/wrong answer highlights, and temporary effects.
+
+## Question Data
+
+- **File format**: Question files use `answer` (string) + `distractors` (array of 3 strings), **not** an `answers` array. See `data/questions/README.md` for full schema.
+- **Text length limits**: Questions ≤ 150 chars, answers/distractors ≤ 100 chars. Enforced by `make validate-questions` (runs automatically as part of `make test`).
+- **Validation**: Run `make validate-questions` to check all question data for structure, lengths, and duplicates.
+
+## Testing Notes
+
+- **GUT tests run headless** (`--headless`), so UI controls have zero size — font measurement and layout-dependent assertions won't produce meaningful results. Use Python scripts (`tools/`) for data validation instead.
+- **Resolution testing**: Use `make run-720p`, `make run-1080p`, `make run-4k`, `make run-phone`, `make run-tablet`, or `make run RES=WxH`. Press **F3** in debug builds to cycle resolutions at runtime.
+- **Dev stress test data**: `data/questions/_dev-text-stress.json` has extreme text lengths for manual UI testing. Add its slug to `categories.json` temporarily to use it.
+
+## GDScript Pitfalls
+
+- **gdlint enforces declaration order**: `const` must come before `var` in class scope. Violating this produces `class-definitions-order` errors.
+- **`clip_text = true` on Buttons silently hides overflow** — prefer `autowrap_mode` with dynamic font sizing instead.
