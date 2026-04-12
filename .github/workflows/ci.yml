@@ -30,15 +30,15 @@ jobs:
   test:
     name: Run GUT Tests
     runs-on: ubuntu-latest
+    container:
+      image: barichello/godot-ci:4.6.0
     steps:
       - uses: actions/checkout@v5
 
-      - name: Setup Godot
-        uses: chickensoft-games/setup-godot@v2
+      - name: Set up Python
+        uses: actions/setup-python@v5
         with:
-          version: 4.6.0
-          use-dotnet: false
-          include-templates: false
+          python-version: "3.12"
 
       - name: Import project
         run: godot --headless --import . --quit || true
@@ -52,20 +52,32 @@ jobs:
     name: Build Web Export
     runs-on: ubuntu-latest
     needs: [lint, test]
+    container:
+      image: barichello/godot-ci:4.6.0
     steps:
       - uses: actions/checkout@v5
 
-      - name: Setup Godot with export templates
-        uses: chickensoft-games/setup-godot@v2
+      - name: Setup export templates
+        run: |
+          mkdir -v -p ~/.local/share/godot/export_templates/
+          mkdir -v -p ~/.config/
+          cp -a /root/.config/godot ~/.config/godot || true
+          cp -a /root/.local/share/godot/export_templates/* ~/.local/share/godot/export_templates/ || true
+
+      - name: Cache binaryen
+        uses: actions/cache@v4
+        id: cache-binaryen
         with:
-          version: 4.6.0
-          use-dotnet: false
-          include-templates: true
+          path: binaryen-version_121
+          key: ${{ runner.os }}-binaryen-121
 
       - name: Install binaryen (wasm-opt)
+        if: steps.cache-binaryen.outputs.cache-hit != 'true'
         run: |
-          curl -sSL https://github.com/WebAssembly/binaryen/releases/download/version_121/binaryen-version_121-x86_64-linux.tar.gz | tar xz
-          echo "$PWD/binaryen-version_121/bin" >> "$GITHUB_PATH"
+          wget -qO- https://github.com/WebAssembly/binaryen/releases/download/version_121/binaryen-version_121-x86_64-linux.tar.gz | tar xz
+          
+      - name: Add binaryen to PATH
+        run: echo "$PWD/binaryen-version_121/bin" >> "$GITHUB_PATH"
 
       - name: Import project
         run: godot --headless --import . --quit || true
