@@ -218,9 +218,13 @@ func _display_question(q: Dictionary) -> void:
 	question_label.remove_theme_font_size_override("font_size")
 
 	var answers: Array = q.get("answers", [])
+	var correct_idx: int = q.get("correct", -1)
 	for i in range(answer_buttons.size()):
 		var btn := answer_buttons[i]
-		btn.text = answers[i] if i < answers.size() else ""
+		var label: String = answers[i] if i < answers.size() else ""
+		if OS.has_feature("debug") and i == correct_idx:
+			label = "★ " + label
+		btn.text = label
 		btn.disabled = false
 		btn.modulate.a = 1.0
 		btn.scale = Vector2.ONE
