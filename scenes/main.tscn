@@ -275,12 +275,23 @@ horizontal_alignment = 1
 custom_minimum_size = Vector2(0, 80)
 layout_mode = 2
 
-[node name="PlayButton" type="Button" parent="TitleScreen/Content" unique_id=379584862]
+[node name="QuickPlayButton" type="Button" parent="TitleScreen/Content" unique_id=379584862]
 custom_minimum_size = Vector2(300, 90)
 layout_mode = 2
 size_flags_horizontal = 4
 theme_type_variation = &"PlayButton"
-text = "PLAY"
+text = "QUICK PLAY"
+
+[node name="Spacer4_1" type="Control" parent="TitleScreen/Content" unique_id=1407817241]
+custom_minimum_size = Vector2(0, 16)
+layout_mode = 2
+
+[node name="EndlessPlayButton" type="Button" parent="TitleScreen/Content" unique_id=379584863]
+custom_minimum_size = Vector2(300, 90)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_type_variation = &"PlayButton"
+text = "ENDLESS PLAY"
 
 [node name="Spacer4" type="Control" parent="TitleScreen/Content" unique_id=1407817240]
 custom_minimum_size = Vector2(0, 30)
@@ -503,7 +514,8 @@ text = "MAIN MENU"
 [node name="GameTimer" type="Timer" parent="." unique_id=93162372]
 wait_time = 0.05
 
-[connection signal="pressed" from="TitleScreen/Content/PlayButton" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="TitleScreen/Content/QuickPlayButton" to="." method="_on_quick_play_pressed"]
+[connection signal="pressed" from="TitleScreen/Content/EndlessPlayButton" to="." method="_on_endless_play_pressed"]
 [connection signal="pressed" from="GameScreen/Content/AnswersContainer/AnswerGrid/Answer1" to="." method="_on_answer_pressed" binds= [0]]
 [connection signal="pressed" from="GameScreen/Content/AnswersContainer/AnswerGrid/Answer2" to="." method="_on_answer_pressed" binds= [1]]
 [connection signal="pressed" from="GameScreen/Content/AnswersContainer/AnswerGrid/Answer3" to="." method="_on_answer_pressed" binds= [2]]

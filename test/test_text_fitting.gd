@@ -34,7 +34,7 @@ func before_all() -> void:
 	# from the real data directory.
 	_manager = load("res://scripts/question_manager.gd").new()
 	_manager.questions_dir = "res://data/questions/"
-	add_child_autofree(_manager)
+	add_child(_manager)
 	_manager.load_questions()
 
 
@@ -42,6 +42,9 @@ func after_all() -> void:
 	if _main_scene:
 		_main_scene.queue_free()
 		_main_scene = null
+	if _manager:
+		_manager.queue_free()
+		_manager = null
 
 
 # --- Data quality tests ---
@@ -123,7 +126,7 @@ func test_text_fits_at_all_resolutions() -> void:
 			# Test question fitting.
 			question_label.remove_theme_font_size_override("font_size")
 			question_label.text = q_text
-			var q_fitted := _main_scene._calc_fitting_font_size(question_label, q_text, MIN_QUESTION_FONT)
+			var q_fitted: int = _main_scene._calc_fitting_font_size(question_label, q_text, MIN_QUESTION_FONT)
 			assert_gt(
 				q_fitted,
 				MIN_QUESTION_FONT,
@@ -131,12 +134,12 @@ func test_text_fits_at_all_resolutions() -> void:
 			)
 
 			# Test answer fitting — find the smallest fitted size across all 4.
-			var min_fitted := answer_btns[0].get_theme_font_size("font_size")
+			var min_fitted: int = answer_btns[0].get_theme_font_size("font_size")
 			for i in range(answer_btns.size()):
 				var btn := answer_btns[i]
 				btn.remove_theme_font_size_override("font_size")
 				btn.text = answers[i] if i < answers.size() else ""
-				var fitted := _main_scene._calc_fitting_font_size(btn, btn.text, MIN_ANSWER_FONT)
+				var fitted: int = _main_scene._calc_fitting_font_size(btn, btn.text, MIN_ANSWER_FONT)
 				if fitted < min_fitted:
 					min_fitted = fitted
 

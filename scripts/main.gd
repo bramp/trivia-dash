@@ -1,6 +1,7 @@
 extends Control
 
 enum State { TITLE, PLAYING, GAME_OVER }
+enum GameMode { QUICK, ENDLESS }
 
 const BuildInfo = preload("res://scripts/build_info.gd")
 
@@ -14,9 +15,10 @@ const _DEBUG_RESOLUTIONS: Array[Vector2i] = [
 ]
 
 var _state: State = State.TITLE
+var _game_mode: GameMode = GameMode.QUICK
 var _score: int = 0
 var _time_remaining: float = 0.0
-var _question_start_time: float = 0.0
+var _question_start_msec: float = 0.0
 var _current_question: Dictionary = {}
 var _input_locked: bool = false
 var _active_tween: Tween = null
@@ -31,7 +33,8 @@ var _debug_res_index: int = 0
 # Title screen
 @onready var title_label: Label = $TitleScreen/Content/TitleLabel
 @onready var subtitle_label: Label = $TitleScreen/Content/SubtitleLabel
-@onready var play_button: Button = $TitleScreen/Content/PlayButton
+@onready var quick_play_button: Button = $TitleScreen/Content/QuickPlayButton
+@onready var endless_play_button: Button = $TitleScreen/Content/EndlessPlayButton
 @onready var title_high_score_label: Label = $TitleScreen/Content/HighScoreLabel
 @onready var build_info_label: Label = $TitleScreen/Content/BuildInfoLabel
 
@@ -61,7 +64,8 @@ func _ready() -> void:
 	_show_title_screen()
 	if not loaded:
 		subtitle_label.text = "Error: No questions found!"
-		play_button.disabled = true
+		quick_play_button.disabled = true
+		endless_play_button.disabled = true
 
 
 func _unhandled_input(event: InputEvent) -> void:
@@ -92,6 +96,8 @@ func _unhandled_input(event: InputEvent) -> void:
 
 
 func _on_game_timer_timeout() -> void:
+	if _game_mode != GameMode.QUICK:
+		return
 	_time_remaining -= game_timer.wait_time
 	_time_remaining = maxf(_time_remaining, 0.0)
 	_update_timer_display()
@@ -102,14 +108,19 @@ func _on_game_timer_timeout() -> void:
 		SfxManager.play_tick()
 
 
-func _on_play_pressed() -> void:
+func _on_quick_play_pressed() -> void:
 	SfxManager.play_button_tap()
-	_start_game()
+	_start_game(GameMode.QUICK)
+
+
+func _on_endless_play_pressed() -> void:
+	SfxManager.play_button_tap()
+	_start_game(GameMode.ENDLESS)
 
 
 func _on_play_again_pressed() -> void:
 	SfxManager.play_button_tap()
-	_start_game()
+	_start_game(_game_mode)
 
 
 func _on_main_menu_pressed() -> void:
@@ -121,13 +132,14 @@ func _on_answer_pressed(index: int) -> void:
 	if _state != State.PLAYING or _input_locked:
 		return
 	_input_locked = true
-	var elapsed := (GameData.ROUND_DURATION - _time_remaining) - _question_start_time
-	var question_time_left := maxf(0.0, _time_remaining)
-	# Use the shorter of elapsed-based remaining or global remaining for bonus.
-	var effective_remaining := minf(
-		maxf(0.0, GameData.ROUND_DURATION - _question_start_time - elapsed),
-		question_time_left,
-	)
+	var elapsed := (Time.get_ticks_msec() - _question_start_msec) / 1000.0
+
+	var effective_remaining := 0.0
+	if _game_mode == GameMode.QUICK:
+		var question_time_left := maxf(0.0, _time_remaining)
+		effective_remaining = minf(maxf(0.0, 5.0 - elapsed), question_time_left)  # Bonus up to 5s of value for quick answer
+	else:
+		effective_remaining = maxf(0.0, 5.0 - elapsed)
 	if index == _current_question.get("correct", -1):
 		_handle_correct_answer(index, effective_remaining)
 	else:
@@ -143,17 +155,19 @@ func _show_title_screen() -> void:
 	game_over_screen.visible = false
 	title_screen.visible = true
 
-	title_high_score_label.text = "High Score: %d" % GameData.high_score
+	title_high_score_label.text = (
+		"High Scores - Quick: %d | Endless: %d" % [GameData.high_score_quick, GameData.high_score_endless]
+	)
 
 	build_info_label.text = "Build: %s" % BuildInfo.BUILD_DATE
 
 	_animate_title_entrance()
 
 
-func _start_game() -> void:
+func _start_game(mode: GameMode) -> void:
+	_game_mode = mode
 	_state = State.PLAYING
 	_score = 0
-	_time_remaining = GameData.ROUND_DURATION
 	_input_locked = false
 	question_manager.reset()
 
@@ -161,10 +175,19 @@ func _start_game() -> void:
 	game_over_screen.visible = false
 	game_screen.visible = true
 
-	_update_score_display()
-	_update_timer_display()
+	if mode == GameMode.QUICK:
+		_time_remaining = GameData.ROUND_DURATION
+		timer_bar.visible = true
+		timer_label.visible = true
+		_update_timer_display()
+		game_timer.start()
+	else:
+		_time_remaining = 0.0
+		timer_bar.visible = false
+		timer_label.visible = false
+		game_timer.stop()
 
-	game_timer.start()
+	_update_score_display()
 	_show_next_question()
 
 
@@ -173,10 +196,17 @@ func _end_game() -> void:
 	_input_locked = true
 	game_timer.stop()
 
-	var is_new_high := _score > GameData.high_score
-	if is_new_high:
-		GameData.high_score = _score
-		GameData.save_data()
+	var is_new_high := false
+	if _game_mode == GameMode.QUICK:
+		is_new_high = _score > GameData.high_score_quick
+		if is_new_high:
+			GameData.high_score_quick = _score
+			GameData.save_data()
+	else:
+		is_new_high = _score > GameData.high_score_endless
+		if is_new_high:
+			GameData.high_score_endless = _score
+			GameData.save_data()
 
 	SfxManager.play_game_over()
 
@@ -192,7 +222,10 @@ func _show_game_over_screen(is_new_high: bool) -> void:
 	game_over_screen.visible = true
 
 	final_score_label.text = "Score: %d" % _score
-	game_over_high_score_label.text = "High Score: %d" % GameData.high_score
+	if _game_mode == GameMode.QUICK:
+		game_over_high_score_label.text = "High Score (Quick): %d" % GameData.high_score_quick
+	else:
+		game_over_high_score_label.text = "High Score (Endless): %d" % GameData.high_score_endless
 	new_high_score_label.visible = is_new_high
 	if is_new_high:
 		SfxManager.play_new_high_score()
@@ -207,7 +240,7 @@ func _show_next_question() -> void:
 	if not question_manager.has_next():
 		question_manager.reset()
 	_current_question = question_manager.next_question()
-	_question_start_time = GameData.ROUND_DURATION - _time_remaining
+	_question_start_msec = Time.get_ticks_msec()
 	_display_question(_current_question)
 	_input_locked = false
 
@@ -332,7 +365,7 @@ func _auto_fit_text() -> void:
 
 	# Find the smallest font size needed across all four answer buttons,
 	# then apply it uniformly so all buttons match.
-	var min_btn_size := answer_buttons[0].get_theme_font_size("font_size")
+	var min_btn_size: int = answer_buttons[0].get_theme_font_size("font_size")
 	for btn in answer_buttons:
 		var fitted := _calc_fitting_font_size(btn, btn.text, 18)
 		if fitted < min_btn_size:
@@ -357,8 +390,10 @@ func _animate_title_entrance() -> void:
 	title_label.modulate.a = 0.0
 	title_label.position.y -= 50
 	subtitle_label.modulate.a = 0.0
-	play_button.modulate.a = 0.0
-	play_button.scale = Vector2.ZERO
+	quick_play_button.modulate.a = 0.0
+	quick_play_button.scale = Vector2.ZERO
+	endless_play_button.modulate.a = 0.0
+	endless_play_button.scale = Vector2.ZERO
 	title_high_score_label.modulate.a = 0.0
 
 	var tween := create_tween()
@@ -368,8 +403,10 @@ func _animate_title_entrance() -> void:
 	tween.tween_property(title_label, "modulate:a", 1.0, 0.4)
 	tween.parallel().tween_property(title_label, "position:y", title_label.position.y + 50, 0.4)
 	tween.tween_property(subtitle_label, "modulate:a", 1.0, 0.3)
-	tween.tween_property(play_button, "modulate:a", 1.0, 0.3)
-	tween.parallel().tween_property(play_button, "scale", Vector2.ONE, 0.3)
+	tween.tween_property(quick_play_button, "modulate:a", 1.0, 0.3)
+	tween.parallel().tween_property(quick_play_button, "scale", Vector2.ONE, 0.3)
+	tween.tween_property(endless_play_button, "modulate:a", 1.0, 0.3)
+	tween.parallel().tween_property(endless_play_button, "scale", Vector2.ONE, 0.3)
 	tween.tween_property(title_high_score_label, "modulate:a", 1.0, 0.3)
 
 

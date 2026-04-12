@@ -18,7 +18,8 @@ const BASE_POINTS := 100
 const TIME_BONUS_MULTIPLIER := 50.0
 const ROUND_DURATION := 30.0
 
-var high_score: int = 0
+var high_score_quick: int = 0
+var high_score_endless: int = 0
 var _save_path := "user://save.json"
 
 
@@ -34,7 +35,10 @@ func calculate_score(question_time_remaining: float) -> int:
 func save_data() -> void:
 	var file := FileAccess.open(_save_path, FileAccess.WRITE)
 	if file:
-		var data := {"high_score": high_score}
+		var data := {
+			"high_score_quick": high_score_quick,
+			"high_score_endless": high_score_endless,
+		}
 		file.store_string(JSON.stringify(data))
 
 
@@ -47,4 +51,5 @@ func load_data() -> void:
 	var json := JSON.new()
 	var error := json.parse(file.get_as_text())
 	if error == OK and json.data is Dictionary:
-		high_score = int(json.data.get("high_score", 0))
+		high_score_quick = int(json.data.get("high_score_quick", 0))
+		high_score_endless = int(json.data.get("high_score_endless", 0))

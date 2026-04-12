@@ -27,10 +27,14 @@ func test_calculate_score_with_small_time() -> void:
 
 func test_high_score_default() -> void:
 	# High score should default to 0 on a fresh instance.
-	var saved := GameData.high_score
-	GameData.high_score = 0
-	assert_eq(GameData.high_score, 0, "Default high score should be 0")
-	GameData.high_score = saved
+	var saved_quick: int = GameData.high_score_quick
+	var saved_endless: int = GameData.high_score_endless
+	GameData.high_score_quick = 0
+	GameData.high_score_endless = 0
+	assert_eq(GameData.high_score_quick, 0, "Default quick high score should be 0")
+	assert_eq(GameData.high_score_endless, 0, "Default endless high score should be 0")
+	GameData.high_score_quick = saved_quick
+	GameData.high_score_endless = saved_endless
 
 
 func test_scoring_constants() -> void:
