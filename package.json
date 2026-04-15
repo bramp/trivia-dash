@@ -1,6 +1,6 @@
 {
   "private": true,
   "devDependencies": {
-    "binaryen": "121"
+    "binaryen": "129"
   }
 }
