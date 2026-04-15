@@ -61,8 +61,8 @@ jobs:
     steps:
       - uses: actions/checkout@v5
 
-      - name: Install make
-        run: apt-get update && apt-get install -y make
+      - name: Install make and npm
+        run: apt-get update && apt-get install -y make npm
 
       - name: Setup export templates
         run: |
