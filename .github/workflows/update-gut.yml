@@ -1,0 +1,64 @@
+name: Update GUT Submodule
+
+on:
+  schedule:
+    # Check weekly on Mondays at 09:00 UTC
+    - cron: "0 9 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  update-gut:
+    name: Check for new GUT release
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          submodules: true
+
+      - name: Get current submodule tag
+        id: current
+        run: |
+          cd third_party/gut
+          current_sha=$(git rev-parse HEAD)
+          current_tag=$(git tag --points-at "$current_sha" | head -1)
+          echo "tag=${current_tag}" >> "$GITHUB_OUTPUT"
+          echo "Current GUT tag: ${current_tag} (${current_sha})"
+
+      - name: Get latest upstream tag
+        id: latest
+        run: |
+          latest_tag=$(git ls-remote --tags https://github.com/bitwes/Gut.git \
+            | grep -v '\^{}' \
+            | awk '{print $2}' \
+            | sed 's|refs/tags/||' \
+            | sort -V \
+            | tail -1)
+          echo "tag=${latest_tag}" >> "$GITHUB_OUTPUT"
+          echo "Latest GUT tag: ${latest_tag}"
+
+      - name: Update submodule to latest tag
+        if: steps.current.outputs.tag != steps.latest.outputs.tag
+        run: |
+          cd third_party/gut
+          git fetch --tags origin
+          git checkout "${{ steps.latest.outputs.tag }}"
+
+      - name: Create Pull Request
+        if: steps.current.outputs.tag != steps.latest.outputs.tag
+        uses: peter-evans/create-pull-request@v7
+        with:
+          commit-message: "chore: update GUT submodule ${{ steps.current.outputs.tag }} → ${{ steps.latest.outputs.tag }}"
+          title: "chore: update GUT submodule to ${{ steps.latest.outputs.tag }}"
+          body: |
+            Automated update of the GUT (Godot Unit Test) submodule.
+
+            **Current version:** `${{ steps.current.outputs.tag }}`
+            **New version:** `${{ steps.latest.outputs.tag }}`
+
+            [Release notes](https://github.com/bitwes/Gut/releases/tag/${{ steps.latest.outputs.tag }})
+          branch: chore/update-gut
+          labels: dependencies

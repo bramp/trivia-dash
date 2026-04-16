@@ -1,8 +1,8 @@
-GD_FILES := $(shell find . -name "*.gd" -not -path "./.godot/*" -not -path "./addons/*")
+GD_FILES := $(shell find . -name "*.gd" -not -path "./.godot/*" -not -path "./addons/*" -not -path "./third_party/*")
 BUILD_DIR := build
 VENV_DIR := .venv
 
-PY_FILES := $(shell find . -name "*.py" -not -path "./.godot/*" -not -path "./$(VENV_DIR)/*")
+PY_FILES := $(shell find . -name "*.py" -not -path "./.godot/*" -not -path "./$(VENV_DIR)/*" -not -path "./third_party/*")
 
 .PHONY: format format-check format-check-gd format-check-py lint test validate-questions run build serve generate-questions venv
 

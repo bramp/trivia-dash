@@ -12,6 +12,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v5
+        with:
+          submodules: true
 
       - name: Set up Python
         uses: actions/setup-python@v6
@@ -35,6 +37,8 @@ jobs:
       image: barichello/godot-ci:4.6.2
     steps:
       - uses: actions/checkout@v5
+        with:
+          submodules: true
 
       - name: Install make
         run: apt-get update && apt-get install -y make
@@ -60,6 +64,8 @@ jobs:
       image: barichello/godot-ci:4.6.2
     steps:
       - uses: actions/checkout@v5
+        with:
+          submodules: true
 
       - name: Install make and npm
         run: apt-get update && apt-get install -y make npm
