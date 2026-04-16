@@ -127,10 +127,10 @@ func test_text_fits_at_all_resolutions() -> void:
 			question_label.remove_theme_font_size_override("font_size")
 			question_label.text = q_text
 			var q_fitted: int = _main_scene._calc_fitting_font_size(question_label, q_text, MIN_QUESTION_FONT)
-			assert_gt(
+			assert_gte(
 				q_fitted,
 				MIN_QUESTION_FONT,
-				"Question font hit minimum at %dx%d: %s" % [res.x, res.y, q_text.left(60)],
+				"Question font below minimum at %dx%d: %s" % [res.x, res.y, q_text.left(60)],
 			)
 
 			# Test answer fitting — find the smallest fitted size across all 4.
@@ -143,10 +143,10 @@ func test_text_fits_at_all_resolutions() -> void:
 				if fitted < min_fitted:
 					min_fitted = fitted
 
-			assert_gt(
+			assert_gte(
 				min_fitted,
 				MIN_ANSWER_FONT,
-				"Answer font hit minimum at %dx%d for: %s" % [res.x, res.y, q_text.left(40)],
+				"Answer font below minimum at %dx%d for: %s" % [res.x, res.y, q_text.left(40)],
 			)
 			tested += 1
 

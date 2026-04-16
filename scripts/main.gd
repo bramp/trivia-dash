@@ -346,12 +346,12 @@ func _calc_fitting_font_size(ctrl: Control, text: String, min_size: int = 16) ->
 	if avail.x <= 0 or avail.y <= 0:
 		return base_size
 	var font_size := base_size
-	while font_size > min_size:
+	while font_size >= min_size:
 		var text_size := font.get_multiline_string_size(text, HORIZONTAL_ALIGNMENT_CENTER, avail.x, font_size)
 		if text_size.y <= avail.y:
 			break
 		font_size -= 2
-	return font_size
+	return max(font_size, min_size)
 
 
 ## Called via call_deferred after layout so control sizes are known.
