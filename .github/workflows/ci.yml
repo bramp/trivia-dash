@@ -11,7 +11,7 @@ jobs:
     name: Lint GDScript
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v6
         with:
           submodules: true
 
@@ -36,7 +36,7 @@ jobs:
     container:
       image: barichello/godot-ci:4.6.2
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v6
         with:
           submodules: true
 
@@ -63,7 +63,7 @@ jobs:
     container:
       image: barichello/godot-ci:4.6.2
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v6
         with:
           submodules: true
 
