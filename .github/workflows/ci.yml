@@ -40,13 +40,8 @@ jobs:
         with:
           submodules: true
 
-      - name: Install make
-        run: apt-get update && apt-get install -y make
-
-      - name: Set up Python
-        uses: actions/setup-python@v6
-        with:
-          python-version: "3.12"
+      - name: Install make and python
+        run: apt-get update && apt-get install -y make python3-venv
 
       - name: Import project
         run: godot --headless --import . --quit || true
@@ -67,8 +62,8 @@ jobs:
         with:
           submodules: true
 
-      - name: Install make and npm
-        run: apt-get update && apt-get install -y make npm
+      - name: Install make, python, and npm
+        run: apt-get update && apt-get install -y make python3-venv npm
 
       - name: Install binaryen (wasm-opt)
         run: npm install
