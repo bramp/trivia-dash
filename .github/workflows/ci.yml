@@ -23,34 +23,36 @@ jobs:
     name: Lint GDScript
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v6
+      - name: 📥 Checkout
+        uses: actions/checkout@v6
         with:
           submodules: true
 
-      - name: Set up Python
+      - name: 🐍 Set up Python
         uses: actions/setup-python@v6
         with:
           python-version: "3.12"
           cache: "pip"
 
-      - name: Install gdtoolkit and ruff
+      - name: 📦 Install gdtoolkit and ruff
         run: pip install "gdtoolkit>=4,<5" "ruff>=0.9"
 
-      - name: Check formatting
+      - name: ✨ Check formatting
         run: make format-check
 
-      - name: Lint
+      - name: 🔍 Lint
         run: make lint
 
   test-gd:
     name: Run GUT Tests
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v6
+      - name: 📥 Checkout
+        uses: actions/checkout@v6
         with:
           submodules: true
 
-      - name: Get Godot version
+      - name: 🔢 Get Godot version
         id: godot-version
         run: echo "version=$(cat .godot-version)" >> "$GITHUB_OUTPUT"
 
@@ -61,24 +63,24 @@ jobs:
           use-dotnet: false
           include-templates: false
 
-      - name: Set up Python
+      - name: 🐍 Set up Python
         uses: actions/setup-python@v6
         with:
           python-version: "3.12"
           cache: "pip"
 
-      - name: Cache venv
+      - name: 💾 Cache venv
         uses: actions/cache@v4
         id: cache-venv
         with:
           path: .venv
           key: venv-${{ runner.os }}-${{ hashFiles('pyproject.toml') }}
 
-      - name: Import project
+      - name: 🏗️ Import project
         run: godot --headless --import . --quit || true
         timeout-minutes: 2
 
-      - name: Run GUT tests
+      - name: 🧪 Run GUT tests
         run: make test-gd
         timeout-minutes: 5
 
@@ -86,21 +88,22 @@ jobs:
     name: Run Python Tools Tests
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v6
+      - name: 📥 Checkout
+        uses: actions/checkout@v6
 
-      - name: Set up Python
+      - name: 🐍 Set up Python
         uses: actions/setup-python@v6
         with:
           python-version: "3.12"
           cache: "pip"
 
-      - name: Cache venv
+      - name: 💾 Cache venv
         uses: actions/cache@v4
         with:
           path: .venv
           key: venv-${{ runner.os }}-${{ hashFiles('pyproject.toml') }}
 
-      - name: Run Python tests
+      - name: 🧪 Run Python tests
         run: make test-py
 
   build:
@@ -109,11 +112,12 @@ jobs:
     needs: [lint, test-gd, test-py]
     if: github.ref == 'refs/heads/main' && github.event_name == 'push'
     steps:
-      - uses: actions/checkout@v6
+      - name: 📥 Checkout
+        uses: actions/checkout@v6
         with:
           submodules: true
 
-      - name: Get Godot version
+      - name: 🔢 Get Godot version
         id: godot-version
         run: echo "version=$(cat .godot-version)" >> "$GITHUB_OUTPUT"
 
@@ -124,40 +128,40 @@ jobs:
           use-dotnet: false
           include-templates: true
 
-      - name: Set up Node.js
+      - name: 🟢 Set up Node.js
         uses: actions/setup-node@v4
         with:
           node-version: "20"
           cache: "npm"
 
-      - name: Set up Python
+      - name: 🐍 Set up Python
         uses: actions/setup-python@v6
         with:
           python-version: "3.12"
           cache: "pip"
 
-      - name: Cache venv
+      - name: 💾 Cache venv
         uses: actions/cache@v4
         with:
           path: .venv
           key: venv-${{ runner.os }}-${{ hashFiles('pyproject.toml') }}
 
-      - name: Install binaryen (wasm-opt)
+      - name: 📦 Install binaryen (wasm-opt)
         run: npm install
         env:
           npm_config_ignore_scripts: "true"
 
-      - name: Add binaryen to PATH
+      - name: 🛤️ Add binaryen to PATH
         run: echo "$PWD/node_modules/.bin" >> "$GITHUB_PATH"
 
-      - name: Import project
+      - name: 🏗️ Import project
         run: godot --headless --import . --quit || true
         timeout-minutes: 2
 
-      - name: Build Web export
+      - name: 🚀 Build Web export
         run: make build-web
 
-      - name: Upload Pages artifact
+      - name: 📤 Upload Pages artifact
         if: github.ref == 'refs/heads/main' && github.event_name == 'push'
         uses: actions/upload-pages-artifact@v3
         with:
@@ -175,6 +179,6 @@ jobs:
       name: github-pages
       url: ${{ steps.deploy.outputs.page_url }}
     steps:
-      - name: Deploy to GitHub Pages
+      - name: 🚀 Deploy to GitHub Pages
         id: deploy
         uses: actions/deploy-pages@v5
