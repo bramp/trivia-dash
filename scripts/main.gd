@@ -23,6 +23,7 @@ var _current_question: Dictionary = {}
 var _input_locked: bool = false
 var _active_tween: Tween = null
 var _debug_res_index: int = 0
+var _keyboard_active: bool = false
 
 @onready var title_screen: MarginContainer = $TitleScreen
 @onready var game_screen: MarginContainer = $GameScreen
@@ -66,6 +67,41 @@ func _ready() -> void:
 		subtitle_label.text = "Error: No questions found!"
 		quick_play_button.disabled = true
 		endless_play_button.disabled = true
+
+	# Listen for any focus changes to update visibility.
+	get_viewport().gui_focus_changed.connect(_on_focus_changed)
+
+
+func _input(event: InputEvent) -> void:
+	# If mouse moves or clicks, hide focus borders.
+	if event is InputEventMouseMotion or event is InputEventMouseButton:
+		if _keyboard_active:
+			_keyboard_active = false
+			_update_focus_visibility()
+	# If keyboard or joypad is used, show focus borders.
+	elif event is InputEventKey or event is InputEventJoypadButton or event is InputEventJoypadMotion:
+		if not _keyboard_active:
+			_keyboard_active = true
+			_update_focus_visibility()
+
+
+func _on_focus_changed(_node: Control) -> void:
+	_update_focus_visibility()
+
+
+func _update_focus_visibility() -> void:
+	var buttons: Array[Button] = [quick_play_button, endless_play_button, play_again_button, main_menu_button]
+	buttons.append_array(answer_buttons)
+
+	for btn in buttons:
+		var style := btn.get_theme_stylebox("focus") as StyleBoxFlat
+		if style:
+			# Only show the border if we are in keyboard mode AND this button has focus.
+			var show_border := _keyboard_active and btn.has_focus()
+			style.border_width_left = 4 if show_border else 0
+			style.border_width_right = 4 if show_border else 0
+			style.border_width_top = 4 if show_border else 0
+			style.border_width_bottom = 4 if show_border else 0
 
 
 func _unhandled_input(event: InputEvent) -> void:
@@ -163,6 +199,7 @@ func _show_title_screen() -> void:
 
 	_animate_title_entrance()
 	quick_play_button.grab_focus()
+	_update_focus_visibility()
 
 
 func _start_game(mode: GameMode) -> void:
@@ -233,6 +270,7 @@ func _show_game_over_screen(is_new_high: bool) -> void:
 
 	_animate_game_over_entrance()
 	play_again_button.grab_focus()
+	_update_focus_visibility()
 
 
 # --- Question flow ---
@@ -272,20 +310,16 @@ func _display_question(q: Dictionary) -> void:
 		# Reset button style to default colour.
 		btn.remove_theme_stylebox_override("disabled")
 		btn.remove_theme_color_override("font_disabled_color")
-		var style := btn.get_theme_stylebox("normal") as StyleBoxFlat
+		var style := btn.get_theme_stylebox("normal").duplicate() as StyleBoxFlat
 		if style:
 			style.bg_color = GameData.BUTTON_COLORS[i]
-			# Only clear borders if NOT focused, to avoid flickering focus style.
-			if not btn.has_focus():
-				style.border_width_left = 0
-				style.border_width_right = 0
-				style.border_width_top = 0
-				style.border_width_bottom = 0
+			btn.add_theme_stylebox_override("normal", style)
 
 	# Auto-fit text after one layout pass so sizes are known.
 	_auto_fit_text.call_deferred()
 	_animate_question_entrance()
 	answer_buttons[0].grab_focus()
+	_update_focus_visibility()
 
 
 func _handle_correct_answer(index: int, time_remaining: float) -> void:
@@ -476,9 +510,8 @@ func _animate_correct(index: int) -> void:
 	var btn := answer_buttons[index]
 	btn.pivot_offset = btn.size / 2.0
 
-	# Flash the button bright green with white border.
+	# Flash the button with a white border, preserving its original color.
 	var style := btn.get_theme_stylebox("normal").duplicate() as StyleBoxFlat
-	style.bg_color = GameData.CORRECT_HIGHLIGHT.lightened(0.2)
 	style.border_width_left = 4
 	style.border_width_right = 4
 	style.border_width_top = 4
