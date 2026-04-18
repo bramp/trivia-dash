@@ -12,7 +12,13 @@ find_exclude = $(foreach dir,$(1),-not -path "./$(dir)/*")
 GD_FILES := $(shell find . -name "*.gd" $(call find_exclude,$(EXCLUDE_DIRS)))
 PY_FILES := $(shell find . -name "*.py" $(call find_exclude,$(EXCLUDE_DIRS)))
 
-.PHONY: format format-check format-check-gd format-check-py lint test validate-questions run build build-web build-mac build-android build-templates build-templates-web build-templates-mac build-templates-android serve generate-questions venv
+# Font subsetting variables
+QUESTION_FILES := $(wildcard data/questions/*.json)
+SCENE_FILES := scenes/main.tscn
+CHARS_FILE := fonts/unique_chars.txt
+SUBSET_FONTS := fonts/NotoSans-subset.ttf fonts/NotoEmoji-subset.ttf
+
+.PHONY: format format-check format-check-gd format-check-py lint test validate-questions run build build-web build-mac build-android build-templates build-templates-web build-templates-mac build-templates-android serve generate-questions venv subset-fonts clean-fonts
 
 ## Run the game (optionally at a specific resolution: make run RES=1920x1080)
 run:
@@ -74,11 +80,31 @@ test: validate-questions
 validate-questions:
 	python3 tools/validate_questions.py
 
+## Generate subsetted fonts based on characters used in questions and UI
+subset-fonts: venv $(SUBSET_FONTS)
+
+$(CHARS_FILE): $(QUESTION_FILES) $(SCENE_FILES) tools/extract_characters.py venv
+	@mkdir -p fonts
+	$(VENV_DIR)/bin/python3 tools/extract_characters.py > $@
+
+fonts/NotoSans-subset.ttf: fonts/NotoSans.ttf $(CHARS_FILE)
+	@echo "Subsetting NotoSans..."
+	$(VENV_DIR)/bin/pyftsubset $< --text-file=$(CHARS_FILE) --output-file=$@
+
+fonts/NotoEmoji-subset.ttf: fonts/NotoEmoji.ttf $(CHARS_FILE)
+	@echo "Subsetting NotoEmoji..."
+	# Color emojis require keeping layout features and glyph names for proper rendering
+	$(VENV_DIR)/bin/pyftsubset $< --text-file=$(CHARS_FILE) --output-file=$@ --layout-features='*' --glyph-names --legacy-cmap --notdef-outline
+
+## Remove subsetted fonts and character list
+clean-fonts:
+	rm -f $(SUBSET_FONTS) $(CHARS_FILE)
+
 ## Build all exports
 build: build-web build-mac build-android
 
 ## Build Web export
-build-web:
+build-web: subset-fonts
 	@if [ ! -f export_presets.cfg ]; then \
 		echo "Error: export_presets.cfg not found. Configure export presets in Godot first."; \
 		exit 1; \
@@ -101,13 +127,13 @@ build-web:
 	@echo "Export written to $(BUILD_DIR)/web/"
 
 ## Build macOS export
-build-mac:
+build-mac: subset-fonts
 	mkdir -p $(BUILD_DIR)/macos
 	godot --headless --export-release "macOS" $(BUILD_DIR)/macos/trivia-dash.zip
 	@ls -lh $(BUILD_DIR)/macos/trivia-dash.zip
 
 ## Build Android export (requires keystore and SDK setup)
-build-android:
+build-android: subset-fonts
 	mkdir -p $(BUILD_DIR)/android
 	godot --headless --export-release "Android" $(BUILD_DIR)/android/trivia-dash.apk
 	@ls -lh $(BUILD_DIR)/android/trivia-dash.apk

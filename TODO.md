@@ -117,6 +117,6 @@
 
 ## Fonts
 - [ ] We should improve the font readability. Enable subpixel sampling, Enable MSDF. See https://docs.godotengine.org/en/stable/tutorials/ui/gui_using_fonts.html
-- [x] We should improve subsetting
-- [ ] I think we are using the wrong emojii font. We should be using NotoColorEmoji-Regular.ttf
+- [x] We should improve subsetting -store the full font, write a tool to extract unique characters, then subsetting as needed.
+- [x] I think we are using the wrong emojii font. We should be using NotoColorEmoji-Regular.ttf
 - [ ] Consider replacing the correct / fail animations with SVG icons, instead of Font emojiis. We still need emojis for questions - but we can perhaps more heavily subset them.

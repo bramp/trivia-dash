@@ -11,6 +11,11 @@
 
 # Build outputs
 /build/
+fonts/unique_chars.txt
+fonts/*-subset.ttf
+
+# OS metadata
+.DS_Store
 
 # Node modules (binaryen for CI)
 node_modules/
