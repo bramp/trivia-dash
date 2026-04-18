@@ -127,8 +127,12 @@ build-web: assets
 	@sed -i.bak 's/^const BUILD_DATE := .*/const BUILD_DATE := "dev"/' scripts/build_info.gd && rm -f scripts/build_info.gd.bak
 	@# Optimize wasm with wasm-opt (from binaryen) if available
 	@if command -v wasm-opt >/dev/null 2>&1; then \
+		echo "Pre-optimization size:"; \
+		ls -lh $(BUILD_DIR)/web/index.wasm; \
 		echo "Running wasm-opt..."; \
 		wasm-opt $(BUILD_DIR)/web/index.wasm -o $(BUILD_DIR)/web/index.wasm -all -Oz; \
+		echo "Post-optimization size:"; \
+		ls -lh $(BUILD_DIR)/web/index.wasm; \
 	else \
 		echo "Warning: wasm-opt not found, skipping wasm optimization. Install binaryen to enable."; \
 	fi
