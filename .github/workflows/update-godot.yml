@@ -1,0 +1,60 @@
+name: Update Godot Version
+
+on:
+  schedule:
+    # Check weekly on Fridays at 09:00 UTC
+    - cron: "0 9 * * 5"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  update-godot:
+    name: Check for new Godot release
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Get current version
+        id: current
+        run: |
+          version=$(cat .godot-version)
+          echo "version=${version}" >> "$GITHUB_OUTPUT"
+          echo "Current Godot version: ${version}"
+
+      - name: Get latest stable tag
+        id: latest
+        run: |
+          # Use git ls-remote to find the latest tag matching *-stable
+          latest_tag=$(git ls-remote --tags https://github.com/godotengine/godot.git \
+            | grep -v '\^{}' \
+            | awk '{print $2}' \
+            | sed 's|refs/tags/||' \
+            | grep '\-stable$' \
+            | sort -V \
+            | tail -1)
+          echo "tag=${latest_tag}" >> "$GITHUB_OUTPUT"
+          echo "Latest stable Godot tag: ${latest_tag}"
+
+      - name: Update version file
+        if: steps.current.outputs.version != steps.latest.outputs.tag
+        run: |
+          echo "${{ steps.latest.outputs.tag }}" > .godot-version
+
+      - name: Create Pull Request
+        if: steps.current.outputs.version != steps.latest.outputs.tag
+        uses: peter-evans/create-pull-request@v7
+        with:
+          commit-message: "chore: update Godot ${{ steps.current.outputs.version }} → ${{ steps.latest.outputs.tag }}"
+          title: "chore: update Godot to ${{ steps.latest.outputs.tag }}"
+          body: |
+            Automated update of the Godot engine version.
+
+            **Current version:** `${{ steps.current.outputs.version }}`
+            **New version:** `${{ steps.latest.outputs.tag }}`
+
+            [Release notes](https://github.com/godotengine/godot/releases/tag/${{ steps.latest.outputs.tag }})
+          branch: chore/update-godot
+          labels: dependencies
