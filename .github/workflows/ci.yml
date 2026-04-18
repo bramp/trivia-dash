@@ -30,7 +30,7 @@ jobs:
       - name: Lint
         run: make lint
 
-  test:
+  test-gd:
     name: Run GUT Tests
     runs-on: ubuntu-latest
     container:
@@ -48,13 +48,28 @@ jobs:
         timeout-minutes: 2
 
       - name: Run GUT tests
-        run: make test
+        run: make test-gd
         timeout-minutes: 5
+
+  test-py:
+    name: Run Python Tools Tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+          cache: "pip"
+
+      - name: Run Python tests
+        run: make test-py
 
   build:
     name: Build Web Export
     runs-on: ubuntu-latest
-    needs: [lint, test]
+    needs: [lint, test-gd, test-py]
     container:
       image: barichello/godot-ci:4.6.2
     steps:
