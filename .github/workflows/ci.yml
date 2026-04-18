@@ -70,13 +70,6 @@ jobs:
       - name: Install make and npm
         run: apt-get update && apt-get install -y make npm
 
-      - name: Setup export templates
-        run: |
-          mkdir -v -p ~/.local/share/godot/export_templates/
-          mkdir -v -p ~/.config/
-          cp -a /root/.config/godot ~/.config/godot || true
-          cp -a /root/.local/share/godot/export_templates/* ~/.local/share/godot/export_templates/ || true
-
       - name: Install binaryen (wasm-opt)
         run: npm install
         env:
@@ -90,13 +83,7 @@ jobs:
         timeout-minutes: 2
 
       - name: Build Web export
-        run: make build
-
-      - name: Upload build artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: web-build
-          path: build/web/
+        run: make build-web
 
       - name: Upload Pages artifact
         if: github.ref == 'refs/heads/main' && github.event_name == 'push'

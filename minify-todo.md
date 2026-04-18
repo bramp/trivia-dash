@@ -27,13 +27,14 @@
 - [x] Clone/Setup Godot source code.
 - [x] Create `custom.py` (stored as `tools/build/web_release.py`)
 - [x] Compile release templates for Web.
-- [ ] Record impact:
-  - **Web Total**: ~22.1MB (index.wasm: 19MB, index.pck: 2.8MB) - **Impact: -14MB**
-  - **macOS Total**:
-  - **Android Total**:
+- [ ] Compile release templates for macOS and Android.
+- [x] Record impact:
+  - **Web Total**: ~22.1MB (index.wasm: 19MB, index.pck: 2.8MB, index.js: 314K) - **Impact: -14MB**
+  - **macOS Total**: (Pending custom build)
+  - **Android Total**: (Pending custom build)
 
 ### 3. PCK Optimization
-- [ ] Review `export_presets.cfg` for unnecessary file inclusions (e.g. `addons/gut` in macOS build).
+- [ ] Review `export_presets.cfg` for unnecessary file inclusions.
 - [ ] Compress texture assets if applicable.
 - [ ] Record impact:
   - **PCK Size**:

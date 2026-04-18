@@ -11,7 +11,7 @@ find_exclude = $(foreach dir,$(1),-not -path "./$(dir)/*")
 GD_FILES := $(shell find . -name "*.gd" $(call find_exclude,$(EXCLUDE_DIRS)))
 PY_FILES := $(shell find . -name "*.py" $(call find_exclude,$(EXCLUDE_DIRS)))
 
-.PHONY: format format-check format-check-gd format-check-py lint test validate-questions run build serve generate-questions venv
+.PHONY: format format-check format-check-gd format-check-py lint test validate-questions run build build-web build-mac build-android serve generate-questions venv
 
 ## Run the game (optionally at a specific resolution: make run RES=1920x1080)
 run:
@@ -73,8 +73,11 @@ test: validate-questions
 validate-questions:
 	python3 tools/validate_questions.py
 
-## Build Web export (requires export templates installed in Godot)
-build:
+## Build all exports
+build: build-web build-mac build-android
+
+## Build Web export
+build-web:
 	@if [ ! -f export_presets.cfg ]; then \
 		echo "Error: export_presets.cfg not found. Configure export presets in Godot first."; \
 		exit 1; \
@@ -95,6 +98,18 @@ build:
 	@echo "Build sizes:"
 	@ls -lh $(BUILD_DIR)/web/index.wasm $(BUILD_DIR)/web/index.pck $(BUILD_DIR)/web/index.js
 	@echo "Export written to $(BUILD_DIR)/web/"
+
+## Build macOS export
+build-mac:
+	mkdir -p $(BUILD_DIR)/macos
+	godot --headless --export-release "macOS" $(BUILD_DIR)/macos/trivia-dash.zip
+	@ls -lh $(BUILD_DIR)/macos/trivia-dash.zip
+
+## Build Android export (requires keystore and SDK setup)
+build-android:
+	mkdir -p $(BUILD_DIR)/android
+	godot --headless --export-release "Android" $(BUILD_DIR)/android/trivia-dash.apk
+	@ls -lh $(BUILD_DIR)/android/trivia-dash.apk
 
 ## Create/update the Python virtual environment and install all dependencies
 venv: $(VENV_DIR)/.installed
