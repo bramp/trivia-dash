@@ -1,8 +1,15 @@
-GD_FILES := $(shell find . -name "*.gd" -not -path "./.godot/*" -not -path "./addons/*" -not -path "./third_party/*" -not -path "./android/*")
 BUILD_DIR := build
 VENV_DIR := .venv
 
-PY_FILES := $(shell find . -name "*.py" -not -path "./.godot/*" -not -path "./$(VENV_DIR)/*" -not -path "./third_party/*")
+# Directories to ignore in all searches
+EXCLUDE_DIRS := .godot addons third_party $(BUILD_DIR) $(VENV_DIR) android
+
+# Helper to generate find exclude patterns
+# usage: $(call find_exclude,path_list)
+find_exclude = $(foreach dir,$(1),-not -path "./$(dir)/*")
+
+GD_FILES := $(shell find . -name "*.gd" $(call find_exclude,$(EXCLUDE_DIRS)))
+PY_FILES := $(shell find . -name "*.py" $(call find_exclude,$(EXCLUDE_DIRS)))
 
 .PHONY: format format-check format-check-gd format-check-py lint test validate-questions run build serve generate-questions venv
 
