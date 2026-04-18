@@ -82,19 +82,19 @@
 - [x] 2×2 answer button grid layout
 - [x] Sound effects (correct ding, wrong buzz, timer tick, button tap, game over, new high score)
 - [x] Fun correct-answer celebration animation (emoji burst + floating score)
-- [ ] Focus/hover states for keyboard/gamepad navigation
-- [ ] Run `gdformat` on all scripts, fix formatting
-- [ ] Run `gdlint` on all scripts, resolve warnings
+- [x] Focus/hover states for keyboard/gamepad navigation
+- [x] Run `gdformat` on all scripts, fix formatting
+- [x] Run `gdlint` on all scripts, resolve warnings
 - [ ] Test responsive layout at 720×1280, 1920×1080, and in-browser
-- [ ] Ensure CI is green
-- [ ] Update `README.md` with project description, screenshots, and setup instructions
+- [x] Ensure CI is green
+- [x] Update `README.md` with project description, screenshots, and setup instructions
 
 ## Phase 9 — Export & Deploy
 
-- [ ] Configure Android export preset, test on device/emulator
+- [/] Configure Android export preset, test on device/emulator
 - [ ] Configure iOS export preset, test on device/simulator
-- [ ] Configure HTML5 export preset, test in browser
-- [ ] Configure Desktop export presets (macOS, Windows, Linux)
+- [x] Configure HTML5 export preset, test in browser
+- [/] Configure Desktop export presets (macOS, Windows, Linux)
 - [ ] Final cross-platform QA pass
 
 ## Stretch Goals
@@ -109,8 +109,14 @@
 - [ ] Difficulty scaling (harder questions as streak grows)
 - [ ] Leaderboard (local or online)
 - [ ] Streak particle effects
-- [ ] Custom export templates compiled with `disable_3d`, `modules_enabled_by_default=no`, etc. to reduce web build size (see https://popcar.bearblog.dev/how-to-minify-godots-build-size/)
+- [x] Custom export templates compiled with `disable_3d`, `modules_enabled_by_default=no`, etc. to reduce web build size (see https://popcar.bearblog.dev/how-to-minify-godots-build-size/)
 - [ ] Include Play Games leaderboard
 - [x] Add a Endless mode vs a Quick Play mode
 - [ ] Show the category of the question
 - [ ] Allow categories to be selected
+
+## Fonts
+- [ ] We should improve the font readability. Enable subpixel sampling, Enable MSDF. See https://docs.godotengine.org/en/stable/tutorials/ui/gui_using_fonts.html
+- [x] We should improve subsetting
+- [ ] I think we are using the wrong emojii font. We should be using NotoColorEmoji-Regular.ttf
+- [ ] Consider replacing the correct / fail animations with SVG icons, instead of Font emojiis. We still need emojis for questions - but we can perhaps more heavily subset them.

@@ -54,13 +54,21 @@ Install pre-commit hooks:
 | Command | Description |
 |---------|-------------|
 | `make venv` | Create/update the Python virtual environment |
-| `make run` | Launch the game |
-| `make format` | Format all GDScript files in place |
-| `make format-check` | Check formatting (fails on diff) |
-| `make lint` | Lint all GDScript files |
-| `make test` | Run GUT unit tests (requires Godot in PATH) |
-| `make build` | Export release builds (requires export presets) |
-| `make generate-questions` | Generate trivia questions via Gemini (requires `gcloud auth application-default login`) |
+| `make run` | Launch the game locally |
+| `make test` | Run all tests (questions + unit tests) |
+| `make format` | Format all scripts (GDScript + Python) |
+| `make lint` | Lint all scripts |
+| `make build-web` | Export optimized Web build (WASM) |
+| `make build-mac` | Export macOS application |
+| `make build-android` | Export Android APK (signed) |
+| `make build-templates` | Build custom Godot engine templates (requires source) |
+| `make generate-questions` | Generate trivia questions via Gemini |
+
+### Build Minification
+
+This project uses custom Godot engine builds to minimize the export size (especially for Web).
+- **Web Build**: Reduced from 33MB to ~19MB WASM using custom compilation flags and a minimal engine profile.
+- **Tools**: See `tools/build/` for the SCons profiles and class-level exclusion configurations.
 
 ### Project Structure
 

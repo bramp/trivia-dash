@@ -1,5 +1,6 @@
 BUILD_DIR := build
 VENV_DIR := .venv
+GODOT_SOURCE := ../godot
 
 # Directories to ignore in all searches
 EXCLUDE_DIRS := .godot addons third_party $(BUILD_DIR) $(VENV_DIR) android
@@ -11,7 +12,7 @@ find_exclude = $(foreach dir,$(1),-not -path "./$(dir)/*")
 GD_FILES := $(shell find . -name "*.gd" $(call find_exclude,$(EXCLUDE_DIRS)))
 PY_FILES := $(shell find . -name "*.py" $(call find_exclude,$(EXCLUDE_DIRS)))
 
-.PHONY: format format-check format-check-gd format-check-py lint test validate-questions run build build-web build-mac build-android serve generate-questions venv
+.PHONY: format format-check format-check-gd format-check-py lint test validate-questions run build build-web build-mac build-android build-templates build-templates-web build-templates-mac build-templates-android serve generate-questions venv
 
 ## Run the game (optionally at a specific resolution: make run RES=1920x1080)
 run:
@@ -126,13 +127,32 @@ $(VENV_DIR)/.installed: pyproject.toml
 generate-questions: venv
 	$(VENV_DIR)/bin/python tools/generate-questions/generate_questions.py
 
-## Build custom Godot export templates for Web (requires Emscripten and Godot source in ../godot)
-GODOT_SOURCE := ../godot
-build-templates:
+## Build custom Godot export templates for all platforms
+build-templates: build-templates-web build-templates-mac build-templates-android
+
+build-templates-web:
 	@if [ ! -d $(GODOT_SOURCE) ]; then \
 		echo "Error: Godot source not found at $(GODOT_SOURCE)."; \
 		exit 1; \
 	fi
-	@# Source emscripten environment if needed (brew version usually handles this, but good to be safe)
-	cd $(GODOT_SOURCE) && scons platform=web target=template_release profile=$(PWD)/tools/build/web_release.py -j$$(sysctl -n hw.logicalcpu)
-	@echo "Custom templates built in $(GODOT_SOURCE)/bin/"
+	cd $(GODOT_SOURCE) && scons platform=web target=template_release profile=$(shell pwd)/tools/build/web_release.py build_profile=$(shell pwd)/tools/build/trivia_dash.build -j$$(sysctl -n hw.logicalcpu)
+	@echo "Web templates built in $(GODOT_SOURCE)/bin/"
+
+build-templates-mac:
+	@if [ ! -d $(GODOT_SOURCE) ]; then \
+		echo "Error: Godot source not found at $(GODOT_SOURCE)."; \
+		exit 1; \
+	fi
+	cd $(GODOT_SOURCE) && scons platform=macos target=template_release profile=$(shell pwd)/tools/build/web_release.py build_profile=$(shell pwd)/tools/build/trivia_dash.build -j$$(sysctl -n hw.logicalcpu)
+	@echo "macOS templates built in $(GODOT_SOURCE)/bin/"
+
+build-templates-android:
+	@if [ ! -d $(GODOT_SOURCE) ]; then \
+		echo "Error: Godot source not found at $(GODOT_SOURCE)."; \
+		exit 1; \
+	fi
+	@if [ -z "$$ANDROID_HOME" ]; then \
+		export ANDROID_HOME=~/Library/Android/sdk; \
+	fi
+	cd $(GODOT_SOURCE) && scons platform=android target=template_release profile=$(shell pwd)/tools/build/web_release.py build_profile=$(shell pwd)/tools/build/trivia_dash.build -j$$(sysctl -n hw.logicalcpu)
+	@echo "Android templates built in $(GODOT_SOURCE)/bin/"
