@@ -10,7 +10,7 @@
 .env
 
 # Build outputs
-build/
+/build/
 
 # Node modules (binaryen for CI)
 node_modules/

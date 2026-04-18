@@ -1,0 +1,34 @@
+{
+	"disabled_build_options": {
+		"disable_3d": true,
+		"disable_vulkan": true,
+		"openxr": false,
+		"vulkan": false,
+		"opengl3": true
+	},
+	"disabled_classes": [
+		"Node3D",
+		"MeshInstance3D",
+		"Camera3D",
+		"Light3D",
+		"World3D",
+		"Skeleton3D",
+		"AnimationPlayer",
+		"AnimationTree",
+		"GPUParticles3D",
+		"CPUParticles3D",
+		"FogVolume",
+		"Label3D",
+		"Sprite3D",
+		"VisibleOnScreenNotifier3D",
+		"NavigationRegion3D",
+		"NavigationAgent3D",
+		"PhysicsBody3D",
+		"CollisionShape3D",
+		"RayCast3D",
+		"ShapeCast3D",
+		"VehicleBody3D",
+		"VehicleWheel3D"
+	],
+	"type": "build_profile"
+}

@@ -103,3 +103,14 @@ $(VENV_DIR)/.installed: pyproject.toml
 ## Generate trivia questions using Gemini (requires gcloud auth + make venv)
 generate-questions: venv
 	$(VENV_DIR)/bin/python tools/generate-questions/generate_questions.py
+
+## Build custom Godot export templates for Web (requires Emscripten and Godot source in ../godot)
+GODOT_SOURCE := ../godot
+build-templates:
+	@if [ ! -d $(GODOT_SOURCE) ]; then \
+		echo "Error: Godot source not found at $(GODOT_SOURCE)."; \
+		exit 1; \
+	fi
+	@# Source emscripten environment if needed (brew version usually handles this, but good to be safe)
+	cd $(GODOT_SOURCE) && scons platform=web target=template_release profile=$(PWD)/tools/build/web_release.py -j$$(sysctl -n hw.logicalcpu)
+	@echo "Custom templates built in $(GODOT_SOURCE)/bin/"
