@@ -12,7 +12,7 @@ py-modules = []
 [project.optional-dependencies]
 dev = [
     "gdtoolkit>=4,<5",
-    "pre-commit>=3,<4",
+    "pre-commit>=4.3.0,<5",
     "ruff>=0.9",
     "fonttools>=4.42",
     "pytest>=8",
