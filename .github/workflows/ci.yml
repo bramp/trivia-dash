@@ -40,8 +40,15 @@ jobs:
         with:
           submodules: true
 
-      - name: Install make and python
+      - name: Install system dependencies
         run: apt-get update && apt-get install -y make python3-venv
+
+      - name: Cache venv
+        uses: actions/cache@v4
+        id: cache-venv
+        with:
+          path: .venv
+          key: venv-${{ runner.os }}-${{ hashFiles('pyproject.toml') }}
 
       - name: Import project
         run: godot --headless --import . --quit || true
@@ -63,6 +70,12 @@ jobs:
           python-version: "3.12"
           cache: "pip"
 
+      - name: Cache venv
+        uses: actions/cache@v4
+        with:
+          path: .venv
+          key: venv-${{ runner.os }}-${{ hashFiles('pyproject.toml') }}
+
       - name: Run Python tests
         run: make test-py
 
@@ -77,8 +90,14 @@ jobs:
         with:
           submodules: true
 
-      - name: Install make, python, and npm
+      - name: Install system dependencies
         run: apt-get update && apt-get install -y make python3-venv npm
+
+      - name: Cache venv
+        uses: actions/cache@v4
+        with:
+          path: .venv
+          key: venv-${{ runner.os }}-${{ hashFiles('pyproject.toml') }}
 
       - name: Install binaryen (wasm-opt)
         run: npm install
