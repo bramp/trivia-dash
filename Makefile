@@ -18,7 +18,7 @@ SCENE_FILES := scenes/main.tscn
 CHARS_FILE := fonts/unique_chars.txt
 SUBSET_FONTS := fonts/NotoSans-subset.ttf fonts/NotoColorEmoji-subset.ttf
 
-.PHONY: format format-check format-check-gd format-check-py lint test validate-questions run build build-web build-mac build-android build-templates build-templates-web build-templates-mac build-templates-android serve generate-questions venv subset-fonts clean-fonts
+.PHONY: format format-check format-check-gd format-check-py lint test test-gd test-py assets validate-questions run build build-web build-mac build-android build-templates build-templates-web build-templates-mac build-templates-android serve generate-questions venv subset-fonts clean-fonts
 
 ## Run the game (optionally at a specific resolution: make run RES=1920x1080)
 run:
@@ -68,13 +68,23 @@ format-check-py:
 lint:
 	gdlint $(GD_FILES)
 
+## Run all unit tests
+test: test-gd test-py
+
+## Prepare all static assets (validate data, subset fonts)
+assets: validate-questions subset-fonts
+
 ## Run GUT unit tests (requires Godot in PATH)
-test: validate-questions
+test-gd: assets
 	godot --headless --script addons/gut/gut_cmdln.gd \
 		-gdir=res://test/ \
 		-gprefix=test_ \
 		-gsuffix=.gd \
 		-gexit
+
+## Run Python unit tests for tools
+test-py: venv
+	PYTHONPATH=. $(VENV_DIR)/bin/pytest tools/tests/
 
 ## Validate question data (structure, text lengths, duplicates)
 validate-questions:
@@ -104,7 +114,7 @@ clean-fonts:
 build: build-web build-mac build-android
 
 ## Build Web export
-build-web: subset-fonts
+build-web: assets
 	@if [ ! -f export_presets.cfg ]; then \
 		echo "Error: export_presets.cfg not found. Configure export presets in Godot first."; \
 		exit 1; \
@@ -127,13 +137,13 @@ build-web: subset-fonts
 	@echo "Export written to $(BUILD_DIR)/web/"
 
 ## Build macOS export
-build-mac: subset-fonts
+build-mac: assets
 	mkdir -p $(BUILD_DIR)/macos
 	godot --headless --export-release "macOS" $(BUILD_DIR)/macos/trivia-dash.zip
 	@ls -lh $(BUILD_DIR)/macos/trivia-dash.zip
 
 ## Build Android export (requires keystore and SDK setup)
-build-android: subset-fonts
+build-android: assets
 	mkdir -p $(BUILD_DIR)/android
 	godot --headless --export-release "Android" $(BUILD_DIR)/android/trivia-dash.apk
 	@ls -lh $(BUILD_DIR)/android/trivia-dash.apk
@@ -151,7 +161,7 @@ $(VENV_DIR)/.installed: pyproject.toml
 
 ## Generate trivia questions using Gemini (requires gcloud auth + make venv)
 generate-questions: venv
-	$(VENV_DIR)/bin/python tools/generate-questions/generate_questions.py
+	$(VENV_DIR)/bin/python tools/generate_questions/generate_questions.py
 
 ## Build custom Godot export templates for all platforms
 build-templates: build-templates-web build-templates-mac build-templates-android

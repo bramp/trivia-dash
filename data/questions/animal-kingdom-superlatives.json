@@ -1,353 +1,353 @@
 [
   {
-    "question": "What is the fastest land animal in the world?",
-    "answer": "Cheetah",
-    "alternative_answers": [
+	"question": "What is the fastest land animal in the world?",
+	"answer": "Cheetah",
+	"alternative_answers": [
       "Acinonyx jubatus"
-    ],
-    "distractors": [
-      "Lion",
-      "Pronghorn",
+	],
+	"distractors": [
+	  "Lion",
+	  "Pronghorn",
       "Thomson's Gazelle"
-    ],
-    "difficulty": "easy",
-    "source": "https://nationalzoo.si.edu/animals/cheetah",
-    "clarity_note": "The cheetah can reach speeds of up to 60-70 mph over short distances, making it the fastest land mammal.",
-    "model": "gemini-3.1-pro-preview",
-    "generated_at": "2026-03-28T19:16:56.008590+00:00"
+	],
+	"difficulty": "easy",
+	"source": "https://nationalzoo.si.edu/animals/cheetah",
+	"clarity_note": "The cheetah can reach speeds of up to 60-70 mph over short distances, making it the fastest land mammal.",
+	"model": "gemini-3.1-pro-preview",
+	"generated_at": "2026-03-28T19:16:56.008590+00:00"
   },
   {
-    "question": "What is the largest known animal to have ever lived on Earth?",
-    "answer": "Blue Whale",
-    "alternative_answers": [
+	"question": "What is the largest known animal to have ever lived on Earth?",
+	"answer": "Blue Whale",
+	"alternative_answers": [
       "Balaenoptera musculus"
-    ],
-    "distractors": [
-      "Megalodon",
-      "Fin Whale",
+	],
+	"distractors": [
+	  "Megalodon",
+	  "Fin Whale",
       "Argentinosaurus"
-    ],
-    "difficulty": "easy",
-    "source": "https://www.fisheries.noaa.gov/species/blue-whale",
-    "clarity_note": "Blue whales can grow up to 100 feet long and weigh up to 200 tons, larger than any known dinosaur.",
-    "model": "gemini-3.1-pro-preview",
-    "generated_at": "2026-03-28T19:16:56.008590+00:00"
+	],
+	"difficulty": "easy",
+	"source": "https://www.fisheries.noaa.gov/species/blue-whale",
+	"clarity_note": "Blue whales can grow up to 100 feet long and weigh up to 200 tons, larger than any known dinosaur.",
+	"model": "gemini-3.1-pro-preview",
+	"generated_at": "2026-03-28T19:16:56.008590+00:00"
   },
   {
-    "question": "What is the tallest living land animal in the world?",
-    "answer": "Giraffe",
-    "alternative_answers": [
+	"question": "What is the tallest living land animal in the world?",
+	"answer": "Giraffe",
+	"alternative_answers": [
       "Giraffa"
-    ],
-    "distractors": [
-      "African Elephant",
-      "Ostrich",
+	],
+	"distractors": [
+	  "African Elephant",
+	  "Ostrich",
       "Moose"
-    ],
-    "difficulty": "easy",
-    "source": "https://awf.org/wildlife-conservation/giraffe",
-    "clarity_note": "Adult male giraffes can reach heights of up to 18 feet (5.5 meters).",
-    "model": "gemini-3.1-pro-preview",
-    "generated_at": "2026-03-28T19:16:56.008590+00:00"
+	],
+	"difficulty": "easy",
+	"source": "https://awf.org/wildlife-conservation/giraffe",
+	"clarity_note": "Adult male giraffes can reach heights of up to 18 feet (5.5 meters).",
+	"model": "gemini-3.1-pro-preview",
+	"generated_at": "2026-03-28T19:16:56.008590+00:00"
   },
   {
-    "question": "What is the heaviest and largest living land animal?",
-    "answer": "African Elephant",
-    "alternative_answers": [
-      "African bush elephant",
+	"question": "What is the heaviest and largest living land animal?",
+	"answer": "African Elephant",
+	"alternative_answers": [
+	  "African bush elephant",
       "Loxodonta africana"
-    ],
-    "distractors": [
-      "White Rhinoceros",
-      "Hippopotamus",
+	],
+	"distractors": [
+	  "White Rhinoceros",
+	  "Hippopotamus",
       "Asian Elephant"
-    ],
-    "difficulty": "easy",
-    "source": "https://www.worldwildlife.org/species/african-elephant",
-    "clarity_note": "Male African elephants can weigh up to 6 tons, making them the largest terrestrial animal.",
-    "model": "gemini-3.1-pro-preview",
-    "generated_at": "2026-03-28T19:16:56.008590+00:00"
+	],
+	"difficulty": "easy",
+	"source": "https://www.worldwildlife.org/species/african-elephant",
+	"clarity_note": "Male African elephants can weigh up to 6 tons, making them the largest terrestrial animal.",
+	"model": "gemini-3.1-pro-preview",
+	"generated_at": "2026-03-28T19:16:56.008590+00:00"
   },
   {
-    "question": "What bird achieves the fastest recorded speed of any animal during its hunting dive?",
-    "answer": "Peregrine Falcon",
-    "alternative_answers": [
-      "Falco peregrinus",
+	"question": "What bird achieves the fastest recorded speed of any animal during its hunting dive?",
+	"answer": "Peregrine Falcon",
+	"alternative_answers": [
+	  "Falco peregrinus",
       "Duck Hawk"
-    ],
-    "distractors": [
-      "Golden Eagle",
-      "Gyrfalcon",
+	],
+	"distractors": [
+	  "Golden Eagle",
+	  "Gyrfalcon",
       "Common Swift"
-    ],
-    "difficulty": "easy",
-    "source": "https://www.audubon.org/field-guide/bird/peregrine-falcon",
-    "clarity_note": "During its hunting stoop (dive), the Peregrine Falcon can reach speeds of over 240 mph (386 km/h).",
-    "model": "gemini-3.1-pro-preview",
-    "generated_at": "2026-03-28T19:16:56.008590+00:00"
+	],
+	"difficulty": "easy",
+	"source": "https://www.audubon.org/field-guide/bird/peregrine-falcon",
+	"clarity_note": "During its hunting stoop (dive), the Peregrine Falcon can reach speeds of over 240 mph (386 km/h).",
+	"model": "gemini-3.1-pro-preview",
+	"generated_at": "2026-03-28T19:16:56.008590+00:00"
   },
   {
-    "question": "What is the largest and heaviest living bird species in the world?",
-    "answer": "Ostrich",
-    "alternative_answers": [
-      "Common ostrich",
+	"question": "What is the largest and heaviest living bird species in the world?",
+	"answer": "Ostrich",
+	"alternative_answers": [
+	  "Common ostrich",
       "Struthio camelus"
-    ],
-    "distractors": [
-      "Emu",
-      "Emperor Penguin",
+	],
+	"distractors": [
+	  "Emu",
+	  "Emperor Penguin",
       "Cassowary"
-    ],
-    "difficulty": "easy",
-    "source": "https://kids.nationalgeographic.com/animals/birds/facts/ostrich",
-    "clarity_note": "Ostriches are the largest living birds, with males reaching up to 9 feet tall and weighing over 300 pounds.",
-    "model": "gemini-3.1-pro-preview",
-    "generated_at": "2026-03-28T19:16:56.008590+00:00"
+	],
+	"difficulty": "easy",
+	"source": "https://kids.nationalgeographic.com/animals/birds/facts/ostrich",
+	"clarity_note": "Ostriches are the largest living birds, with males reaching up to 9 feet tall and weighing over 300 pounds.",
+	"model": "gemini-3.1-pro-preview",
+	"generated_at": "2026-03-28T19:16:56.008590+00:00"
   },
   {
-    "question": "What is the largest living species of fish?",
-    "answer": "Whale Shark",
-    "alternative_answers": [
+	"question": "What is the largest living species of fish?",
+	"answer": "Whale Shark",
+	"alternative_answers": [
       "Rhincodon typus"
-    ],
-    "distractors": [
-      "Great White Shark",
-      "Basking Shark",
+	],
+	"distractors": [
+	  "Great White Shark",
+	  "Basking Shark",
       "Beluga Sturgeon"
-    ],
-    "difficulty": "easy",
-    "source": "https://www.worldwildlife.org/species/whale-shark",
-    "clarity_note": "The whale shark is a filter-feeding carpet shark that can reach lengths over 40 feet.",
-    "model": "gemini-3.1-pro-preview",
-    "generated_at": "2026-03-28T19:16:56.008590+00:00"
+	],
+	"difficulty": "easy",
+	"source": "https://www.worldwildlife.org/species/whale-shark",
+	"clarity_note": "The whale shark is a filter-feeding carpet shark that can reach lengths over 40 feet.",
+	"model": "gemini-3.1-pro-preview",
+	"generated_at": "2026-03-28T19:16:56.008590+00:00"
   },
   {
-    "question": "What is the largest living rodent species in the world?",
-    "answer": "Capybara",
-    "alternative_answers": [
-      "Hydrochoerus hydrochaeris",
+	"question": "What is the largest living rodent species in the world?",
+	"answer": "Capybara",
+	"alternative_answers": [
+	  "Hydrochoerus hydrochaeris",
       "Greater capybara"
-    ],
-    "distractors": [
-      "Beaver",
-      "Porcupine",
+	],
+	"distractors": [
+	  "Beaver",
+	  "Porcupine",
       "Nutria"
-    ],
-    "difficulty": "easy",
-    "source": "https://nationalzoo.si.edu/animals/capybara",
-    "clarity_note": "Native to South America, the capybara can weigh up to 140 pounds, far surpassing any other rodent.",
-    "model": "gemini-3.1-pro-preview",
-    "generated_at": "2026-03-28T19:16:56.008590+00:00"
+	],
+	"difficulty": "easy",
+	"source": "https://nationalzoo.si.edu/animals/capybara",
+	"clarity_note": "Native to South America, the capybara can weigh up to 140 pounds, far surpassing any other rodent.",
+	"model": "gemini-3.1-pro-preview",
+	"generated_at": "2026-03-28T19:16:56.008590+00:00"
   },
   {
-    "question": "Which bird completes the longest known migration of any animal, traveling from pole to pole?",
-    "answer": "Arctic Tern",
-    "alternative_answers": [
+	"question": "Which bird completes the longest known migration of any animal, traveling from pole to pole?",
+	"answer": "Arctic Tern",
+	"alternative_answers": [
       "Sterna paradisaea"
-    ],
-    "distractors": [
-      "Wandering Albatross",
-      "Sooty Shearwater",
+	],
+	"distractors": [
+	  "Wandering Albatross",
+	  "Sooty Shearwater",
       "Bar-tailed Godwit"
-    ],
-    "difficulty": "medium",
-    "source": "https://www.audubon.org/field-guide/bird/arctic-tern",
-    "clarity_note": "Arctic Terns travel up to 44,000 miles annually between their Arctic breeding grounds and the Antarctic.",
-    "model": "gemini-3.1-pro-preview",
-    "generated_at": "2026-03-28T19:16:56.008590+00:00"
+	],
+	"difficulty": "medium",
+	"source": "https://www.audubon.org/field-guide/bird/arctic-tern",
+	"clarity_note": "Arctic Terns travel up to 44,000 miles annually between their Arctic breeding grounds and the Antarctic.",
+	"model": "gemini-3.1-pro-preview",
+	"generated_at": "2026-03-28T19:16:56.008590+00:00"
   },
   {
-    "question": "Which living bird species has the longest recorded wingspan, reaching up to 12 feet?",
-    "answer": "Wandering Albatross",
-    "alternative_answers": [
+	"question": "Which living bird species has the longest recorded wingspan, reaching up to 12 feet?",
+	"answer": "Wandering Albatross",
+	"alternative_answers": [
       "Diomedea exulans"
-    ],
-    "distractors": [
-      "Andean Condor",
-      "Marabou Stork",
+	],
+	"distractors": [
+	  "Andean Condor",
+	  "Marabou Stork",
       "Dalmatian Pelican"
-    ],
-    "difficulty": "medium",
-    "source": "https://www.antarctica.gov.au/about-antarctica/animals/flying-birds/albatrosses/",
-    "clarity_note": "The Wandering Albatross holds the record for the largest wingspan of any living bird, averaging 10-12 feet.",
-    "model": "gemini-3.1-pro-preview",
-    "generated_at": "2026-03-28T19:16:56.008590+00:00"
+	],
+	"difficulty": "medium",
+	"source": "https://www.antarctica.gov.au/about-antarctica/animals/flying-birds/albatrosses/",
+	"clarity_note": "The Wandering Albatross holds the record for the largest wingspan of any living bird, averaging 10-12 feet.",
+	"model": "gemini-3.1-pro-preview",
+	"generated_at": "2026-03-28T19:16:56.008590+00:00"
   },
   {
-    "question": "By median lethal dose, what is the most venomous land snake in the world?",
-    "answer": "Inland Taipan",
-    "alternative_answers": [
-      "Oxyuranus microlepidotus",
-      "Fierce snake",
+	"question": "By median lethal dose, what is the most venomous land snake in the world?",
+	"answer": "Inland Taipan",
+	"alternative_answers": [
+	  "Oxyuranus microlepidotus",
+	  "Fierce snake",
       "Small-scaled snake"
-    ],
-    "distractors": [
-      "Black Mamba",
-      "King Cobra",
+	],
+	"distractors": [
+	  "Black Mamba",
+	  "King Cobra",
       "Coastal Taipan"
-    ],
-    "difficulty": "medium",
-    "source": "https://australian.museum/learn/animals/reptiles/inland-taipan/",
-    "clarity_note": "The Inland Taipan's venom is the most toxic of any land snake based on LD50 tests on mice.",
-    "model": "gemini-3.1-pro-preview",
-    "generated_at": "2026-03-28T19:16:56.008590+00:00"
+	],
+	"difficulty": "medium",
+	"source": "https://australian.museum/learn/animals/reptiles/inland-taipan/",
+	"clarity_note": "The Inland Taipan's venom is the most toxic of any land snake based on LD50 tests on mice.",
+	"model": "gemini-3.1-pro-preview",
+	"generated_at": "2026-03-28T19:16:56.008590+00:00"
   },
   {
-    "question": "What is the largest living species of amphibian in the world?",
-    "answer": "Chinese Giant Salamander",
-    "alternative_answers": [
-      "Andrias davidianus",
-      "South China giant salamander",
+	"question": "What is the largest living species of amphibian in the world?",
+	"answer": "Chinese Giant Salamander",
+	"alternative_answers": [
+	  "Andrias davidianus",
+	  "South China giant salamander",
       "Giant Salamander"
-    ],
-    "distractors": [
-      "Goliath Frog",
-      "Cane Toad",
+	],
+	"distractors": [
+	  "Goliath Frog",
+	  "Cane Toad",
       "Hellbender"
-    ],
-    "difficulty": "medium",
-    "source": "https://nationalzoo.si.edu/animals/chinese-giant-salamander",
-    "clarity_note": "This species can reach up to nearly 6 feet (1.8 meters) in length.",
-    "model": "gemini-3.1-pro-preview",
-    "generated_at": "2026-03-28T19:16:56.008590+00:00"
+	],
+	"difficulty": "medium",
+	"source": "https://nationalzoo.si.edu/animals/chinese-giant-salamander",
+	"clarity_note": "This species can reach up to nearly 6 feet (1.8 meters) in length.",
+	"model": "gemini-3.1-pro-preview",
+	"generated_at": "2026-03-28T19:16:56.008590+00:00"
   },
   {
-    "question": "Which animal has the densest fur in the animal kingdom, with up to one million hairs per square inch?",
-    "answer": "Sea Otter",
-    "alternative_answers": [
+	"question": "Which animal has the densest fur in the animal kingdom, with up to one million hairs per square inch?",
+	"answer": "Sea Otter",
+	"alternative_answers": [
       "Enhydra lutris"
-    ],
-    "distractors": [
-      "Chinchilla",
-      "Arctic Fox",
+	],
+	"distractors": [
+	  "Chinchilla",
+	  "Arctic Fox",
       "Polar Bear"
-    ],
-    "difficulty": "medium",
-    "source": "https://www.fisheries.noaa.gov/species/sea-otter",
-    "clarity_note": "Because they lack an insulating layer of blubber, sea otters rely entirely on their extremely dense fur for warmth.",
-    "model": "gemini-3.1-pro-preview",
-    "generated_at": "2026-03-28T19:16:56.008590+00:00"
+	],
+	"difficulty": "medium",
+	"source": "https://www.fisheries.noaa.gov/species/sea-otter",
+	"clarity_note": "Because they lack an insulating layer of blubber, sea otters rely entirely on their extremely dense fur for warmth.",
+	"model": "gemini-3.1-pro-preview",
+	"generated_at": "2026-03-28T19:16:56.008590+00:00"
   },
   {
-    "question": "Which living animal has the strongest experimentally measured bite force?",
-    "answer": "Saltwater Crocodile",
-    "alternative_answers": [
-      "Crocodylus porosus",
+	"question": "Which living animal has the strongest experimentally measured bite force?",
+	"answer": "Saltwater Crocodile",
+	"alternative_answers": [
+	  "Crocodylus porosus",
       "Estuarine crocodile"
-    ],
-    "distractors": [
-      "Great White Shark",
-      "Hippopotamus",
+	],
+	"distractors": [
+	  "Great White Shark",
+	  "Hippopotamus",
       "Spotted Hyena"
-    ],
-    "difficulty": "medium",
-    "source": "https://phys.org/news/2012-03-crocodiles-world-chomping-champion.html",
-    "clarity_note": "In a 2012 laboratory study, a Saltwater Crocodile delivered a bite force of 3,700 pounds per square inch.",
-    "model": "gemini-3.1-pro-preview",
-    "generated_at": "2026-03-28T19:16:56.008590+00:00"
+	],
+	"difficulty": "medium",
+	"source": "https://phys.org/news/2012-03-crocodiles-world-chomping-champion.html",
+	"clarity_note": "In a 2012 laboratory study, a Saltwater Crocodile delivered a bite force of 3,700 pounds per square inch.",
+	"model": "gemini-3.1-pro-preview",
+	"generated_at": "2026-03-28T19:16:56.008590+00:00"
   },
   {
-    "question": "What is widely considered the loudest land animal, whose calls can be heard up to 3 miles away?",
-    "answer": "Howler Monkey",
-    "alternative_answers": [
+	"question": "What is widely considered the loudest land animal, whose calls can be heard up to 3 miles away?",
+	"answer": "Howler Monkey",
+	"alternative_answers": [
       "Alouatta"
-    ],
-    "distractors": [
-      "African Elephant",
-      "Lion",
+	],
+	"distractors": [
+	  "African Elephant",
+	  "Lion",
       "Silverback Gorilla"
-    ],
-    "difficulty": "medium",
-    "source": "https://nationalzoo.si.edu/animals/howler-monkey",
-    "clarity_note": "Due to their enlarged hyoid bone, Howler Monkeys produce roars reaching 140 decibels.",
-    "model": "gemini-3.1-pro-preview",
-    "generated_at": "2026-03-28T19:16:56.008590+00:00"
+	],
+	"difficulty": "medium",
+	"source": "https://nationalzoo.si.edu/animals/howler-monkey",
+	"clarity_note": "Due to their enlarged hyoid bone, Howler Monkeys produce roars reaching 140 decibels.",
+	"model": "gemini-3.1-pro-preview",
+	"generated_at": "2026-03-28T19:16:56.008590+00:00"
   },
   {
-    "question": "Which animal holds the record for the longest lifespan of any known vertebrate?",
-    "answer": "Greenland Shark",
-    "alternative_answers": [
-      "Somniosus microcephalus",
+	"question": "Which animal holds the record for the longest lifespan of any known vertebrate?",
+	"answer": "Greenland Shark",
+	"alternative_answers": [
+	  "Somniosus microcephalus",
       "Gurry shark"
-    ],
-    "distractors": [
-      "Bowhead Whale",
-      "Galapagos Tortoise",
+	],
+	"distractors": [
+	  "Bowhead Whale",
+	  "Galapagos Tortoise",
       "Koi Carp"
-    ],
-    "difficulty": "medium",
-    "source": "https://oceanservice.noaa.gov/facts/greenland-shark.html",
-    "clarity_note": "Radiocarbon dating of their eye lenses has estimated the Greenland Shark can live for over 400 years.",
-    "model": "gemini-3.1-pro-preview",
-    "generated_at": "2026-03-28T19:16:56.008590+00:00"
+	],
+	"difficulty": "medium",
+	"source": "https://oceanservice.noaa.gov/facts/greenland-shark.html",
+	"clarity_note": "Radiocarbon dating of their eye lenses has estimated the Greenland Shark can live for over 400 years.",
+	"model": "gemini-3.1-pro-preview",
+	"generated_at": "2026-03-28T19:16:56.008590+00:00"
   },
   {
-    "question": "What marine mammal holds the record for the deepest recorded dive, reaching nearly 10,000 feet?",
-    "answer": "Cuvier's Beaked Whale",
-    "alternative_answers": [
+	"question": "What marine mammal holds the record for the deepest recorded dive, reaching nearly 10,000 feet?",
+	"answer": "Cuvier's Beaked Whale",
+	"alternative_answers": [
       "Ziphius cavirostris"
-    ],
-    "distractors": [
-      "Sperm Whale",
-      "Southern Elephant Seal",
+	],
+	"distractors": [
+	  "Sperm Whale",
+	  "Southern Elephant Seal",
       "Narwhal"
-    ],
-    "difficulty": "hard",
-    "source": "https://www.nhm.ac.uk/discover/deep-ocean-mammals.html",
-    "clarity_note": "Satellite tagging recorded a Cuvier's Beaked Whale diving to 2,992 meters (9,816 feet) in 2014.",
-    "model": "gemini-3.1-pro-preview",
-    "generated_at": "2026-03-28T19:16:56.008590+00:00"
+	],
+	"difficulty": "hard",
+	"source": "https://www.nhm.ac.uk/discover/deep-ocean-mammals.html",
+	"clarity_note": "Satellite tagging recorded a Cuvier's Beaked Whale diving to 2,992 meters (9,816 feet) in 2014.",
+	"model": "gemini-3.1-pro-preview",
+	"generated_at": "2026-03-28T19:16:56.008590+00:00"
   },
   {
-    "question": "What is the highest-flying bird ever recorded, with one individual striking a plane at 37,000 feet?",
-    "answer": "Rüppell's Vulture",
-    "alternative_answers": [
-      "Rüppell's griffon vulture",
+	"question": "What is the highest-flying bird ever recorded, with one individual striking a plane at 37,000 feet?",
+	"answer": "Rüppell's Vulture",
+	"alternative_answers": [
+	  "Rüppell's griffon vulture",
       "Gyps rueppellii"
-    ],
-    "distractors": [
-      "Bar-headed Goose",
-      "Alpine Chough",
+	],
+	"distractors": [
+	  "Bar-headed Goose",
+	  "Alpine Chough",
       "Andean Condor"
-    ],
-    "difficulty": "hard",
-    "source": "https://nationalzoo.si.edu/animals/ruppells-griffon-vulture",
-    "clarity_note": "In 1973, one of these vultures collided with a commercial aircraft at 37,000 feet over the Ivory Coast.",
-    "model": "gemini-3.1-pro-preview",
-    "generated_at": "2026-03-28T19:16:56.008590+00:00"
+	],
+	"difficulty": "hard",
+	"source": "https://nationalzoo.si.edu/animals/ruppells-griffon-vulture",
+	"clarity_note": "In 1973, one of these vultures collided with a commercial aircraft at 37,000 feet over the Ivory Coast.",
+	"model": "gemini-3.1-pro-preview",
+	"generated_at": "2026-03-28T19:16:56.008590+00:00"
   },
   {
-    "question": "Discovered in Australia in 2021, what animal species holds the record for having the most legs?",
-    "answer": "Eumillipes persephone",
-    "alternative_answers": [
+	"question": "Discovered in Australia in 2021, what animal species holds the record for having the most legs?",
+	"answer": "Eumillipes persephone",
+	"alternative_answers": [
       "True millipede"
-    ],
-    "distractors": [
-      "Illacme plenipes",
-      "Scutigera coleoptrata",
+	],
+	"distractors": [
+	  "Illacme plenipes",
+	  "Scutigera coleoptrata",
       "Scolopendra gigantea"
-    ],
-    "difficulty": "hard",
-    "source": "https://www.nature.com/articles/s41598-021-02447-0",
-    "clarity_note": "This species was the first millipede discovered to actually have over a thousand legs, with one specimen possessing 1,306.",
-    "model": "gemini-3.1-pro-preview",
-    "generated_at": "2026-03-28T19:16:56.008590+00:00"
+	],
+	"difficulty": "hard",
+	"source": "https://www.nature.com/articles/s41598-021-02447-0",
+	"clarity_note": "This species was the first millipede discovered to actually have over a thousand legs, with one specimen possessing 1,306.",
+	"model": "gemini-3.1-pro-preview",
+	"generated_at": "2026-03-28T19:16:56.008590+00:00"
   },
   {
-    "question": "Which species holds the record for the loudest bird call, reaching up to 125 decibels?",
-    "answer": "White Bellbird",
-    "alternative_answers": [
+	"question": "Which species holds the record for the loudest bird call, reaching up to 125 decibels?",
+	"answer": "White Bellbird",
+	"alternative_answers": [
       "Procnias albus"
-    ],
-    "distractors": [
-      "Screaming Piha",
-      "Kakapo",
+	],
+	"distractors": [
+	  "Screaming Piha",
+	  "Kakapo",
       "Three-wattled Bellbird"
-    ],
-    "difficulty": "hard",
-    "source": "https://www.cell.com/current-biology/fulltext/S0960-9822(19)31190-X",
-    "clarity_note": "A 2019 study confirmed the male White Bellbird's mating call is the loudest recorded bird vocalization.",
-    "model": "gemini-3.1-pro-preview",
-    "generated_at": "2026-03-28T19:16:56.008590+00:00"
+	],
+	"difficulty": "hard",
+	"source": "https://www.cell.com/current-biology/fulltext/S0960-9822(19)31190-X",
+	"clarity_note": "A 2019 study confirmed the male White Bellbird's mating call is the loudest recorded bird vocalization.",
+	"model": "gemini-3.1-pro-preview",
+	"generated_at": "2026-03-28T19:16:56.008590+00:00"
   }
 ]

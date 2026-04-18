@@ -5,6 +5,7 @@
 # Python virtual environment
 .venv/
 *.egg-info/
+__pycache__/
 
 # Environment files (API keys, secrets)
 .env
