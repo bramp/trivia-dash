@@ -24,6 +24,8 @@ var _input_locked: bool = false
 var _active_tween: Tween = null
 var _debug_res_index: int = 0
 var _keyboard_active: bool = false
+var _focus_style_visible: StyleBoxFlat = null
+var _focus_style_hidden: StyleBoxFlat = null
 
 @onready var title_screen: MarginContainer = $TitleScreen
 @onready var game_screen: MarginContainer = $GameScreen
@@ -62,24 +64,78 @@ var _keyboard_active: bool = false
 
 func _ready() -> void:
 	var loaded: bool = question_manager.load_questions()
-	_show_title_screen()
-	if not loaded:
-		subtitle_label.text = "Error: No questions found!"
-		quick_play_button.disabled = true
-		endless_play_button.disabled = true
+
+	# Initialize focus styles. We want a transparent box with a white border
+	# that sits OUTSIDE the button (using expand_margin) so it doesn't cause jumps.
+	_focus_style_visible = StyleBoxFlat.new()
+	_focus_style_visible.draw_center = false
+	_focus_style_visible.border_width_left = 4
+	_focus_style_visible.border_width_right = 4
+	_focus_style_visible.border_width_top = 4
+	_focus_style_visible.border_width_bottom = 4
+	_focus_style_visible.border_color = Color.WHITE
+	_focus_style_visible.expand_margin_left = 10
+	_focus_style_visible.expand_margin_right = 10
+	_focus_style_visible.expand_margin_top = 10
+	_focus_style_visible.expand_margin_bottom = 10
+	_focus_style_visible.corner_radius_top_left = 14
+	_focus_style_visible.corner_radius_top_right = 14
+	_focus_style_visible.corner_radius_bottom_right = 14
+	_focus_style_visible.corner_radius_bottom_left = 14
+
+	# IMPORTANT: Set content margins to -1 so they don't override the base button margins.
+	_focus_style_visible.content_margin_left = -1
+	_focus_style_visible.content_margin_right = -1
+	_focus_style_visible.content_margin_top = -1
+	_focus_style_visible.content_margin_bottom = -1
+
+	_focus_style_hidden = _focus_style_visible.duplicate()
+	_focus_style_hidden.border_width_left = 0
+	_focus_style_hidden.border_width_right = 0
+	_focus_style_hidden.border_width_top = 0
+	_focus_style_hidden.border_width_bottom = 0
+
+	_initialize_game_deferred.call_deferred(loaded)
 
 	# Listen for any focus changes to update visibility.
 	get_viewport().gui_focus_changed.connect(_on_focus_changed)
 
 
+func _initialize_game_deferred(loaded: bool) -> void:
+	_show_title_screen()
+	_update_focus_visibility()
+
+	if not loaded:
+		subtitle_label.text = "Error: No questions found!"
+		quick_play_button.disabled = true
+		endless_play_button.disabled = true
+
+
 func _input(event: InputEvent) -> void:
-	# If mouse moves or clicks, hide focus borders.
-	if event is InputEventMouseMotion or event is InputEventMouseButton:
+	# If mouse clicks a button, hide focus borders (until they press Tab again).
+	if event is InputEventMouseButton and event.pressed:
 		if _keyboard_active:
 			_keyboard_active = false
 			_update_focus_visibility()
-	# If keyboard or joypad is used, show focus borders.
-	elif event is InputEventKey or event is InputEventJoypadButton or event is InputEventJoypadMotion:
+
+	# Only activate keyboard mode if Tab or Arrows are pressed (navigation).
+	elif event is InputEventKey and event.pressed:
+		if (
+			event.keycode == KEY_TAB
+			or event.keycode == KEY_UP
+			or event.keycode == KEY_DOWN
+			or event.keycode == KEY_LEFT
+			or event.keycode == KEY_RIGHT
+		):
+			if not _keyboard_active:
+				_keyboard_active = true
+				_update_focus_visibility()
+				# If it was a TAB, consume the event so Godot doesn't move to the NEXT item immediately.
+				if event.keycode == KEY_TAB:
+					get_viewport().set_input_as_handled()
+
+	# Joypad also activates focus visibility.
+	elif event is InputEventJoypadButton:
 		if not _keyboard_active:
 			_keyboard_active = true
 			_update_focus_visibility()
@@ -93,15 +149,12 @@ func _update_focus_visibility() -> void:
 	var buttons: Array[Button] = [quick_play_button, endless_play_button, play_again_button, main_menu_button]
 	buttons.append_array(answer_buttons)
 
+	var focus_style := _focus_style_visible if _keyboard_active else _focus_style_hidden
+	if not focus_style:
+		return
+
 	for btn in buttons:
-		var style := btn.get_theme_stylebox("focus") as StyleBoxFlat
-		if style:
-			# Only show the border if we are in keyboard mode AND this button has focus.
-			var show_border := _keyboard_active and btn.has_focus()
-			style.border_width_left = 4 if show_border else 0
-			style.border_width_right = 4 if show_border else 0
-			style.border_width_top = 4 if show_border else 0
-			style.border_width_bottom = 4 if show_border else 0
+		btn.add_theme_stylebox_override("focus", focus_style)
 
 
 func _unhandled_input(event: InputEvent) -> void:
@@ -309,11 +362,35 @@ func _display_question(q: Dictionary) -> void:
 				child.queue_free()
 		# Reset button style to default colour.
 		btn.remove_theme_stylebox_override("disabled")
+		btn.remove_theme_stylebox_override("normal")
+		btn.remove_theme_stylebox_override("hover")
+		btn.remove_theme_stylebox_override("pressed")
 		btn.remove_theme_color_override("font_disabled_color")
-		var style := btn.get_theme_stylebox("normal").duplicate() as StyleBoxFlat
-		if style:
-			style.bg_color = GameData.BUTTON_COLORS[i]
-			btn.add_theme_stylebox_override("normal", style)
+
+		var color: Color = GameData.BUTTON_COLORS[i]
+
+		# Helper to create styled boxes for each state with permanent white border
+		var create_styled_box = func(base_color: Color):
+			var sb := StyleBoxFlat.new()
+			sb.bg_color = base_color
+			sb.border_width_left = 4
+			sb.border_width_right = 4
+			sb.border_width_top = 4
+			sb.border_width_bottom = 4
+			sb.border_color = Color.WHITE
+			sb.corner_radius_top_left = 12
+			sb.corner_radius_top_right = 12
+			sb.corner_radius_bottom_right = 12
+			sb.corner_radius_bottom_left = 12
+			sb.content_margin_left = 20
+			sb.content_margin_right = 20
+			sb.content_margin_top = 10
+			sb.content_margin_bottom = 10
+			return sb
+
+		btn.add_theme_stylebox_override("normal", create_styled_box.call(color))
+		btn.add_theme_stylebox_override("hover", create_styled_box.call(color.lightened(0.1)))
+		btn.add_theme_stylebox_override("pressed", create_styled_box.call(color.darkened(0.1)))
 
 	# Auto-fit text after one layout pass so sizes are known.
 	_auto_fit_text.call_deferred()
@@ -510,14 +587,20 @@ func _animate_correct(index: int) -> void:
 	var btn := answer_buttons[index]
 	btn.pivot_offset = btn.size / 2.0
 
-	# Flash the button with a white border, preserving its original color.
-	var style := btn.get_theme_stylebox("normal").duplicate() as StyleBoxFlat
-	style.border_width_left = 4
-	style.border_width_right = 4
-	style.border_width_top = 4
-	style.border_width_bottom = 4
-	style.border_color = Color.WHITE
-	btn.add_theme_stylebox_override("normal", style)
+	# Helper to add celebration border to any existing stylebox
+	var add_celebration_border = func(sb: StyleBox):
+		var new_sb := sb.duplicate() as StyleBoxFlat
+		new_sb.border_width_left = 4
+		new_sb.border_width_right = 4
+		new_sb.border_width_top = 4
+		new_sb.border_width_bottom = 4
+		new_sb.border_color = Color.WHITE
+		return new_sb
+
+	# Add a white border to all states for celebration feedback.
+	for state in ["normal", "hover", "pressed"]:
+		var current_sb := btn.get_theme_stylebox(state)
+		btn.add_theme_stylebox_override(state, add_celebration_border.call(current_sb))
 
 	var tween := create_tween()
 	tween.set_ease(Tween.EASE_OUT)

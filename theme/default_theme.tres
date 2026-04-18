@@ -1,7 +1,7 @@
-[gd_resource type="Theme" format=3 uid="uid://bjj6ci4wlgaac"]
+[gd_resource type="Theme" load_steps=11 format=3 uid="uid://bjj6ci4wlgaac"]
 
-[ext_resource type="FontFile" path="res://fonts/NotoSans-subset.ttf" id="1"]
-[ext_resource type="FontFile" path="res://fonts/NotoColorEmoji-subset.ttf" id="2"]
+[ext_resource type="FontFile" path="res://fonts/NotoSans.ttf" id="1"]
+[ext_resource type="FontFile" path="res://fonts/NotoColorEmoji.ttf" id="2"]
 
 [sub_resource type="FontVariation" id="FontVariation_bold"]
 fallbacks = Array[Font]([ExtResource("2")])
@@ -10,87 +10,61 @@ variation_opentype = {
 "wght": 700
 }
 
-[sub_resource type="StyleBoxFlat" id="PlayButton_hover"]
-content_margin_left = 20.0
-content_margin_top = 10.0
-content_margin_right = 20.0
-content_margin_bottom = 10.0
-bg_color = Color(0.303, 0.83, 0.527, 1)
-corner_radius_top_left = 12
-corner_radius_top_right = 12
-corner_radius_bottom_right = 12
-corner_radius_bottom_left = 12
-
-[sub_resource type="StyleBoxFlat" id="PlayButton_normal"]
-content_margin_left = 20.0
-content_margin_top = 10.0
-content_margin_right = 20.0
-content_margin_bottom = 10.0
-bg_color = Color(0.18, 0.8, 0.443, 1)
-corner_radius_top_left = 12
-corner_radius_top_right = 12
-corner_radius_bottom_right = 12
-corner_radius_bottom_left = 12
-
-[sub_resource type="StyleBoxFlat" id="PlayButton_pressed"]
-content_margin_left = 20.0
-content_margin_top = 10.0
-content_margin_right = 20.0
-content_margin_bottom = 10.0
-bg_color = Color(0.153, 0.68, 0.377, 1)
-corner_radius_top_left = 12
-corner_radius_top_right = 12
-corner_radius_bottom_right = 12
-corner_radius_bottom_left = 12
-
-[sub_resource type="StyleBoxFlat" id="PlayButton_focus"]
-content_margin_left = 20.0
-content_margin_top = 10.0
-content_margin_right = 20.0
-content_margin_bottom = 10.0
-bg_color = Color(0.18, 0.8, 0.443, 1)
-border_width_left = 4
-border_width_top = 4
-border_width_right = 4
-border_width_bottom = 4
-border_color = Color(1, 1, 1, 1)
-corner_radius_top_left = 12
-corner_radius_top_right = 12
-corner_radius_bottom_right = 12
-corner_radius_bottom_left = 12
-expand_margin_left = 4.0
-expand_margin_top = 4.0
-expand_margin_right = 4.0
-expand_margin_bottom = 4.0
-
-[sub_resource type="StyleBoxFlat" id="AnswerButton_focus"]
-content_margin_left = 20.0
-content_margin_top = 10.0
-content_margin_right = 20.0
-content_margin_bottom = 10.0
-bg_color = Color(1, 1, 1, 0)
+[sub_resource type="StyleBoxFlat" id="Button_focus_ring"]
 draw_center = false
 border_width_left = 4
 border_width_top = 4
 border_width_right = 4
 border_width_bottom = 4
 border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 14
+corner_radius_top_right = 14
+corner_radius_bottom_right = 14
+corner_radius_bottom_left = 14
+expand_margin_left = 10.0
+expand_margin_top = 10.0
+expand_margin_right = 10.0
+expand_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxFlat" id="Base_Button_Style"]
+content_margin_left = 20.0
+content_margin_top = 10.0
+content_margin_right = 20.0
+content_margin_bottom = 10.0
+bg_color = Color(0.1, 0.1, 0.1, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(1, 1, 1, 1)
 corner_radius_top_left = 12
 corner_radius_top_right = 12
 corner_radius_bottom_right = 12
 corner_radius_bottom_left = 12
-expand_margin_left = 4.0
-expand_margin_top = 4.0
-expand_margin_right = 4.0
-expand_margin_bottom = 4.0
 
-[sub_resource type="FontVariation" id="FontVariation_1"]
+[sub_resource type="StyleBoxFlat" id="PlayButton_normal"]
+base_style = SubResource("Base_Button_Style")
+bg_color = Color(0.18, 0.8, 0.443, 1)
+
+[sub_resource type="StyleBoxFlat" id="PlayButton_hover"]
+base_style = SubResource("Base_Button_Style")
+bg_color = Color(0.303, 0.83, 0.527, 1)
+
+[sub_resource type="StyleBoxFlat" id="PlayButton_pressed"]
+base_style = SubResource("Base_Button_Style")
+bg_color = Color(0.153, 0.68, 0.377, 1)
+
+[sub_resource type="FontVariation" id="FontVariation_default"]
 fallbacks = Array[Font]([ExtResource("2")])
 base_font = ExtResource("1")
 
 [resource]
-default_font = SubResource("FontVariation_1")
+default_font = SubResource("FontVariation_default")
 default_font_size = 24
+Button/styles/focus = SubResource("Button_focus_ring")
+Button/styles/hover = SubResource("Base_Button_Style")
+Button/styles/normal = SubResource("Base_Button_Style")
+Button/styles/pressed = SubResource("Base_Button_Style")
 AnswerButton/base_type = &"Button"
 AnswerButton/colors/font_color = Color(1, 1, 1, 1)
 AnswerButton/colors/font_hover_color = Color(1, 1, 1, 1)
@@ -99,7 +73,6 @@ AnswerButton/colors/font_pressed_color = Color(1, 1, 1, 1)
 AnswerButton/constants/outline_size = 8
 AnswerButton/font_sizes/font_size = 52
 AnswerButton/fonts/font = SubResource("FontVariation_bold")
-AnswerButton/styles/focus = SubResource("AnswerButton_focus")
 BuildInfoLabel/base_type = &"Label"
 BuildInfoLabel/colors/font_color = Color(0.463, 0.471, 0.473, 1)
 BuildInfoLabel/font_sizes/font_size = 14
@@ -124,7 +97,6 @@ PlayButton/colors/font_color = Color(1, 1, 1, 1)
 PlayButton/colors/font_hover_color = Color(1, 1, 1, 1)
 PlayButton/colors/font_pressed_color = Color(1, 1, 1, 1)
 PlayButton/font_sizes/font_size = 40
-PlayButton/styles/focus = SubResource("PlayButton_focus")
 PlayButton/styles/hover = SubResource("PlayButton_hover")
 PlayButton/styles/normal = SubResource("PlayButton_normal")
 PlayButton/styles/pressed = SubResource("PlayButton_pressed")
