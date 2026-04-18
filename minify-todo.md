@@ -26,12 +26,11 @@
 ### 2. Custom Export Templates (Custom Build)
 - [x] Clone/Setup Godot source code.
 - [x] Create `custom.py` (stored as `tools/build/web_release.py`)
-- [x] Compile release templates for Web.
-- [/] Compile release templates for macOS and Android. (In progress)
+- [x] Compile release templates for Web. (Non-threaded for GitHub Pages compatibility)
+- [ ] Compile release templates for macOS and Android.
 - [x] Record impact:
-  - **Web Total**: ~19.4MB (index.wasm: 19MB, index.pck: 329KB, index.js: 314KB) - **Impact: -16.7MB**
-  - **macOS Total**: ~21MB (trivia-dash.zip) - **Impact: -42MB**
-  - **Android Total**: (Pending custom build)
+  - **Web Total**: ~19.6MB (index.wasm: 19MB, index.pck: 329KB, index.js: 277KB) - **Impact: -16.5MB**
+  - **Note**: Rebuilt with `threads=no` to fix `SharedArrayBuffer` errors on GitHub Pages.
 
 ### 3. PCK Optimization
 - [x] Review `export_presets.cfg` for unnecessary file inclusions.

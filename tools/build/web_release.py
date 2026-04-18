@@ -3,6 +3,9 @@ optimize = "size"
 lto = "full"
 debug_symbols = "no"
 
+# Disable threading for GitHub Pages (avoid SharedArrayBuffer requirement)
+threads = "no"
+
 # Disable heavy features
 disable_3d = "yes"
 vulkan = "no"
