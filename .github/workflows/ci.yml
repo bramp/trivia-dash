@@ -3,8 +3,20 @@ name: CI
 on:
   push:
     branches: [main]
+    paths-ignore:
+      - "**.md"
+      - "LICENSE"
+      - "THIRD_PARTY_LICENSES"
+      - ".gitignore"
+      - ".editorconfig"
   pull_request:
     branches: [main]
+    paths-ignore:
+      - "**.md"
+      - "LICENSE"
+      - "THIRD_PARTY_LICENSES"
+      - ".gitignore"
+      - ".editorconfig"
 
 jobs:
   lint:
@@ -83,6 +95,7 @@ jobs:
     name: Build Web Export
     runs-on: ubuntu-latest
     needs: [lint, test-gd, test-py]
+    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
     container:
       image: barichello/godot-ci:4.6.2
     steps:
