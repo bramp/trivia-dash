@@ -1,4 +1,4 @@
-GD_FILES := $(shell find . -name "*.gd" -not -path "./.godot/*" -not -path "./addons/*" -not -path "./third_party/*")
+GD_FILES := $(shell find . -name "*.gd" -not -path "./.godot/*" -not -path "./addons/*" -not -path "./third_party/*" -not -path "./android/*")
 BUILD_DIR := build
 VENV_DIR := .venv
 

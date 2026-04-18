@@ -27,7 +27,10 @@ func _get_all_gd_scripts(path: String) -> Array[String]:
 			var file_name := dir.get_next()
 			while file_name != "":
 				if dir.current_is_dir() and not file_name.begins_with("."):
-					if current_dir == "res://" and (file_name == "addons" or file_name == "third_party"):
+					if (
+						current_dir == "res://"
+						and (file_name == "addons" or file_name == "third_party" or file_name == "android")
+					):
 						pass
 					else:
 						dirs.append(current_dir.path_join(file_name))

@@ -7,7 +7,7 @@ repos:
         entry: make format-check-gd
         language: system
         files: '\.gd$'
-        exclude: ^addons/
+        exclude: ^(addons/|android/)
         pass_filenames: false
 
       - id: gdlint
@@ -16,7 +16,7 @@ repos:
         entry: make lint
         language: system
         files: '\.gd$'
-        exclude: ^addons/
+        exclude: ^(addons/|android/)
         pass_filenames: false
 
       - id: gut-tests
@@ -25,7 +25,7 @@ repos:
         entry: make test
         language: system
         files: '\.gd$'
-        exclude: ^addons/
+        exclude: ^(addons/|android/)
         pass_filenames: false
 
       - id: ruff
