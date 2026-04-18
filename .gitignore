@@ -15,3 +15,4 @@ build/
 # Node modules (binaryen for CI)
 node_modules/
 package-lock.json
+*.keystore
