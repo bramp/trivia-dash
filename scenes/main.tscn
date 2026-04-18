@@ -50,21 +50,6 @@ corner_radius_top_right = 12
 corner_radius_bottom_right = 12
 corner_radius_bottom_left = 12
 
-[sub_resource type="StyleBoxFlat" id="Answer1_focus"]
-content_margin_left = 20.0
-content_margin_top = 10.0
-content_margin_right = 20.0
-content_margin_bottom = 10.0
-bg_color = Color(0.906, 0.298, 0.235, 1)
-border_width_left = 3
-border_width_top = 3
-border_width_right = 3
-border_width_bottom = 3
-border_color = Color(1, 1, 1, 1)
-corner_radius_top_left = 12
-corner_radius_top_right = 12
-corner_radius_bottom_right = 12
-corner_radius_bottom_left = 12
 
 [sub_resource type="StyleBoxFlat" id="Answer2_normal"]
 content_margin_left = 20.0
@@ -99,21 +84,6 @@ corner_radius_top_right = 12
 corner_radius_bottom_right = 12
 corner_radius_bottom_left = 12
 
-[sub_resource type="StyleBoxFlat" id="Answer2_focus"]
-content_margin_left = 20.0
-content_margin_top = 10.0
-content_margin_right = 20.0
-content_margin_bottom = 10.0
-bg_color = Color(0.18, 0.8, 0.443, 1)
-border_width_left = 3
-border_width_top = 3
-border_width_right = 3
-border_width_bottom = 3
-border_color = Color(1, 1, 1, 1)
-corner_radius_top_left = 12
-corner_radius_top_right = 12
-corner_radius_bottom_right = 12
-corner_radius_bottom_left = 12
 
 [sub_resource type="StyleBoxFlat" id="Answer3_normal"]
 content_margin_left = 20.0
@@ -148,21 +118,6 @@ corner_radius_top_right = 12
 corner_radius_bottom_right = 12
 corner_radius_bottom_left = 12
 
-[sub_resource type="StyleBoxFlat" id="Answer3_focus"]
-content_margin_left = 20.0
-content_margin_top = 10.0
-content_margin_right = 20.0
-content_margin_bottom = 10.0
-bg_color = Color(0.204, 0.596, 0.859, 1)
-border_width_left = 3
-border_width_top = 3
-border_width_right = 3
-border_width_bottom = 3
-border_color = Color(1, 1, 1, 1)
-corner_radius_top_left = 12
-corner_radius_top_right = 12
-corner_radius_bottom_right = 12
-corner_radius_bottom_left = 12
 
 [sub_resource type="StyleBoxFlat" id="Answer4_normal"]
 content_margin_left = 20.0
@@ -197,21 +152,6 @@ corner_radius_top_right = 12
 corner_radius_bottom_right = 12
 corner_radius_bottom_left = 12
 
-[sub_resource type="StyleBoxFlat" id="Answer4_focus"]
-content_margin_left = 20.0
-content_margin_top = 10.0
-content_margin_right = 20.0
-content_margin_bottom = 10.0
-bg_color = Color(0.945, 0.769, 0.059, 1)
-border_width_left = 3
-border_width_top = 3
-border_width_right = 3
-border_width_bottom = 3
-border_color = Color(1, 1, 1, 1)
-corner_radius_top_left = 12
-corner_radius_top_right = 12
-corner_radius_bottom_right = 12
-corner_radius_bottom_left = 12
 
 [node name="Main" type="Control" unique_id=1639450787]
 layout_mode = 3
@@ -396,7 +336,6 @@ theme_type_variation = &"AnswerButton"
 theme_override_styles/normal = SubResource("Answer1_normal")
 theme_override_styles/pressed = SubResource("Answer1_pressed")
 theme_override_styles/hover = SubResource("Answer1_hover")
-theme_override_styles/focus = SubResource("Answer1_focus")
 text = "Answer 1"
 autowrap_mode = 3
 
@@ -409,7 +348,6 @@ theme_type_variation = &"AnswerButton"
 theme_override_styles/normal = SubResource("Answer2_normal")
 theme_override_styles/pressed = SubResource("Answer2_pressed")
 theme_override_styles/hover = SubResource("Answer2_hover")
-theme_override_styles/focus = SubResource("Answer2_focus")
 text = "Answer 2"
 autowrap_mode = 3
 
@@ -422,7 +360,6 @@ theme_type_variation = &"AnswerButton"
 theme_override_styles/normal = SubResource("Answer3_normal")
 theme_override_styles/pressed = SubResource("Answer3_pressed")
 theme_override_styles/hover = SubResource("Answer3_hover")
-theme_override_styles/focus = SubResource("Answer3_focus")
 text = "Answer 3"
 autowrap_mode = 3
 
@@ -435,7 +372,6 @@ theme_type_variation = &"AnswerButton"
 theme_override_styles/normal = SubResource("Answer4_normal")
 theme_override_styles/pressed = SubResource("Answer4_pressed")
 theme_override_styles/hover = SubResource("Answer4_hover")
-theme_override_styles/focus = SubResource("Answer4_focus")
 text = "Answer 4"
 autowrap_mode = 3
 

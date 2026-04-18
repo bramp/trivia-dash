@@ -43,6 +43,47 @@ corner_radius_top_right = 12
 corner_radius_bottom_right = 12
 corner_radius_bottom_left = 12
 
+[sub_resource type="StyleBoxFlat" id="PlayButton_focus"]
+content_margin_left = 20.0
+content_margin_top = 10.0
+content_margin_right = 20.0
+content_margin_bottom = 10.0
+bg_color = Color(0.18, 0.8, 0.443, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+expand_margin_left = 4.0
+expand_margin_top = 4.0
+expand_margin_right = 4.0
+expand_margin_bottom = 4.0
+
+[sub_resource type="StyleBoxFlat" id="AnswerButton_focus"]
+content_margin_left = 20.0
+content_margin_top = 10.0
+content_margin_right = 20.0
+content_margin_bottom = 10.0
+bg_color = Color(1, 1, 1, 0)
+draw_center = false
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+expand_margin_left = 4.0
+expand_margin_top = 4.0
+expand_margin_right = 4.0
+expand_margin_bottom = 4.0
+
 [sub_resource type="FontVariation" id="FontVariation_1"]
 fallbacks = Array[Font]([ExtResource("2")])
 base_font = ExtResource("1")
@@ -58,6 +99,7 @@ AnswerButton/colors/font_pressed_color = Color(1, 1, 1, 1)
 AnswerButton/constants/outline_size = 8
 AnswerButton/font_sizes/font_size = 52
 AnswerButton/fonts/font = SubResource("FontVariation_bold")
+AnswerButton/styles/focus = SubResource("AnswerButton_focus")
 BuildInfoLabel/base_type = &"Label"
 BuildInfoLabel/colors/font_color = Color(0.463, 0.471, 0.473, 1)
 BuildInfoLabel/font_sizes/font_size = 14
@@ -82,6 +124,7 @@ PlayButton/colors/font_color = Color(1, 1, 1, 1)
 PlayButton/colors/font_hover_color = Color(1, 1, 1, 1)
 PlayButton/colors/font_pressed_color = Color(1, 1, 1, 1)
 PlayButton/font_sizes/font_size = 40
+PlayButton/styles/focus = SubResource("PlayButton_focus")
 PlayButton/styles/hover = SubResource("PlayButton_hover")
 PlayButton/styles/normal = SubResource("PlayButton_normal")
 PlayButton/styles/pressed = SubResource("PlayButton_pressed")

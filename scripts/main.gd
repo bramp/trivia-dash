@@ -162,6 +162,7 @@ func _show_title_screen() -> void:
 	build_info_label.text = "Build: %s" % BuildInfo.BUILD_DATE
 
 	_animate_title_entrance()
+	quick_play_button.grab_focus()
 
 
 func _start_game(mode: GameMode) -> void:
@@ -231,6 +232,7 @@ func _show_game_over_screen(is_new_high: bool) -> void:
 		SfxManager.play_new_high_score()
 
 	_animate_game_over_entrance()
+	play_again_button.grab_focus()
 
 
 # --- Question flow ---
@@ -273,14 +275,17 @@ func _display_question(q: Dictionary) -> void:
 		var style := btn.get_theme_stylebox("normal") as StyleBoxFlat
 		if style:
 			style.bg_color = GameData.BUTTON_COLORS[i]
-			style.border_width_left = 0
-			style.border_width_right = 0
-			style.border_width_top = 0
-			style.border_width_bottom = 0
+			# Only clear borders if NOT focused, to avoid flickering focus style.
+			if not btn.has_focus():
+				style.border_width_left = 0
+				style.border_width_right = 0
+				style.border_width_top = 0
+				style.border_width_bottom = 0
 
 	# Auto-fit text after one layout pass so sizes are known.
 	_auto_fit_text.call_deferred()
 	_animate_question_entrance()
+	answer_buttons[0].grab_focus()
 
 
 func _handle_correct_answer(index: int, time_remaining: float) -> void:
