@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://gph2bktax5p"
-path="res://.godot/imported/NotoEmoji.ttf-0d1188f9e4b9eab9cd2b0d39fc8dea77.fontdata"
+uid="uid://7uxuo58beogj"
+path="res://.godot/imported/NotoColorEmoji-subset.ttf-3af9687b940a436ba5525f076c728566.fontdata"
 
 [deps]
 
-source_file="res://fonts/NotoEmoji.ttf"
-dest_files=["res://.godot/imported/NotoEmoji.ttf-0d1188f9e4b9eab9cd2b0d39fc8dea77.fontdata"]
+source_file="res://fonts/NotoColorEmoji-subset.ttf"
+dest_files=["res://.godot/imported/NotoColorEmoji-subset.ttf-3af9687b940a436ba5525f076c728566.fontdata"]
 
 [params]
 

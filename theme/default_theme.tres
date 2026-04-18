@@ -1,7 +1,7 @@
 [gd_resource type="Theme" format=3 uid="uid://bjj6ci4wlgaac"]
 
 [ext_resource type="FontFile" path="res://fonts/NotoSans-subset.ttf" id="1"]
-[ext_resource type="FontFile" path="res://fonts/NotoEmoji-subset.ttf" id="2"]
+[ext_resource type="FontFile" path="res://fonts/NotoColorEmoji-subset.ttf" id="2"]
 
 [sub_resource type="FontVariation" id="FontVariation_bold"]
 fallbacks = Array[Font]([ExtResource("2")])

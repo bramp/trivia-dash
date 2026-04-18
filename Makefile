@@ -16,7 +16,7 @@ PY_FILES := $(shell find . -name "*.py" $(call find_exclude,$(EXCLUDE_DIRS)))
 QUESTION_FILES := $(wildcard data/questions/*.json)
 SCENE_FILES := scenes/main.tscn
 CHARS_FILE := fonts/unique_chars.txt
-SUBSET_FONTS := fonts/NotoSans-subset.ttf fonts/NotoEmoji-subset.ttf
+SUBSET_FONTS := fonts/NotoSans-subset.ttf fonts/NotoColorEmoji-subset.ttf
 
 .PHONY: format format-check format-check-gd format-check-py lint test validate-questions run build build-web build-mac build-android build-templates build-templates-web build-templates-mac build-templates-android serve generate-questions venv subset-fonts clean-fonts
 
@@ -91,8 +91,8 @@ fonts/NotoSans-subset.ttf: fonts/NotoSans.ttf $(CHARS_FILE)
 	@echo "Subsetting NotoSans..."
 	$(VENV_DIR)/bin/pyftsubset $< --text-file=$(CHARS_FILE) --output-file=$@
 
-fonts/NotoEmoji-subset.ttf: fonts/NotoEmoji.ttf $(CHARS_FILE)
-	@echo "Subsetting NotoEmoji..."
+fonts/NotoColorEmoji-subset.ttf: fonts/NotoColorEmoji.ttf $(CHARS_FILE)
+	@echo "Subsetting NotoColorEmoji..."
 	# Color emojis require keeping layout features and glyph names for proper rendering
 	$(VENV_DIR)/bin/pyftsubset $< --text-file=$(CHARS_FILE) --output-file=$@ --layout-features='*' --glyph-names --legacy-cmap --notdef-outline
 

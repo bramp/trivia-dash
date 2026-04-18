@@ -120,3 +120,4 @@
 - [x] We should improve subsetting -store the full font, write a tool to extract unique characters, then subsetting as needed.
 - [x] I think we are using the wrong emojii font. We should be using NotoColorEmoji-Regular.ttf
 - [ ] Consider replacing the correct / fail animations with SVG icons, instead of Font emojiis. We still need emojis for questions - but we can perhaps more heavily subset them.
+- [ ] We have the warning `WARNING: Falling back to dummy PhysicsServer2D; 2D physics functionality will be disabled. If this is intended, set the physics/2d/physics_engine project setting to Dummy.`
