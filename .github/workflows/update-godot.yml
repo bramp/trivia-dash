@@ -1,4 +1,4 @@
-name: Update Godot Version
+name: 🤖 Update Godot Version
 
 on:
   schedule:
