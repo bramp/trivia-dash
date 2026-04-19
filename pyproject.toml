@@ -14,7 +14,7 @@ dev = [
     "gdtoolkit>=4.5.0,<5",
     "pre-commit>=4.3.0,<5",
     "ruff>=0.9",
-    "fonttools>=4.42",
+    "fonttools>=4.60.2",
     "pytest>=8",
 ]
 generate = [
