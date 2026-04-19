@@ -45,7 +45,7 @@ jobs:
 
       - name: Create Pull Request
         if: steps.current.outputs.version != steps.latest.outputs.tag
-        uses: peter-evans/create-pull-request@v7
+        uses: peter-evans/create-pull-request@v8
         with:
           commit-message: "chore: update Godot ${{ steps.current.outputs.version }} → ${{ steps.latest.outputs.tag }}"
           title: "chore: update Godot to ${{ steps.latest.outputs.tag }}"
