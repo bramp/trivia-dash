@@ -76,6 +76,9 @@ jobs:
           path: .venv
           key: venv-${{ runner.os }}-${{ hashFiles('pyproject.toml') }}
 
+      - name: 🔠 Generate subset fonts
+        run: make subset-fonts
+
       - name: 🏗️ Import project
         run: godot --headless --import . --quit || true
         timeout-minutes: 2
@@ -153,6 +156,9 @@ jobs:
 
       - name: 🛤️ Add binaryen to PATH
         run: echo "$PWD/node_modules/.bin" >> "$GITHUB_PATH"
+
+      - name: 🔠 Generate subset fonts
+        run: make subset-fonts
 
       - name: 🏗️ Import project
         run: godot --headless --import . --quit || true

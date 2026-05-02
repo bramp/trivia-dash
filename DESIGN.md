@@ -175,18 +175,18 @@ All static font sizes live in `theme/default_theme.tres`. Dynamic overrides (cor
 
 | Variation | Base type | Font size (logical px) | Notes |
 | --------- | --------- | ---------------------- | ----- |
-| `TitleLabel` | `Label` | 96 | Game title on title screen |
-| `SubtitleLabel` | `Label` | 40 | Tagline below the title |
-| `HudLabel` | `Label` | 56 | Score and countdown timer |
-| `QuestionLabel` | `Label` | 88 (ceiling) | Auto-fit min: 28 px |
-| `AnswerButton` | `Button` | 72 (ceiling) | Auto-fit min: 24 px; same size applied to all 4 buttons |
-| `PlayButton` | `Button` | 52 | Play / Play Again / Main Menu |
-| `GameOverTitle` | `Label` | 88 | "GAME OVER" heading |
-| `FinalScoreLabel` | `Label` | 64 | Score on game-over screen |
-| `HighScoreLabel` | `Label` | 36 | High score display |
-| `NewHighScoreLabel` | `Label` | 52 | New high score celebration |
+| `TitleLabel` | `Label` | 80 | Game title on title screen |
+| `SubtitleLabel` | `Label` | 32 | Tagline below the title |
+| `HudLabel` | `Label` | 48 | Score and countdown timer |
+| `QuestionLabel` | `Label` | 64 (ceiling) | Auto-fit min: 24 px |
+| `AnswerButton` | `Button` | 52 (ceiling) | Auto-fit min: 18 px; same size applied to all 4 buttons |
+| `PlayButton` | `Button` | 40 | Play / Play Again / Main Menu |
+| `GameOverTitle` | `Label` | 64 | "GAME OVER" heading |
+| `FinalScoreLabel` | `Label` | 48 | Score on game-over screen |
+| `HighScoreLabel` | `Label` | 28 | High score display |
+| `NewHighScoreLabel` | `Label` | 36 | New high score celebration |
 | `BuildInfoLabel` | `Label` | 14 | Build date/version (intentionally tiny) |
-| *(default)* | — | 32 | Fallback for any unlabelled elements |
+| *(default)* | — | 24 | Fallback for any unlabelled elements |
 
 ## Code Quality
 
