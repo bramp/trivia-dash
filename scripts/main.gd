@@ -474,7 +474,7 @@ func _calc_fitting_font_size(ctrl: Control, text: String, min_size: int = 16) ->
 ## Shrinks font sizes to fit, using the same size for all answer buttons.
 func _auto_fit_text() -> void:
 	# Fit question label independently.
-	var q_size := _calc_fitting_font_size(question_label, question_label.text, 24)
+	var q_size := _calc_fitting_font_size(question_label, question_label.text, 28)
 	var q_base := question_label.get_theme_font_size("font_size")
 	if q_size < q_base:
 		question_label.add_theme_font_size_override("font_size", q_size)
@@ -483,7 +483,7 @@ func _auto_fit_text() -> void:
 	# then apply it uniformly so all buttons match.
 	var min_btn_size: int = answer_buttons[0].get_theme_font_size("font_size")
 	for btn in answer_buttons:
-		var fitted := _calc_fitting_font_size(btn, btn.text, 18)
+		var fitted := _calc_fitting_font_size(btn, btn.text, 24)
 		if fitted < min_btn_size:
 			min_btn_size = fitted
 	var btn_base := answer_buttons[0].get_theme_font_size("font_size")

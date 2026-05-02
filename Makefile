@@ -21,7 +21,7 @@ SUBSET_FONTS := fonts/NotoSans-subset.ttf fonts/NotoColorEmoji-subset.ttf
 .PHONY: format format-check format-check-gd format-check-py lint test test-gd test-py assets validate-questions run build build-web build-mac build-android build-templates build-templates-web build-templates-mac build-templates-android serve generate-questions venv subset-fonts clean-fonts
 
 ## Run the game (optionally at a specific resolution: make run RES=1920x1080)
-run:
+run: subset-fonts
 ifdef RES
 	godot --path . --resolution $(RES)
 else
