@@ -130,6 +130,64 @@ One scene (`main.tscn`) with child containers for each screen state, toggled via
 - **Font:** Clean sans-serif (Noto Sans, bundled as `.ttf` in a Theme resource).
 - **Flat design** — rounded rectangles, no sprite art, all UI-driven.
 
+## Typography
+
+### Fonts
+
+| File | Role |
+| ---- | ---- |
+| `fonts/NotoSans-subset.ttf` | Primary UI font (regular + bold via OpenType `wght` axis) |
+| `fonts/NotoColorEmoji-subset.ttf` | Emoji fallback — chained after NotoSans in every `FontVariation` |
+
+The `-subset` variants are generated at build time by `make subset-fonts` (called automatically by `make build` and `make run`). The full source fonts (`NotoSans.ttf`, `NotoColorEmoji.ttf`) live alongside them for subsetting but are excluded from all exports to keep bundle size small.
+
+### Canonical viewport and scaling
+
+The project viewport is **720 × 1280** (portrait). Stretch mode `canvas_items` with aspect `keep_height` means every logical pixel scales uniformly with the physical screen **height**:
+
+```
+physical_px = logical_px × physical_screen_height / 1280
+```
+
+Examples for a 64 px logical font:
+
+| Device | Screen height | Physical font size |
+| ------ | ------------- | ------------------ |
+| Small phone (844 px) | 844 px | ≈ 42 px |
+| Laptop 1080p (1080 px) | 1080 px | ≈ 54 px |
+| 4K TV (2160 px) | 2160 px | ≈ 108 px |
+
+### Two-layer font size system
+
+Font sizes are managed in two layers so that text is always as large as possible without overflowing:
+
+1. **Theme ceiling** — each UI element type has a `font_size` defined in `theme/default_theme.tres` via a theme type variation. This is the *maximum* size used when text comfortably fits.
+2. **Runtime auto-fit floor** — `_auto_fit_text()` in `main.gd` is called deferred after each question loads (once layout sizes are known). It shrinks the question label and answer buttons down in 2 px steps until the text fits, but never below a stated minimum.
+
+```
+displayed_size = max(min_size, largest_size_that_fits_in_available_space)
+                 where largest_size_that_fits ≤ theme_ceiling
+```
+
+### Theme type variations
+
+All static font sizes live in `theme/default_theme.tres`. Dynamic overrides (correct/wrong highlights, animations) are applied in GDScript at runtime.
+
+| Variation | Base type | Font size (logical px) | Notes |
+| --------- | --------- | ---------------------- | ----- |
+| `TitleLabel` | `Label` | 80 | Game title on title screen |
+| `SubtitleLabel` | `Label` | 32 | Tagline below the title |
+| `HudLabel` | `Label` | 48 | Score and countdown timer |
+| `QuestionLabel` | `Label` | 64 (ceiling) | Auto-fit min: 24 px |
+| `AnswerButton` | `Button` | 52 (ceiling) | Auto-fit min: 18 px; same size applied to all 4 buttons |
+| `PlayButton` | `Button` | 40 | Play / Play Again / Main Menu |
+| `GameOverTitle` | `Label` | 64 | "GAME OVER" heading |
+| `FinalScoreLabel` | `Label` | 48 | Score on game-over screen |
+| `HighScoreLabel` | `Label` | 28 | High score display |
+| `NewHighScoreLabel` | `Label` | 36 | New high score celebration |
+| `BuildInfoLabel` | `Label` | 14 | Build date/version (intentionally tiny) |
+| *(default)* | — | 24 | Fallback for any unlabelled elements |
+
 ## Code Quality
 
 | Tool                        | Purpose                                     |
