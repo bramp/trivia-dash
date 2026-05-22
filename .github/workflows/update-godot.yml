@@ -57,4 +57,5 @@ jobs:
 
             [Release notes](https://github.com/godotengine/godot/releases/tag/${{ steps.latest.outputs.tag }})
           branch: chore/update-godot
+          delete-branch: true
           labels: dependencies
