@@ -70,7 +70,7 @@ jobs:
           cache: "pip"
 
       - name: 💾 Cache venv
-        uses: actions/cache@v5
+        uses: actions/cache@v6
         id: cache-venv
         with:
           path: .venv
@@ -101,7 +101,7 @@ jobs:
           cache: "pip"
 
       - name: 💾 Cache venv
-        uses: actions/cache@v5
+        uses: actions/cache@v6
         with:
           path: .venv
           key: venv-${{ runner.os }}-${{ hashFiles('pyproject.toml') }}
@@ -144,7 +144,7 @@ jobs:
           cache: "pip"
 
       - name: 💾 Cache venv
-        uses: actions/cache@v5
+        uses: actions/cache@v6
         with:
           path: .venv
           key: venv-${{ runner.os }}-${{ hashFiles('pyproject.toml') }}
